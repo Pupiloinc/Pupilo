@@ -2,7 +2,11 @@
 @import "tailwindcss";
 
 
-@theme inline {
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@theme {
   /* Font Size */
  --text-custom-4xl: 32px;
 --text-custom-5xl: 40px;
