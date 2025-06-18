@@ -1,9 +1,9 @@
 import React from 'react'
-import Paragraph from './Description'
 import CustomButton from './CustomButton'
 import Link from 'next/link'
 import Icons from './Icons'
 import Image from 'next/image'
+import Description from './Description'
 
 const PupiloCard = () => {
     return (
@@ -13,7 +13,7 @@ const PupiloCard = () => {
                     <div className='flex flex-col gap-6'>
                         <div className='flex flex-col gap-3'>
                             <h3 className={`text-custom-5xl max-lg:text-4xl max-lg:text-center max-md:text-custom-4xl max-sm:text-3xl leading-120 font-semibold text-white`}>Coding Fundamental</h3>
-                            <Paragraph className={'text-white max-lg:text-center'} text={`Young learners begin their journey with visual tools like ScratchJr and Blockly. Focus on basic logic, sequences, loops, and cause-effect thinking. Students build interactive animations, tell stories through code, and develop foundational logic.`} />
+                            <Description className={'text-white max-lg:text-center'} text={`Young learners begin their journey with visual tools like ScratchJr and Blockly. Focus on basic logic, sequences, loops, and cause-effect thinking. Students build interactive animations, tell stories through code, and develop foundational logic.`} />
                         </div>
                         <div className='flex gap-10 max-sm:gap-4 max-lg:justify-center items-center'>
                             <CustomButton iconColor={'#010101'} text={'Try a Free Lesson'} className={'!bg-white'} />
