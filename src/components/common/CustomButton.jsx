@@ -13,7 +13,7 @@ const CustomButton = ({ iconClass, text, className, iconColor }) => {
         />
       </span>
     </button>
-  );
+  )
 }
 
 export default CustomButton
