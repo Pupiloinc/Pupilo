@@ -43,21 +43,35 @@ const formats = [
 const PupiloDelivers = () => {
   return (
     <div className="py-[60px] sm:py-20 bg-white-100 relative">
-      <Image
-        src="/assets/images/png/pupilo-delivers-right-img.png"
-        alt="bg"
-        className="absolute pointer-events-none opacity-50 max-sm:bottom-[162px] max-sm:right-[11px] max-sm:max-w-[181px] max-lg:bottom-[106px] max-sm:max-h-[147px] bottom-[90px] right-0 max-lg:max-w-[180px] max-lg:max-h-[140px] w-[255px] h-[208px]"
-        width={255}
-        height={208}
-      />
       <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto">
+        <Image
+          src="/assets/images/png/pupilo-delivers-right-img.png"
+          alt="bg"
+          className="absolute pointer-events-none right-0 top-0 max-lg:hidden"
+          width={183}
+          height={208}
+        />
+        <Image
+          src="/assets/images/png/pupilo-delivers-left-img.png"
+          alt="bg"
+          className="absolute pointer-events-none left-0 top-[30%] max-lg:hidden"
+          width={183}
+          height={208}
+        />
+        <Image
+          src="/assets/images/png/pupilo-delivers-bottom-img.png"
+          alt="bg"
+          className="absolute pointer-events-none right-0 bottom-0 max-lg:hidden"
+          width={220}
+          height={208}
+        />
         <h2 className="text-2xl sm:text-3xl lg:text-custom-5xl font-semibold text-center leading-[120%] mb-6 sm:mb-10 max-sm:px-0 max-lg:px-7">
           Pupilo delivers a flexible, personalized and student-centered learning
           experience through multiple formats that fit every learner’s schedule
           and style.
         </h2>
 
-        <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 mx-auto max-w-[400px] sm:max-w-[800px]">
+        <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 mx-auto max-w-[400px] sm:max-w-[800px] relative z-10">
           {formats.map((card) => (
             <div
               key={card.id}
