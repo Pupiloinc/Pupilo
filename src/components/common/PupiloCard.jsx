@@ -7,7 +7,7 @@ import Description from './Description'
 
 const PupiloCard = () => {
     return (
-        <div className='container p-4 max-w-[1140px] mx-auto'>
+        <div className='container overflow-hidden p-4 max-w-[1140px] mx-auto'>
             <div className='p-8 max-lg:p-7 max-md:p-6 max-sm:p-4 relative bg-blue rounded-3xl flex flex-wrap'>
                 <div className='w-1/2 max-lg:w-full'>
                     <div className='flex flex-col gap-6'>
@@ -22,7 +22,7 @@ const PupiloCard = () => {
                     </div>
                 </div>
                 <div className='w-1/2 max-lg:w-full max-lg:justify-center max-lg:flex'>
-                    <Image width={584} height={400} className='absolute bottom-0 z-10 right-0' src={'/assets/images/png/pupilo-card-layer.png'} />
+                    <Image width={584} height={460} className='absolute pointer-events-none top-10 z-10 -right-[50px]' src={'/assets/images/png/pupilo-card-layer.png'} />
                     <Image className='absolute bottom-0 z-20 right-5 max-lg:relative max-lg:right-0 max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 max-sm:w-full' width={434} height={290} alt='conding-functional' src={'/assets/images/png/coding-fundamental.png'} />
                 </div>
             </div>
