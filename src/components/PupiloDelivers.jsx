@@ -113,9 +113,9 @@ const PupiloDelivers = () => {
                   <path
                     d="M1 1L5 5L1 9"
                     stroke="#010101"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
