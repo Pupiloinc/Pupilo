@@ -42,40 +42,42 @@ const formats = [
 
 const PupiloDelivers = () => {
   return (
-    <div className="py-20 bg-white">
+    <div className="py-20 bg-white-100">
       <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto">
-        <h2 className="text-custom-5xl font-semibold text-center leading-[120%] mb-16">
+        <h2 className="text-custom-5xl font-semibold text-center leading-[120%] mb-10">
           Pupilo delivers a flexible, personalized and student-centered learning
           experience through multiple formats that fit every learner’s schedule
           and style.
         </h2>
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 mx-auto max-w-[800px]">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 mx-auto max-w-[800px]">
           {formats.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-xl shadow-md p-4 flex flex-col"
+              className="bg-white rounded-3xl shadow-md p-6 flex flex-col"
             >
-              <div className="relative w-full h-[180px] rounded-lg overflow-hidden mb-4">
+              <div className="relative w-full min-h-[220px] rounded-lg overflow-hidden mb-6">
                 <Image
                   src={card.image}
                   alt={card.title}
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-xl"
                 />
               </div>
               <span
-                className={`text-xs font-medium px-2 py-1 rounded ${card.tagColor}`}
+                className={`text-base px-5 py-[6px] rounded-full text-purple/80 border border-purple/16 bg-purple/10 ${card.tagColor}`}
               >
                 {card.tag}
               </span>
-              <h3 className="text-lg font-semibold mt-3">{card.title}</h3>
-              <p className="text-sm text-gray-600 mt-2 flex-grow">
+              <h3 className="text-2xl leading-120 font-semibold mt-4">
+                {card.title}
+              </h3>
+              <p className="text-base text-dune mt-3 flex-grow">
                 {card.desc}
               </p>
               <a
                 href="#"
-                className="text-indigo-600 text-sm font-medium mt-4 inline-block"
+                className="text-dark-black text-base font-semibold mt-4 inline-block"
               >
                 {card.cta}
               </a>
