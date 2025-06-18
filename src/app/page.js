@@ -3,6 +3,7 @@ import GetStarted from "@/components/common/GetStarted";
 import Header from "@/components/common/Header";
 import PupiloCard from "@/components/common/PupiloCard";
 import Hero from "@/components/Hero";
+import BrandMarquee from "@/components/home/BrandMarquee";
 import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import PupiloDelivers from "@/components/PupiloDelivers";
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <BrandMarquee />
       <PupiloCard />
       <PupiloCurriculum />
       <PupiloDelivers />
