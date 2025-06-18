@@ -9,7 +9,7 @@ const CustomButton = ({ iconClass, text, className, iconColor }) => {
         <Icons
           icon={"commonArrow"}
           className={`${iconClass}`}
-          fill={iconColor || "purple"}
+          fill={iconColor}
         />
       </span>
     </button>
