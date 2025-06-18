@@ -1,3 +1,5 @@
+import Footer from "@/components/common/Footer";
+import GetStarted from "@/components/common/GetStarted";
 import Header from "@/components/common/Header";
 import Hero from "@/components/Hero";
 import PupiloCurriculum from "@/components/home/PupiloCurriculum";
@@ -8,9 +10,10 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <PupiloCurriculum/>
+      <PupiloCurriculum />
       <PupiloDelivers />
-
+      <GetStarted />
+      <Footer />
     </>
   );
 }
