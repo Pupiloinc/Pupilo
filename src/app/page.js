@@ -1,6 +1,9 @@
+import Header from "@/components/common/Header";
 import Hero from "@/components/Hero";
-import Image from "next/image";
 
 export default function Home() {
-  return <Hero />;
+  return <>
+    <Header />
+    <Hero />
+  </>
 }
