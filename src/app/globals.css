@@ -37,9 +37,9 @@ body {
 
 @theme {
   /* Font Size */
- --text-custom-4xl: 32px;
---text-custom-5xl: 40px;
---text-custom-6xl: 64px;
+  --text-custom-4xl: 32px;
+  --text-custom-5xl: 40px;
+  --text-custom-6xl: 64px;
 
 
 /* Color */
@@ -52,7 +52,7 @@ body {
 --color-light-yellow: #F7DA00;
 /* Line Height  */
 
-
---spacing-120: 120%;
---spacing-150: 150%;
+  --spacing-100: 100%;
+  --spacing-120: 120%;
+  --spacing-150: 150%;
 }
