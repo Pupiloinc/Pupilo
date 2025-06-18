@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <PupiloCard />
       <PupiloCurriculum />
       <PupiloDelivers />
       <GetStarted />
