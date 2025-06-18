@@ -12,7 +12,6 @@ export default function Home() {
     <>
       <Hero />
       <BrandMarquee />
-      <PupiloCard />
       <PupiloCurriculum />
       <PupiloDelivers />
       <GetStarted />
