@@ -9,10 +9,9 @@ import PupiloDelivers from "@/components/PupiloDelivers";
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
-      <PupiloCard/>
-      <PupiloCurriculum/>
+      <PupiloCard />
+      <PupiloCurriculum />
       <PupiloDelivers />
       <GetStarted />
       <Footer />
