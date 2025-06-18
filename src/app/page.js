@@ -16,8 +16,8 @@ export default function Home() {
       <BrandMarquee />
       <PupiloCurriculum />
       <PupiloDelivers />
-      <WhyPupilo />
       <Reviews />
+      <WhyPupilo />
       <GetStarted />
       <Footer />
     </>
