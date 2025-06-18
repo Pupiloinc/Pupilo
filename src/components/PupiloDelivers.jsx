@@ -4,7 +4,7 @@ import Image from "next/image";
 const formats = [
   {
     id: 1,
-    image: "/images/private-lessons.jpg",
+    image: "/assets/images/webp/private-lessons.webp",
     tag: "Fully flexible schedule",
     tagColor: "bg-pink-100 text-pink-700",
     title: "1-on-1 Private Lessons",
@@ -13,7 +13,7 @@ const formats = [
   },
   {
     id: 2,
-    image: "/images/group-lessons.jpg",
+    image: "/assets/images/webp/group-lessons.webp",
     tag: "Group dynamics & teamwork",
     tagColor: "bg-blue-100 text-blue-700",
     title: "Online Live Group Lessons",
@@ -22,7 +22,7 @@ const formats = [
   },
   {
     id: 3,
-    image: "/images/self-paced.jpg",
+    image: "/assets/images/webp/self-paced-course.webp",
     tag: "Pre-recorded lessons",
     tagColor: "bg-yellow-100 text-yellow-700",
     title: "Self-Paced Courses",
@@ -31,7 +31,7 @@ const formats = [
   },
   {
     id: 4,
-    image: "/images/coding-camp.jpg",
+    image: "/assets/images/webp/virtual-coding-camps.webp",
     tag: "Game Jam",
     tagColor: "bg-purple-100 text-purple-700",
     title: "Virtual Coding Camps",
