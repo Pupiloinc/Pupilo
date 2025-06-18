@@ -37,7 +37,7 @@ export const FOOTER_DATA_LIST = [
 const Footer = () => {
   return (
     <div className="bg-white-100">
-      <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto pt-20 pb-[60px]">
+      <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto pt-[60px] sm:pt-20 pb-[60px]">
         <div className="flex lg:flex-row flex-col justify-between gap-7">
           <div className="lg:w-[35%]">
             <Link href="/">
@@ -59,15 +59,25 @@ const Footer = () => {
             <div className="flex gap-2 flex-col">
               <div className="flex gap-2">
                 <Icons icon="phoneIcon" />
-                <p>+234 123 456 7890</p>
+                <Link
+                  href="tel:+2341234567890"
+                  className="text-black/70 hover:text-custom-pink transition-colors"
+                >
+                  +234 123 456 7890
+                </Link>
               </div>
               <div className="flex gap-2">
                 <Icons icon="mailIcon" />
-                <p>hello@pupilo.com</p>
+                <Link
+                  href="mailto:hello@pupilo.com"
+                  className="text-black/70 hover:text-custom-pink transition-colors"
+                >
+                  hello@pupilo.com
+                </Link>
               </div>
             </div>
           </div>
-          <div className="lg:w-[57%] flex flex-wrap xl:gap-[80px] sm:gap-[63px] gap-10 lg:justify-end justify-between">
+          <div className="max-sm:w-[100%] max-lg:w-[90%] max-[1120px]:w-[64%] w-[57%] flex flex-wrap xl:gap-[80px] md:gap-[63px] gap-6 sm:gap-10 lg:justify-end justify-between mt-5 lg:mt-0">
             {FOOTER_DATA_LIST.map((obj, i) => (
               <div key={i}>
                 <h4 className="font-bold text-lg text-dark-black sm:mb-3 mb-2">
