@@ -16,13 +16,14 @@ const PupiloCard = () => {
                         <Paragraph className={'text-white max-lg:text-center'} text={`Young learners begin their journey with visual tools like ScratchJr and Blockly. Focus on basic logic, sequences, loops, and cause-effect thinking. Students build interactive animations, tell stories through code, and develop foundational logic.`}/>
                     </div> 
                     <div className='flex gap-10 max-sm:gap-4 max-lg:justify-center items-center'>
-                        <CustomButton text={'Try a Free Lesson'} className={'!bg-white'}/>
+                        <CustomButton iconColor={'#010101'} text={'Try a Free Lesson'} className={'!bg-white'}/>
                         <Link className='font-bold flex group items-center text-white' href={'#learn-more'}>Learn More <span className='flex size-6 group-hover:translate-x-2 transition-all duration-300 max-sm:size-4 justify-center items-center'> <Icons icon={'arrowIcon'} /> </span> </Link>
                     </div>
                 </div>
             </div>
             <div className='w-1/2 max-lg:w-full max-lg:justify-center max-lg:flex'>
-                <Image className='absolute bottom-0 right-5 max-lg:relative max-lg:right-0 max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 max-sm:w-full' width={434} height={290} alt='conding-functional' src={'/assets/images/png/coding-fundamental.png'} />
+                <Image width={584} height={400} className='absolute bottom-0 z-10 right-0' src={'/assets/images/png/pupilo-card-layer.png'}/>
+                <Image className='absolute bottom-0 z-20 right-5 max-lg:relative max-lg:right-0 max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 max-sm:w-full' width={434} height={290} alt='conding-functional' src={'/assets/images/png/coding-fundamental.png'} />
             </div>
         </div>
     </div>
