@@ -1,3 +1,4 @@
+import Heading from "@/components/common/Heading";
 import Hero from "@/components/Hero";
 import PupiloDelivers from "@/components/PupiloDelivers";
 
