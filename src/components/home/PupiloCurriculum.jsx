@@ -7,7 +7,7 @@ import { PUPILO_CURRICULUM_LIST } from '../../../utils/helper'
 const PupiloCurriculum = () => {
     return (
       <div>
-        <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto pb-[80px]">
+        <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto pb-[80px]">
           <div className="pb-10">
             <Title
               text={

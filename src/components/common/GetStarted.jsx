@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const GetStarted = () => {
   return (
-    <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto py-[60px] sm:py-[100px] lg:py-40">
+    <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto py-[60px] sm:py-[100px] lg:py-40">
       <div className=" bg-purple rounded-3xl min-h-auto sm:min-h-[352px] py-10 sm:py-[52px] max-sm:px-4 relative">
         <Image
           src="/assets/images/png/get-started-right-icon.png"
