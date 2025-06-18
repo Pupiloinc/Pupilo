@@ -1,5 +1,5 @@
 import React from "react";
-const Icons = ({ icon, className, fill , stroke }) => {
+const Icons = ({ icon, className, fill, stroke }) => {
   const iconList = {
     downArrow: (
       <svg
@@ -73,6 +73,12 @@ const Icons = ({ icon, className, fill , stroke }) => {
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.0039 3.414L2.39691 12.021L0.98291 10.607L9.58891 2H2.00391V0H13.0039V11H11.0039V3.414Z" fill={fill || "#010101"} />
       </svg>
+    ),
+    arrowIcon: (
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L5 5L1 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
     )
   };
   const addClassName = (icon) => {
