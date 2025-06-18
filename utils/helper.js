@@ -5,3 +5,4 @@ export const NAV_DATA_LIST = [
     { title: "Learn with Pupilo", link: "#" },
     { title: "Blog", link: "#" },
 ];
+

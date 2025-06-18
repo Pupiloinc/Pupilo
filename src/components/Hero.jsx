@@ -15,7 +15,7 @@ const Hero = () => {
           <h2 className="max-lg:text-center font-semibold text-custom-5xl lg:text-custom-6xl leading-120 text-dark-black mt-4 relative z-10">Where Every Child can <span className="text-purple block">
             Code, <span className="relative">Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-sm:size-7" /></span> and Thrive.</span></h2>
           <div className="mt-6 flex gap-3 relative z-10 max-lg:justify-center">
-            <CustomButton text="Try a Free Lesson" />
+            <CustomButton iconColor="#FFF" text="Try a Free Lesson" />
             <Link href="#">
               <div className="min-w-[52px] h-[52px] bg-dark-black rounded-full flex justify-center items-center hover:animate-pulse">
                 <Icons icon="whatsappIcon" />
