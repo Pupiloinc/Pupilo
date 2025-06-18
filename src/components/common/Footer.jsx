@@ -37,7 +37,7 @@ export const FOOTER_DATA_LIST = [
 const Footer = () => {
   return (
     <div className="bg-white-100">
-      <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto pt-[60px] sm:pt-20 pb-[60px]">
+      <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto pt-[60px] sm:pt-20 pb-[60px]">
         <div className="flex lg:flex-row flex-col justify-between gap-7">
           <div className="lg:w-[35%]">
             <Link href="/">
