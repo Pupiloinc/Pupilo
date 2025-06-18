@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "./Heading";
-import Paragraph from "./Paragraph";
+import Heading from "./Title";
+import Paragraph from "./Description";
 import CustomButton from "./CustomButton";
 
 const GetStarted = () => {
