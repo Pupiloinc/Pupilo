@@ -17,8 +17,7 @@ const Icons = ({ icon, className, fill }) => {
     ),
     commonArrow: (
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.0039 3.414L2.39691 12.021L0.98291 10.607L9.58891 2H2.00391V0H13.0039V11H11.0039V3.414Z" fill="#010101" />
-        
+        <path d="M11.0039 3.414L2.39691 12.021L0.98291 10.607L9.58891 2H2.00391V0H13.0039V11H11.0039V3.414Z" fill={fill || "#010101"} />
       </svg>
     )
   };
