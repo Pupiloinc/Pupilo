@@ -35,21 +35,27 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Font Size */
+ --text-custom-4xl: 32px;
+--text-custom-5xl: 40px;
+--text-custom-6xl: 64px;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Color */
+--color-dark-grey: #4E4E4E;
+--color-dark-black: #010101;
+--color-dark-black: #010101;
+--color-purple: #8C52FF;
+--color-yellow: #F9DC00;
+--color-white-100: #F8F8F8;
+--color-white-100: #F8F8F8;
+--color-blue: #0D5FCE;
+--color-light-yellow: #F7DA00;
+/* Line Height  */
+
+
+--spacing-120: 120%;
+--spacing-150: 150%;
+
 }
