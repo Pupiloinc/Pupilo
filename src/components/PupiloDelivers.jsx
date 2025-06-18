@@ -43,7 +43,7 @@ const formats = [
 const PupiloDelivers = () => {
   return (
     <div className="py-[60px] sm:py-20 bg-white-100 relative">
-      <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto">
+      <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
         <Image
           src="/assets/images/png/pupilo-delivers-right-img.png"
           alt="bg"
@@ -113,9 +113,9 @@ const PupiloDelivers = () => {
                   <path
                     d="M1 1L5 5L1 9"
                     stroke="#010101"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>

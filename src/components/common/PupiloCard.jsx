@@ -22,8 +22,8 @@ const PupiloCard = ({title , description , buttonText , buttonClass , buttonIcon
                     </div>
                 </div>
                 <div className='w-1/2 max-lg:w-full max-lg:justify-center max-lg:flex'>
-                    <Image width={584} height={460} className='absolute pointer-events-none top-10 z-10 -right-[50px]' src={'/assets/images/png/pupilo-card-layer.png'} />
-                    <Image className={`absolute bottom-0 z-20 max-lg:relative max-lg:!right-0 max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 max-sm:w-full`} style={{right : rightPosition || '20px'}} width={imageWidth} height={290} alt={imageAlt} src={imageSrc} />
+                    <Image width={584} height={460} alt='layer' className='absolute pointer-events-none top-10 z-10 -right-[50px]' src={'/assets/images/png/pupilo-card-layer.png'} />
+                    <Image className={`absolute bottom-0 z-20 max-lg:relative max-lg:!right-0 max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 max-sm:w-full`} style={{right : rightPosition || '20px'}} width={imageWidth} height={290} alt={'images'} src={imageSrc} />
                 </div>
             </div>
         </div>
