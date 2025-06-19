@@ -24,7 +24,7 @@ const Icons = ({ icon, className, fill, stroke }) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clipPath="url(#clip0_480_7)">
-          <path 
+          <path
             d="M4 15H6V20H18V4H6V9H4V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"
             fill="white"
           />
@@ -86,7 +86,7 @@ const Icons = ({ icon, className, fill, stroke }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path 
+        <path
           d="M11.0039 3.414L2.39691 12.021L0.98291 10.607L9.58891 2H2.00391V0H13.0039V11H11.0039V3.414Z"
           fill={fill || "#010101"}
         />
@@ -312,6 +312,12 @@ const Icons = ({ icon, className, fill, stroke }) => {
         </defs>
       </svg>
     ),
+    sliderArrow: (
+      <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 1L1 9L9 17" stroke="#010101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+
+    )
   };
   const addClassName = (icon) => {
     return React.cloneElement(icon, {
