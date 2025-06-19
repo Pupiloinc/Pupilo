@@ -33,6 +33,7 @@ const PupiloCurriculum = () => {
                 imageSrc={item.image}
                 imageAlt={item.title}
                 imageWidth={item.imageWeight}
+                pupiloCardLayer={index === 1 || index === 3  ? "/assets/images/webp/pupilo-card-layer-light.webp" : "/assets/images/webp/pupilo-card-layer.webp"}
                 rightPosition={`${item.rightPosition}px`}
                 buttonIconcolor={
                   item.buttonTheme === "white" ? "#010101" : "#FFFFFF"

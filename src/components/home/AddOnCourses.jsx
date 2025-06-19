@@ -24,6 +24,7 @@ const AddOnCourses = () => {
             imageClass={'lg:-translate-y-1/2 top-1/2 max-sm:w-[90%]'}
             buttonText={item.buttonText}
             imageSrc={item.image}
+            pupiloCardLayer={index === 1 || index === 3  ? "/assets/images/webp/pupilo-card-layer-light.webp" : "/assets/images/webp/pupilo-card-layer.webp"}
             imageAlt={item.title}
             imageWidth={item.imageWeight}
             rightPosition={`${item.rightPosition}px`}
@@ -35,8 +36,8 @@ const AddOnCourses = () => {
             }
             textColor={`text-${item.textColor}`}
             buttonClass={`${item.buttonTheme === "white"
-                ? "!bg-white !text-dark-black"
-                : "!bg-dark-black !text-white"
+              ? "!bg-white !text-dark-black"
+              : "!bg-dark-black !text-white"
               }`}
           />
         ))}
