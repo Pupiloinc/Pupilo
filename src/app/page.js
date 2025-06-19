@@ -10,6 +10,7 @@ import WhyPupilo from "@/components/home/WhyPupilo";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
 import OurCoding from "@/components/home/OurCoding";
 import AddOnCourses from "@/components/home/AddOnCourses";
+import BackToTop from "@/components/common/BackToTop";
 
 export default function Home() {
   return (
@@ -17,13 +18,14 @@ export default function Home() {
       <Hero />
       <BrandMarquee />
       <PupiloCurriculum />
-      <AddOnCourses/>
+      <AddOnCourses />
       <PupiloDelivers />
       <WhyPupilo />
-      <OurCoding/>
+      <OurCoding />
       <Reviews />
       <GetStarted />
       <Footer />
+      <BackToTop />
     </>
   );
 }
