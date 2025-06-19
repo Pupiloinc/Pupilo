@@ -59,7 +59,6 @@ const Reviews = () => {
         />
 
         <div className="relative">
-          {/* Slider Container */}
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
@@ -68,7 +67,6 @@ const Reviews = () => {
               {reviewsData.map((review) => (
                 <div key={review.id} className="w-full flex-shrink-0 px-3">
                   <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 custom-cards-shadow transition-all duration-500 max-w-sm mx-auto">
-                    {/* 5 Stars Display */}
                     <div className="flex gap-1 mb-4">
                       {[...Array(5)].map((_, index) => (
                         <Image
@@ -106,7 +104,6 @@ const Reviews = () => {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
@@ -149,7 +146,6 @@ const Reviews = () => {
             </svg>
           </button>
 
-          {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-8">
             {reviewsData.map((_, index) => (
               <button
