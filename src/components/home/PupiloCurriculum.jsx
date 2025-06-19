@@ -19,15 +19,17 @@ const PupiloCurriculum = () => {
               Choose Your Learning Path
             </p>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 max-lg:gap-5 max-md:gap-4">
             {PUPILO_CURRICULUM_LIST.map((item, index) => (
               <PupiloCard
                 key={index}
                 title={item.title}
                 cardTheme={`bg-${item.cardTheme}`}
                 description={item.description}
+                imageClass={'max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 bottom-0'}
                 buttonText={item.buttonText}
                 imageSrc={item.image}
+                imageAlt={item.title}
                 imageWidth={item.imageWeight}
                 rightPosition={`${item.rightPosition}px`}
                 buttonIconcolor={
