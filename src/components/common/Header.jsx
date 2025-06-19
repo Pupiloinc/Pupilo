@@ -24,7 +24,7 @@ const Header = () => {
     }, [isOpen]);
     return (
         <div className="py-3 lg:py-6 border-b border-b-black/10">
-            <div className='container max-w-[1140px] xl:px-0 px-6 mx-auto'>
+            <div className='container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto'>
                 <div className="flex justify-between items-center">
                     <Link href="/">
                         <Image className='max-sm:max-w-[100px] w-full' src="/assets/images/svg/logo.svg" width={152} height={42} alt='logo' />
@@ -36,13 +36,13 @@ const Header = () => {
                                 href={item.link}
                                 className={`font-normal text-base leading-150 text-dark-grey relative  transition-all duration-700
      after:absolute after:left-0 after:bottom-[-8%] after:h-[1.5px] after:bg-dark-grey
-    after:w-0 after:transition-all after:duration-500 hover:after:w-full ${i === 0 && "font-semibold"} `}
+    after:w-0 after:transition-all after:duration-500 hover:after:w-full ${i === 0 && "font-semibold !text-dark-black"} `}
                             >
                                 {item.title}
                             </Link>
                         ))}
                     </ul>
-                    <Link href="/" className='bg-black max-lg:hidden flex items-center font-semibold text-base leading-100 text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
+                    <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:opacity-50 max-lg:hidden flex items-center font-semibold text-base leading-100 text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
                     <div className="lg:hidden z-50 cursor-pointer">
                         <button
                             onClick={toggleMenu}
@@ -69,14 +69,14 @@ const Header = () => {
                             <Link
                                 key={i}
                                 href={item.link}
-                                className={`font-normal text-sm leading-150 text-dark-grey relative  transition-all duration-700
+                                className={`font-normal text-sm md:text-base leading-150 text-dark-grey relative  transition-all duration-700
      after:absolute after:left-0 after:bottom-[-8%] after:h-[1.5px] after:bg-dark-grey
     after:w-0 after:transition-all after:duration-500 hover:after:w-full ${i === 0 && "font-semibold"} `}
                             >
                                 {item.title}
                             </Link>
                         ))}
-                        <Link href="/" className='bg-black flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
+                        <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:opacity-50 flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
                     </div>
                 </div>
             </div>
