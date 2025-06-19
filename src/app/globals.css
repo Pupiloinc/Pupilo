@@ -51,6 +51,8 @@ body {
   --color-dune: #343434;
   --color-light-purple: #e8dcff;
   --color-dolphin: #5d6180;
+  --color-light-purple: #8C52FF14;
+  --background-our-coding: url("/assets/images/png/coding-program-bg.png");
   /* Line Height  */
 
   --spacing-100: 100%;
@@ -58,9 +60,20 @@ body {
   --spacing-150: 150%;
 }
 
+@media (min-width:768px) {
+  .bg-our-coding {
+    background-image: var(--background-our-coding);
+  }
+}
+
+.bg-full {
+  background-size: 100% 100%;
+}
+
 .custom-cards-shadow {
   box-shadow: 0px 0px 32px 0px #0000000f;
 }
+
 .custom-cards-shadow:hover {
   box-shadow: 0px 0px 32px 0px #8c52ff1f;
 }
