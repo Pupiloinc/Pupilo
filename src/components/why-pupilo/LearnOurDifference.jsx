@@ -11,7 +11,7 @@ const LearnOurDifference = () => {
           {LEARN_OUR_LIST.map((item, index) => (
             <div
               key={index}
-              className="bg-white md:p-6 p-4 rounded-[24px] hover:shadow-lg flex flex-col gap-4"
+              className="bg-white md:p-6 p-4 rounded-[24px] hover:shadow-lg transition-all duration-500 flex flex-col gap-4"
             >
               <div className='flex items-center md:gap-5 gap-3'>
                 <div
