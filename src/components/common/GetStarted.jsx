@@ -3,6 +3,7 @@ import Heading from "./Title";
 import Paragraph from "./Description";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
+import Description from "./Description";
 
 const GetStarted = () => {
   return (
@@ -33,12 +34,10 @@ const GetStarted = () => {
           className={"text-center text-white max-w-[573px] mx-auto"}
           text={"Start Your Child’s Coding Journey Today!"}
         />
-        <Paragraph
-          className={"text-center text-white/80 max-w-[420px] mx-auto pt-2"}
-          text={
-            "Personalized session with a vetted instructor. Watch your child build their first project in 45 minutes."
-          }
-        />
+        <p className="text-center text-white/80 leading-normal px-[1.1px] font-normal mx-auto pt-2">
+          Personalized session with a vetted instructor. <br /> Watch your child
+          build their first project in 45 minutes.
+        </p>
         <CustomButton
           className={"mx-auto mt-6 !bg-white text-purple"}
           iconColor={"#8C52FF"}
