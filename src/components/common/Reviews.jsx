@@ -6,47 +6,9 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
+import { REVIEWS_DATA } from "../../../utils/helper";
 
 const Reviews = () => {
-  const reviewsData = [
-    {
-      id: 1,
-      name: "Kayla Steyn",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      cardImg: "/assets/images/webp/kayla-steyn.webp",
-    },
-    {
-      id: 2,
-      name: "Nairah Moeketsi",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
-      cardImg: "/assets/images/webp/naledi-moeketsi.webp",
-    },
-    {
-      id: 3,
-      name: "Johan Botha",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
-      cardImg: "/assets/images/webp/johan-botha.webp",
-    },
-    {
-      id: 4,
-      name: "Kayla Steyn",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      cardImg: "/assets/images/webp/kayla-steyn.webp",
-    },
-  ];
-
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
@@ -67,11 +29,11 @@ const Reviews = () => {
                 spaceBetween: 20,
               },
               640: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 16,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
               1024: {
@@ -80,7 +42,7 @@ const Reviews = () => {
               },
             }}
             autoplay={{
-              delay: 3000,
+              delay: 1200000,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -92,9 +54,9 @@ const Reviews = () => {
             modules={[Autoplay, Pagination]}
             className="reviewsSlider pb-12"
           >
-            {reviewsData.map((review) => (
+            {REVIEWS_DATA.map((review) => (
               <SwiperSlide key={review.id} className="!flex justify-center">
-                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all duration-500">
+                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all duration-500 min-h-auto">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, index) => (
                       <Image
