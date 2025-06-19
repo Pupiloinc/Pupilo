@@ -404,9 +404,4 @@ export const LEARN_OUR_LIST = [
       "Pupilo envisions an Africa where every child has the opportunity to thrive in a tech-enabled world—not just by consuming technology, but by creating it.",
     icon: "/assets/images/svg/mission-driven.svg",
   },
-  "/assets/images/webp/top-rated-1.webp",
-  "/assets/images/webp/top-rated-2.webp",
-  "/assets/images/webp/top-rated-3.webp",
-  "/assets/images/webp/top-rated-4.webp",
-  "/assets/images/webp/top-rated-5.webp",
 ];

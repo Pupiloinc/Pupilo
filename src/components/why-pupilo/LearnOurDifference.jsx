@@ -11,13 +11,13 @@ const LearnOurDifference = () => {
           {LEARN_OUR_LIST.map((item, index) => (
             <div
               key={index}
-              className="bg-white md:p-6 p-4 rounded-[24px] hover:shadow-lg flex flex-col gap-4"
+              className="bg-white md:p-6 p-4 rounded-[24px] hover:shadow-lg transition-all duration-500 flex flex-col gap-4"
             >
               <div className='flex items-center md:gap-5 gap-3'>
                 <div
                   className={`w-[52px] h-[52px] p-3 rounded-full flex bg-[#8C52FF1A] items-center justify-center`}
                 >
-                  <Image src={item.icon} alt={item.title} width={28} height={28} className="size-[28px]  rounded-full" />
+                  <Image src={item.icon} alt={item.title} width={28} height={28} className="size-[28px] rounded-full" />
                 </div>
                 <h3 className="md:text-2xl text-xl font-medium text-left  spacing-120 max-[460px]:max-w-[230px] md:max-w-[220px] text-gray-800">
                   {item.title}

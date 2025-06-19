@@ -28,8 +28,8 @@ const Hero = () => {
         </div>
       </div>
     </div>
-    <Image className="absolute top-[52%] left-[4%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-purple-ellipse.svg" width={240} height={240} alt="purple-ellipse" />
-    <Image className="absolute right-[7%] top-[30%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-yellow-ellipse.svg" width={240} height={240} alt="yellow-ellipse" />
+    <Image className="absolute top-[52%] left-[4%] 2xl:left-[15%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-purple-ellipse.svg" width={240} height={240} alt="purple-ellipse" />
+    <Image className="absolute right-[7%] top-[30%] 2xl:right-[18%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-yellow-ellipse.svg" width={240} height={240} alt="yellow-ellipse" />
   </div>;
 };
 
