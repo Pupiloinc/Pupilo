@@ -28,7 +28,7 @@ const PupiloCurriculum = () => {
                 descriptionClass={`max-w-[523px] max-[1100px]:max-w-[481px] max-lg:mx-auto`}
                 cardTheme={`bg-${item.cardTheme}`}
                 description={item.description}
-                imageClass={'max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 bottom-0'}
+                imageClass={`max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 bottom-0 ${index === 1 && 'max-[1100px]:!right-[70px]'}`}
                 buttonText={item.buttonText}
                 imageSrc={item.image}
                 imageAlt={item.title}

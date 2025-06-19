@@ -10,7 +10,7 @@ const AddOnCourses = () => {
         text={
           "Add-on Courses"
         }
-        className={"max-w-[1140px] mx-auto text-center pb-10"}
+        className={"max-w-[1140px] mx-auto text-center pb-10 max-sm:pb-6 max-md:pb-8"}
       />
       <div className="flex flex-col gap-6 max-lg:gap-5 max-md:gap-5">
         {ADD_ON_COURSES_LIST.map((item, index) => (
@@ -19,7 +19,7 @@ const AddOnCourses = () => {
             title={item.title}
             headingClass={`max-w-[692px] max-[1100px]:max-w-[690px] max-lg:mx-auto`}
             descriptionClass={`max-w-[472px] max-lg:max-w-[481px] max-lg:mx-auto`}
-            cardTheme={`bg-${item.cardTheme}`}
+            cardTheme={`bg-${item.cardTheme} !gap-10`}
             description={item.description}
             imageClass={'lg:-translate-y-1/2 top-1/2 max-sm:!w-[75%]'}
             buttonText={item.buttonText}
