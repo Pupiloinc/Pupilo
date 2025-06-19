@@ -19,9 +19,9 @@ export default function Home() {
       <PupiloCurriculum />
       <AddOnCourses/>
       <PupiloDelivers />
-      <Reviews />
       <WhyPupilo />
       <OurCoding/>
+      <Reviews />
       <GetStarted />
       <Footer />
     </>
