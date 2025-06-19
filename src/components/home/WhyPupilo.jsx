@@ -11,18 +11,19 @@ const WhyPupilo = () => {
         <div className="py-40">
             <div className='container max-w-[1140px] xl:px-0 px-6 mx-auto'>
                 <div className="flex justify-between gap-5 max-lg:flex-col mb-6 max-lg:pb-5 items-center">
-                    <div className="max-w-[627px]">
+                    <div className="max-w-[627px] max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
                         <Title text="Learn our Difference:
-                            Why Pupilo?" className="max-w-[506px]" />
-                        <Description text="Pupilo goes beyond teaching syntax and commands. Pupilo nurtures cognitive development and life skills that shape confident, adaptable learners." className="opacity-80 mt-2" />
+                            Why Pupilo?" className="max-w-[506px] max-lg:mx-auto max-lg:text-center" />
+                        <Description text="Pupilo goes beyond teaching syntax and commands. Pupilo nurtures cognitive development and life skills that shape confident, adaptable learners." className="opacity-80 mt-2 max-lg:text-center" />
                         <CustomButton iconColor="#010101" text="Learn More" className="mt-6" />
                     </div>
-                    <div className="">
+                    <div className="max-lg:w-full max-lg:flex max-lg:justify-center">
                         <Image
                             src="/assets/images/webp/why-pupilo.webp"
                             alt='why-pupilo'
                             width="364"
                             height="272"
+                            className='max-lg:max-w-[600px] max-lg:w-full'
                         />
                     </div>
                 </div>
