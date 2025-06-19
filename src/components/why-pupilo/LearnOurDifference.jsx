@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../common/Title'
 import Image from 'next/image';
 const LearnOurDifference = () => {
-  const features = [
+  const  LEARN_LIST = [
     {
       title: "Whole-Child Learning",
       description:
@@ -35,11 +35,11 @@ const LearnOurDifference = () => {
     },
   ];
   return (
-    <div className="bg-[#f3edff] py-20 px-4 learn-bg bg-cover bg-no-repeat bg-center">
+    <div className="md:py-20 py-14 px-4 learn-bg bg-cover bg-no-repeat bg-center">
       <div className="max-w-[1140px] mx-auto text-center">
-        <Title text="Learn Our Difference: Why Pupilo?" className="text-center" />
+        <Title text="Learn Our Difference: Why Pupilo?" className="text-center md:!leading-[160%]" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 min-[1200px]:gap-6 gap-x-3 gap-y-4 mt-10">
-          {features.map((item, index) => (
+          {LEARN_LIST.map((item, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-[24px] hover:shadow-lg flex flex-col gap-4"
