@@ -5,6 +5,7 @@ export const NAV_DATA_LIST = [
   { title: "Learn with Pupilo", link: "#" },
   { title: "Blog", link: "#" },
 ];
+
 export const BRAND_LOGO_DATA_LIST = [
     "/assets/images/svg/layers.svg",
     "/assets/images/svg/sisyphus.svg",
