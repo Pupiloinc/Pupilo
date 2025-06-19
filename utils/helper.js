@@ -139,6 +139,7 @@ export const LEARNING_PLATFORM_LOGO_DATA_LIST = [
     "assets/images/svg/js.svg",
     "assets/images/svg/bitbucket.svg",
 ]
+
 export const CODING_INSTRUCTORS_DATA_LIST = [
     "/assets/images/webp/coding-one.webp",
     "/assets/images/webp/coding-two.webp",
@@ -220,5 +221,44 @@ export const REVIEWS_DATA = [
     review:
       "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
     cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+];
+
+export const FORMATS = [
+  {
+    id: 1,
+    image: "/assets/images/webp/private-lessons.webp",
+    tag: "Fully flexible schedule",
+    tagColor: "bg-pink-100 text-pink-700",
+    title: "1-on-1 Private Lessons",
+    desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 2,
+    image: "/assets/images/webp/group-lessons.webp",
+    tag: "Group dynamics & teamwork",
+    tagColor: "bg-blue-100 text-blue-700",
+    title: "Online Live Group Lessons",
+    desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 3,
+    image: "/assets/images/webp/self-paced-course.webp",
+    tag: "Pre-recorded lessons",
+    tagColor: "bg-yellow/10 border border-yellow/20 text-yellow/80",
+    title: "Self-Paced Courses",
+    desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 4,
+    image: "/assets/images/webp/virtual-coding-camps.webp",
+    tag: "Game Jam",
+    tagColor: "bg-purple-100 text-purple-700",
+    title: "Virtual Coding Camps",
+    desc: "Exciting week-themed programs packed with creativity, problem-solving, and teamwork.",
+    cta: "Try a Free Lesson",
   },
 ];
