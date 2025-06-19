@@ -17,7 +17,7 @@ const LearnOurDifference = () => {
                 <div
                   className={`w-[52px] h-[52px] p-3 rounded-full flex bg-[#8C52FF1A] items-center justify-center`}
                 >
-                  <Image src={item.icon} alt={item.title} width={28} height={28} className="size-[28px]  rounded-full" />
+                  <Image src={item.icon} alt={item.title} width={28} height={28} className="size-[28px] rounded-full" />
                 </div>
                 <h3 className="md:text-2xl text-xl font-medium text-left  spacing-120 max-[460px]:max-w-[230px] md:max-w-[220px] text-gray-800">
                   {item.title}
