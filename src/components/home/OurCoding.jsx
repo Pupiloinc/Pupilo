@@ -14,7 +14,7 @@ const OurCoding = () => {
         />
         <Description
           text="Our instructors are rigorously selected from top universities and institutions around the world. With experience in coding, teaching, and mentoring, they bring out the best in every learner."
-          className="text-center max-w-[566px] mx-auto pb-10"
+          className="text-center max-w-[566px] mx-auto sm:pb-10 pb-7"
         />
         <Image width={849} height={271} src="/assets/images/svg/our-coding-group.svg" alt='our-coding-group' className='mx-auto lg:block hidden' />
         <div className='lg:hidden flex flex-wrap sm:gap-10 gap-6 justify-center'>
