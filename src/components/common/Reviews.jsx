@@ -9,7 +9,7 @@ const Reviews = () => {
       rating: 5,
       review:
         "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      avatar: "👩‍🦰", 
+      avatar: "👩‍🦰",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const Reviews = () => {
       rating: 5,
       review:
         "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
-      avatar: "👩🏾",
+      avatar: "/assets/images/png/coding-fundamental.png",
     },
     {
       id: 3,
@@ -29,19 +29,7 @@ const Reviews = () => {
     },
   ];
 
-  const renderStars = (rating) => {
-    return [...Array(5)].map((_, index) => (
-      <span
-        key={index}
-        className={`text-lg ${
-          index < rating ? "text-yellow-400" : "text-gray-300"
-        }`}
-      >
-        ⭐
-      </span>
-    ));
-  };
-
+ 
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
@@ -54,9 +42,9 @@ const Reviews = () => {
           {reviewsData.map((review) => (
             <div
               key={review.id}
-              className="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex-1 max-w-sm mx-auto md:mx-0"
+              className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 custom-cards-shadow transition-all duration-500 flex-1 max-w-sm mx-auto md:mx-0"
             >
-              <div className="flex">{renderStars(review.rating)}</div>
+              <div className="flex">{(review.rating)}</div>
 
               <p className="max-w-[304px] text-base text-black/70 my-4">
                 {review.review}
