@@ -1,9 +1,9 @@
 export const NAV_DATA_LIST = [
     { title: "Home", link: "/" },
-    { title: "Courses", link: "#" },
-    { title: "Why Pupilo?", link: "#" },
-    { title: "Learn with Pupilo", link: "#" },
-    { title: "Blog", link: "#" },
+    { title: "Courses", link: "/courses" },
+    { title: "Why Pupilo?", link: "/why-pupilo" },
+    { title: "Learn with Pupilo", link: "/learn-pupilo" },
+    { title: "Blog", link: "/blog" },
 ];
 
 export const BRAND_LOGO_DATA_LIST = [
