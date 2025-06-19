@@ -8,7 +8,6 @@ import BrandMarquee from "@/components/home/BrandMarquee";
 import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import WhyPupilo from "@/components/home/WhyPupilo";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
-
 export default function Home() {
   return (
     <>
