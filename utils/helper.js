@@ -75,3 +75,9 @@ export const   PUPILO_CURRICULUM_LIST = [
         learnMoreLink : '#learn-more'
     },
 ] 
+
+export const ADD_ON_COURSES_LIST = [
+    {
+        
+    }
+]
