@@ -6,11 +6,9 @@ import Title from '../common/Title';
 
 const FutureInnovators = () => {
   return (
-    <div className="max-w-[1200px] mx-auto px-4 lg:py-[160px] md:py-20 py-14">
-      {/* Heading */}
+    <div className='lg:py-[160px] md:py-20 py-14'>
+    <div className="max-w-[1200px] mx-auto px-4 ">
       <Title text="Future Innovators are Born Here!" className="text-center" />
-
-      {/* Image */}
       <div className="w-full md:my-10 my-5">
         <Image
           src="/assets/images/webp/future-innovators.webp"
@@ -20,11 +18,8 @@ const FutureInnovators = () => {
           className="max-w-[1140px] rounded w-full xl:min-h-[555px] h-auto"
         />
       </div>
-
-      {/* About Section */}
       <div className="flex max-md:flex-wrap justify-between md:gap-16 sm:gap-5 gap-2">
         <Title text="About Pupilo" />
-
         <div>
           <p className="text-[#4E4E4E] min-[800px]:max-w-[566px] max-lg:w-full lg:text-base text-sm leading-[150%] font-normal mb-4">
             Pupilo is a visionary online learning platform where children and
@@ -42,6 +37,7 @@ const FutureInnovators = () => {
             continent.
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -67,3 +67,6 @@ body {
 .custom-cards-shadow:hover {
   box-shadow: 0px 0px 32px 0px #8c52ff1f;
 }
+.learn-bg{
+  background-image: url("/assets/images/webp/learn-bg.webp");
+}
