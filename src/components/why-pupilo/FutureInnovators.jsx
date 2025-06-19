@@ -5,7 +5,7 @@ import Title from '../common/Title';
 const FutureInnovators = () => {
   return (
     <div className='lg:py-[160px] md:py-20 py-14'>
-    <div className="max-w-[1200px] mx-auto px-4 ">
+      <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
       <Title text="Future Innovators are Born Here!" className="text-center md:!leading-[160%]" />
       <div className="w-full md:my-10 my-5">
         <Image
@@ -19,7 +19,7 @@ const FutureInnovators = () => {
       <div className="flex max-[892px]:flex-wrap justify-between gap-5">
         <Title text="About Pupilo" />
         <div>
-          <p className="text-[#4E4E4E] min-[892px]:max-w-[566px] max-lg:w-full lg:text-base text-sm leading-[150%] font-normal mb-4">
+            <p className="text-dark-grey min-[892px]:max-w-[566px] max-lg:w-full lg:text-base text-sm spacing-150 font-normal mb-4">
             Pupilo is a visionary online learning platform where children and
             teens aged 7 to 18 learn computer programming and coding in a way
             that is engaging, fun, and future-focused. Beyond simply learning
@@ -27,7 +27,7 @@ const FutureInnovators = () => {
             critical thinking, communication, problem-solving, creativity, and
             curiosity.
           </p>
-          <p className="text-[#4E4E4E] min-[892px]:max-w-[566px] w-full lg:text-base text-sm leading-[150%] font-normal">
+            <p className="text-dark-grey min-[892px]:max-w-[566px] w-full lg:text-base text-sm spacing-150 font-normal">
             At the heart of Pupilo is a scalable and socially impactful
             after-school program that equips learners with essential digital and
             computational thinking and life skills—while solving the urgent

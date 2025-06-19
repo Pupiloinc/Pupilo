@@ -1,9 +1,9 @@
 export const NAV_DATA_LIST = [
-  { title: "Home", link: "/" },
-  { title: "Courses", link: "#" },
-  { title: "Why Pupilo?", link: "#" },
-  { title: "Learn with Pupilo", link: "#" },
-  { title: "Blog", link: "#" },
+    { title: "Home", link: "/" },
+    { title: "Courses", link: "/courses" },
+    { title: "Why Pupilo?", link: "/why-pupilo" },
+    { title: "Learn with Pupilo", link: "/learn-pupilo" },
+    { title: "Blog", link: "/blog" },
 ];
 
 export const BRAND_LOGO_DATA_LIST = [
@@ -367,9 +367,41 @@ export const FORMATS = [
 ];
 
 export const TOP_RATED_LIST = [
-  "/assets/images/webp/top-rated-1.webp",
-  "/assets/images/webp/top-rated-2.webp",
-  "/assets/images/webp/top-rated-3.webp",
-  "/assets/images/webp/top-rated-4.webp",
-  "/assets/images/webp/top-rated-5.webp",
+    "/assets/images/webp/top-rated-1.webp",
+    "/assets/images/webp/top-rated-2.webp",
+    "/assets/images/webp/top-rated-3.webp",
+    "/assets/images/webp/top-rated-4.webp",
+    "/assets/images/webp/top-rated-5.webp",
+]
+export const LEARN_OUR_LIST = [
+  {
+    title: "Whole-Child Learning",
+    description:
+      "We go beyond teaching syntax and commands. Pupilo nurtures cognitive development and life skills that shape confident, adaptable learners.",
+    icon: "/assets/images/svg/child-learning.svg",
+  },
+  {
+    title: "Future-Ready Pathways",
+    description:
+      "Our courses span from Scratch and Python to AI, Data Science, Robotics, and App Development—preparing learners not just for jobs, but for entrepreneurship, leadership, and innovation.",
+    icon: "/assets/images/svg/future-ready.svg",
+  },
+  {
+    title: "Solving the CS Teacher Gap",
+    description:
+      "Pupilo’s hybrid learning model leverages AI tutors, pre-recorded expert sessions, and trained digital coaches—bridging the shortage of computer science educators while maintaining quality and consistency.",
+    icon: "/assets/images/svg/teacher-gap.svg",
+  },
+  {
+    title: "Fun, Culturally-Relevant Learning",
+    description:
+      "Our storytelling-driven, gamified lessons and localized project themes foster deeper engagement and cultural pride, making learning stick.",
+    icon: "/assets/images/svg/fun.svg",
+  },
+  {
+    title: "Mission-Driven for Africa",
+    description:
+      "Pupilo envisions an Africa where every child has the opportunity to thrive in a tech-enabled world—not just by consuming technology, but by creating it.",
+    icon: "/assets/images/svg/mission-driven.svg",
+  },
 ];
