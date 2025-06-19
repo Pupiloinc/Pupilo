@@ -40,8 +40,9 @@ body {
   --text-custom-5xl: 40px;
   --text-custom-6xl: 64px;
 
+
   /* Color */
-  --color-dark-grey: #4e4e4e;
+  --color-dark-grey: #4E4E4E;
   --color-dark-black: #010101;
   --color-purple: #8c52ff;
   --color-light: #8c52ff;
@@ -50,18 +51,28 @@ body {
   --color-blue: #0d5fce;
   --color-light-yellow: #f7da00;
   --color-dune: #343434;
-  --color-light-purple: #e8dcff;
+  --color-light-purple: #E8DCFF;
   --color-dolphin: #5d6180;
+  --color-light-purple: #8C52FF14;
+  --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
   /* Line Height  */
 
   --spacing-100: 100%;
   --spacing-120: 120%;
   --spacing-150: 150%;
+
+  --shadow-light-dark: 0px 0px 32px 0px #0000000F;
+  --shadow-card-hover: 0px 0px 32px 0px #8c52ff1f;
 }
 
-.custom-cards-shadow {
-  box-shadow: 0px 0px 32px 0px #0000000f;
+@media (min-width:768px) {
+  .bg-our-coding {
+    background-image: var(--background-our-coding);
+  }
 }
-.custom-cards-shadow:hover {
-  box-shadow: 0px 0px 32px 0px #8c52ff1f;
+.learn-bg {
+  background-image: url("/assets/images/webp/learn-bg.webp");
+}
+.bg-full {
+  background-size: 100% 100%;
 }

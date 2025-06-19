@@ -1,44 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-const formats = [
-  {
-    id: 1,
-    image: "/assets/images/webp/private-lessons.webp",
-    tag: "Fully flexible schedule",
-    tagColor: "bg-pink-100 text-pink-700",
-    title: "1-on-1 Private Lessons",
-    desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
-    cta: "Try a Free Lesson",
-  },
-  {
-    id: 2,
-    image: "/assets/images/webp/group-lessons.webp",
-    tag: "Group dynamics & teamwork",
-    tagColor: "bg-blue-100 text-blue-700",
-    title: "Online Live Group Lessons",
-    desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
-    cta: "Try a Free Lesson",
-  },
-  {
-    id: 3,
-    image: "/assets/images/webp/self-paced-course.webp",
-    tag: "Pre-recorded lessons",
-    tagColor: "bg-yellow/10 border border-yellow/20 text-yellow/80",
-    title: "Self-Paced Courses",
-    desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
-    cta: "Try a Free Lesson",
-  },
-  {
-    id: 4,
-    image: "/assets/images/webp/virtual-coding-camps.webp",
-    tag: "Game Jam",
-    tagColor: "bg-purple-100 text-purple-700",
-    title: "Virtual Coding Camps",
-    desc: "Exciting week-themed programs packed with creativity, problem-solving, and teamwork.",
-    cta: "Try a Free Lesson",
-  },
-];
+import { FORMATS } from "../../../utils/helper";
 
 const PupiloDelivers = () => {
   return (
@@ -72,7 +34,7 @@ const PupiloDelivers = () => {
         </h2>
 
         <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 mx-auto max-w-[400px] sm:max-w-[800px] relative z-10">
-          {formats.map((card) => (
+          {FORMATS.map((card) => (
             <div
               key={card.id}
               className="bg-white rounded-2xl sm:rounded-3xl shadow-md p-4 md:p-6 flex flex-col hover:shadow-2xl transition-all ease-in-out duration-500"

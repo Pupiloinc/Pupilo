@@ -2,37 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Icons from "./Icons";
-
-export const FOOTER_DATA_LIST = [
-  {
-    title: "About Us",
-    links: [
-      { label: "Home", url: "/" },
-      { label: "Courses", url: "/courses" },
-      { label: "How It Works", url: "/how-it-works" },
-      { label: "Why Pupilo?", url: "/why-pupilo" },
-      { label: "Instructors", url: "/instructors" },
-      { label: "Blog", url: "/blog" },
-    ],
-  },
-  {
-    title: "Our Courses",
-    links: [
-      { label: "Coding Fundamentals", url: "#" },
-      { label: "Game Development", url: "#" },
-      { label: "Programming with Python", url: "#" },
-      { label: "App & Web Development ", url: "#" },
-    ],
-  },
-  {
-    title: "Legal Links",
-    links: [
-      { label: "Terms and Conditions", url: "#" },
-      { label: "Privacy Policy", url: "#" },
-      { label: "Cookie Policy", url: "#" },
-    ],
-  },
-];
+import { FOOTER_DATA_LIST } from "../../../utils/helper";
 
 const Footer = () => {
   return (
@@ -85,10 +55,10 @@ const Footer = () => {
                 </h4>
                 <ul className="sm:space-y-2 space-y-1">
                   {obj.links.map((object, index) => (
-                    <li key={index} className="mb-3">
+                    <li key={index} className="mb-3 group">
                       <Link
                         href={object.url}
-                        className="text-black/80 sm:text-base text-sm font-normal hover:text-custom-pink after:transition-all ease-linear duration-300 relative after:absolute after:w-0 after:h-[1px] after:bg-custom-pink after:left-0 after:bottom-0 hover:after:w-full"
+                        className="text-black/80 sm:text-base text-sm font-normal hover:text-purple transition-all duration-300 ease-in-out"
                       >
                         {object.label}
                       </Link>
@@ -101,11 +71,39 @@ const Footer = () => {
                     <h4 className="font-bold text-lg text-dark-black mb-2">
                       Follow Us
                     </h4>
-                    <div className="flex gap-2 cursor-pointer">
-                      <Icons icon="instagramIcon" />
-                      <Icons icon="facebookIcon" />
-                      <Icons icon="linkedinIcon" />
-                      <Icons icon="twitterIcon" />
+                    <div className="flex gap-2">
+                      <a
+                        href="https://www.instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
+                        <Icons icon="instagramIcon" />
+                      </a>
+                      <a
+                        href="https://www.facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
+                        <Icons icon="facebookIcon" />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
+                        <Icons icon="linkedinIcon" />
+                      </a>
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
+                        <Icons icon="twitterIcon" />
+                      </a>
                     </div>
                   </div>
                 )}

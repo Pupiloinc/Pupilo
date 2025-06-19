@@ -79,6 +79,7 @@ export const PUPILO_CURRICULUM_LIST = [
     learnMoreLink: "#learn-more",
   },
 ];
+
 export const TECH_JOURNEY_CARDS_LIST = [
   {
     grade: "Grades 2-3",
@@ -232,4 +233,143 @@ export const ADD_ON_COURSES_LIST = [
     rightPosition: 92,
     learnMoreLink: "#learn-more",
   },
+];
+
+export const LEARNING_PLATFORM_LOGO_DATA_LIST = [
+  "assets/images/svg/gitkeep.svg",
+  "assets/images/svg/css.svg",
+  "assets/images/svg/html.svg",
+  "assets/images/svg/js.svg",
+  "assets/images/svg/bitbucket.svg",
+];
+
+export const CODING_INSTRUCTORS_DATA_LIST = [
+  "/assets/images/webp/coding-one.webp",
+  "/assets/images/webp/coding-two.webp",
+  "/assets/images/webp/coding-three.webp",
+  "/assets/images/webp/coding-four.webp",
+  "/assets/images/webp/coding-five.webp",
+  "/assets/images/webp/coding-six.webp",
+  "/assets/images/webp/coding-seven.webp",
+  "/assets/images/webp/coding-eight.webp",
+  "/assets/images/webp/coding-nine.webp",
+  "/assets/images/webp/coding-ten.webp",
+  "/assets/images/webp/coding-eleven.webp",
+];
+
+export const FOOTER_DATA_LIST = [
+  {
+    title: "About Us",
+    links: [
+      { label: "Home", url: "/" },
+      { label: "Courses", url: "/courses" },
+      { label: "How It Works", url: "/how-it-works" },
+      { label: "Why Pupilo?", url: "/why-pupilo" },
+      { label: "Instructors", url: "/instructors" },
+      { label: "Blog", url: "/blog" },
+    ],
+  },
+  {
+    title: "Our Courses",
+    links: [
+      { label: "Coding Fundamentals", url: "#" },
+      { label: "Game Development", url: "#" },
+      { label: "Programming with Python", url: "#" },
+      { label: "App & Web Development ", url: "#" },
+    ],
+  },
+  {
+    title: "Legal Links",
+    links: [
+      { label: "Terms and Conditions", url: "#" },
+      { label: "Privacy Policy", url: "#" },
+      { label: "Cookie Policy", url: "#" },
+    ],
+  },
+];
+
+export const REVIEWS_DATA = [
+  {
+    id: 1,
+    name: "Kayla Steyn",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+    cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+  {
+    id: 2,
+    name: "Nairah Moeketsi",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
+    cardImg: "/assets/images/webp/naledi-moeketsi.webp",
+  },
+  {
+    id: 3,
+    name: "Johan Botha",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
+    cardImg: "/assets/images/webp/johan-botha.webp",
+  },
+  {
+    id: 4,
+    name: "Kayla Steyn",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+    cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+];
+
+export const FORMATS = [
+  {
+    id: 1,
+    image: "/assets/images/webp/private-lessons.webp",
+    tag: "Fully flexible schedule",
+    tagColor: "bg-pink-100 text-pink-700",
+    title: "1-on-1 Private Lessons",
+    desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 2,
+    image: "/assets/images/webp/group-lessons.webp",
+    tag: "Group dynamics & teamwork",
+    tagColor: "bg-blue-100 text-blue-700",
+    title: "Online Live Group Lessons",
+    desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 3,
+    image: "/assets/images/webp/self-paced-course.webp",
+    tag: "Pre-recorded lessons",
+    tagColor: "bg-yellow/10 border border-yellow/20 text-yellow/80",
+    title: "Self-Paced Courses",
+    desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 4,
+    image: "/assets/images/webp/virtual-coding-camps.webp",
+    tag: "Game Jam",
+    tagColor: "bg-purple-100 text-purple-700",
+    title: "Virtual Coding Camps",
+    desc: "Exciting week-themed programs packed with creativity, problem-solving, and teamwork.",
+    cta: "Try a Free Lesson",
+  },
+];
+
+export const TOP_RATED_LIST = [
+  "/assets/images/webp/top-rated-1.webp",
+  "/assets/images/webp/top-rated-2.webp",
+  "/assets/images/webp/top-rated-3.webp",
+  "/assets/images/webp/top-rated-4.webp",
+  "/assets/images/webp/top-rated-5.webp",
 ];
