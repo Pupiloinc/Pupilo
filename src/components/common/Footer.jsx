@@ -88,7 +88,7 @@ const Footer = () => {
                     <li key={index} className="mb-3 group">
                       <Link
                         href={object.url}
-                        className="text-black/80 sm:text-base text-sm font-normal hover:text-custom-pink transition-all duration-300 ease-in-out relative after:absolute after:w-0 after:h-[1px] after:bg-custom-pink after:left-0 after:bottom-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out group-hover:translate-x-1"
+                        className="text-black/80 sm:text-base text-sm font-normal hover:text-purple transition-all duration-300 ease-in-out"
                       >
                         {object.label}
                       </Link>
@@ -102,18 +102,38 @@ const Footer = () => {
                       Follow Us
                     </h4>
                     <div className="flex gap-2">
-                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                      <a
+                        href="https://www.instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
                         <Icons icon="instagramIcon" />
-                      </div>
-                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                      </a>
+                      <a
+                        href="https://www.facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
                         <Icons icon="facebookIcon" />
-                      </div>
-                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                      </a>
+                      <a
+                        href="https://www.linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
                         <Icons icon="linkedinIcon" />
-                      </div>
-                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                      </a>
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
                         <Icons icon="twitterIcon" />
-                      </div>
+                      </a>
                     </div>
                   </div>
                 )}
