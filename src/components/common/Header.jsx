@@ -42,7 +42,7 @@ const Header = () => {
                             </Link>
                         ))}
                     </ul>
-                    <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:opacity-50 max-lg:hidden flex items-center font-semibold text-base leading-100 text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
+                    <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-100 text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
                     <div className="lg:hidden z-50 cursor-pointer">
                         <button
                             onClick={toggleMenu}
@@ -76,7 +76,7 @@ const Header = () => {
                                 {item.title}
                             </Link>
                         ))}
-                        <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:opacity-50 flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
+                        <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
                     </div>
                 </div>
             </div>
