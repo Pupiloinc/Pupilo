@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "./Title";
+import Image from "next/image";
 
 const Reviews = () => {
   const reviewsData = [
@@ -9,7 +10,7 @@ const Reviews = () => {
       rating: 5,
       review:
         "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      avatar: "👩‍🦰",
+      cardImg: "/assets/images/svg/kayla-steyn.svg",
     },
     {
       id: 2,
@@ -17,7 +18,7 @@ const Reviews = () => {
       rating: 5,
       review:
         "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
-      avatar: "/assets/images/png/coding-fundamental.png",
+      cardImg: "/assets/images/svg/kayla-steyn.svg",
     },
     {
       id: 3,
@@ -25,7 +26,7 @@ const Reviews = () => {
       rating: 5,
       review:
         "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
-      avatar: "👨",
+      cardImg: "/assets/images/svg/kayla-steyn.svg",
     },
   ];
 
@@ -44,18 +45,24 @@ const Reviews = () => {
               key={review.id}
               className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 custom-cards-shadow transition-all duration-500 flex-1 max-w-sm mx-auto md:mx-0"
             >
-              <div className="flex">{(review.rating)}</div>
+              <div className="flex">{review.rating}</div>
 
               <p className="max-w-[304px] text-base text-black/70 my-4">
                 {review.review}
               </p>
 
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xl mr-3">
-                  {review.avatar}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xl">
+                  <Image
+                    src={review.cardImg}
+                    alt={review.reviewImage}
+                    className="w-full h-full object-cover rounded-full"
+                    width={40}
+                    height={40}
+                  />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">
+                  <h4 className=" text-black text-xl">
                     {review.name}
                   </h4>
                 </div>
