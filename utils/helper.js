@@ -262,3 +262,11 @@ export const FORMATS = [
     cta: "Try a Free Lesson",
   },
 ];
+
+export const TOP_RATED_LIST = [
+    "/assets/images/webp/top-rated-1.webp",
+    "/assets/images/webp/top-rated-2.webp",
+    "/assets/images/webp/top-rated-3.webp",
+    "/assets/images/webp/top-rated-4.webp",
+    "/assets/images/webp/top-rated-5.webp",
+]
