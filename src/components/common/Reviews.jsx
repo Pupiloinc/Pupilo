@@ -13,7 +13,7 @@ const Reviews = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
-    <div className="bg-white">
+    <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
         <Title
           text={"Hear What Families Say About Pupilo"}
