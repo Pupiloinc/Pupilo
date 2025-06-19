@@ -8,8 +8,8 @@ import Header from "./common/Header";
 const Hero = () => {
   return <div className="bg-[url(/assets/images/webp/bg-hero.webp)] bg-cover bg-no-repeat bg-center relative">
     <Header />
-    <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto">
-      <div className="flex justify-between mt-[60px] pb-[60px] md:pb-[100px] lg:pb-[120px] max-lg:flex-col max-lg:items-center">
+    <div className="container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto">
+      <div className="flex justify-between mt-[40px] pb-[40px] md:pb-[100px] lg:pb-[120px] max-lg:flex-col max-lg:items-center">
         <div className="w-full lg:w-1/2 lg:mt-6">
           <div className="max-lg:mx-auto py-2 lg:py-[11.2px] border border-purple/15 px-4 lg:px-5 rounded-full bg-purple/10 w-fit lg:max-w-[239px] lg:w-full font-semibold text-sm md:text-base leading-100 text-nowrap text-purple">🏆Top-Rated by Parents</div>
           <h2 className="max-lg:text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black mt-4 relative z-10 lg:max-w-[502px]">Where Every Child can <span className="text-purple block">
