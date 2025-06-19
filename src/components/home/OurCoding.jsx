@@ -6,7 +6,7 @@ import { CODING_INSTRUCTORS_DATA_LIST } from '../../../utils/helper'
 
 const OurCoding = () => {
   return (
-    <div className='max-md:bg-light-purple sm:pt-20 pt-[60px] xl:pb-[357px] sm:pb-20 pb-10 relative bg-our-coding bg-full max-lg:!bg-cover'>
+    <div className='max-md:bg-fade-purple sm:pt-20 pt-[60px] xl:pb-[357px] sm:pb-20 pb-10 relative bg-our-coding bg-full max-lg:!bg-cover'>
       <div className='container max-w-[1140px] xl:px-0 px-6 mx-auto '>
         <Title
           text="Our Coding Instructors"
