@@ -8,8 +8,6 @@ import BrandMarquee from "@/components/home/BrandMarquee";
 import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import WhyPupilo from "@/components/home/WhyPupilo";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
-import OurCoding from "@/components/home/OurCoding";
-import AddOnCourses from "@/components/home/AddOnCourses";
 import BackToTop from "@/components/common/BackToTop";
 
 export default function Home() {
@@ -18,10 +16,7 @@ export default function Home() {
       <Hero />
       <BrandMarquee />
       <PupiloCurriculum />
-      <AddOnCourses />
       <PupiloDelivers />
-      <WhyPupilo />
-      <OurCoding />
       <Reviews />
       <WhyPupilo />
       <GetStarted />
