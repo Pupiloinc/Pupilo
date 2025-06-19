@@ -1,7 +1,5 @@
 import Footer from "@/components/common/Footer";
 import GetStarted from "@/components/common/GetStarted";
-import Header from "@/components/common/Header";
-import PupiloCard from "@/components/common/PupiloCard";
 import Reviews from "@/components/common/Reviews";
 import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/home/BrandMarquee";
@@ -9,6 +7,7 @@ import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import WhyPupilo from "@/components/home/WhyPupilo";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
 import BackToTop from "@/components/common/BackToTop";
+import OurCoding from "@/components/home/OurCoding";
 
 export default function Home() {
   return (
@@ -17,8 +16,9 @@ export default function Home() {
       <BrandMarquee />
       <PupiloCurriculum />
       <PupiloDelivers />
-      <Reviews />
       <WhyPupilo />
+      <OurCoding/>
+      <Reviews />
       <GetStarted />
       <Footer />
       <BackToTop />
