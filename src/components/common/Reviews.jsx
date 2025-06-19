@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import Title from "./Title";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
 
 const Reviews = () => {
