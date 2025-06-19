@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const PupiloCurriculum = () => {
   return (
-    <div className="bg-light-purple sm:py-20 py-[60px] relative">
+    <div className="bg-fade-purple sm:py-20 py-[60px] relative">
       <Image width={454} height={152} src="/assets/images/svg/instructors-top-ellipse.svg" className='absolute top-0 right-[19%] md:block hidden pointer-events-none' alt='top-ellipse' />
-      <Image width={317} height={165} src="/assets/images/svg/instructors-bottom-ellipse.svg" className='absolute bottom-0 right-[0%] lg:block hidden pointer-events-none' alt='top-ellipse' />
-      <Image width={165} height={454} src="/assets/images/svg/instructors-left-ellipse.svg" className='absolute bottom-[0%] left-[0%] sm:block hidden pointer-events-none' alt='top-ellipse' />
+      <Image width={317} height={165} src="/assets/images/svg/instructors-bottom-ellipse.svg" className='absolute bottom-0 right-[0%] lg:block hidden pointer-events-none' alt='bottom-ellipse' />
+      <Image width={165} height={454} src="/assets/images/svg/instructors-left-ellipse.svg" className='absolute bottom-[0%] left-[0%] sm:block hidden pointer-events-none' alt='left-ellipse' />
       <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto">
         <Title
           text="Pupilo’s Curriculum"
