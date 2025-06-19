@@ -9,6 +9,10 @@ const Reviews = () => {
           text={"Hear What Families Say About Pupilo"}
           className={"max-w-[1140px] mx-auto  text-center pb-10"}
         />
+
+        <div className="flex">
+          
+        </div>
       </div>
     </div>
   );
