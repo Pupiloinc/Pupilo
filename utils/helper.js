@@ -151,5 +151,74 @@ export const CODING_INSTRUCTORS_DATA_LIST = [
     "/assets/images/webp/coding-nine.webp",
     "/assets/images/webp/coding-ten.webp",
     "/assets/images/webp/coding-eleven.webp",
-
 ]
+
+export const FOOTER_DATA_LIST = [
+  {
+    title: "About Us",
+    links: [
+      { label: "Home", url: "#" },
+      { label: "Courses", url: "#" },
+      { label: "How It Works", url: "#" },
+      { label: "Why Pupilo?", url: "#" },
+      { label: "Instructors", url: "#" },
+      { label: "Blog", url: "#" },
+    ],
+  },
+  {
+    title: "Our Courses",
+    links: [
+      { label: "Coding Fundamentals", url: "#" },
+      { label: "Game Development", url: "#" },
+      { label: "Programming with Python", url: "#" },
+      { label: "App & Web Development ", url: "#" },
+    ],
+  },
+  {
+    title: "Legal Links",
+    links: [
+      { label: "Terms and Conditions", url: "#" },
+      { label: "Privacy Policy", url: "#" },
+      { label: "Cookie Policy", url: "#" },
+    ],
+  },
+];
+
+const reviewsData = [
+  {
+    id: 1,
+    name: "Kayla Steyn",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+    cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+  {
+    id: 2,
+    name: "Nairah Moeketsi",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
+    cardImg: "/assets/images/webp/naledi-moeketsi.webp",
+  },
+  {
+    id: 3,
+    name: "Johan Botha",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
+    cardImg: "/assets/images/webp/johan-botha.webp",
+  },
+  {
+    id: 4,
+    name: "Kayla Steyn",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+    cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+];

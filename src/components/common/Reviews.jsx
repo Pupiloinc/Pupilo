@@ -6,46 +6,9 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
+import { }
 
 const Reviews = () => {
-  const reviewsData = [
-    {
-      id: 1,
-      name: "Kayla Steyn",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      cardImg: "/assets/images/webp/kayla-steyn.webp",
-    },
-    {
-      id: 2,
-      name: "Nairah Moeketsi",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
-      cardImg: "/assets/images/webp/naledi-moeketsi.webp",
-    },
-    {
-      id: 3,
-      name: "Johan Botha",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
-      cardImg: "/assets/images/webp/johan-botha.webp",
-    },
-    {
-      id: 4,
-      name: "Kayla Steyn",
-      starImg: "/assets/images/svg/star-icon.svg",
-      rating: 5,
-      review:
-        "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      cardImg: "/assets/images/webp/kayla-steyn.webp",
-    },
-  ];
 
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">

@@ -2,37 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Icons from "./Icons";
-
-export const FOOTER_DATA_LIST = [
-  {
-    title: "About Us",
-    links: [
-      { label: "Home", url: "#" },
-      { label: "Courses", url: "#" },
-      { label: "How It Works", url: "#" },
-      { label: "Why Pupilo?", url: "#" },
-      { label: "Instructors", url: "#" },
-      { label: "Blog", url: "#" },
-    ],
-  },
-  {
-    title: "Our Courses",
-    links: [
-      { label: "Coding Fundamentals", url: "#" },
-      { label: "Game Development", url: "#" },
-      { label: "Programming with Python", url: "#" },
-      { label: "App & Web Development ", url: "#" },
-    ],
-  },
-  {
-    title: "Legal Links",
-    links: [
-      { label: "Terms and Conditions", url: "#" },
-      { label: "Privacy Policy", url: "#" },
-      { label: "Cookie Policy", url: "#" },
-    ],
-  },
-];
+import { FOOTER_DATA_LIST } from "../../../utils/helper";
 
 const Footer = () => {
   return (
