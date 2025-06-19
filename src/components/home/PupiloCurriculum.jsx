@@ -13,7 +13,7 @@ const PupiloCurriculum = () => {
               text={
                 "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."
               }
-              className={"max-w-[1140px] mx-auto  text-center pb-4"}
+              className={"max-w-[1140px] mx-auto text-center pb-4"}
             />
             <p className="font-semibold text-2xl max-lg:text-xl text-center max-md:text-lg leading-120 text-dark-grey">
               Choose Your Learning Path
@@ -24,6 +24,8 @@ const PupiloCurriculum = () => {
               <PupiloCard
                 key={index}
                 title={item.title}
+                headingClass={`max-w-[510px] max-lg:mx-auto`}
+                descriptionClass={`max-w-[523px] max-lg:mx-auto`}
                 cardTheme={`bg-${item.cardTheme}`}
                 description={item.description}
                 imageClass={'max-lg:translate-y-7 max-md:translate-y-6 max-sm:translate-y-4 bottom-0'}
