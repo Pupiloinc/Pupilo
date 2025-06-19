@@ -46,7 +46,7 @@ const WhyPupilo = () => {
                         <div className="relative">
                             <div className="w-[370px] h-[100px] bg-[linear-gradient(180deg,_#FFFFFF00_0%,_#FFFFFF_100%)] absolute top-0 left-0 z-10"></div>
                             <div className="w-[370px] h-[100px] bg-[linear-gradient(180deg,_#FFFFFF00_0%,_#FFFFFF_100%)] absolute bottom-0 left-0 z-10"></div>
-                            <div className="flex flex-col gap-[12px] absolute rotate-[15deg] right-[25%]">
+                            <div className="flex flex-col gap-[12px] absolute rotate-[15deg] right-[30%]">
                                 {LEARNING_PLATFORM_LOGO_DATA_LIST.map((obj, i) => (
                                     <div key={i} className="min-w-[66px] h-[66px] flex justify-center items-center bg-white rounded-lg border border-black/10 shadow-light-dark">
                                         <Image

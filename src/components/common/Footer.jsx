@@ -85,10 +85,10 @@ const Footer = () => {
                 </h4>
                 <ul className="sm:space-y-2 space-y-1">
                   {obj.links.map((object, index) => (
-                    <li key={index} className="mb-3">
+                    <li key={index} className="mb-3 group">
                       <Link
                         href={object.url}
-                        className="text-black/80 sm:text-base text-sm font-normal hover:text-custom-pink after:transition-all ease-linear duration-300 relative after:absolute after:w-0 after:h-[1px] after:bg-custom-pink after:left-0 after:bottom-0 hover:after:w-full"
+                        className="text-black/80 sm:text-base text-sm font-normal hover:text-custom-pink transition-all duration-300 ease-in-out relative after:absolute after:w-0 after:h-[1px] after:bg-custom-pink after:left-0 after:bottom-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out group-hover:translate-x-1"
                       >
                         {object.label}
                       </Link>
@@ -101,11 +101,19 @@ const Footer = () => {
                     <h4 className="font-bold text-lg text-dark-black mb-2">
                       Follow Us
                     </h4>
-                    <div className="flex gap-2 cursor-pointer">
-                      <Icons icon="instagramIcon" />
-                      <Icons icon="facebookIcon" />
-                      <Icons icon="linkedinIcon" />
-                      <Icons icon="twitterIcon" />
+                    <div className="flex gap-2">
+                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                        <Icons icon="instagramIcon" />
+                      </div>
+                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                        <Icons icon="facebookIcon" />
+                      </div>
+                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                        <Icons icon="linkedinIcon" />
+                      </div>
+                      <div className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80">
+                        <Icons icon="twitterIcon" />
+                      </div>
                     </div>
                   </div>
                 )}
