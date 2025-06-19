@@ -1,46 +1,51 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Title from "./Title";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Reviews = () => {
   const reviewsData = [
     {
       id: 1,
       name: "Kayla Steyn",
+      starImg: "/assets/images/svg/star-icon.svg",
       rating: 5,
       review:
         "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
-      avatar: "👩‍🦰", 
+      cardImg: "/assets/images/webp/kayla-steyn.webp",
     },
     {
       id: 2,
       name: "Nairah Moeketsi",
+      starImg: "/assets/images/svg/star-icon.svg",
       rating: 5,
       review:
         "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
-      avatar: "👩🏾",
+      cardImg: "/assets/images/webp/naledi-moeketsi.webp",
     },
     {
       id: 3,
       name: "Johan Botha",
+      starImg: "/assets/images/svg/star-icon.svg",
       rating: 5,
       review:
         "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
-      avatar: "👨",
+      cardImg: "/assets/images/webp/johan-botha.webp",
+    },
+    {
+      id: 4,
+      name: "Kayla Steyn",
+      starImg: "/assets/images/svg/star-icon.svg",
+      rating: 5,
+      review:
+        "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+      cardImg: "/assets/images/webp/kayla-steyn.webp",
     },
   ];
-
-  const renderStars = (rating) => {
-    return [...Array(5)].map((_, index) => (
-      <span
-        key={index}
-        className={`text-lg ${
-          index < rating ? "text-yellow-400" : "text-gray-300"
-        }`}
-      >
-        ⭐
-      </span>
-    ));
-  };
 
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
@@ -50,32 +55,105 @@ const Reviews = () => {
           className={"max-w-[1140px] mx-auto text-center pb-10"}
         />
 
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
-          {reviewsData.map((review) => (
-            <div
-              key={review.id}
-              className="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex-1 max-w-sm mx-auto md:mx-0"
-            >
-              <div className="flex">{renderStars(review.rating)}</div>
+        <div className="relative">
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              bulletClass: "swiper-pagination-bullet review-bullet",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active review-bullet-active",
+            }}
+            modules={[Autoplay, Pagination]}
+            className="reviewsSlider pb-12"
+          >
+            {reviewsData.map((review) => (
+              <SwiperSlide key={review.id} className="!flex justify-center">
+                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 custom-cards-shadow transition-all duration-500">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, index) => (
+                      <Image
+                        key={index}
+                        src={review.starImg}
+                        alt="star"
+                        className=""
+                        width={17}
+                        height={16}
+                      />
+                    ))}
+                  </div>
 
-              <p className="max-w-[304px] text-base text-black/70 my-4">
-                {review.review}
-              </p>
+                  <p className="max-w-[304px] text-base text-black/70 my-4">
+                    {review.review}
+                  </p>
 
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xl mr-3">
-                  {review.avatar}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-xl">
+                      <Image
+                        src={review.cardImg}
+                        alt={review.name}
+                        className="w-full h-full object-cover rounded-full"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-black text-xl">{review.name}</h4>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">
-                    {review.name}
-                  </h4>
-                </div>
-              </div>
-            </div>
-          ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
+
+      <style jsx>{`
+        .reviewsSlider .review-bullet {
+          width: 8px;
+          height: 8px;
+          background-color: #d1d5db;
+          border-radius: 50%;
+          margin: 0 4px;
+          transition: all 0.3s ease;
+        }
+
+        .reviewsSlider .review-bullet-active {
+          background-color: #8b5cf6; /* purple color */
+          transform: scale(1.2);
+        }
+
+        .reviewsSlider .swiper-pagination {
+          bottom: 0;
+          position: relative;
+          margin-top: 2rem;
+        }
+      `}</style>
     </div>
   );
 };
