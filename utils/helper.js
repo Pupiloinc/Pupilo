@@ -139,6 +139,7 @@ export const LEARNING_PLATFORM_LOGO_DATA_LIST = [
     "assets/images/svg/js.svg",
     "assets/images/svg/bitbucket.svg",
 ]
+
 export const CODING_INSTRUCTORS_DATA_LIST = [
     "/assets/images/webp/coding-one.webp",
     "/assets/images/webp/coding-two.webp",
@@ -151,5 +152,153 @@ export const CODING_INSTRUCTORS_DATA_LIST = [
     "/assets/images/webp/coding-nine.webp",
     "/assets/images/webp/coding-ten.webp",
     "/assets/images/webp/coding-eleven.webp",
-
 ]
+
+export const FOOTER_DATA_LIST = [
+  {
+    title: "About Us",
+    links: [
+      { label: "Home", url: "#" },
+      { label: "Courses", url: "#" },
+      { label: "How It Works", url: "#" },
+      { label: "Why Pupilo?", url: "#" },
+      { label: "Instructors", url: "#" },
+      { label: "Blog", url: "#" },
+    ],
+  },
+  {
+    title: "Our Courses",
+    links: [
+      { label: "Coding Fundamentals", url: "#" },
+      { label: "Game Development", url: "#" },
+      { label: "Programming with Python", url: "#" },
+      { label: "App & Web Development ", url: "#" },
+    ],
+  },
+  {
+    title: "Legal Links",
+    links: [
+      { label: "Terms and Conditions", url: "#" },
+      { label: "Privacy Policy", url: "#" },
+      { label: "Cookie Policy", url: "#" },
+    ],
+  },
+];
+
+export const REVIEWS_DATA = [
+  {
+    id: 1,
+    name: "Kayla Steyn",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+    cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+  {
+    id: 2,
+    name: "Nairah Moeketsi",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "I never thought my son would enjoy math, but through Pupilo's game design classes, he's now loving coding and math at the same time.",
+    cardImg: "/assets/images/webp/naledi-moeketsi.webp",
+  },
+  {
+    id: 3,
+    name: "Johan Botha",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "The coding sessions are fantastic! My daughter used to shy away from technology - now she's proudly building animations in Scratch.",
+    cardImg: "/assets/images/webp/johan-botha.webp",
+  },
+  {
+    id: 4,
+    name: "Kayla Steyn",
+    starImg: "/assets/images/svg/star-icon.svg",
+    rating: 5,
+    review:
+      "My son shifted from watching cartoons to building interactive stories! Pupilo's gamified design sparks his creativity.",
+    cardImg: "/assets/images/webp/kayla-steyn.webp",
+  },
+];
+
+export const FORMATS = [
+  {
+    id: 1,
+    image: "/assets/images/webp/private-lessons.webp",
+    tag: "Fully flexible schedule",
+    tagColor: "bg-pink-100 text-pink-700",
+    title: "1-on-1 Private Lessons",
+    desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 2,
+    image: "/assets/images/webp/group-lessons.webp",
+    tag: "Group dynamics & teamwork",
+    tagColor: "bg-blue-100 text-blue-700",
+    title: "Online Live Group Lessons",
+    desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 3,
+    image: "/assets/images/webp/self-paced-course.webp",
+    tag: "Pre-recorded lessons",
+    tagColor: "bg-yellow/10 border border-yellow/20 text-yellow/80",
+    title: "Self-Paced Courses",
+    desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
+    cta: "Try a Free Lesson",
+  },
+  {
+    id: 4,
+    image: "/assets/images/webp/virtual-coding-camps.webp",
+    tag: "Game Jam",
+    tagColor: "bg-purple-100 text-purple-700",
+    title: "Virtual Coding Camps",
+    desc: "Exciting week-themed programs packed with creativity, problem-solving, and teamwork.",
+    cta: "Try a Free Lesson",
+  },
+];
+
+export const TOP_RATED_LIST = [
+    "/assets/images/webp/top-rated-1.webp",
+    "/assets/images/webp/top-rated-2.webp",
+    "/assets/images/webp/top-rated-3.webp",
+    "/assets/images/webp/top-rated-4.webp",
+    "/assets/images/webp/top-rated-5.webp",
+]
+export const LEARN_OUR_LIST = [
+  {
+    title: "Whole-Child Learning",
+    description:
+      "We go beyond teaching syntax and commands. Pupilo nurtures cognitive development and life skills that shape confident, adaptable learners.",
+    icon: "/assets/images/svg/child-learning.svg",
+  },
+  {
+    title: "Future-Ready Pathways",
+    description:
+      "Our courses span from Scratch and Python to AI, Data Science, Robotics, and App Development—preparing learners not just for jobs, but for entrepreneurship, leadership, and innovation.",
+    icon: "/assets/images/svg/future-ready.svg",
+  },
+  {
+    title: "Solving the CS Teacher Gap",
+    description:
+      "Pupilo’s hybrid learning model leverages AI tutors, pre-recorded expert sessions, and trained digital coaches—bridging the shortage of computer science educators while maintaining quality and consistency.",
+    icon: "/assets/images/svg/teacher-gap.svg",
+  },
+  {
+    title: "Fun, Culturally-Relevant Learning",
+    description:
+      "Our storytelling-driven, gamified lessons and localized project themes foster deeper engagement and cultural pride, making learning stick.",
+    icon: "/assets/images/svg/fun.svg",
+  },
+  {
+    title: "Mission-Driven for Africa",
+    description:
+      "Pupilo envisions an Africa where every child has the opportunity to thrive in a tech-enabled world—not just by consuming technology, but by creating it.",
+    icon: "/assets/images/svg/mission-driven.svg",
+  },
+];

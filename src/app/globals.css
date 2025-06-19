@@ -52,7 +52,7 @@ body {
   --color-dune: #343434;
   --color-light-purple: #E8DCFF;
   --color-dolphin: #5d6180;
-  --color-light-purple: #8C52FF14;
+  --color-light-purple: #8C52FF33;
   --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
   /* Line Height  */
 
@@ -69,7 +69,9 @@ body {
     background-image: var(--background-our-coding);
   }
 }
-
+.learn-bg {
+  background-image: url("/assets/images/webp/learn-bg.webp");
+}
 .bg-full {
   background-size: 100% 100%;
 }
