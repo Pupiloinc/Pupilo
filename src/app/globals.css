@@ -52,6 +52,8 @@ body {
   --color-dune: #343434;
   --color-light-purple: #E8DCFF;
   --color-dolphin: #5d6180;
+  --color-light-purple: #8C52FF14;
+  --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
   /* Line Height  */
 
   --spacing-100: 100%;
@@ -60,4 +62,14 @@ body {
 
   --shadow-light-dark: 0px 0px 32px 0px #0000000F;
   --shadow-card-hover: 0px 0px 32px 0px #8c52ff1f;
+}
+
+@media (min-width:768px) {
+  .bg-our-coding {
+    background-image: var(--background-our-coding);
+  }
+}
+
+.bg-full {
+  background-size: 100% 100%;
 }
