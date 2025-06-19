@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="border-t py-6 border-solid border-black/10 text-center text-black/80">
+      <p className="border-t py-4 border-solid border-black/10 text-center text-black/80">
         Copyright © 2025 Pupilo. All Rights Reserved.
       </p>
     </div>
