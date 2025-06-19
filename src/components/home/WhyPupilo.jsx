@@ -46,7 +46,7 @@ const WhyPupilo = () => {
                             <div className="w-[370px] h-[100px] max-sm:hidden bg-[linear-gradient(180deg,_#FFFFFF00_0%,_#FFFFFF_100%)] absolute bottom-0 right-0 z-10"></div>
                             <div>
                                 <Image src={'/assets/images/webp/why-pupilo-icon.webp'} width={210} height={476} alt='why-pupilo-icon' className='absolute right-[9%] max-md:right-[1%] max-sm:hidden top-[-42%] rotate-15'/>
-                                <Image width={863} height={208} className='sm:hidden scale-[1.6] max-[400px]:scale-[1.9] max-[400px]:translate-y-[-29px] max-sm:translate-y-[-23px]' src={'/assets/images/webp/why-pupilo-icon-small-scrren-image.webp'}/>
+                                <Image width={863} height={208} className='sm:hidden scale-[1.6] max-[400px]:scale-[1.9] max-[400px]:translate-y-[-29px] max-sm:translate-y-[-23px]' alt='pupilo-sm-icons' src={'/assets/images/webp/why-pupilo-icon-small-scrren-image.webp'}/>
                             </div>
                         </div>
                     </div>

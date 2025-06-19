@@ -7,9 +7,9 @@ import Description from './Description'
 
 const PupiloCard = ({ title, description, buttonText, buttonClass, buttonIconcolor, imageWidth, imageAlt, imageSrc, cardTheme, textColor, rightPosition, learnMoreLink, learnMoreIcon, imageClass, headingClass, descriptionClass , pupiloCardLayer }) => {
     return (
-        <div className='overflow-hidden '>
-            <div className={`p-8 max-lg:p-7 max-md:p-6 max-sm:p-4 relative rounded-3xl max-md:rounded-2xl max-sm:rounded-xl flex max-lg:flex-col max-lg:gap-6 max-md:gap-3 ${cardTheme || 'bg-light-purple'}`}>
-                <div className={`w-full relative z-10`}>
+        <div className='overflow-hidden max-lg:px-10 max-sm:px-5 max-[575px]:px-0'>
+            <div className={`p-8 max-lg:p-7 max-md:p-6 max-sm:p-4 relative rounded-3xl max-md:rounded-2xl max-sm:rounded-xl flex max-lg:flex-col max-lg:gap-6 max-md:gap-3 max-[575px]:max-w-[464px] max-[575px]:mx-auto ${cardTheme || 'bg-light-purple'}`}>
+                <div className={`w-full relative z-20`}>
                     <div className={`flex flex-col gap-6`}>
                         <div className='flex flex-col gap-3'>
                             <h3 className={`text-custom-5xl max-lg:text-4xl max-lg:text-center max-md:text-custom-4xl max-sm:text-3xl leading-120 font-semibold ${headingClass} ${textColor || 'text-white'}`}>{title}</h3>

@@ -18,10 +18,10 @@ const AddOnCourses = () => {
             key={index}
             title={item.title}
             headingClass={`max-w-[692px] max-[1100px]:max-w-[690px] max-lg:mx-auto`}
-            descriptionClass={`max-w-[472px] max-lg:mx-auto`}
+            descriptionClass={`max-w-[472px] max-lg:max-w-[481px] max-lg:mx-auto`}
             cardTheme={`bg-${item.cardTheme}`}
             description={item.description}
-            imageClass={'lg:-translate-y-1/2 top-1/2 max-sm:w-[90%]'}
+            imageClass={'lg:-translate-y-1/2 top-1/2 max-sm:!w-[75%]'}
             buttonText={item.buttonText}
             imageSrc={item.image}
             pupiloCardLayer={index === 1 || index === 3  ? "/assets/images/webp/pupilo-card-layer-light.webp" : "/assets/images/webp/pupilo-card-layer.webp"}
