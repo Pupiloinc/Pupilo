@@ -94,7 +94,7 @@ const Reviews = () => {
           >
             {reviewsData.map((review) => (
               <SwiperSlide key={review.id} className="!flex justify-center">
-                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 custom-cards-shadow transition-all duration-500">
+                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all duration-500">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, index) => (
                       <Image
@@ -132,28 +132,6 @@ const Reviews = () => {
           </Swiper>
         </div>
       </div>
-
-      <style jsx>{`
-        .reviewsSlider .review-bullet {
-          width: 8px;
-          height: 8px;
-          background-color: #d1d5db;
-          border-radius: 50%;
-          margin: 0 4px;
-          transition: all 0.3s ease;
-        }
-
-        .reviewsSlider .review-bullet-active {
-          background-color: #8b5cf6; /* purple color */
-          transform: scale(1.2);
-        }
-
-        .reviewsSlider .swiper-pagination {
-          bottom: 0;
-          position: relative;
-          margin-top: 2rem;
-        }
-      `}</style>
     </div>
   );
 };
