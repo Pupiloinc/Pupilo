@@ -67,11 +67,11 @@ const Reviews = () => {
                 spaceBetween: 20,
               },
               640: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 16,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
               1024: {
@@ -80,7 +80,7 @@ const Reviews = () => {
               },
             }}
             autoplay={{
-              delay: 3000,
+              delay: 1200000,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -94,7 +94,7 @@ const Reviews = () => {
           >
             {reviewsData.map((review) => (
               <SwiperSlide key={review.id} className="!flex justify-center">
-                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all duration-500">
+                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all duration-500 min-h-auto">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, index) => (
                       <Image
@@ -104,7 +104,7 @@ const Reviews = () => {
                         className=""
                         width={17}
                         height={16}
-                      />
+                      />  
                     ))}
                   </div>
 
