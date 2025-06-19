@@ -7,12 +7,12 @@ export const FOOTER_DATA_LIST = [
   {
     title: "About Us",
     links: [
-      { label: "Home", url: "#" },
-      { label: "Courses", url: "#" },
-      { label: "How It Works", url: "#" },
-      { label: "Why Pupilo?", url: "#" },
-      { label: "Instructors", url: "#" },
-      { label: "Blog", url: "#" },
+      { label: "Home", url: "/" },
+      { label: "Courses", url: "/courses" },
+      { label: "How It Works", url: "/how-it-works" },
+      { label: "Why Pupilo?", url: "/why-pupilo" },
+      { label: "Instructors", url: "/instructors" },
+      { label: "Blog", url: "/blog" },
     ],
   },
   {
