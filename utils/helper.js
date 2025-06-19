@@ -184,7 +184,7 @@ export const FOOTER_DATA_LIST = [
   },
 ];
 
-const reviewsData = [
+export const REVIEWS_DATA = [
   {
     id: 1,
     name: "Kayla Steyn",
