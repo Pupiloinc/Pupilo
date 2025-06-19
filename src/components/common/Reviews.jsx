@@ -131,28 +131,6 @@ const Reviews = () => {
           </Swiper>
         </div>
       </div>
-
-      <style jsx>{`
-        .reviewsSlider .review-bullet {
-          width: 8px;
-          height: 8px;
-          background-color: #d1d5db;
-          border-radius: 50%;
-          margin: 0 4px;
-          transition: all 0.3s ease;
-        }
-
-        .reviewsSlider .review-bullet-active {
-          background-color: #8b5cf6; /* purple color */
-          transform: scale(1.2);
-        }
-
-        .reviewsSlider .swiper-pagination {
-          bottom: 0;
-          position: relative;
-          margin-top: 2rem;
-        }
-      `}</style>
     </div>
   );
 };
