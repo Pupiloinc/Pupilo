@@ -78,6 +78,55 @@ export const   PUPILO_CURRICULUM_LIST = [
 
 export const ADD_ON_COURSES_LIST = [
     {
-        
-    }
+        title : "Minecraft 1:1 Coding Course" ,
+        description : "In this exciting course, learners will explore coding fundamentals by modifying (modding) the Minecraft world using block-based coding tools like Microsoft MakeCode and Blockly, and progress to Python for advanced learners.",
+        buttonText :  'Try a Free Lesson',
+        learnMoreLink : '#learn-more',
+        buttonTheme : 'white',
+        cardTheme : 'purple',
+        textColor : 'white',
+        image : '/assets/images/webp/minecraft-coding-course.webp' ,
+        imageWeight : 309 ,
+        rightPosition : 70 ,
+        learnMoreLink : '#learn-more'
+    },
+    {
+        title : "Fun Coding Math" ,
+        description : "This course blends math and logic using Scratch and visual puzzles. Concepts like number patterns, geometry, and measurement come alive through coding mini-projects.",
+        buttonText :  'Try a Free Lesson',
+        learnMoreLink : '#learn-more',
+        buttonTheme : 'dark',
+        cardTheme : 'light-purple',
+        textColor : 'dark-black',
+        image : '/assets/images/webp/fun-coding-math.webp' ,
+        imageWeight : 389 ,
+        rightPosition : 61 ,
+        learnMoreLink : '#learn-more'
+    },
+    {
+        title : "Game Development & Storytelling" ,
+        description : "Learner will build a game where Shaka Zulu Saves a Village using Scratch and Roblox Studio. They will learn events, characters, scoring systems, and storytelling.",
+        buttonText :  'Try a Free Lesson',
+        learnMoreLink : '#learn-more',
+        buttonTheme : 'white',
+        cardTheme : 'purple',
+        textColor : 'white',
+        image : '/assets/images/webp/game-development-and-storytelling.webp' ,
+        imageWeight : 452 ,
+        rightPosition : 40 ,
+        learnMoreLink : '#learn-more'
+    },
+    {
+        title : "Artificial Intelligence" ,
+        description : "Learners start with AI basics: pattern recognition, chatbots, and machine learning concepts using Teachable Machine or block-based AI tools. Advance to ethical AI, image recognition, and Python-based AI in high school.",
+        buttonText :  'Try a Free Lesson',
+        learnMoreLink : '#learn-more',
+        buttonTheme : 'dark',
+        cardTheme : 'yellow',
+        textColor : 'dark-black',
+        image : '/assets/images/webp/artificial-intelligence.webp' ,
+        imageWeight : 289 ,
+        rightPosition : 92 ,
+        learnMoreLink : '#learn-more'
+    },
 ]
