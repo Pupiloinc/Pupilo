@@ -94,7 +94,7 @@ const Reviews = () => {
           >
             {reviewsData.map((review) => (
               <SwiperSlide key={review.id} className="!flex justify-center">
-                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 custom-cards-shadow transition-all duration-500">
+                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all duration-500">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, index) => (
                       <Image
