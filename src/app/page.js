@@ -12,7 +12,7 @@ import AddOnCourses from "@/components/home/AddOnCourses";
 
 export default function Home() {
   return (
-    <>
+    <div className="max-w-[2560px] mx-auto">
       <Hero />
       <BrandMarquee />
       <PupiloCurriculum />
@@ -24,6 +24,6 @@ export default function Home() {
       <GetStarted />
       <Footer />
       <BackToTop />
-    </>
+    </div>
   );
 }
