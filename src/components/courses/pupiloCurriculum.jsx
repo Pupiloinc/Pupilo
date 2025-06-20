@@ -27,7 +27,7 @@ const PupiloCurriculum = () => {
         className="absolute bottom-[0%] left-[0%] sm:block hidden pointer-events-none"
         alt="left-ellipse"
       />
-      <div className="container max-w-[1140px] xl:px-0 px-6 mx-auto">
+      <div className="container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto">
         <Title
           text="Pupilo’s Curriculum"
           className="text-center !leading-[160%] mb-1"
