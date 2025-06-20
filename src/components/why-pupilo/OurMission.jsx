@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const OurMission = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [selectedCard, setSelectedCard] = useState("mission"); // default card
 
   return (
     <div className="lg:pt-[160px] md:pt-20 pt-14">
@@ -19,18 +19,17 @@ const OurMission = () => {
         </div>
         <div className="w-full min-[790px]:w-1/2 xl:space-y-6 space-y-4">
           <div
-            onMouseEnter={() => setHoveredCard("mission")}
-            onMouseLeave={() => setHoveredCard(null)}
-            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${hoveredCard === "mission"
-                ? "bg-[#875BF7] text-white shadow-lg"
-                : "bg-white text-black"
+            onMouseEnter={() => setSelectedCard("mission")}
+            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${selectedCard === "mission"
+              ? "bg-[#875BF7] text-white shadow-lg"
+              : "bg-white text-black"
               }`}
           >
             <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 xl:mb-3 mb-[6px] transition-all duration-500">
               Our Mission
             </h2>
             <p
-              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${hoveredCard === "mission" ? "text-white" : "text-dark-grey"
+              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${selectedCard === "mission" ? "text-white" : "text-dark-grey"
                 }`}
             >
               Pupilo is on mission to become Africa’s most loved & trusted coding
@@ -40,18 +39,17 @@ const OurMission = () => {
             </p>
           </div>
           <div
-            onMouseEnter={() => setHoveredCard("vision")}
-            onMouseLeave={() => setHoveredCard(null)}
-            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${hoveredCard === "vision"
-                ? "bg-[#875BF7] text-white shadow-lg"
-                : "bg-white text-black"
+            onMouseEnter={() => setSelectedCard("vision")}
+            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${selectedCard === "vision"
+              ? "bg-[#875BF7] text-white shadow-lg"
+              : "bg-white text-black"
               }`}
           >
             <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 xl:mb-3 mb-[6px] transition-all duration-500">
               Our Vision
             </h2>
             <p
-              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${hoveredCard === "vision" ? "text-white" : "text-dark-grey"
+              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${selectedCard === "vision" ? "text-white" : "text-dark-grey"
                 }`}
             >
               We believe in an African education system that no longer teaches
