@@ -415,7 +415,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Weekly progress reports + goal setting"
     ],
     bgColor: "bg-[#8C52FF]",
-    textColor: "text-white"
+    ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
   },
   {
     title: "Online Live Group Lessons",
@@ -426,7 +426,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Teacher-led coding jams"
     ],
     bgColor: "bg-[#8C52FF33]",
-    textColor: "text-black"
+    ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
   },
   {
     title: "Self-Paced Coding Courses",
@@ -437,7 +437,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Live support for debugging & guidance"
     ],
     bgColor: "bg-[#F9DC00]",
-    textColor: "text-black"
+    ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
   },
   {
     title: "Virtual Coding Camps",
@@ -448,6 +448,6 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Earn certificates + digital badges"
     ],
     bgColor: "bg-[#0D5FCE]",
-    textColor: "text-white"
+    ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
   }
 ];
