@@ -1,0 +1,26 @@
+import BlogHero from '@/components/blogs/BlogHero'
+import GeneralPupiloTopic from '@/components/blogs/GeneralPupiloTopic'
+import OurLatestBlogs from '@/components/blogs/OurLatestBlogs'
+import BackToTop from '@/components/common/BackToTop'
+import Footer from '@/components/common/Footer'
+import GetStarted from '@/components/common/GetStarted'
+import Reviews from '@/components/common/Reviews'
+import BrandMarquee from '@/components/home/BrandMarquee'
+import React from 'react'
+
+const page = () => {
+    return (
+        <>
+            <BlogHero />
+            <BrandMarquee/>
+            <OurLatestBlogs />
+            <GeneralPupiloTopic />
+            <Reviews />
+            <GetStarted />
+            <Footer />
+            <BackToTop />
+        </>
+    )
+}
+
+export default page
