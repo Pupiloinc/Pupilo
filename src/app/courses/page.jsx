@@ -3,7 +3,7 @@ import Footer from "@/components/common/Footer";
 import GetStarted from "@/components/common/GetStarted";
 import Reviews from "@/components/common/Reviews";
 import CourseHero from "@/components/courses/CourseHero";
-import PupiloCurriculum from "@/components/courses/PupiloCurriculum";
+import PupiloCurriculum from "@/components/courses/pupiloCurriculum";
 import TechJourney from "@/components/courses/TechJourney";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import React from "react";
