@@ -8,7 +8,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className="max-w-[2560px] mx-auto">
       <Gallery />
       <FindWhatBest />
       <Reviews />
