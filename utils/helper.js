@@ -1,9 +1,9 @@
 export const NAV_DATA_LIST = [
-    { title: "Home", link: "/" },
-    { title: "Courses", link: "/courses" },
-    { title: "Why Pupilo?", link: "/why-pupilo" },
-    { title: "Learn with Pupilo", link: "/learn-pupilo" },
-    { title: "Blog", link: "/blog" },
+  { title: "Home", link: "/" },
+  { title: "Courses", link: "/courses" },
+  { title: "Why Pupilo?", link: "/why-pupilo" },
+  { title: "Learn with Pupilo", link: "/learn-pupilo" },
+  { title: "Blog", link: "/blog" },
 ];
 
 export const BRAND_LOGO_DATA_LIST = [
@@ -367,11 +367,11 @@ export const FORMATS = [
 ];
 
 export const TOP_RATED_LIST = [
-    "/assets/images/webp/top-rated-1.webp",
-    "/assets/images/webp/top-rated-2.webp",
-    "/assets/images/webp/top-rated-3.webp",
-    "/assets/images/webp/top-rated-4.webp",
-    "/assets/images/webp/top-rated-5.webp",
+  "/assets/images/webp/top-rated-1.webp",
+  "/assets/images/webp/top-rated-2.webp",
+  "/assets/images/webp/top-rated-3.webp",
+  "/assets/images/webp/top-rated-4.webp",
+  "/assets/images/webp/top-rated-5.webp",
 ]
 export const LEARN_OUR_LIST = [
   {
@@ -404,4 +404,50 @@ export const LEARN_OUR_LIST = [
       "Pupilo envisions an Africa where every child has the opportunity to thrive in a tech-enabled world—not just by consuming technology, but by creating it.",
     icon: "/assets/images/svg/mission-driven.svg",
   },
+];
+export const FORMAT_GALLERY_DATA_LIST = [
+  {
+    title: "1-on-1 Online Private Lessons",
+    points: [
+      "Personalized learning paths",
+      "Live tutor + real-time support",
+      "Ideal for focused learners & passion projects",
+      "Weekly progress reports + goal setting"
+    ],
+    bgColor: "bg-[#8C52FF]",
+    textColor: "text-white"
+  },
+  {
+    title: "Online Live Group Lessons",
+    points: [
+      "1:6 student-teacher ratio",
+      "Learn teamwork & collaboration",
+      "Challenge-based problem solving",
+      "Teacher-led coding jams"
+    ],
+    bgColor: "bg-[#8C52FF33]",
+    textColor: "text-black"
+  },
+  {
+    title: "Self-Paced Coding Courses",
+    points: [
+      "Learn at your own pace",
+      "Video walkthroughs + practice tasks",
+      "Ideal for independent learners",
+      "Live support for debugging & guidance"
+    ],
+    bgColor: "bg-[#F9DC00]",
+    textColor: "text-black"
+  },
+  {
+    title: "Virtual Coding Camps",
+    points: [
+      "Seasonal, high-energy events",
+      "Themed weekly challenges",
+      "Real project builds & peer presentations",
+      "Earn certificates + digital badges"
+    ],
+    bgColor: "bg-[#0D5FCE]",
+    textColor: "text-white"
+  }
 ];
