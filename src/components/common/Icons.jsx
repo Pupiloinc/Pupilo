@@ -362,8 +362,8 @@ const Icons = ({ icon, className, fill, stroke }) => {
         <path
           d="M9 1L1 9L9 17"
           stroke="#010101"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
           stroke-linejoin="round"
         />
       </svg>
@@ -379,17 +379,21 @@ const Icons = ({ icon, className, fill, stroke }) => {
         <path
           d="M1 1L9 9L1 17"
           stroke="#010101"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
           stroke-linejoin="round"
         />
       </svg>
     ),
     btnArrow: (
       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L5 5L1 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 1L5 5L1 9" stroke="white" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" />
       </svg>
-
+    ),
+    blackBtnArrow: (
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L5 5L1 9" stroke="#010101" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" />
+      </svg>
     )
   };
   const addClassName = (icon) => {
