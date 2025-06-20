@@ -54,6 +54,7 @@ body {
   --color-dolphin: #5d6180;
   --color-light-purple: #8c52ff33;
   --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
+  --background-find-best: url("/assets/images/png/what-best-bg.png");
   --color-fade-purple: #8c52ff14;
   /* Line Height  */
 
@@ -69,6 +70,9 @@ body {
 @media (min-width: 768px) {
   .bg-our-coding {
     background-image: var(--background-our-coding);
+  }
+  .bg-find-best {
+    background-image: var(--background-find-best);
   }
 }
 
@@ -102,10 +106,6 @@ body {
   height: 4px;
   width: 4px;
 }
-
-/* .scrollbar-custom::-webkit-scrollbar-track {
-  background: #8c52ff14;
-} */
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
   background-color: #a855f7;
