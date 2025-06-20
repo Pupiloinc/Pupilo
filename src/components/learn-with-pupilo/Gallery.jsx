@@ -17,7 +17,7 @@ const Gallery = () => {
                     {FORMAT_GALLERY_DATA_LIST.map((card, i) => (
                         <div
                             key={i}
-                            className={`${card.bgColor} rounded-3xl lg:py-8 lg:ps-8 lg:pe-[60px] md:p-6 p-5 mx-auto w-full relative flex flex-col max-sm:min-h-[255px]`}
+                            className={`${card.bgColor} rounded-3xl lg:py-8 lg:ps-8 lg:pe-[60px] md:p-6 p-5 mx-auto w-full relative flex flex-col max-sm:min-h-[255px] hover:shadow-2xl transition-all ease-in-out duration-300`}
                         >
                             <Image className='absolute top-0 right-0 pointer-events-none max-lg:size-[200px]' width={270} height={220} src={card.ellipseImage} alt='gallery-ellipse' />
                             <h2 className={`font-semibold lg:text-custom-4xl md:text-2xl text-xl leading-120 lg:max-w-[360px] lg:mb-4 mb-2  ${i === 1 || i === 2 ? "text-dark-black" : "text-white"}`}>{card.title}</h2>
