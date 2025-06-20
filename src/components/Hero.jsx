@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="mt-3 sm:mt-5 md:mt-6 flex gap-3 relative z-10 max-lg:justify-center items-center">
             <CustomButton iconColor="#010101" text="Try a Free Lesson" />
             <Link href="#">
-              <div className="min-w-[41px] h-[41px] lg:min-w-[52px] lg:h-[52px] bg-dark-black rounded-full flex justify-center items-center hover:animate-pulse">
+              <div className="min-w-[41px] h-[41px] lg:min-w-[52px] lg:h-[52px] bg-dark-black rounded-full flex justify-center items-center duration-300 ease-linear transition-all hover:opacity-50">
                 <Icons icon="whatsappIcon" />
               </div>
             </Link>
