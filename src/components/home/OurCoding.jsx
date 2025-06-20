@@ -7,7 +7,7 @@ const OurCoding = () => {
   return (
     <div className='max-md:bg-fade-purple bg-our-coding bg-full max-lg:!bg-cover'>
       <div className='relative max-w-[1920px] sm:pt-20 pt-[60px] xl:pb-[357px] sm:pb-20 pb-10 mx-auto'>
-        <div className='container max-w-[1140px] xl:px-0 px-6 mx-auto '>
+        <div className='container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto '>
           <Title
             text="Our Coding Instructors"
             className="text-center mb-2"

@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Gallery = () => {
     return (
         <div className='lg:py-40 md:py-28 sm:py-16 py-10'>
-            <div className='container max-w-[1140px] xl:px-0 px-6 mx-auto '>
+            <div className='container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto '>
                 <Title
                     text="Learning Formats Gallery"
                     className="text-center lg:mb-[60px] md:mb-10 sm:mb-8 mb-6"

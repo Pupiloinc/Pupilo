@@ -27,6 +27,13 @@ const PupiloDelivers = () => {
           width={220}
           height={208}
         />
+        <Image
+          src="/assets/images/svg/deliver-top-right-ellipse.svg"
+          alt="bg"
+          className="absolute pointer-events-none top-0 right-0 max-lg:hidden"
+          width={183}
+          height={334}
+        />
         <h2 className="text-2xl sm:text-3xl lg:text-custom-5xl font-semibold text-center leading-[120%] mb-6 sm:mb-10 max-sm:px-0 max-lg:px-7">
           Pupilo delivers a flexible, personalized and student-centered learning
           experience through multiple formats that fit every learner’s schedule
@@ -34,7 +41,7 @@ const PupiloDelivers = () => {
         </h2>
 
         <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 mx-auto max-w-[400px] sm:max-w-[800px] relative z-10">
-          {FORMATS.map((card) => (
+          {FORMATS.map((card, i) => (
             <div
               key={card.id}
               className="bg-white rounded-2xl sm:rounded-3xl shadow-md p-4 md:p-6 flex flex-col hover:shadow-2xl transition-all ease-in-out duration-500"
@@ -57,7 +64,7 @@ const PupiloDelivers = () => {
               <h3 className="text-lg sm:text-2xl leading-120 font-semibold mt-4">
                 {card.title}
               </h3>
-              <p className="text-base text-dune mt-3 flex-grow">{card.desc}</p>
+              <p className={`text-base font-normal leading-150 text-dune mt-3 flex-grow ${i === 1 || i === 3 ? "lg:max-w-[320px]" : ""}`}>{card.desc}</p>
               <div className="flex items-center mt-4 gap-2">
                 <a
                   href="#"
