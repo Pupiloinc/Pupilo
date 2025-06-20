@@ -96,3 +96,18 @@ body {
 .swiper-pagination-bullet-active {
   background: #8c52ff !important;
 }
+
+/* Custom Scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+/* .scrollbar-custom::-webkit-scrollbar-track {
+  background: #8c52ff14;
+} */
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #a855f7;
+  border-radius: 8px;
+}
