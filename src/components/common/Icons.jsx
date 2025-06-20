@@ -353,7 +353,7 @@ const Icons = ({ icon, className, fill, stroke }) => {
     ),
     prevArrow: (
       <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 1L1 9L9 17" stroke="#010101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 1L1 9L9 17" stroke="null" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     nextArrow: (
@@ -366,7 +366,7 @@ const Icons = ({ icon, className, fill, stroke }) => {
       >
         <path
           d="M1 1L9 9L1 17"
-          stroke="#010101"
+          stroke="null"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
