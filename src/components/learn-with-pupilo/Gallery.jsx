@@ -3,6 +3,7 @@ import Title from '../common/Title'
 import { FORMAT_GALLERY_DATA_LIST } from '../../../utils/helper'
 import Icons from '../common/Icons'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Gallery = () => {
     return (
@@ -25,14 +26,14 @@ const Gallery = () => {
                                     <li key={index} className={`font-normal md:text-base text-sm leading-150  ${i === 1 || i === 2 ? "text-dark-grey" : "text-white/80"}`}>{point}</li>
                                 ))}
                             </ul>
-            
+
                             <div className='flex flex-col grow h-full justify-end'>
-                                    <button href="#" className={`font-semibold md:text-base text-sm leading-150 underline flex items-center gap-2.5 ${i === 1 || i === 2 ? "text-dark-black" : "text-white"}`}>
-                                        Try a Free Lesson
-                                        <Icons icon={i === 1 || i === 2 ? "blackBtnArrow" : "btnArrow"} />
-                                    </button>
-                                </div>
-            
+                                <Link className={`font-semibold md:text-base text-sm leading-150 flex group underline items-center w-fit ${i === 1 || i === 2 ? "text-dark-black" : "text-white"}`} href="#" >Try a Free Lesson <span className='flex size-6 group-hover:translate-x-2 transition-all duration-300 max-sm:size-4 justify-center items-center'>
+                                    <Icons icon={i === 1 || i === 2 ? "blackBtnArrow" : "btnArrow"} />
+                                </span>
+                                </Link>
+                            </div>
+
                         </div>
                     ))}
                 </div>
