@@ -2,7 +2,7 @@ export const NAV_DATA_LIST = [
   { title: "Home", link: "/" },
   { title: "Courses", link: "/courses" },
   { title: "Why Pupilo?", link: "/why-pupilo" },
-  { title: "Learn with Pupilo", link: "/learn-pupilo" },
+  { title: "Learn with Pupilo", link: "/learn-with-pupilo" },
   { title: "Blog", link: "/blog" },
 ];
 
