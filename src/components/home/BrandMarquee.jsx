@@ -8,7 +8,7 @@ const BrandMarquee = () => {
         <div className='bg-white-100 py-10 md:py-14 lg:py-20'>
             <Marquee>
                 {BRAND_LOGO_DATA_LIST.map((obj, i) => (
-                    <Image key={i} width={175} height={48} src={obj} alt='brand-logo' className='mx-2 lg:mx-[70px] max-h-[38px] lg:max-h-[48px]' />
+                    <Image key={i} width={175} height={48} src={obj} alt='brand-logo' className='mx-2 lg:mx-[70px] max-h-[38px] lg:max-h-[48px] object-cover' />
                 ))}
             </Marquee>
         </div>
