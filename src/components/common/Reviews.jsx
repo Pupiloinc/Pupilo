@@ -13,11 +13,11 @@ const Reviews = () => {
   const nextRef = useRef(null);
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
-      <div className="container max-w-[1107px] xl:px-0 px-6 max-sm:px-4 mx-auto">
+      <div className="container max-w-[1127px] xl:px-0 px-6 max-sm:px-4 mx-auto">
         <Title
           text={"Hear What Families Say About Pupilo"}
           className={
-            "max-w-[1140px] max-lg:!max-w-[500px] max-sm:px-2 mx-auto text-center pb-4 sm:pb-6"
+            "max-w-[1140px] max-lg:!max-w-[500px] max-sm:px-2 mx-auto text-center pb-2 sm:pb-6"
           }
         />
         <div id="about-pupilo" className="relative">
@@ -75,7 +75,7 @@ const Reviews = () => {
             }}
             pagination={true}
             modules={[Autoplay,  Navigation]}
-            className="reviewsSlider pb-12"
+            className="reviewsSlider !px-2.5 pb-12"
           >
             {REVIEWS_DATA.map((review) => (
               <SwiperSlide
@@ -111,7 +111,7 @@ const Reviews = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="text-black text-xl">{review.name}</h4>
+                      <h4 className="text-black text-xl max-lg:text-lg">{review.name}</h4>
                     </div>
                   </div>
                 </div>
