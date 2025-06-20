@@ -30,17 +30,20 @@ const Header = () => {
                         <Image className='max-sm:max-w-[100px] w-full' src="/assets/images/svg/logo.svg" width={152} height={42} alt='logo' />
                     </Link>
                     <ul className="flex gap-8 items-center max-lg:hidden">
-                        {NAV_DATA_LIST.map((item, i) => (
-                            <Link
-                                key={i}
-                                href={item.link}
-                                className={`font-normal text-base leading-150 text-dark-grey relative  transition-all duration-700
+                        {NAV_DATA_LIST.map((item, i) => {
+                            const isActive = pathname === item.link;
+                            return (
+                                <Link
+                                    key={i}
+                                    href={item.link}
+                                    className={`font-normal text-base leading-150 text-dark-grey relative  transition-all duration-700
      after:absolute after:left-0 after:bottom-[-8%] after:h-[1.5px] after:bg-dark-grey
-    after:w-0 after:transition-all after:duration-500 hover:after:w-full ${i === 0 && "font-semibold !text-dark-black"} `}
-                            >
-                                {item.title}
-                            </Link>
-                        ))}
+    after:w-0 after:transition-all after:duration-500 hover:after:w-full ${isActive && "font-semibold !text-dark-black"} `}
+                                >
+                                    {item.title}
+                                </Link>
+                            )
+                        })}
                     </ul>
                     <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-100 text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
                     <div className="lg:hidden z-50 cursor-pointer">
@@ -76,7 +79,7 @@ const Header = () => {
                                 {item.title}
                             </Link>
                         ))}
-                        <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
+                        <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
                     </div>
                 </div>
             </div>

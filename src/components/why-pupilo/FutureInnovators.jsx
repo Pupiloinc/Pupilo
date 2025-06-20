@@ -4,22 +4,22 @@ import Title from '../common/Title';
 
 const FutureInnovators = () => {
   return (
-    <div className='lg:py-[160px] md:py-20 py-14'>
-      <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
-      <Title text="Future Innovators are Born Here!" className="text-center md:!leading-[160%]" />
-      <div className="w-full md:my-10 my-5">
+    <div className='lg:py-[160px] md:py-20 py-[60px]'>
+      <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto max-[790px]:max-w-[650px]">
+        <Title text="Future Innovators are Born Here!" className="text-center md:!leading-[160%] max-[580px]:max-w-[420px] mx-auto" />
+      <div className="w-full md:my-10 my-6">
         <Image
           src="/assets/images/webp/future-innovators.webp"
           alt="Girl learning online"
           width={1140}
           height={555}
-          className="max-w-[1140px] rounded w-full xl:min-h-[555px] h-auto pointer-events-auto"
+          className="max-w-[1140px] md:rounded-[24px] rounded-2xl w-full xl:min-h-[555px] h-auto pointer-events-auto"
         />
       </div>
-      <div className="flex max-[892px]:flex-wrap justify-between gap-5">
+      <div className="flex max-[892px]:flex-wrap justify-between md:gap-5 gap-3">
         <Title text="About Pupilo" />
         <div>
-            <p className="text-dark-grey min-[892px]:max-w-[566px] max-lg:w-full lg:text-base text-sm spacing-150 font-normal mb-4">
+            <p className="text-dark-grey min-[892px]:max-w-[566px] max-lg:w-full lg:text-base text-sm spacing-150 font-normal md:mb-4 mb-3">
             Pupilo is a visionary online learning platform where children and
             teens aged 7 to 18 learn computer programming and coding in a way
             that is engaging, fun, and future-focused. Beyond simply learning

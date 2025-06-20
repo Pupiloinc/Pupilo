@@ -4,36 +4,35 @@ import Title from "./Title";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay,  Navigation } from "swiper/modules";
 import { REVIEWS_DATA } from "../../../utils/helper";
-// import Icons from "./Icons";
+import Icons from "./Icons";
 
 const Reviews = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
-      <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
+      <div className="container max-w-[1127px] xl:px-0 px-6 max-sm:px-4 mx-auto">
         <Title
           text={"Hear What Families Say About Pupilo"}
           className={
-            "max-w-[1140px] max-lg:!max-w-[500px] max-sm:px-2 mx-auto text-center pb-4 sm:pb-6"
+            "max-w-[1140px] max-lg:!max-w-[500px] max-sm:px-2 mx-auto text-center pb-2 sm:pb-6"
           }
         />
         <div id="about-pupilo" className="relative">
-          {/* <button
+          <button
             ref={prevRef}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-purple transition cursor-pointer"
+            className="absolute -left-16 top-1/2 -translate-y-1/2 z-10 bg-white border border-dark-black  rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:scale-[0.9] max-[1090px]:hidden"
           >
-            <Icons name="prevArrow" />
+            <Icons className="group-hover:!stroke-white duration-300 ease-linear transition-all" icon="prevArrow" />
           </button>
           <button
             ref={nextRef}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-purple transition cursor-pointer"
+            className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 bg-white border border-dark-black rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:scale-[0.9] max-[1090px]:hidden"
           >
-            <Icons name="nextArrow" />
-          </button> */}
+            <Icons icon="nextArrow" />
+          </button>
           <Swiper
             spaceBetween={24}
             slidesPerView={1}
@@ -55,30 +54,35 @@ const Reviews = () => {
               768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
-                pagination: true,
               },
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 24,
               },
+              1090: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                autoplay: false,
+              }
             }}
             autoplay={{
-              delay: 1200000,
+              delay: 2500,
               disableOnInteraction: false,
             }}
             onBeforeInit={(swiper) => {
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
             }}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="reviewsSlider pb-12"
+            pagination={true}
+            modules={[Autoplay,  Navigation]}
+            className="reviewsSlider !px-2.5 pb-12"
           >
             {REVIEWS_DATA.map((review) => (
               <SwiperSlide
                 key={review.id}
                 className="!flex justify-center py-4"
               >
-                <div className="bg-white border border-dolphin/12 hover:border-purple rounded-3xl p-6 shadow-light-dark hover:shadow-card-hover transition-all w-full duration-500 h-full min-h-[232px] flex flex-col justify-between">
+                <div className="bg-white border border-dolphin/12 rounded-3xl p-6 shadow-bright-dark reviewSlide transition-all w-full duration-500 h-full min-h-[232px] flex flex-col justify-between">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, index) => (
                       <Image
@@ -107,7 +111,7 @@ const Reviews = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="text-black text-xl">{review.name}</h4>
+                      <h4 className="text-black text-xl max-lg:text-lg">{review.name}</h4>
                     </div>
                   </div>
                 </div>

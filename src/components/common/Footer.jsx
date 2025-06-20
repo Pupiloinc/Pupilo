@@ -55,7 +55,7 @@ const Footer = () => {
                 </h4>
                 <ul className="sm:space-y-2 space-y-1">
                   {obj.links.map((object, index) => (
-                    <li key={index} className="mb-3 group">
+                    <li key={index} className={`${index !== obj.links.length - 1 ? "mb-3" : ""} group`}>
                       <Link
                         href={object.url}
                         className="text-black/80 sm:text-base text-sm font-normal hover:text-purple transition-all duration-300 ease-in-out"
@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="border-t py-4 border-solid border-black/10 text-center text-black/80">
+      <p className="border-t py-4 border-solid border-black/10 text-center text-black/80 max-sm:px-4">
         Copyright © 2025 Pupilo. All Rights Reserved.
       </p>
     </div>

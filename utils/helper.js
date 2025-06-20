@@ -405,6 +405,52 @@ export const LEARN_OUR_LIST = [
     icon: "/assets/images/svg/mission-driven.svg",
   },
 ];
+export const FORMAT_GALLERY_DATA_LIST = [
+  {
+    title: "1-on-1 Online Private Lessons",
+    points: [
+      "Personalized learning paths",
+      "Live tutor + real-time support",
+      "Ideal for focused learners & passion projects",
+      "Weekly progress reports + goal setting",
+    ],
+    bgColor: "bg-[#8C52FF]",
+    ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
+  },
+  {
+    title: "Online Live Group Lessons",
+    points: [
+      "1:6 student-teacher ratio",
+      "Learn teamwork & collaboration",
+      "Challenge-based problem solving",
+      "Teacher-led coding jams",
+    ],
+    bgColor: "bg-[#8C52FF33]",
+    ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
+  },
+  {
+    title: "Self-Paced Coding Courses",
+    points: [
+      "Learn at your own pace",
+      "Video walkthroughs + practice tasks",
+      "Ideal for independent learners",
+      "Live support for debugging & guidance",
+    ],
+    bgColor: "bg-[#F9DC00]",
+    ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
+  },
+  {
+    title: "Virtual Coding Camps",
+    points: [
+      "Seasonal, high-energy events",
+      "Themed weekly challenges",
+      "Real project builds & peer presentations",
+      "Earn certificates + digital badges",
+    ],
+    bgColor: "bg-[#0D5FCE]",
+    ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
+  },
+];
 export const ADD_ON_COURSES_DATA = [
   {
     grade: "Grades 3-8",
