@@ -1,9 +1,9 @@
 export const NAV_DATA_LIST = [
-    { title: "Home", link: "/" },
-    { title: "Courses", link: "/courses" },
-    { title: "Why Pupilo?", link: "/why-pupilo" },
-    { title: "Learn with Pupilo", link: "/learn-pupilo" },
-    { title: "Blog", link: "/blog" },
+  { title: "Home", link: "/" },
+  { title: "Courses", link: "/courses" },
+  { title: "Why Pupilo?", link: "/why-pupilo" },
+  { title: "Learn with Pupilo", link: "/learn-pupilo" },
+  { title: "Blog", link: "/blog" },
 ];
 
 export const BRAND_LOGO_DATA_LIST = [
@@ -122,7 +122,7 @@ export const TECH_JOURNEY_CARDS_LIST = [
       "/assets/images/webp/tynker-tools.webp",
     ],
     image: "/assets/images/webp/little-creators.webp",
-    cardTheme: "light-purple",
+    cardTheme: "off-purple",
     buttonText: "Try a Free Lesson",
     buttonTheme: "dark-black",
     badgeBorder: "dark-black",
@@ -367,12 +367,12 @@ export const FORMATS = [
 ];
 
 export const TOP_RATED_LIST = [
-    "/assets/images/webp/top-rated-1.webp",
-    "/assets/images/webp/top-rated-2.webp",
-    "/assets/images/webp/top-rated-3.webp",
-    "/assets/images/webp/top-rated-4.webp",
-    "/assets/images/webp/top-rated-5.webp",
-]
+  "/assets/images/webp/top-rated-1.webp",
+  "/assets/images/webp/top-rated-2.webp",
+  "/assets/images/webp/top-rated-3.webp",
+  "/assets/images/webp/top-rated-4.webp",
+  "/assets/images/webp/top-rated-5.webp",
+];
 export const LEARN_OUR_LIST = [
   {
     title: "Whole-Child Learning",
@@ -403,5 +403,77 @@ export const LEARN_OUR_LIST = [
     description:
       "Pupilo envisions an Africa where every child has the opportunity to thrive in a tech-enabled world—not just by consuming technology, but by creating it.",
     icon: "/assets/images/svg/mission-driven.svg",
+  },
+];
+export const ADD_ON_COURSES_DATA = [
+  {
+    grade: "Grades 3-8",
+    title: "Minecraft 1:1 Coding Course",
+    description:
+      "Welcome to Minecraft Coding Adventures, where imagination meets programming! In this exciting course, learners will explore coding fundamentals by modifying (modding) the Minecraft world using block-based coding tools like Microsoft MakeCode and Blockly, and progress to Python for advanced learners. Students will create custom mini-games, automate tasks, build structures with code, and bring their own Minecraft worlds to life—all while learning real programming concepts.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/coding-course.webp",
+    cardTheme: "purple",
+    textColor: "white",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "white",
+    badgeBorder: "white",
+  },
+  {
+    grade: "Grades 2-5",
+    title: "Fun Coding Math",
+    description:
+      "This course blends math and logic using Scratch and visual puzzles. Concepts like number patterns, geometry, and measurement come alive through coding mini-projects.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/coding-math.webp",
+    cardTheme: "off-purple",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "dark-black",
+    badgeBorder: "dark-black",
+  },
+  {
+    grade: "Grades 2-6",
+    title: "Game Development & Storytelling ",
+    description:
+      "Learner will build a game where Shaka Zulu Saves a Village using Scratch and Roblox Studio. They will learn events, characters, scoring systems, and storytelling.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/coding-development.webp",
+    cardTheme: "blue",
+    textColor: "white",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "white",
+    badgeBorder: "white",
+  },
+  {
+    grade: "Grades 6-12",
+    title: "Artificial Intelligence",
+    description:
+      "Learners start with AI basics: pattern recognition, chatbots, and machine learning concepts using Teachable Machine or block-based AI tools. Advance to ethical AI, image recognition, and Python-based AI in high school.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/ai-artificial-intelligence.webp",
+    cardTheme: "yellow",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "dark-black",
+    badgeBorder: "dark-black",
   },
 ];
