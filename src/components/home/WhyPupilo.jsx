@@ -8,7 +8,7 @@ import { TOP_RATED_LIST } from '../../../utils/helper'
 const WhyPupilo = () => {
     return (
         <div className="py-40 max-xl:py-[100px] max-md:py-[60px]">
-            <div className='container max-w-[1140px] xl:px-0 px-6 mx-auto'>
+            <div className='container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto'>
                 <div className="flex justify-between gap-5 max-sm:gap-8 max-lg:flex-col mb-6 max-lg:pb-5 items-center">
                     <div className="max-w-[627px] max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
                         <Title text="Learn our Difference:
@@ -27,7 +27,7 @@ const WhyPupilo = () => {
                     </div>
                 </div>
                 <div className="flex justify-between max-lg:flex-col gap-5">
-                    <div className="max-w-[364px] max-lg:max-w-full max-lg:justify-center max-lg:items-center max-lg:flex-col max-lg:flex w-full py-[30.49px] px-[52px] bg-white shadow-light-dark rounded-3xl">
+                    <div className="lg:max-w-[364px] max-w-[752px] max-lg:mx-auto max-lg:justify-center max-lg:items-center max-lg:flex-col max-lg:flex w-full py-[30.49px] sm:px-[52px] max-sm:ps-[42px] max-sm:pe-[52px] bg-white shadow-light-dark rounded-3xl">
                         <p className='font-medium text-custom-4xl max-lg:text-3xl max-md:text-2xl leading-120 text-center text-dark-black'>Top Rated</p>
                             <div className='flex mt-6 max-lg:mt-5 max-md:mt-4'>
                                 {TOP_RATED_LIST.map((item , index) => (
@@ -36,10 +36,10 @@ const WhyPupilo = () => {
                             </div>
                         <p className='font-normal text-base leading-150 text-dark-black opacity-80 mt-6 text-center'>Over 2000 happy parents reviews.</p>
                     </div>
-                    <div className="max-w-[752px] max-sm:pb-3 max-sm:flex-col relative max-lg:max-w-full w-full bg-white shadow-light-dark rounded-3xl flex gap-[6px] overflow-hidden">
-                        <div className="py-14 max-sm:pt-6 max-sm:pl-6 pl-8 ">
-                            <p className='font-medium text-custom-4xl max-lg:text-3xl max-md:text-2xl leading-120 text-dark-black max-w-[344px] pb-3 max-md:pb-2'>Fun, Culturally-Relevant Learning</p>
-                            <p className='font-normal text-base leading-150 text-dark-black opacity-80 max-[1100px]:max-w-[254px] max-lg:max-w-[400px] max-md:max-w-[350px] max-w-[344px]'>We blend storytelling, games, and projects that reflect African stories, heroes, and settings.</p>
+                    <div className="max-w-[752px] max-lg:mx-auto max-sm:pb-3 max-sm:flex-col relative w-full bg-white shadow-light-dark rounded-3xl flex gap-[6px] overflow-hidden">
+                        <div className="py-14 max-sm:pt-6 max-sm:px-5 pl-8 ">
+                            <p className='font-medium text-custom-4xl max-lg:text-3xl max-md:text-2xl leading-120 text-dark-black max-w-[344px] pb-3 max-md:pb-2 max-sm:text-center max-sm:mx-auto'>Fun, Culturally-Relevant Learning</p>
+                            <p className='font-normal text-base leading-150 text-dark-black opacity-80 max-[1100px]:max-w-[254px] max-lg:max-w-[400px] max-md:max-w-[350px] max-w-[344px] max-sm:text-center max-sm:mx-auto'>We blend storytelling, games, and projects that reflect African stories, heroes, and settings.</p>
                         </div>
                         <div>
                             <div className="w-[370px] h-[100px] max-sm:hidden bg-[linear-gradient(0deg,_#FFFFFF00_0%,_#FFFFFF_100%)] absolute top-0 right-0 z-10"></div>

@@ -1,3 +1,7 @@
+import BackToTop from '@/components/common/BackToTop'
+import Footer from '@/components/common/Footer'
+import GetStarted from '@/components/common/GetStarted'
+import Reviews from '@/components/common/Reviews'
 import BrandMarquee from '@/components/home/BrandMarquee'
 import FutureInnovators from '@/components/why-pupilo/FutureInnovators'
 import LearnOurDifference from '@/components/why-pupilo/LearnOurDifference'
@@ -12,6 +16,10 @@ const page = () => {
       <FutureInnovators />
       <LearnOurDifference />
       <OurMission />
+      <Reviews />
+      <GetStarted />
+      <Footer />
+      <BackToTop />
     </div>
   )
 }
