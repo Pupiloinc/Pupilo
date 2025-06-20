@@ -44,7 +44,7 @@ const Reviews = () => {
                 spaceBetween: 20,
               },
               520: {
-                slidesPerView: 2,
+                slidesPerView: 1.2,
                 spaceBetween: 16,
               },
               640: {
@@ -96,7 +96,7 @@ const Reviews = () => {
                     ))}
                   </div>
 
-                  <p className="max-w-[304px] text-base text-black/70">
+                  <p className="sm:max-w-[304px] text-base text-black/70">
                     {review.review}
                   </p>
 
