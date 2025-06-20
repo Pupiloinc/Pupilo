@@ -4,8 +4,7 @@ import Title from "./Title";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay,  Navigation } from "swiper/modules";
 import { REVIEWS_DATA } from "../../../utils/helper";
 import Icons from "./Icons";
 
@@ -55,7 +54,6 @@ const Reviews = () => {
               768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
-                pagination: true,
               },
               1024: {
                 slidesPerView: 3,
@@ -64,7 +62,6 @@ const Reviews = () => {
               1090: {
                 slidesPerView: 3,
                 spaceBetween: 20,
-                pagination: false,
                 autoplay: false,
               }
             }}
@@ -77,7 +74,7 @@ const Reviews = () => {
               swiper.params.navigation.nextEl = nextRef.current;
             }}
             pagination={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay,  Navigation]}
             className="reviewsSlider pb-12"
           >
             {REVIEWS_DATA.map((review) => (
