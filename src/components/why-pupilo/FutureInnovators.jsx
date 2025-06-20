@@ -13,7 +13,7 @@ const FutureInnovators = () => {
           alt="Girl learning online"
           width={1140}
           height={555}
-          className="max-w-[1140px] rounded-[24px] w-full xl:min-h-[555px] h-auto pointer-events-auto"
+          className="max-w-[1140px] md:rounded-[24px] rounded-2xl w-full xl:min-h-[555px] h-auto pointer-events-auto"
         />
       </div>
       <div className="flex max-[892px]:flex-wrap justify-between md:gap-5 gap-3">

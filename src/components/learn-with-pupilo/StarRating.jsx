@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-const StarRating = ({ count,index }) => {
+const StarRating = ({ count, className }) => {
     return (
-        <div className={`flex gap-[4px] min-w-[157px] ${index === 3 ? "xl:max-w-[157px] max-w-[100px]" : ""}`}>
+        <div className={`flex gap-[4px] min-w-[157px] ${className}`}>
             {[...Array(count)].map((_, i) => (
                 <Image
                     key={i}

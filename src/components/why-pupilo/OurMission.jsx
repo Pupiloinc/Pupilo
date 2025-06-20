@@ -1,13 +1,13 @@
-"use client"
-import React from 'react'
-import Image from 'next/image'
-import { useState } from 'react';
-const OurMission = () => {
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
 
-    const [hovered, setHovered] = useState(false);
+const OurMission = () => {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   return (
     <div className="lg:pt-[160px] md:pt-20 pt-14">
-      <div className=' flex max-[790px]:flex-wrap max-[790px]:max-w-[650px] gap-6 items-center container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto'>
+      <div className="flex max-[790px]:flex-wrap max-[790px]:max-w-[650px] gap-6 items-center container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
         <div className="w-full min-[790px]:w-1/2 rounded-[20px] overflow-hidden">
           <Image
             src="/assets/images/webp/our-mission.webp"
@@ -18,20 +18,20 @@ const OurMission = () => {
           />
         </div>
         <div className="w-full min-[790px]:w-1/2 xl:space-y-6 space-y-4">
-          {/* First Card */}
           <div
-            className={`xl:p-6 p-4 ${hovered ? "bg-white" : "bg-[#875BF7]"
-              } group md:rounded-[30px] rounded-2xl transition-all duration-500`}
+            onMouseEnter={() => setHoveredCard("mission")}
+            onMouseLeave={() => setHoveredCard(null)}
+            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${hoveredCard === "mission"
+                ? "bg-[#875BF7] text-white shadow-lg"
+                : "bg-white text-black"
+              }`}
           >
-            <h2
-              className={`md:text-[32px] text-2xl font-semibold spacing-120 ${hovered ? "text-black" : "text-white"
-                } xl:mb-3 mb-[6px] transition-all duration-500`}
-            >
+            <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 xl:mb-3 mb-[6px] transition-all duration-500">
               Our Mission
             </h2>
             <p
-              className={`${hovered ? "text-dark-grey" : "text-white"
-                } xl:text-base text-sm spacing-150 font-normal transition-all duration-500`}
+              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${hoveredCard === "mission" ? "text-white" : "text-dark-grey"
+                }`}
             >
               Pupilo is on mission to become Africa’s most loved & trusted coding
               education platform – a place where every child, regardless of
@@ -39,25 +39,31 @@ const OurMission = () => {
               to thrive in an evolving digital world.
             </p>
           </div>
-
-          {/* Second Card */}
           <div
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className="xl:p-6 p-4 bg-white hover:bg-[#875BF7] group  md:rounded-[30px] rounded-2xl transition-all duration-500"
+            onMouseEnter={() => setHoveredCard("vision")}
+            onMouseLeave={() => setHoveredCard(null)}
+            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${hoveredCard === "vision"
+                ? "bg-[#875BF7] text-white shadow-lg"
+                : "bg-white text-black"
+              }`}
           >
-            <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 text-black group-hover:text-white xl:mb-3 mb-[6px] transition-all duration-500">
+            <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 xl:mb-3 mb-[6px] transition-all duration-500">
               Our Vision
             </h2>
-            <p className="text-dark-grey group-hover:text-white xl:text-base text-sm spacing-150 font-normal transition-all duration-500">
-              We believe in an African education system that no longer teaches just to pass exams, but one that empowers children to create, lead, and thrive. Pupilo is helping reshape what education can look like—dynamic, digital, and deeply personal.
+            <p
+              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${hoveredCard === "vision" ? "text-white" : "text-dark-grey"
+                }`}
+            >
+              We believe in an African education system that no longer teaches
+              just to pass exams, but one that empowers children to create, lead,
+              and thrive. Pupilo is helping reshape what education can look
+              like—dynamic, digital, and deeply personal.
             </p>
           </div>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurMission
+export default OurMission;
