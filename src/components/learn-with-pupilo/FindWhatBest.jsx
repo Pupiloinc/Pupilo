@@ -58,14 +58,6 @@ const ComparisonTable = () => {
         />
         <div className="overflow-x-scroll scrollbar-custom xl:ps-4">
           <div className="xl:max-w-[1124px] mx-auto">
-            {/* <div className="flex items-center gap-[33px]  font-semibold text-sm sm:text-base text-dark-black lg:pb-6 pb-5">
-              <p className="font-semibold text-xl leading-120 text-dark-black xl:min-w-[157px] min-w-[90px]">Format</p>
-              <p className="font-semibold text-xl leading-120 text-dark-black text-start min-w-[157px]">Personalization</p>
-              <p className="font-semibold text-xl leading-120 text-dark-black min-w-[157px]">Collaboration</p>
-              <p className="font-semibold text-xl leading-120 text-dark-black xl:min-w-[157px] min-w-[110px]">Structure</p>
-              <p className="font-semibold text-xl leading-120 text-dark-black xl:min-w-[157px] min-w-[110px]">Flexibility</p>
-              <p className="font-semibold text-xl leading-120 text-dark-black min-w-[157px]">Best For</p>
-            </div> */}
           <div className="flex items-center gap-[33px] font-semibold text-sm sm:text-base text-dark-black lg:pb-6 pb-5">
             {FIND_BEST_HEADING_DATA_LIST.map((heading, index) => (
               <p
