@@ -23,15 +23,17 @@ const OurLatestBlogs = () => {
             .map((blog) => (
               <div
                 key={blog.id}
-                className="bg-white md:rounded-3xl rounded-2xl blure-2xl sm:p-5 p-4 sm:!pb-6 flex flex-col lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px]"
+                className="bg-white group md:rounded-3xl rounded-2xl blure-2xl sm:p-5 p-4 sm:!pb-6 flex flex-col lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px]"
               >
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  width={520}
-                  height={301}
-                  className="md:max-w-[520px] lg:h-[301px] md:h-[170px] sm:h-[250px] rounded-xl object-cover object-top w-full lg:mb-5 mb-4"
-                />
+                <div className='md:max-w-[520px] lg:h-[301px] md:h-[170px] sm:h-[250px] rounded-xl overflow-hidden lg:mb-5 mb-4'>
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    width={520}
+                    height={301}
+                    className="rounded-xl object-cover object-top w-full group-hover:scale-110 transition-all ease-linear duration-300"
+                  />
+                </div>
                 <Description
                   text={`By ${blog.author} on ${blog.date}`}
                   className="!text-purple font-medium lg:mb-3.5 mb-2"
@@ -52,15 +54,17 @@ const OurLatestBlogs = () => {
               .map((blog) => (
                 <div
                   key={blog.id}
-                  className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3.5 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px]"
+                  className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3.5 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px] group"
                 >
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    width={177}
-                    height={184}
-                    className="xl:max-w-[177px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] h-[184px] w-full rounded-xl object-cover"
-                  />
+                  <div className='xl:max-w-[177px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] h-[184px] rounded-xl overflow-hidden'>
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      width={177}
+                      height={184}
+                      className="w-full rounded-xl object-cover group-hover:scale-110 transition-all ease-linear duration-300"
+                    />
+                  </div>
                   <div className="flex-1">
                     <Description
                       text={`By ${blog.author} on ${blog.date}`}
@@ -68,8 +72,8 @@ const OurLatestBlogs = () => {
                     />
                     <h4 className="font-medium xl:text-xl lg:text-lg md:text-base sm:text-lg text-base leading-120 text-dark-black xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1">{blog.title}</h4>
                     <p className="font-normal lg:text-sm text-xs leading-150 text-dark-grey xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1 ellipsis-text">{blog.description}</p>
-                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex group underline items-center w-fit`} href="#" >Learn More<span className='flex size-6 group-hover:translate-x-2 transition-all duration-300 max-sm:size-4 justify-center items-center'>
-                      <Icons icon="blackBtnArrow"/>
+                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex hover:translate-x-2 transition-all duration-300 underline items-center w-fit`} href="#" >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
+                      <Icons icon="blackBtnArrow" />
                     </span>
                     </Link>
                   </div>
