@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Gallery = () => {
     return (
-        <div className='lg:py-40 md:py-28 sm:py-16 py-10'>
+        <div className='lg:py-40 md:py-[100px] py-[60px] '>
             <div className='container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto '>
                 <Title
                     text="Learning Formats Gallery"
@@ -19,7 +19,7 @@ const Gallery = () => {
                             key={i}
                             className={`${card.bgColor} md:rounded-3xl rounded-2xl lg:py-8 lg:ps-8 lg:pe-[60px] md:p-6 p-5 mx-auto w-full relative flex flex-col max-sm:min-h-[230px] hover:shadow-2xl transition-all ease-in-out duration-300`}
                         >
-                            <Image className='absolute top-0 right-0 pointer-events-none max-lg:size-[200px]' width={270} height={220} src={card.ellipseImage} alt='gallery-ellipse' />
+                            <Image className='absolute top-0 right-0 pointer-events-none max-lg:size-[200px] max-sm:size-[150px]' width={270} height={220} src={card.ellipseImage} alt='gallery-ellipse' />
                             <h2 className={`font-semibold lg:text-custom-4xl md:text-2xl text-xl leading-120 lg:max-w-[360px] lg:mb-4 mb-2  ${i === 1 || i === 2 ? "text-dark-black" : "text-white"}`}>{card.title}</h2>
                             <ul className="list-disc pl-5 lg:mb-6 sm:mb-4 mb-3">
                                 {card.points.map((point, index) => (
