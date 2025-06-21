@@ -68,6 +68,7 @@ body {
   --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
   --background-find-best: url("/assets/images/webp/what-best-bg.webp");
   --background-our-blog: url("/assets/images/webp/our-blog-bg.webp");
+  --background-pupilo-curriculum: url("/assets/images/webp/pupilo-curriculum-bg.webp");
   --color-fade-purple: #8c52ff14;
   --font-Inter: "Inter", sans-serif;
   --color-medium-gray: #747474;
@@ -96,6 +97,10 @@ body {
   .bg-our-blog {
     background-image: var(--background-our-blog);
   }
+
+  .bg-pupilo-curriculum {
+    background-image: var(--background-pupilo-curriculum);
+  }
 }
 
 .learn-bg {
@@ -114,7 +119,7 @@ body {
   border: 1px solid #8c52ff;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -2% !important;
 }
@@ -133,4 +138,3 @@ body {
   background-color: #a855f7;
   border-radius: 8px;
 }
-

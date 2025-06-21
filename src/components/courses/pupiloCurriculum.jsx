@@ -5,28 +5,7 @@ import Image from "next/image";
 
 const PupiloCurriculum = () => {
   return (
-    <div className="bg-fade-purple sm:py-20 py-[60px] relative mt-[60px] sm:mt-20 lg:mt-32 xl:pt-40">
-      <Image
-        width={454}
-        height={152}
-        src="/assets/images/svg/instructors-top-ellipse.svg"
-        className="absolute top-0 right-[19%] md:block hidden pointer-events-none"
-        alt="top-ellipse"
-      />
-      <Image
-        width={317}
-        height={165}
-        src="/assets/images/svg/instructors-bottom-ellipse.svg"
-        className="absolute bottom-0 right-[0%] lg:block hidden pointer-events-none"
-        alt="bottom-ellipse"
-      />
-      <Image
-        width={165}
-        height={454}
-        src="/assets/images/svg/instructors-left-ellipse.svg"
-        className="absolute bottom-[0%] left-[0%] sm:block hidden pointer-events-none"
-        alt="left-ellipse"
-      />
+    <div className="max-md:bg-fade-purple bg-pupilo-curriculum bg-full max-lg:!bg-cover sm:py-20 py-[60px] relative mt-[60px] md:mt-[100px] lg:mt-32 xl:mt-40 overflow-hidden">
       <div className="container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto">
         <Title
           text="Pupilo’s Curriculum"

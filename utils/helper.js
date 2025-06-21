@@ -590,3 +590,46 @@ export const GENERAL_PUPILO_LIST = [
     image: "/assets/images/webp/general-pupilo-three.webp",
   },
 ];
+export const FORMAT_COMPARISON_DATA_LIST = [
+  {
+    format: "1-on-1",
+    personalization: 5,
+    collaboration: 1,
+    structure: 4,
+    flexibility: 2,
+    bestFor: "Focused learners & passion projects.",
+  },
+  {
+    format: "Group",
+    personalization: 2,
+    collaboration: 4,
+    structure: 3,
+    flexibility: 1,
+    bestFor: "Social learners, teamwork fans.",
+  },
+  {
+    format: "Self-Paced",
+    personalization: 3,
+    collaboration: 1,
+    structure: 2,
+    flexibility: 5,
+    bestFor: "Independent explorers.",
+  },
+  {
+    format: "Camps",
+    personalization: 2,
+    collaboration: 3,
+    structure: 2,
+    flexibility: 3,
+    bestFor: "High-energy kids, quick wins.",
+  },
+];
+
+export const FIND_BEST_HEADING_DATA_LIST = [
+  "Format",
+  "Personalization",
+  "Collaboration",
+  "Structure",
+  "Flexibility",
+  "Best For",
+];
