@@ -63,11 +63,12 @@ body {
   --spacing-120: 120%;
   --spacing-150: 150%;
   --spacing-160: 160%;
+  --spacing-163: 163%;
   --shadow-light-dark: 0px 0px 32px 0px #0000000f;
   --shadow-bright-dark: 0px 0px 13px 0px #0000000f;
   --shadow-card-hover: 0px 0px 32px 0px #8c52ff1f;
 }
- 
+
 @media (min-width: 768px) {
   .bg-our-coding {
     background-image: var(--background-our-coding);
