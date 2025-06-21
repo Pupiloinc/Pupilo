@@ -56,7 +56,6 @@ body {
   --color-dark-grey: #4e4e4e;
   --color-dark-black: #010101;
   --color-purple: #8c52ff;
-  --color-light: #8c52ff;
   --color-yellow: #f9dc00;
   --color-white-100: #f8f8f8;
   --color-blue: #0d5fce;
@@ -71,6 +70,8 @@ body {
   --background-our-blog: url("/assets/images/webp/our-blog-bg.webp");
   --color-fade-purple: #8c52ff14;
   --font-Inter: "Inter", sans-serif;
+  --color-medium-gray: #747474;
+  --color-rich-black: #0a0a0a;
   /* Line Height  */
 
   --spacing-100: 100%;
@@ -81,7 +82,7 @@ body {
   --shadow-bright-dark: 0px 0px 13px 0px #0000000f;
   --shadow-card-hover: 0px 0px 32px 0px #8c52ff1f;
 }
-
+ 
 @media (min-width: 768px) {
   .bg-our-coding {
     background-image: var(--background-our-coding);
@@ -112,7 +113,7 @@ body {
   border: 1px solid #8c52ff;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -2% !important;
 }

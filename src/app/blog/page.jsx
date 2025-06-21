@@ -12,7 +12,7 @@ const page = () => {
     return (
         <>
             <BlogHero />
-            <BrandMarquee/>
+            <BrandMarquee />
             <OurLatestBlogs />
             <GeneralPupiloTopic />
             <Reviews />
