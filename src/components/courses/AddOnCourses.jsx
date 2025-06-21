@@ -21,7 +21,7 @@ const AddOnCourses = () => {
               ))}
             </ul>
           }
-          cardTheme={`bg-${item.cardTheme}`}
+          cardTheme={item.cardTheme}
           description={item.description}
           buttonText={item.buttonText}
           imageSrc={item.image}
