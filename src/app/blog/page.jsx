@@ -1,6 +1,6 @@
-import BlogHero from '@/components/blogs/BlogHero'
-import GeneralPupiloTopic from '@/components/blogs/GeneralPupiloTopic'
-import OurLatestBlogs from '@/components/blogs/OurLatestBlogs'
+import BlogHero from '@/components/blog/BlogHero'
+import GeneralPupiloTopic from '@/components/blog/GeneralPupiloTopic'
+import OurLatestBlogs from '@/components/blog/OurLatestBlogs'
 import BackToTop from '@/components/common/BackToTop'
 import Footer from '@/components/common/Footer'
 import GetStarted from '@/components/common/GetStarted'
@@ -12,7 +12,7 @@ const page = () => {
     return (
         <>
             <BlogHero />
-            <BrandMarquee/>
+            <BrandMarquee />
             <OurLatestBlogs />
             <GeneralPupiloTopic />
             <Reviews />
