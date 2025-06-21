@@ -523,3 +523,33 @@ export const ADD_ON_COURSES_DATA = [
     badgeBorder: "dark-black",
   },
 ];
+
+export const GENERAL_PUPILO_LIST = [
+  {
+    id: 1,
+    title: "The Code Learning Blog: For Kids, Teens, and Adults",
+    description:
+      "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
+    date: "2 June 2025",
+    author: "John doe",
+    image: "/assets/images/webp/general-pupilo-one.webp",
+  },
+  {
+    id: 2,
+    title: "Learning to Code at Any Age",
+    description:
+      "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
+    date: "2 June 2025",
+    author: "John doe",
+    image: "/assets/images/webp/general-pupilo-two.webp",
+  },
+  {
+    id: 3,
+    title: "The Power of Learning at Every Stage",
+    description:
+      "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
+    date: "2 June 2025",
+    author: "John doe",
+    image: "/assets/images/webp/general-pupilo-three.webp",
+  },
+];
