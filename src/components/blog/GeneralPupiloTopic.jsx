@@ -33,7 +33,7 @@ const GeneralPupiloTopic = () => {
             </div>
           ))}
         </div>
-        <button className="group md:mt-10 mt-5 bg-yellow text-black text-base font-semibold px-[38px] py-[14px] rounded-full flex items-center gap-2 mx-auto transition-all duration-300">
+        <button className="group cursor-pointer hover:shadow-xl md:mt-10 mt-5 bg-yellow text-black text-base font-semibold px-[38px] py-[14px] rounded-full flex items-center gap-2 mx-auto transition-all duration-300">
           View All
           <Icons
             icon="commonArrow"
