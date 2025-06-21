@@ -44,7 +44,6 @@ body {
   --color-dark-grey: #4e4e4e;
   --color-dark-black: #010101;
   --color-purple: #8c52ff;
-  --color-light: #8c52ff;
   --color-yellow: #f9dc00;
   --color-white-100: #f8f8f8;
   --color-blue: #0d5fce;
@@ -56,11 +55,14 @@ body {
   --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
   --background-find-best: url("/assets/images/png/what-best-bg.png");
   --color-fade-purple: #8c52ff14;
+  --color-medium-gray: #747474;
+  --color-rich-black: #0a0a0a;
   /* Line Height  */
 
   --spacing-100: 100%;
   --spacing-120: 120%;
   --spacing-150: 150%;
+  --spacing-160: 160%;
   --shadow-light-dark: 0px 0px 32px 0px #0000000f;
   --shadow-bright-dark: 0px 0px 13px 0px #0000000f;
   --shadow-card-hover: 0px 0px 32px 0px #8c52ff1f;
@@ -91,7 +93,7 @@ body {
   border: 1px solid #8c52ff;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -2% !important;
 }
@@ -110,4 +112,3 @@ body {
   background-color: #a855f7;
   border-radius: 8px;
 }
-

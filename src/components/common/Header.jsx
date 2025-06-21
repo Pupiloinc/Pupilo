@@ -45,7 +45,7 @@ const Header = () => {
                             )
                         })}
                     </ul>
-                    <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-100 text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
+                    <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-none text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
                     <div className="lg:hidden z-50 cursor-pointer">
                         <button
                             onClick={toggleMenu}
