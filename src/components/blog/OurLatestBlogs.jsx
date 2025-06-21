@@ -16,7 +16,7 @@ const OurLatestBlogs = () => {
           className="text-center lg:mb-10 mb-8 !text-white"
         />
 
-        <div className="mx-auto flex md:flex-row flex-col justify-center gap-6">
+        <div className="mx-auto flex md:flex-row flex-col justify-center items-center gap-6">
           {/* Left Highlighted Blog */}
           {LATEST_BLOG_DATA_LIST
             .filter((b) => b.highlight)
@@ -56,7 +56,7 @@ const OurLatestBlogs = () => {
                   key={blog.id}
                   className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3.5 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px] group"
                 >
-                  <div className='xl:max-w-[177px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] h-[184px] rounded-xl overflow-hidden'>
+                  <div className='flex xl:max-w-[177px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] lg:h-[184px] min-w-[850px]:h-[152px] h-[179px] rounded-xl overflow-hidden'>
                     <Image
                       src={blog.image}
                       alt={blog.title}
@@ -70,8 +70,8 @@ const OurLatestBlogs = () => {
                       text={`By ${blog.author} on ${blog.date}`}
                       className="!text-purple lg:!text-sm md:text-xs text-sm font-medium xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1"
                     />
-                    <h4 className="font-medium xl:text-xl lg:text-lg md:text-base sm:text-lg text-base leading-120 text-dark-black xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1">{blog.title}</h4>
-                    <p className="font-normal lg:text-sm text-xs leading-150 text-dark-grey xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1 ellipsis-text">{blog.description}</p>
+                    <h4 className="font-medium xl:text-xl lg:text-lg md:text-base sm:text-lg text-base leading-120 text-dark-black line-clamp-3 xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1">{blog.title}</h4>
+                    <p className="font-normal lg:text-sm text-xs leading-150 text-dark-grey xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1 md:max-w-[323px] md:line-clamp-2 line-clamp-4 overflow-hidden text-ellipsis">{blog.description}</p>
                     <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex hover:translate-x-2 transition-all duration-300 underline items-center w-fit`} href="#" >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
                       <Icons icon="blackBtnArrow" />
                     </span>
