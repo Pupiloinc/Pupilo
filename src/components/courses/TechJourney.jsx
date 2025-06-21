@@ -7,12 +7,12 @@ import Image from "next/image";
 const TechJourney = () => {
   return (
     <div>
-      <div className="pb-[60px] pt-40 px-5 2xl:px-0">
+      <div className="py-[60px] sm:pt-20 lg:pt-32 xl:pt-40 px-5 2xl:px-0">
         <Title
           text={
             "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."
           }
-          className={"max-w-[1140px] mx-auto  text-center pb-4"}
+          className={"max-w-[1140px] mx-auto text-center pb-4"}
         />
         <p className="font-semibold text-2xl max-lg:text-xl text-center max-md:text-lg leading-120 text-dark-grey">
           Choose Your Learning Path
@@ -32,16 +32,65 @@ const TechJourney = () => {
               ))}
             </ul>
           }
-          toolsImage={item.tools.map((obj, index) => (
-            <Image
-              width={164}
-              height={27}
-              src={obj}
-              alt="tools-img"
-              key={index}
-            />
-          ))}
-          cardTheme={`bg-${item.cardTheme}`}
+          toolsImage={item.tools.map((obj, index) => {
+            let width = 164;
+            let height = 27;
+            if (item.title === "Little Explorers") {
+              if (index === 0) {
+                width = 124;
+                height = 34;
+              } else if (index === 1) {
+                width = 164;
+                height = 27;
+              } else if (index === 2) {
+                width = 99;
+                height = 33;
+              }
+            } else if (item.title === "Little Creators") {
+              if (index === 0) {
+                width = 35;
+                height = 35;
+              } else if (index === 1) {
+                width = 124;
+                height = 34;
+              } else if (index === 2) {
+                width = 136;
+                height = 34;
+              }
+            } else if (item.title === "Little Programmers") {
+              if (index === 0) {
+                width = 68;
+                height = 32;
+              } else if (index === 1) {
+                width = 98;
+                height = 32;
+              } else if (index === 2) {
+                width = 143;
+                height = 55;
+              }
+            } else if (item.title === "Master Programmers") {
+              if (index === 0) {
+                width = 38;
+                height = 34;
+              } else if (index === 1) {
+                width = 92;
+                height = 34;
+              } else if (index === 2) {
+                width = 125;
+                height = 34;
+              }
+            }
+            return (
+              <Image
+                width={width}
+                height={height}
+                src={obj}
+                alt="tools-img"
+                key={index}
+              />
+            );
+          })}
+          cardTheme={item.cardTheme}
           description={item.description}
           buttonText={item.buttonText}
           imageSrc={item.image}

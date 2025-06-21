@@ -1,16 +1,13 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import Title from "./Title";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay,  Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { REVIEWS_DATA } from "../../../utils/helper";
 import Icons from "./Icons";
 
 const Reviews = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-40 bg-white">
       <div className="container max-w-[1127px] xl:px-0 px-6 max-sm:px-4 mx-auto">
@@ -21,18 +18,7 @@ const Reviews = () => {
           }
         />
         <div id="about-pupilo" className="relative">
-          <button
-            ref={prevRef}
-            className="absolute -left-16 top-1/2 -translate-y-1/2 z-10 bg-white border border-dark-black  rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:scale-[0.9] max-[1090px]:hidden"
-          >
-            <Icons className="group-hover:!stroke-white duration-300 ease-linear transition-all" icon="prevArrow" />
-          </button>
-          <button
-            ref={nextRef}
-            className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 bg-white border border-dark-black rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:scale-[0.9] max-[1090px]:hidden"
-          >
-            <Icons icon="nextArrow" />
-          </button>
+
           <Swiper
             spaceBetween={24}
             slidesPerView={1}
@@ -69,12 +55,12 @@ const Reviews = () => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
+            navigation={{
+              nextEl: ".next-arrow",
+              prevEl: ".prev-arrow"
             }}
             pagination={true}
-            modules={[Autoplay,  Navigation]}
+            modules={[Autoplay, Navigation]}
             className="reviewsSlider !px-2.5 pb-12"
           >
             {REVIEWS_DATA.map((review) => (
@@ -118,6 +104,18 @@ const Reviews = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="max-xl:flex max-xl:justify-center max-xl:gap-5">
+            <button
+              className="absolute prev-arrow max-xl:relative group xl:-left-16 xl:top-1/2 xl:-translate-y-1/2 z-10 bg-white border border-dark-black  rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:bg-purple hover:border-purple"
+            >
+              <Icons className="group-hover:!stroke-white stroke-dark-black duration-300 ease-linear transition-all" icon="prevArrow" />
+            </button>
+            <button
+              className="absolute next-arrow max-xl:relative group xl:-right-16 xl:top-1/2 xl:-translate-y-1/2 z-10 bg-white border border-dark-black rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear hover:bg-purple hover:border-purple duration-150 cursor-pointer"
+            >
+              <Icons className="group-hover:!stroke-white stroke-dark-black duration-300 ease-linear transition-all" icon="nextArrow" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

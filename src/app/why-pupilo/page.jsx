@@ -10,7 +10,7 @@ import PupiloHero from '@/components/why-pupilo/PupiloHero'
 
 const page = () => {
   return (
-    <div>
+    <div className="max-w-[2560px] mx-auto">
       <PupiloHero />
       <BrandMarquee />
       <FutureInnovators />
@@ -21,7 +21,7 @@ const page = () => {
       <Footer />
       <BackToTop />
     </div>
-  )
+  );
 }
 
 export default page

@@ -98,7 +98,7 @@ export const TECH_JOURNEY_CARDS_LIST = [
       "/assets/images/webp/lightbot-tools.webp",
     ],
     image: "/assets/images/webp/little-explorers.webp",
-    cardTheme: "purple",
+    cardTheme: "bg-purple",
     textColor: "white",
     buttonText: "Try a Free Lesson",
     buttonTheme: "white",
@@ -122,7 +122,7 @@ export const TECH_JOURNEY_CARDS_LIST = [
       "/assets/images/webp/tynker-tools.webp",
     ],
     image: "/assets/images/webp/little-creators.webp",
-    cardTheme: "light-purple",
+    cardTheme: "bg-off-purple",
     buttonText: "Try a Free Lesson",
     buttonTheme: "dark-black",
     badgeBorder: "dark-black",
@@ -145,7 +145,7 @@ export const TECH_JOURNEY_CARDS_LIST = [
       "/assets/images/webp/trinket-tools.webp",
     ],
     image: "/assets/images/webp/little-programmers.webp",
-    cardTheme: "blue",
+    cardTheme: "bg-blue",
     textColor: "white",
     buttonText: "Try a Free Lesson",
     buttonTheme: "white",
@@ -169,7 +169,7 @@ export const TECH_JOURNEY_CARDS_LIST = [
       "/assets/images/webp/firebase-tool.webp",
     ],
     image: "/assets/images/webp/master-programmers.webp",
-    cardTheme: "yellow",
+    cardTheme: "bg-yellow",
     buttonText: "Try a Free Lesson",
     buttonTheme: "dark-black",
     badgeBorder: "dark-black",
@@ -372,7 +372,7 @@ export const TOP_RATED_LIST = [
   "/assets/images/webp/top-rated-3.webp",
   "/assets/images/webp/top-rated-4.webp",
   "/assets/images/webp/top-rated-5.webp",
-]
+];
 export const LEARN_OUR_LIST = [
   {
     title: "Whole-Child Learning",
@@ -412,7 +412,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Personalized learning paths",
       "Live tutor + real-time support",
       "Ideal for focused learners & passion projects",
-      "Weekly progress reports + goal setting"
+      "Weekly progress reports + goal setting",
     ],
     bgColor: "bg-[#8C52FF]",
     ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
@@ -423,7 +423,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "1:6 student-teacher ratio",
       "Learn teamwork & collaboration",
       "Challenge-based problem solving",
-      "Teacher-led coding jams"
+      "Teacher-led coding jams",
     ],
     bgColor: "bg-[#8C52FF33]",
     ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
@@ -434,7 +434,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Learn at your own pace",
       "Video walkthroughs + practice tasks",
       "Ideal for independent learners",
-      "Live support for debugging & guidance"
+      "Live support for debugging & guidance",
     ],
     bgColor: "bg-[#F9DC00]",
     ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
@@ -445,9 +445,81 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Seasonal, high-energy events",
       "Themed weekly challenges",
       "Real project builds & peer presentations",
-      "Earn certificates + digital badges"
+      "Earn certificates + digital badges",
     ],
     bgColor: "bg-[#0D5FCE]",
     ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
-  }
+  },
+];
+export const ADD_ON_COURSES_DATA = [
+  {
+    grade: "Grades 3-8",
+    title: "Minecraft 1:1 Coding Course",
+    description:
+      "Welcome to Minecraft Coding Adventures, where imagination meets programming! In this exciting course, learners will explore coding fundamentals by modifying (modding) the Minecraft world using block-based coding tools like Microsoft MakeCode and Blockly, and progress to Python for advanced learners. Students will create custom mini-games, automate tasks, build structures with code, and bring their own Minecraft worlds to life—all while learning real programming concepts.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/coding-course.webp",
+    cardTheme: "bg-purple",
+    textColor: "white",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "white",
+    badgeBorder: "white",
+  },
+  {
+    grade: "Grades 2-5",
+    title: "Fun Coding Math",
+    description:
+      "This course blends math and logic using Scratch and visual puzzles. Concepts like number patterns, geometry, and measurement come alive through coding mini-projects.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/coding-math.webp",
+    cardTheme: "bg-off-purple",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "dark-black",
+    badgeBorder: "dark-black",
+  },
+  {
+    grade: "Grades 2-6",
+    title: "Game Development & Storytelling ",
+    description:
+      "Learner will build a game where Shaka Zulu Saves a Village using Scratch and Roblox Studio. They will learn events, characters, scoring systems, and storytelling.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/coding-development.webp",
+    cardTheme: "bg-blue",
+    textColor: "white",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "white",
+    badgeBorder: "white",
+  },
+  {
+    grade: "Grades 6-12",
+    title: "Artificial Intelligence",
+    description:
+      "Learners start with AI basics: pattern recognition, chatbots, and machine learning concepts using Teachable Machine or block-based AI tools. Advance to ethical AI, image recognition, and Python-based AI in high school.",
+    skills: [
+      "Critical thinking",
+      "Creativity & imagination",
+      "Early programming concepts",
+      "Problem Solving",
+    ],
+    image: "/assets/images/webp/ai-artificial-intelligence.webp",
+    cardTheme: "bg-yellow",
+    buttonText: "Try a Free Lesson",
+    buttonTheme: "dark-black",
+    badgeBorder: "dark-black",
+  },
 ];
