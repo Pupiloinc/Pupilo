@@ -44,7 +44,7 @@ const BlogContent = () => {
               alt="blog-hero-img"
               className="w-full max-w-[730px] xl:h-[442px] rounded-[20px] mb-5"
             />
-            <p className="text-medium-gray leading-160 text-sm sm:text-base font-normal">
+            <p className="text-medium-gray leading-163 text-sm sm:text-base font-normal">
               In today’s digital world, coding is no longer just a career
               skill—it’s a life skill. Whether you’re a curious 10-year-old
               building your first game or a 50-year-old professional exploring a
@@ -68,11 +68,11 @@ const BlogContent = () => {
               alt="coding-for-everyone"
               className="max-w-[730px] xl:h-[422px] w-full rounded-[20px]"
             />
-            <p className="text-dark-black font-normal text-sm sm:text-base leading-160">
+            <p className="text-dark-black font-normal text-sm sm:text-base leading-163">
               One of the biggest misconceptions? “I’m too old” or “I’m too
               young” to start coding. Let’s kill that noise.
             </p>
-            <ul className="font-normal text-sm sm:text-base leading-160 -mt-1 list-inside text-dark-grey list-disc flex flex-col gap-[10px]">
+            <ul className="font-normal text-sm sm:text-base leading-163 -mt-1 list-inside text-dark-grey list-disc flex flex-col gap-[10px]">
               <li>
                 For Kids (10–17): Platforms like Scratch, Code.org, and Tynker
                 turn programming into play. Visual blocks teach logic,
@@ -116,11 +116,11 @@ const BlogContent = () => {
               className="max-w-[730px] xl:h-[422px] w-full rounded-[20px]"
             />
             <div className="flex flex-col gap-[10px]">
-              <p className="text-dark-black font-normal mb-1 text-sm sm:text-base leading-160">
+              <p className="text-dark-black font-normal mb-1 text-sm sm:text-base leading-163">
                 The right tools make all the difference. Here’s a breakdown of
                 the most user-friendly and effective platforms to get started:
               </p>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-160 text-dark-grey">
+              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
                 <span className="font-normal text-base leading-160 text-dark-grey !mb-1">
                   1. Absolute Beginners:
                 </span>
@@ -135,7 +135,7 @@ const BlogContent = () => {
                   Grasshopper (by Google): Mobile-first JavaScript learning app.
                 </li>
               </ul>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-160 text-dark-grey">
+              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
                 <span className="font-normal text-base leading-160 text-dark-grey !mb-1">
                   2. Next-Level Learners:
                 </span>
@@ -145,7 +145,7 @@ const BlogContent = () => {
                 <li>Khan Academy: Interactive JS and web dev courses.</li>
                 <li>Replit : Learn and build real projects in-browser.</li>
               </ul>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-160 text-dark-grey">
+              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
                 <span className="font-normal text-sm sm:text-base leading-160 text-dark-grey !mb-1">
                   3. For Deep Divers:
                 </span>
@@ -175,12 +175,12 @@ const BlogContent = () => {
               className="max-w-[730px] xl:h-[422px] w-full rounded-[20px]"
             />
             <div className="mb-8 sm:mb-10 lg:mb-[60px]">
-              <p className="mb-4 text-sm sm:text-base leading-160 font-normal text-dark-black">
+              <p className="mb-4 text-sm sm:text-base leading-163 font-normal text-dark-black">
                 Coding isn’t just about writing lines of syntax. It’s about
                 solving real problems. Here’s how it’s transforming everyday
                 lives:
               </p>
-              <ol className="list-decimal list-inside space-y-[10px] font-normal text-sm sm:text-base leading-160 text-dark-grey ">
+              <ol className="list-decimal list-inside space-y-[10px] font-normal text-sm sm:text-base leading-163 text-dark-grey ">
                 <li>
                   A 13-year-old girl in India used Scratch to build an
                   anti-bullying game and won global recognition.
@@ -198,7 +198,7 @@ const BlogContent = () => {
                   taking a part-time bootcamp — now earning double.
                 </li>
                 <li>
-                  Use coding to:
+                  <span className="pb-2 inline-flex"> Use coding to:</span>
                   <ul className="list-disc list-inside font-normal text-sm sm:text-base leading-160 -mt-1 text-dark-grey flex flex-col gap-1">
                     <li>Build a side hustle</li>
                     <li>Enhance your job performance</li>
@@ -208,7 +208,7 @@ const BlogContent = () => {
                 </li>
               </ol>
             </div>
-            <p className="text-sm sm:text-base leading-160 font-normal text-dark-black pr-5">
+            <p className="text-sm sm:text-base leading-163 font-normal text-dark-black pr-5">
               Coding is not just a career path — it's a mindset shift. It
               teaches you how to think, how to solve, how to create. Whether
               you're 10 or 50, there’s a space in the tech world waiting for you
