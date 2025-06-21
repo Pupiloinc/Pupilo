@@ -8,8 +8,8 @@ const BlogHero = () => {
     <Header />
     <div className="container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto">
       <div className="pt-[230px] pb-[326px] relative">
-        <h2 className="text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black mt-4 relative z-10">Our<span className="text-purple relative"> Blogs<Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span></h2>
-        <Image src="/assets/images/webp/blog-1.webp" alt="blog-1" width={214} height={166} className="absolute top-[8%] md:top-[12%] left-[4%] -rotate-[20deg] max-sm:w-[144px]" />
+        <h2 className="text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black relative z-10">Our<span className="text-purple relative"> Blogs<Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span></h2>
+        <Image src="/assets/images/webp/blog-1.webp" alt="blog-1" width={214} height={166} className="absolute top-[8%] md:top-[14%] left-[4%] -rotate-[20deg] max-sm:w-[144px]" />
         <div className="absolute top-[8%] md:top-[12%] right-[4%] ">
           <div className="relative">
             <Image src="/assets/images/webp/blog-2.webp" alt="blog-2" width={228} height={178} className="rotate-[30deg] max-sm:w-[144px]" />
@@ -44,8 +44,8 @@ const BlogHero = () => {
         </div>
       </div>
     </div>
-    <Image className="absolute top-[51%] left-[4%]  min-[1700px]:left-[15%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-purple-ellipse.svg" width={240} height={240} alt="purple-ellipse" />
-    <Image className="absolute right-[5%] 2xl:right-[6%] top-[40%] min-[1700px]:right-[18%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-yellow-ellipse.svg" width={240} height={240} alt="yellow-ellipse" />
+    <Image className="absolute top-[54%] left-[7%]  min-[1700px]:left-[18%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-purple-ellipse.svg" width={191} height={191} alt="purple-ellipse" />
+    <Image className="absolute right-[8%] 2xl:right-[9%] top-[46%] min-[1700px]:right-[18%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-yellow-ellipse.svg" width={190} height={190} alt="yellow-ellipse" />
   </div>;
 };
 
