@@ -31,7 +31,7 @@ const BlogHero = () => {
           <Image src="/assets/images/svg/css.svg" width={24} height={28} alt="html-img" />
         </div>
         <div className="min-w-10 sm:min-w-12 h-10 sm:h-12 bg-white border border-black/10 shadow-light-dark rounded-full flex justify-center items-center absolute left-[49%] bottom-[28%] rotate-[-30deg] z-10">
-          <Image src="/assets/images/svg/js.svg" width={25} height={25} alt="html-img" />
+          <Image src="/assets/images/svg/js.svg" width={25} height={25} alt="html-img" className="max-w-[25px] h-[25px]" />
         </div>
         <div className="min-w-10 sm:min-w-12 h-10 sm:h-12 bg-white border border-black/10 shadow-light-dark rounded-full flex justify-center items-center absolute right-[38%] top-[24%] md:top-[13%] rotate-[2deg] z-10">
           <Image src="/assets/images/svg/python.svg" width={30} height={30} alt="html-img" />
