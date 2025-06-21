@@ -127,6 +127,7 @@ export const TECH_JOURNEY_CARDS_LIST = [
     buttonTheme: "dark-black",
     badgeBorder: "dark-black",
     levelTextTheme: "text-light-purple",
+    textColor: "dark-black",
   },
   {
     grade: "Grades 6-9",
