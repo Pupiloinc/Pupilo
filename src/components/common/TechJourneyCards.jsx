@@ -136,7 +136,7 @@ const PupiloCard = ({
           width={322}
           height={322}
           alt="layer"
-          className="absolute pointer-events-none size-[322px] opacity-60 top-1/2 -translate-y-1/2 z-10 left-0 max-lg:bottom-0"
+          className="absolute pointer-events-none size-[322px] opacity-60 top-1/2 -translate-y-1/2 z-10 -left-12 max-lg:bottom-0"
           src={"/assets/images/svg/star-vector-1.svg"}
         />
         <Image

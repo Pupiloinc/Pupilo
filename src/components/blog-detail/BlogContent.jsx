@@ -34,7 +34,7 @@ const BlogContent = () => {
                 "Explore the World of Coding: Tips and Insights for All Ages"
               }
             />
-            <p className="text-sm sm:text-base font-medium leading-none text-dark-black mb-3">
+            <p className="text-sm sm:text-base font-medium leading-normal text-dark-black mb-3">
               By: Jordon on March 14, 2025
             </p>
             <Image
