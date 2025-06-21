@@ -6,7 +6,10 @@ import TechJourneyCards from "../common/TechJourneyCards";
 const AddOnCourses = () => {
   return (
     <div className="pt-[60px] sm:pt-[100px] lg:pt-32 xl:pt-40 ">
-      <Title text={"Add-on Courses"} className={"md:px-6 px-4 md:pb-[60px] pb-6 text-center"} />
+      <Title
+        text={"Add-on Courses"}
+        className={"md:px-6 px-4 pb-[60px] text-center"}
+      />
       {ADD_ON_COURSES_DATA.map((item, index) => (
         <TechJourneyCards
           key={index}
@@ -31,6 +34,9 @@ const AddOnCourses = () => {
           textColor={`text-${item.textColor}`}
           levelTextTheme={item.levelTextTheme}
           level={index + 1}
+          starVectorClass={
+            index === 1 || index === 3 ? "opacity-75" : "opacity-20 sm:opacity-35"
+          }
           buttonClass={`${
             item.buttonTheme === "white"
               ? "!bg-white !text-dark-black"
