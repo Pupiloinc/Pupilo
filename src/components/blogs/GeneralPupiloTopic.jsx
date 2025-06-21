@@ -1,9 +1,47 @@
 import React from 'react'
-
+import Image from 'next/image'
+import Title from '../common/Title'
+import Icons from '../common/Icons'
+import Link from 'next/link'
+import { GENERAL_PUPILO_LIST } from '../../../utils/helper'
 const GeneralPupiloTopic = () => {
   return (
-    <div>GeneralPupiloTopic</div>
+    <div className='lg:pt-[160px] md:pt-[100px] pt-[60px] px-4'>
+    <div className="max-w-[1140px] mx-auto">
+      <Title text="General Pupilo Topic" className="text-center md:!leading-[121%]" />
+        <p className="text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-10 mt-3">
+        In this section, we cover a wide range of topics to support every learner on their coding journey.
+      </p>
+      <div className="grid xl:gap-6 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {GENERAL_PUPILO_LIST.map((general) => (
+            <div key={general.id} className="bg-white md:rounded-[24px] rounded-xl shadow-light-dark hover:shadow-2xl transition-all duration-300 xl:p-4 p-3 text-left">
+            <div className="w-full relative overflow-hidden mb-4">
+              <Image
+                src={general.image}
+                  alt={general.title}
+                width={332}
+                height={220}
+                className="object-cover max-w-[332px] xl:min-h-[220px] w-full rounded-xl"
+              />
+            </div>
+              <p className="text-base text-purple font-normal lg:mb-4 mb-2">
+                By {general.author} on {general.date}
+            </p>
+              <h3 className="md:text-2xl text-xl font-semibold spacing-120 md:mb-3 mb-2">{general.title}</h3>
+              <p className="md:text-base text-sm text-dark-black lg:mb-4 mb-3 font-normal spacing-150">{general.description}</p>
+              <Link href="#" className='flex items-center group gap-1 text-base font-semibold underline transition-all duration-300'>Learn More <span className='group-hover:translate-x-2 transition-all duration-300' ><Icons icon="blackBtnArrow" /></span></Link>
+          </div>
+        ))}
+      </div>
+        <button className="group md:mt-10 mt-5 bg-yellow text-black text-base font-semibold px-[38px] py-[14px] rounded-full flex items-center gap-2 mx-auto transition-all duration-300">
+          View All
+          <Icons
+            icon="commonArrow"
+            className="transition-transform duration-300 group-hover:rotate-45"
+          />
+        </button>
+      </div>
+    </div>
   )
 }
-
 export default GeneralPupiloTopic

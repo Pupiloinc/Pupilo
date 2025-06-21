@@ -27,7 +27,7 @@ const PupiloCard = ({
   return (
     <div className="overflow-hidden ">
       <div
-        className={`py-10 lg:py-[68px] px-5 relative ${
+        className={`py-10 lg:py-[68px] md:px-6 px-4 relative ${
           cardTheme || "bg-off-purple"
         }`}
       >
@@ -66,7 +66,7 @@ const PupiloCard = ({
                       </p>
                     </div>
                     <h3
-                      className={`text-custom-5xl max-lg:text-4xl max-md:text-custom-4xl max-sm:text-3xl leading-120 font-semibold ${headingClass} ${
+                      className={`text-5xl max-lg:text-4xl max-md:text-custom-4xl max-sm:text-3xl leading-120 font-semibold ${headingClass} ${
                         textColor || "text-white"
                       }`}
                     >
@@ -91,7 +91,7 @@ const PupiloCard = ({
                   <div
                     className={`${
                       textColor || "text-white"
-                    } flex flex-col text-base leading-normal font-normal pl-5`}
+                    } opacity-80 flex flex-col text-base leading-normal font-normal pl-5`}
                   >
                     {skills}
                   </div>
@@ -121,7 +121,7 @@ const PupiloCard = ({
                   height={447}
                   src={imageSrc}
                   alt="journey-cards-image"
-                  className={`${imageClass} w-full max-lg:object-center max-lg:object-cover max-w-[480px] lg:max-w-[347px] h-[380px] lg:h-[447px] rounded-3xl`}
+                  className={`${imageClass} w-full max-lg:object-center max-lg:object-cover max-w-[480px] lg:max-w-[347px] h-[380px] lg:h-[447px] md:rounded-3xl rounded-2xl`}
                 />
                 <CustomButton
                   iconColor={buttonIconcolor || "#010101"}

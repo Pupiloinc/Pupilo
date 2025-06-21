@@ -7,7 +7,7 @@ import Image from "next/image";
 const TechJourney = () => {
   return (
     <div>
-      <div className="py-[60px] sm:pt-20 lg:pt-32 xl:pt-40 px-5 2xl:px-0">
+      <div className="md:py-[60px] pb-6 pt-[60px] sm:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
         <Title
           text={
             "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."
@@ -24,7 +24,7 @@ const TechJourney = () => {
           badge={item.grade}
           title={item.title}
           headingClass={`max-w-[510px] max-lg:mx-auto`}
-          descriptionClass={`max-w-[523px] max-lg:mx-auto`}
+          descriptionClass={`max-w-[606px] max-lg:mx-auto`}
           skills={
             <ul className="list-disc">
               {item.skills.map((skill, i) => (

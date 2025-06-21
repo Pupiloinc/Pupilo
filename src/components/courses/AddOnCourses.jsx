@@ -5,8 +5,8 @@ import TechJourneyCards from "../common/TechJourneyCards";
 
 const AddOnCourses = () => {
   return (
-    <div className="pt-[60px] sm:pt-20 lg:pt-32 xl:pt-40 ">
-      <Title text={"Add-on Courses"} className={"px-5 pb-[60px] text-center"} />
+    <div className="pt-[60px] sm:pt-[100px] lg:pt-32 xl:pt-40 ">
+      <Title text={"Add-on Courses"} className={"md:px-6 px-4 md:pb-[60px] pb-6 text-center"} />
       {ADD_ON_COURSES_DATA.map((item, index) => (
         <TechJourneyCards
           key={index}
