@@ -106,12 +106,12 @@ const Reviews = () => {
           </Swiper>
           <div className="max-xl:flex max-xl:justify-center max-xl:gap-5">
             <button
-              className="absolute prev-arrow max-xl:relative group xl:-left-16 xl:top-1/2 xl:-translate-y-1/2 z-10 bg-white border border-dark-black  rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:bg-purple hover:border-purple"
+              className="absolute prev-arrow max-xl:relative group xl:-left-16 xl:top-1/2 xl:-translate-y-1/2 z-10 bg-white border border-dark-black  rounded-full w-12 h-12 max-sm:size-10 flex items-center justify-center  transition-all ease-linear duration-150 cursor-pointer hover:bg-purple hover:border-purple"
             >
               <Icons className="group-hover:!stroke-white stroke-dark-black duration-300 ease-linear transition-all" icon="prevArrow" />
             </button>
             <button
-              className="absolute next-arrow max-xl:relative group xl:-right-16 xl:top-1/2 xl:-translate-y-1/2 z-10 bg-white border border-dark-black rounded-full w-12 h-12 flex items-center justify-center  transition-all ease-linear hover:bg-purple hover:border-purple duration-150 cursor-pointer"
+              className="absolute next-arrow max-xl:relative group xl:-right-16 xl:top-1/2 xl:-translate-y-1/2 z-10 bg-white border border-dark-black rounded-full w-12 h-12 max-sm:size-10 flex items-center justify-center  transition-all ease-linear hover:bg-purple hover:border-purple duration-150 cursor-pointer"
             >
               <Icons className="group-hover:!stroke-white stroke-dark-black duration-300 ease-linear transition-all" icon="nextArrow" />
             </button>
