@@ -523,13 +523,40 @@ export const ADD_ON_COURSES_DATA = [
     badgeBorder: "dark-black",
   },
 ];
-export const BLOG_ICON_DATA_LIST = [
- ,
-  "/assets/images/svg/css.svg",
-  "/assets/images/svg/bitbucket.svg",
-  "/assets/images/svg/js.svg",
-  "/assets/images/svg/python.svg",
-  "/assets/images/svg/vs-code.svg",
-  "/assets/images/svg/wordpress.svg",
-  "/assets/images/svg/sublime.svg",
-]
+
+export const LATEST_BLOG_DATA_LIST = [
+  {
+    id: 1,
+    title: "Explore the World of Coding: Tips and Insights for All Ages",
+    author: "John doe",
+    date: "2 June 2025",
+    description: "Discover coding tips, inspiring stories, and expert insights crafted for learners of all ages. Whether you're a curious student, a working professional, or someone exploring a new passion, our blog is here to guide you. From beginner basics to real-world projects, explore how anyone—from age 10 to 50—can start coding and grow.",
+    image: "/assets/images/webp/coding-tips.webp",
+    highlight: true
+  },
+  {
+    id: 2,
+    title: "From First Line to Full Stack: Journeys from Our Students",
+    author: "John doe",
+    date: "2 June 2025",
+    description: "Epoxy coatings provide a durable, moisture-resistant surface ideal for high-traffic areas.",
+    image: "/assets/images/webp/full-stack.webp",
+    highlight: false
+  },
+  {
+    id: 3,
+    title: "Your Coding Companion: Learn, Practice, and Grow with Us",
+    author: "John doe",
+    date: "2 June 2025",
+    description: "Installing epoxy flooring involves surface preparation, priming, and applying multiple.",
+    image: "/assets/images/webp/coding-companion.webp"
+  },
+  {
+    id: 4,
+    title: "Behind the Code: Stories and Resources for Every Student",
+    author: "John doe",
+    date: "2 June 2025",
+    description: "Garages demand tough, long-lasting flooring, and epoxy stands out for its strength.",
+    image: "/assets/images/webp/behind-the-code.webp"
+  }
+];

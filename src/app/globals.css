@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @font-face {
   font-family: Poppins;
   src: url(/assets/fonts/Poppins-Thin.ttf);
@@ -30,12 +31,23 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/inter/Inter-Regular.otf);
+  font-weight: 400;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
+
 @theme {
   /* Font Size */
+  --text-custom-3xl: 28px;
   --text-custom-4xl: 32px;
   --text-custom-5xl: 40px;
   --text-custom-6xl: 64px;
@@ -53,14 +65,18 @@ body {
   --color-off-purple: #8c52ff33;
   --color-light-purple: #e8dcff;
   --color-dolphin: #5d6180;
+  --color-light-black: #0000001F;
   --background-our-coding: url("/assets/images/webp/coding-program-bg.webp");
-  --background-find-best: url("/assets/images/png/what-best-bg.png");
+  --background-find-best: url("/assets/images/webp/what-best-bg.webp");
+  --background-our-blog: url("/assets/images/webp/our-blog-bg.webp");
   --color-fade-purple: #8c52ff14;
+  --font-Inter: "Inter", sans-serif;
   /* Line Height  */
 
   --spacing-100: 100%;
   --spacing-120: 120%;
   --spacing-150: 150%;
+  --spacing-160: 160%;
   --shadow-light-dark: 0px 0px 32px 0px #0000000f;
   --shadow-bright-dark: 0px 0px 13px 0px #0000000f;
   --shadow-card-hover: 0px 0px 32px 0px #8c52ff1f;
@@ -70,8 +86,13 @@ body {
   .bg-our-coding {
     background-image: var(--background-our-coding);
   }
+
   .bg-find-best {
     background-image: var(--background-find-best);
+  }
+
+  .bg-our-blog {
+    background-image: var(--background-our-blog);
   }
 }
 
@@ -111,3 +132,9 @@ body {
   border-radius: 8px;
 }
 
+.ellipsis-text {
+  max-width: 323px;
+  min-height: 42px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
