@@ -10,11 +10,12 @@ import BackToTop from "@/components/common/BackToTop";
 import OurCoding from "@/components/home/OurCoding";
 import AddOnCourses from "@/components/home/AddOnCourses";
 import Icons from "@/components/common/Icons";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="max-w-[2560px] mx-auto">
-      <Hero badgeText="🏆Top-Rated by Parents"  blackText="Where Every Child can" purpleText={<>Code,<span className="relative"> Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span>and Thrive.</>}/>
+      <Hero badgeText="🏆Top-Rated by Parents"  blackText="Where Every Child can" purpleText={<>Code,<span className="relative"> Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span>and Thrive.</>} heroImg={<Image className="relative z-10" src="/assets/images/webp/home-hero.webp" width={550} height={527} alt="home-hero" />}/>
       <BrandMarquee />
       <PupiloCurriculum />
       <AddOnCourses/>

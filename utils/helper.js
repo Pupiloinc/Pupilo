@@ -523,3 +523,13 @@ export const ADD_ON_COURSES_DATA = [
     badgeBorder: "dark-black",
   },
 ];
+export const BLOG_ICON_DATA_LIST = [
+ ,
+  "/assets/images/svg/css.svg",
+  "/assets/images/svg/bitbucket.svg",
+  "/assets/images/svg/js.svg",
+  "/assets/images/svg/python.svg",
+  "/assets/images/svg/vs-code.svg",
+  "/assets/images/svg/wordpress.svg",
+  "/assets/images/svg/sublime.svg",
+]
