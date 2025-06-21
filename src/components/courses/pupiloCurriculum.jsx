@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const PupiloCurriculum = () => {
   return (
-    <div className="bg-fade-purple sm:py-20 py-[60px] relative">
+    <div className="bg-fade-purple sm:py-20 py-[60px] relative mt-[60px] sm:mt-20 lg:mt-32 xl:pt-40">
       <Image
         width={454}
         height={152}
