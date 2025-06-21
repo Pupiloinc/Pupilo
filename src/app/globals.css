@@ -134,9 +134,3 @@ body {
   border-radius: 8px;
 }
 
-.ellipsis-text {
-  max-width: 323px;
-  min-height: 42px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
