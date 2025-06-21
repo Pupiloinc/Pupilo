@@ -7,7 +7,7 @@ import Image from "next/image";
 const TechJourney = () => {
   return (
     <div>
-      <div className="md:py-[60px] pb-6 pt-[60px] sm:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
+      <div className="sm:py-[60px] md:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
         <Title
           text={
             "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."
@@ -16,14 +16,14 @@ const TechJourney = () => {
         />
         <p className="font-semibold text-2xl max-lg:text-xl text-center max-md:text-lg leading-120 text-dark-grey">
           Choose Your Learning Path
-        </p>
+        </p>  
       </div>
       {TECH_JOURNEY_CARDS_LIST.map((item, index) => (
         <TechJourneyCards
           key={index}
           badge={item.grade}
           title={item.title}
-          headingClass={`max-w-[510px] max-lg:mx-auto`}
+          headingClass={`max-lg:mx-auto`}
           descriptionClass={`max-w-[606px] max-lg:mx-auto`}
           skills={
             <ul className="list-disc">
@@ -100,6 +100,11 @@ const TechJourney = () => {
           textColor={`text-${item.textColor}`}
           levelTextTheme={item.levelTextTheme}
           level={index + 1}
+          starVectorClass={
+            index === 1 || index === 3
+              ? "opacity-75"
+              : "opacity-20 sm:opacity-35"
+          }
           buttonClass={`${
             item.buttonTheme === "white"
               ? "!bg-white !text-dark-black"

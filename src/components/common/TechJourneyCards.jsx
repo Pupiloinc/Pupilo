@@ -20,6 +20,7 @@ const PupiloCard = ({
   cardTheme,
   textColor,
   imageClass,
+  starVectorClass,
   headingClass,
   ourTools,
   descriptionClass,
@@ -27,21 +28,21 @@ const PupiloCard = ({
   return (
     <div className="overflow-hidden ">
       <div
-        className={`py-10 lg:py-[68px] md:px-6 px-4 relative ${
+        className={`py-10 md:py-[60px] lg:py-[68px] md:px-6 px-4 relative ${
           cardTheme || "bg-off-purple"
         }`}
       >
         <div className={`max-w-[1140px] mx-auto relative z-15`}>
           <div className="flex flex-row flex-wrap items-center">
             <div
-              className={`w-full lg:w-[60%] flex flex-col gap-7 max-lg:items-center`}
+              className={`w-full lg:w-[62%] flex flex-col gap-7 max-lg:items-center`}
             >
               <div className="flex flex-col gap-6 md:gap-7">
                 <div className="flex flex-col gap-2 max-lg:items-start">
                   <div
                     className={`${
                       badgeBorder || "border-white"
-                    } py-2 px-5 rounded-full border border-solid mb-2 w-max`}
+                    } py-2 sm:py-[11px] px-5 rounded-full border border-solid mb-2 w-max`}
                   >
                     <p
                       className={`${
@@ -111,7 +112,7 @@ const PupiloCard = ({
               </div>
             </div>
             <div
-              className={`w-full lg:w-[40%] flex justify-center max-lg:pt-10 lg:justify-end`}
+              className={`w-full lg:w-[38%] flex justify-center max-lg:pt-10 lg:justify-end`}
             >
               <div
                 className={`w-full max-w-[480px] lg:max-w-[347px] flex flex-col gap-6`}
@@ -121,7 +122,7 @@ const PupiloCard = ({
                   height={447}
                   src={imageSrc}
                   alt="journey-cards-image"
-                  className={`${imageClass} w-full max-lg:object-center max-lg:object-cover max-w-[480px] lg:max-w-[347px] h-[380px] lg:h-[447px] md:rounded-3xl rounded-2xl`}
+                  className={`${imageClass} w-full object-cover max-w-[480px] lg:max-w-[347px] h-[447px] md:rounded-3xl rounded-2xl`}
                 />
                 <CustomButton
                   iconColor={buttonIconcolor || "#010101"}
@@ -136,21 +137,21 @@ const PupiloCard = ({
           width={322}
           height={322}
           alt="layer"
-          className="absolute pointer-events-none size-[322px] opacity-60 top-1/2 -translate-y-1/2 z-10 -left-12 max-lg:bottom-0"
+          className={`${starVectorClass} absolute pointer-events-none size-[322px] top-[45%] -translate-y-1/2 z-10 -left-12 max-lg:bottom-0`}
           src={"/assets/images/svg/star-vector-1.svg"}
         />
         <Image
           width={322}
           height={322}
           alt="layer"
-          className="absolute pointer-events-none size-[322px] opacity-60 -top-32 -translate-x-1/2 z-10 left-1/2 max-lg:bottom-0"
+          className={`${starVectorClass} absolute pointer-events-none size-[322px] -top-32 -translate-x-1/2 z-10 left-1/2 max-lg:bottom-0`}
           src={"/assets/images/svg/star-vector-2.svg"}
         />
         <Image
           width={322}
           height={322}
           alt="layer"
-          className="absolute pointer-events-none size-[322px] opacity-60 bottom-0 z-10 right-0 max-lg:bottom-0"
+          className={`${starVectorClass} absolute pointer-events-none size-[322px] bottom-0 z-10 right-0 max-lg:bottom-0`}
           src={"/assets/images/svg/star-vector-3.svg"}
         />
       </div>
