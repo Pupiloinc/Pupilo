@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Title from '../common/Title'
 import Icons from '../common/Icons'
 import Link from 'next/link'
+import CustomButton from '../common/CustomButton'
 import { GENERAL_PUPILO_LIST } from '../../../utils/helper'
 const GeneralPupiloTopic = () => {
   return (
@@ -33,13 +34,9 @@ const GeneralPupiloTopic = () => {
             </div>
           ))}
         </div>
-        <button className="group md:mt-10 mt-5 bg-yellow text-black text-base font-semibold px-[38px] py-[14px] rounded-full flex items-center gap-2 mx-auto transition-all duration-300">
-          View All
-          <Icons
-            icon="commonArrow"
-            className="transition-transform duration-300 group-hover:rotate-45"
-          />
-        </button>
+        <div className="mt-10 flex justify-center">
+          <CustomButton iconColor="#010101" text="View More" className="!bg-yellow !px-[22px]" />
+        </div>
       </div>
     </div>
   )
