@@ -7,7 +7,7 @@ import Image from "next/image";
 const TechJourney = () => {
   return (
     <div>
-      <div className="sm:py-[60px] md:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
+      <div className="py-[60px] md:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
         <Title
           text={
             "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."

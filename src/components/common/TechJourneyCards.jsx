@@ -122,7 +122,7 @@ const PupiloCard = ({
                   height={447}
                   src={imageSrc}
                   alt="journey-cards-image"
-                  className={`${imageClass} w-full object-cover max-w-[480px] lg:max-w-[347px] h-[447px] md:rounded-3xl rounded-2xl`}
+                  className={`${imageClass} w-full object-cover max-w-[480px] lg:max-w-[347px] h-[380px] sm:h-[447px] md:rounded-3xl rounded-2xl`}
                 />
                 <CustomButton
                   iconColor={buttonIconcolor || "#010101"}
