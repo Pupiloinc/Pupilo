@@ -22,7 +22,7 @@ const GeneralPupiloTopic = () => {
                   alt={general.title}
                   width={332}
                   height={220}
-                  className="object-cover max-w-[332px] xl:min-h-[220px] w-full rounded-xl"
+                  className="object-cover lg:max-w-[332px] xl:min-h-[220px] w-full rounded-xl"
                 />
               </div>
               <p className="text-base text-purple font-normal lg:mb-4 mb-2">
