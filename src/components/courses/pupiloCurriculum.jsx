@@ -6,7 +6,7 @@ import Image from "next/image";
 const PupiloCurriculum = () => {
   return (
     <div className="max-md:bg-fade-purple bg-pupilo-curriculum bg-full max-lg:!bg-cover sm:py-20 py-[60px] relative mt-[60px] md:mt-[100px] lg:mt-32 xl:mt-40 overflow-hidden">
-      <div className="container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto">
+      <div className="container max-w-[1140px] xl:px-0  px-4 mx-auto">
         <Title
           text="Pupilo’s Curriculum"
           className="text-center !leading-[160%] mb-1"
