@@ -10,12 +10,12 @@ const GeneralPupiloTopic = () => {
     <div className='lg:pt-[160px] md:pt-[100px] pt-[60px] px-4'>
       <div className="max-w-[1140px] mx-auto">
         <Title text="General Pupilo Topic" className="text-center md:!leading-[121%]" />
-        <p className="text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-10 mt-3">
+        <p className="text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-6 lg:mb-10 mt-3">
           In this section, we cover a wide range of topics to support every learner on their coding journey.
         </p>
         <div className="grid xl:gap-6 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {GENERAL_PUPILO_LIST.map((general) => (
-            <div key={general.id} className="bg-white md:rounded-[24px] rounded-xl shadow-light-dark hover:shadow-2xl transition-all duration-300 xl:p-4 p-3 text-left">
+            <div key={general.id} className="bg-white md:rounded-[24px] rounded-xl shadow-light-dark hover:shadow-2xl transition-all duration-300 xl:p-4 max-sm:py-4 max-sm:px-3 text-left">
               <div className="w-full relative overflow-hidden mb-4">
                 <Image
                   src={general.image}
@@ -34,7 +34,7 @@ const GeneralPupiloTopic = () => {
             </div>
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-6 lg:mt-10 flex justify-center">
           <CustomButton iconColor="#010101" text="View More" className="!bg-yellow !px-[22px]" />
         </div>
       </div>

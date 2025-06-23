@@ -10,13 +10,13 @@ import Icons from '../common/Icons'
 const OurLatestBlogs = () => {
   return (
     <div className='sm:py-20 py-[60px] bg-our-blog bg-full max-lg:!bg-cover max-md:bg-purple'>
-      <div className="container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto">
+      <div className="container max-w-[1140px] xl:px-0  px-4 mx-auto">
         <Title
           text="Our Latest Blogs"
           className="text-center lg:mb-10 mb-8 !text-white"
         />
 
-        <div className="mx-auto flex md:flex-row flex-col justify-center items-center gap-6">
+        <div className="mx-auto flex md:flex-row flex-col justify-center lg:items-center gap-6">
           {/* Left Highlighted Blog */}
           {LATEST_BLOG_DATA_LIST
             .filter((b) => b.highlight)
@@ -39,7 +39,7 @@ const OurLatestBlogs = () => {
                   className="!text-purple font-medium lg:mb-3.5 mb-2"
                 />
                 <h3 className="font-semibold lg:text-custom-3xl text-2xl leading-120 text-dark-black lg:mb-4 md:mb-2 mb-2">{blog.title}</h3>
-                <p className="font-normal sm:text-base text-sm leading-160 text-dark-grey lg:mb-7 mb-5 font-inter ">{blog.description}</p>
+                <p className="font-normal sm:text-base text-sm leading-[135%] min-[800px]:leading-160 text-dark-grey lg:mb-7 mb-5 font-inter ">{blog.description}</p>
 
                 <button className="bg-yellow text-dark-black font-semibold lg:text-base text-sm leading-150 sm:py-3.5 py-3 px-8 rounded-full w-fit cursor-pointer hover:shadow-lg transition-all ease-linear duration-300">
                   Learn More
@@ -48,13 +48,13 @@ const OurLatestBlogs = () => {
             ))}
 
           {/* Right Blog List */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-3 lg:gap-6">
             {LATEST_BLOG_DATA_LIST
               .filter((b) => !b.highlight)
               .map((blog) => (
                 <div
                   key={blog.id}
-                  className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3.5 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px] group"
+                  className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px] group"
                 >
                   <div className='flex xl:max-w-[177px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] lg:h-[184px] min-w-[850px]:h-[152px] h-[179px] rounded-xl overflow-hidden'>
                     <Image
@@ -82,7 +82,7 @@ const OurLatestBlogs = () => {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-6 lg:mt-10 flex justify-center">
           <CustomButton iconColor="#010101" text="View More" className="!bg-white" />
         </div>
       </div>

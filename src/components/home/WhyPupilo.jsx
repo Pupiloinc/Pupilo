@@ -8,7 +8,7 @@ import { TOP_RATED_LIST } from '../../../utils/helper'
 const WhyPupilo = () => {
     return (
         <div className="py-40 max-xl:py-[100px] max-md:py-[60px]">
-            <div className='container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto'>
+            <div className='container max-w-[1140px] xl:px-0  px-4 mx-auto'>
                 <div className="flex justify-between gap-5 max-sm:gap-8 max-lg:flex-col mb-6 max-lg:pb-5 items-center">
                     <div className="max-w-[627px] max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center">
                         <Title text="Learn our Difference:
@@ -29,11 +29,11 @@ const WhyPupilo = () => {
                 <div className="flex justify-between max-lg:flex-col gap-5">
                     <div className="lg:max-w-[364px] max-w-[752px] max-lg:mx-auto max-lg:justify-center max-lg:items-center max-lg:flex-col max-lg:flex w-full py-[30.49px] sm:px-[52px] max-sm:ps-[42px] max-sm:pe-[52px] bg-white shadow-light-dark rounded-3xl">
                         <p className='font-medium text-custom-4xl max-lg:text-3xl max-md:text-2xl leading-120 text-center text-dark-black'>Top Rated</p>
-                            <div className='flex mt-6 max-lg:mt-5 max-md:mt-4'>
-                                {TOP_RATED_LIST.map((item , index) => (
-                                <Image src={item} alt={`top-rated-${index}`} key={index} className={`size-[71px] border-solid border-4 border-white rounded-full ${index !== 0 && 'ml-[-25px]'}`} width={71} height={71}/> 
+                        <div className='flex mt-6 max-lg:mt-5 max-md:mt-4'>
+                            {TOP_RATED_LIST.map((item, index) => (
+                                <Image src={item} alt={`top-rated-${index}`} key={index} className={`size-[71px] border-solid border-4 border-white rounded-full ${index !== 0 && 'ml-[-25px]'}`} width={71} height={71} />
                             ))}
-                            </div>
+                        </div>
                         <p className='font-normal text-base leading-150 text-dark-black opacity-80 mt-6 text-center'>Over 2000 happy parents reviews.</p>
                     </div>
                     <div className="max-w-[752px] max-lg:mx-auto max-sm:pb-3 max-sm:flex-col relative w-full bg-white shadow-light-dark rounded-3xl flex gap-[6px] overflow-hidden">
@@ -45,8 +45,8 @@ const WhyPupilo = () => {
                             <div className="w-[370px] h-[100px] max-sm:hidden bg-[linear-gradient(0deg,_#FFFFFF00_0%,_#FFFFFF_100%)] absolute top-0 right-0 z-10"></div>
                             <div className="w-[370px] h-[100px] max-sm:hidden bg-[linear-gradient(180deg,_#FFFFFF00_0%,_#FFFFFF_100%)] absolute bottom-0 right-0 z-10"></div>
                             <div>
-                                <Image src={'/assets/images/webp/why-pupilo-icon.webp'} width={210} height={476} alt='why-pupilo-icon' className='absolute right-[9%] max-md:right-[1%] max-sm:hidden top-[-42%] rotate-15'/>
-                                <Image width={863} height={208} className='sm:hidden scale-[1.6] max-[400px]:scale-[1.9] max-[400px]:translate-y-[-29px] max-sm:translate-y-[-23px]' alt='pupilo-sm-icons' src={'/assets/images/webp/why-pupilo-icon-small-scrren-image.webp'}/>
+                                <Image src={'/assets/images/webp/why-pupilo-icon.webp'} width={210} height={476} alt='why-pupilo-icon' className='absolute right-[9%] max-md:right-[1%] max-sm:hidden top-[-42%] rotate-15' />
+                                <Image width={863} height={208} className='sm:hidden scale-[1.6] max-[400px]:scale-[1.9] max-[400px]:translate-y-[-29px] max-sm:translate-y-[-23px]' alt='pupilo-sm-icons' src={'/assets/images/webp/why-pupilo-icon-small-scrren-image.webp'} />
                             </div>
                         </div>
                     </div>

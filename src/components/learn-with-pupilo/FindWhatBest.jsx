@@ -9,7 +9,7 @@ const ComparisonTable = () => {
   return (
     <div className="max-md:bg-fade-purple bg-find-best  bg-full max-lg:!bg-cover relative sm:pt-20 sm:pb-[64px] py-[60px]">
 
-      <div className="container max-w-[1140px] xl:px-0 sm:px-6 px-4 mx-auto">
+      <div className="container max-w-[1140px] xl:px-0  px-4 mx-auto">
         <Title
           text="Find What Fits Best"
           className="text-center !leading-[160%] xl:mb-[60px] lg:mb-10 mb-7"
