@@ -29,7 +29,7 @@ const GetStarted = ({ paragraph, headingText }) => {
           height={100}
         />
         <Heading
-          className={"text-center text-white max-w-[573px] mx-auto"}
+          className={"text-center text-white mx-auto"}
           text={headingText}
         />
         <p className="text-center text-white/80 leading-normal px-[1.1px] font-normal mx-auto pt-2">

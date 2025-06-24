@@ -19,7 +19,7 @@ const page = () => {
       <Gallery />
       <FindWhatBest />
       <Reviews />
-      <GetStarted headingText={<>Every Learner is Unique.<br /> So is Every Path.</>} paragraph={<>Browse programs by level, or book a free placement  <br /> session to find the perfect fit.</>} />
+      <GetStarted headingText={<>Every Learner is Unique.<br /> So is Every Path.</>} paragraph={<>Browse programs by level, or book a free placement  <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
       <Footer />
       <BackToTop />
     </div>

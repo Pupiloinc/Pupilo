@@ -52,7 +52,10 @@ const JoinTheWaitList = () => {
         return () => clearInterval(timer);
     }, []);
     return (
-        <div className='min-h-screen bg-purple flex flex-col justify-center px-4 sm:px-6 max-sm:py-12'>
+        <div className='min-h-screen bg-purple flex flex-col justify-center px-4 sm:px-6 max-sm:py-12 relative'>
+            <Image src="/assets/images/webp/bottom-left-ellipse.webp" alt='bottom-left' width={325} height={325}  className='absolute bottom-0 left-0 pointer-events-none max-lg:hidden'/>
+            <Image src="/assets/images/webp/left-ellipse.webp" alt='left-ellipse' width={180} height={340}  className='absolute top-1/3 right-0 pointer-events-none max-lg:hidden'/>
+            <Image src="/assets/images/webp/top-join-ellipse.webp" alt='left-ellipse' width={325} height={325}  className='absolute top-0 left-[16%] pointer-events-none max-lg:hidden'/>
             <h2 className='text-center text-white font-semibold text-3xl sm:text-4xl lg:text-custom-6xl leading-120 max-w-[936px] mx-auto'>Join the Waitlist.
                 <br />Empower a Future Innovator.</h2>
             <p className='font-normal text-sm md:text-base leading-150 text-white opacity-80 max-w-[771px] text-center mx-auto mt-3'>At HelpBnk, we believe that collective wisdom is the foundation of growth. By connecting individuals, entrepreneurs, and businesses in a collaborative ecosystem, we empower you to share insights, gain valuable expertise, and accelerate success.</p>

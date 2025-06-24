@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Title from "../common/Title";
 import Icons from "../common/Icons";
@@ -11,11 +12,11 @@ function slugify(text) {
   return text
     .toString()
     .toLowerCase()
-    .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/[^\w\-]+/g, '')      // Remove all non-word chars
-    .replace(/\-\-+/g, '-')        // Replace multiple - with single -
-    .replace(/^-+/, '')              // Trim - from start of text
-    .replace(/-+$/, '');             // Trim - from end of text
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
 }
 
 const GeneralPupiloTopic = ({
@@ -26,21 +27,20 @@ const GeneralPupiloTopic = ({
   seeAllBtn = "",
   className = "",
 }) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedCards = showAll ? GENERAL_PUPILO_LIST : GENERAL_PUPILO_LIST.slice(0, 3);
+
   return (
     <div className="lg:pt-[160px] md:pt-[100px] pt-[60px] px-4">
       <div className="max-w-[1140px] mx-auto">
-        <div
-          className={`${className} flex flex-col items-center`}
-        >
+        <div className={`${className} flex flex-col items-center`}>
           <Title
             text={heading}
             className={`${headingClass} text-center md:!leading-[121%]`}
           />
-          <p
-            className={`${paragraphClass} text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-6 lg:mb-10 mt-3`}
-          >
-            In this section, we cover a wide range of topics to support every
-            learner on their coding journey.
+          <p className={`${paragraphClass} text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-6 lg:mb-10 mt-3`}>
+            In this section, we cover a wide range of topics to support every learner on their coding journey.
           </p>
           <CustomButton
             iconColor="#010101"
@@ -48,8 +48,9 @@ const GeneralPupiloTopic = ({
             className={`${seeAllBtn} !bg-yellow !px-[22px]`}
           />
         </div>
+
         <div className="grid xl:gap-6 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {GENERAL_PUPILO_LIST.map((general) => (
+          {displayedCards.map((general) => (
             <div
               key={general.id}
               className="bg-white md:rounded-[24px] rounded-xl shadow-light-dark hover:shadow-2xl transition-all duration-300 xl:p-4 max-sm:py-4 max-sm:px-3 text-left"
@@ -84,13 +85,14 @@ const GeneralPupiloTopic = ({
             </div>
           ))}
         </div>
-        <div className={`${viewMoreBtn} mt-6 lg:mt-10 flex justify-center`}>
-          <CustomButton
-            iconColor="#010101"
-            text="View More"
-            className="!bg-yellow !px-[22px]"
-          />
-        </div>
+          <div onClick={() => setShowAll(true)} className={`${viewMoreBtn} mt-6 lg:mt-10 flex justify-center`}>
+            <CustomButton
+              iconColor="#010101"
+              text="View More"
+              className="!bg-yellow !px-[22px]"
+              onClick={() => setShowAll(true)}
+            />
+          </div>
       </div>
     </div>
   );
