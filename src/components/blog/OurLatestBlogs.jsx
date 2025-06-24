@@ -16,14 +16,14 @@ const OurLatestBlogs = () => {
           className="text-center lg:mb-10 mb-8 !text-white"
         />
 
-        <div className="mx-auto flex md:flex-row flex-col justify-center lg:items-center gap-6">
+        <div className="mx-auto flex md:flex-row flex-col justify-center items-center gap-6">
           {/* Left Highlighted Blog */}
           {LATEST_BLOG_DATA_LIST
             .filter((b) => b.highlight)
             .map((blog) => (
               <div
                 key={blog.id}
-                className="bg-white group md:rounded-3xl rounded-2xl blure-2xl sm:p-5 p-4 sm:!pb-6 flex flex-col lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px]"
+                className="bg-white group md:rounded-3xl rounded-2xl blure-2xl sm:p-5 p-4 sm:!pb-6 flex flex-col lg:!max-w-[556px] min-[800px]:!max-w-[410px] max-lg:w-full"
               >
                 <div className='md:max-w-[520px] lg:h-[301px] md:h-[170px] sm:h-[250px] rounded-xl overflow-hidden lg:mb-5 mb-4'>
                   <Image
@@ -39,7 +39,7 @@ const OurLatestBlogs = () => {
                   className="!text-purple font-medium lg:mb-3.5 mb-2"
                 />
                 <h3 className="font-semibold lg:text-custom-3xl text-2xl leading-120 text-dark-black lg:mb-4 md:mb-2 mb-2">{blog.title}</h3>
-                <p className="font-normal sm:text-base text-sm leading-[135%] min-[800px]:leading-160 text-dark-grey lg:mb-7 mb-5 font-inter ">{blog.description}</p>
+                <p className="font-normal sm:text-base text-sm leading-[135%] min-[800px]:leading-160 text-dark-grey lg:mb-7 mb-5 font-inter line-clamp-[7]">{blog.description}</p>
 
                 <button className="bg-yellow text-dark-black font-semibold lg:text-base text-sm leading-150 sm:py-3.5 py-3 px-8 rounded-full w-fit cursor-pointer hover:shadow-lg transition-all ease-linear duration-300">
                   Learn More
@@ -54,9 +54,9 @@ const OurLatestBlogs = () => {
               .map((blog) => (
                 <div
                   key={blog.id}
-                  className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] md:max-w-[335px] group"
+                  className="bg-white border border-solid border-light-black lg:rounded-3xl rounded-2xl xl:items-start items-center lg:px-4 lg:py-[15px] p-3 flex xl:gap-6 gap-4 lg:!max-w-[556px] min-[800px]:!max-w-[410px] max-lg:w-full group"
                 >
-                  <div className='flex xl:max-w-[177px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] lg:h-[184px] min-w-[850px]:h-[152px] h-[179px] rounded-xl overflow-hidden'>
+                  <div className='flex xl:max-w-[177px] lg:max-w-[130px] md:max-w-[100px] sm:max-w-[140px] max-w-[100px] lg:h-[184px] md:h-[150px] h-[179px] rounded-xl overflow-hidden'>
                     <Image
                       src={blog.image}
                       alt={blog.title}
@@ -72,7 +72,7 @@ const OurLatestBlogs = () => {
                     />
                     <h4 className="font-medium xl:text-xl lg:text-lg md:text-base sm:text-lg text-base leading-120 text-dark-black line-clamp-3 xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1">{blog.title}</h4>
                     <p className="font-normal lg:text-sm text-xs leading-150 text-dark-grey xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1 md:max-w-[323px] md:line-clamp-2 line-clamp-4 overflow-hidden text-ellipsis">{blog.description}</p>
-                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex hover:translate-x-2 transition-all duration-300 underline items-center w-fit`} href="#" >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
+                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex underline items-center w-fit`} href="#" >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
                       <Icons icon="blackBtnArrow" />
                     </span>
                     </Link>
