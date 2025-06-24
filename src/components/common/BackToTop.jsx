@@ -27,7 +27,7 @@ const BackToTop = () => {
       aria-label="for back to top"
       onClick={handleScrollTop}
       id="back-to-top"
-      className={`size-12 cursor-pointer flex justify-center shadow-md shadow-white items-center rounded-full z-50 bg-purple group transition-all ease-linear duration-300 fixed bottom-1 right-1 md:bottom-3 md:right-3 group max-md:scale-75 ${
+      className={`size-12 cursor-pointer flex justify-center shadow-md  items-center rounded-full z-50 bg-purple group transition-all ease-linear duration-300 fixed bottom-1 right-1 md:bottom-3 md:right-3 group max-md:scale-75 ${
         !isBackTOpVisible && "translate-y-[150%]"
       }`}
     >
