@@ -19,7 +19,7 @@ const page = () => {
       <TechJourney />
       <AddOnCourses />
       <Reviews />
-      <GetStarted headingText={<>Start Their Tech <br /> Future Today</>} paragraph={<>Browse programs by level, or book a free placement <br /> session to find the perfect fit.</>} />
+      <GetStarted headingText={<>Start Their Tech <br /> Future Today</>} paragraph={<>Browse programs by level, or book a free placement <br className="max-sm:hidden"/> session to find the perfect fit.</>} />
       <Footer />
       <BackToTop />
     </div>
