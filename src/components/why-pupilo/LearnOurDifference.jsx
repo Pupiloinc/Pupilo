@@ -19,7 +19,7 @@ const LearnOurDifference = () => {
                 >
                   <Image src={item.icon} alt={item.title} width={28} height={28} className="size-[28px] rounded-full" />
                 </div>
-                <h3 className="md:text-2xl text-xl font-medium text-left  spacing-120 max-[460px]:max-w-[230px] md:max-w-[217px] text-[#010101]">
+                <h3 className="md:text-2xl text-xl font-medium text-left  leading-120 max-[460px]:max-w-[230px] md:max-w-[217px] text-[#010101]">
                   {item.title}
                 </h3>
               </div>
