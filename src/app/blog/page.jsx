@@ -16,7 +16,7 @@ const page = () => {
             <OurLatestBlogs />
             <GeneralPupiloTopic />
             <Reviews />
-            <GetStarted />
+            <GetStarted headingText={<>Let’s Raise Africa’s <br /> So is Every Path.</>} paragraph={<>Browse programs by level, or book a free placement  <br /> session to find the perfect fit.</>} />
             <Footer />
             <BackToTop />
         </>

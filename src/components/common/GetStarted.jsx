@@ -3,7 +3,7 @@ import Heading from "./Title";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
 
-const GetStarted = () => {
+const GetStarted = ({ paragraph, headingText }) => {
   return (
     <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto py-[60px] sm:py-[100px] lg:py-40 xl:pt-36">
       <div className=" bg-purple rounded-3xl min-h-auto sm:min-h-[352px] py-10 sm:py-[52px] max-sm:px-4 relative">
@@ -30,11 +30,10 @@ const GetStarted = () => {
         />
         <Heading
           className={"text-center text-white max-w-[573px] mx-auto"}
-          text={"Start Your Child’s Coding Journey Today!"}
+          text={headingText}
         />
         <p className="text-center text-white/80 leading-normal px-[1.1px] font-normal mx-auto pt-2">
-          Personalized session with a vetted instructor. <br /> Watch your child
-          build their first project in 45 minutes.
+          {paragraph}
         </p>
         <CustomButton
           className={"mx-auto mt-6 !bg-white text-purple"}

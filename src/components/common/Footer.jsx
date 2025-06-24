@@ -24,7 +24,7 @@ const Footer = () => {
               teens—where every child can code, create, and thrive.
             </p>
 
-            <hr className="max-w-[224px] my-[18px] text-black/10" />
+            <hr className="w-full lg:max-w-[224px] my-[18px] text-black/10" />
 
             <div className="flex gap-2 flex-col">
               <div className="flex gap-2">

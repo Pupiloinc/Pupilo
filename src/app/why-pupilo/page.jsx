@@ -13,13 +13,13 @@ import Image from 'next/image'
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">
-      <Hero badgeText="🌍Reach of 15+ Countries"  blackText="More Than Coding. Here’s" purpleText={<>Why <span className="relative">Pupilo<Icons icon="heroTextEllipse" className="absolute top-7 rotate-[25deg] -right-10 max-lg:hidden" /></span> Exists</>} heroImg={<Image className="relative z-10 xl:min-h-[558px]" src="/assets/images/png/why-pupilo-hero.png" width={558} height={558} alt="home-hero" />}/>
+      <Hero badgeText="🌍Reach of 15+ Countries" blackText="More Than Coding. Here’s" purpleText={<>Why <span className="relative">Pupilo<Icons icon="heroTextEllipse" className="absolute top-7 rotate-[25deg] -right-10 max-lg:hidden" /></span> Exists</>} heroImg={<Image className="relative z-10 xl:min-h-[558px]" src="/assets/images/png/why-pupilo-hero.png" width={558} height={558} alt="home-hero" />} />
       <BrandMarquee />
       <FutureInnovators />
       <LearnOurDifference />
       <OurMission />
       <Reviews />
-      <GetStarted />
+      <GetStarted headingText={<>Join Africa’s Leading <br /> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br /> and confidence to thrive in the future</>} />
       <Footer />
       <BackToTop />
     </div>

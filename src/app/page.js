@@ -15,15 +15,15 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="max-w-[2560px] mx-auto">
-      <Hero badgeText="🏆Top-Rated by Parents"  blackText="Where Every Child can" purpleText={<>Code,<span className="relative"> Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span>and Thrive.</>} heroImg={<Image className="relative z-10" src="/assets/images/webp/home-hero.webp" width={550} height={527} alt="home-hero" />}/>
+      <Hero badgeText="🏆Top-Rated by Parents" blackText="Where Every Child can" purpleText={<>Code,<span className="relative"> Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span>and Thrive.</>} heroImg={<Image className="relative z-10" src="/assets/images/webp/home-hero.webp" width={550} height={527} alt="home-hero" />} />
       <BrandMarquee />
       <PupiloCurriculum />
-      <AddOnCourses/>
+      <AddOnCourses />
       <PupiloDelivers />
       <WhyPupilo />
-      <OurCoding/>
+      <OurCoding />
       <Reviews />
-      <GetStarted />
+      <GetStarted headingText="Start Your Child’s Coding Journey Today!" paragraph={<> Personalized session with a vetted instructor.<br /> Watch your child build their first project in 45 minutes. </>} />
       <Footer />
       <BackToTop />
     </div>
