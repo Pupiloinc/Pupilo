@@ -382,6 +382,59 @@ const Icons = ({ icon, className, fill, stroke }) => {
       <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 1L5 5L1 9" stroke="#010101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
+    ),
+    htmlIcon: (
+      <svg width="101" height="133" viewBox="0 0 101 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_209_1310)">
+          <rect x="16" y="32" width="69" height="69" rx="34.5" fill="white" shapeRendering="crispEdges" />
+          <rect x="16.5" y="32.5" width="68" height="68" rx="34" stroke="black" strokeOpacity="0.04" shapeRendering="crispEdges" />
+          <path d="M36.75 83.9286L34 50H67L64.25 83.9286L50.5 88L36.75 83.9286Z" fill="#E44D26" />
+          <path d="M64.2505 52.7143H50.5005V85.9643L61.5005 82.5714L64.2505 52.7143Z" fill="#F16529" />
+          <path d="M41.5625 69.6786L40.1875 56.7857H61.5L60.8125 60.8571H44.3125L45 65.6071H60.125L58.75 78.5L50.5 81.2143L42.25 78.5L41.5625 71.7143H45.6875L46.375 75.1071L50.5 76.4643L54.625 75.1071L55.3125 69.6786H41.5625Z" fill="white" />
+        </g>
+        <defs>
+          <filter id="filter0_d_209_1310" x="-16" y="0" width="133" height="133" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+            <feOffset />
+            <feGaussianBlur stdDeviation="16" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_209_1310" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_209_1310" result="shape" />
+          </filter>
+        </defs>
+      </svg>
+    ),
+    pythonIcon: (
+      <svg width="101" height="117" viewBox="0 0 101 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_209_1306)">
+          <rect x="16" y="16" width="69" height="69" rx="34.5" fill="white" shapeRendering="crispEdges" />
+          <rect x="16.5" y="16.5" width="68" height="68" rx="34" stroke="black" strokeOpacity="0.04" shapeRendering="crispEdges" />
+          <path fillRule="evenodd" clipRule="evenodd" d="M46.3913 31.2206C43.3658 31.2206 40.913 33.5954 40.913 36.5249V40.1972H50.3947V41.2173H36.699C33.6734 41.2173 31.2207 43.5921 31.2207 46.5216L31.2207 54.4782C31.2207 57.4077 33.6734 59.7826 36.699 59.7826H39.8595V55.2942C39.8595 52.3647 42.3122 49.9899 45.3378 49.9899H55.4516C58.0117 49.9899 60.087 47.9804 60.087 45.5016V36.5249C60.087 33.5954 57.6343 31.2206 54.6087 31.2206L46.3913 31.2206ZM45.1271 37.749C46.1744 37.749 47.0234 36.927 47.0234 35.9129C47.0234 34.8988 46.1744 34.0768 45.1271 34.0768C44.0798 34.0768 43.2308 34.8988 43.2308 35.9129C43.2308 36.927 44.0798 37.749 45.1271 37.749Z" fill="url(#paint0_linear_209_1306)" />
+          <path fillRule="evenodd" clipRule="evenodd" d="M54.6093 69.7794C57.6348 69.7794 60.0876 67.4045 60.0876 64.475V60.8027L50.6059 60.8027L50.6059 59.7827L64.3016 59.7827C67.3272 59.7827 69.7799 57.4078 69.7799 54.4783V46.5217C69.7799 43.5922 67.3272 41.2174 64.3016 41.2174L61.1411 41.2174V45.7057C61.1411 48.6352 58.6884 51.0101 55.6628 51.0101L45.549 51.0101C42.9889 51.0101 40.9136 53.0195 40.9136 55.4984L40.9136 64.475C40.9136 67.4045 43.3663 69.7794 46.3919 69.7794H54.6093ZM55.8735 63.2509C54.8262 63.2509 53.9772 64.073 53.9772 65.087C53.9772 66.1011 54.8262 66.9232 55.8735 66.9232C56.9208 66.9232 57.7698 66.1011 57.7698 65.087C57.7698 64.073 56.9208 63.2509 55.8735 63.2509Z" fill="url(#paint1_linear_209_1306)" />
+        </g>
+        <defs>
+          <filter id="filter0_d_209_1306" x="-16" y="-16" width="133" height="133" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+            <feOffset />
+            <feGaussianBlur stdDeviation="16" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_209_1306" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_209_1306" result="shape" />
+          </filter>
+          <linearGradient id="paint0_linear_209_1306" x1="45.6539" y1="31.2206" x2="45.6539" y2="59.7826" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#327EBD" />
+            <stop offset="1" stopColor="#1565A7" />
+          </linearGradient>
+          <linearGradient id="paint1_linear_209_1306" x1="55.3467" y1="41.2174" x2="55.3467" y2="69.7794" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#FFDA4B" />
+            <stop offset="1" stopColor="#F9C600" />
+          </linearGradient>
+        </defs>
+      </svg>
     )
   };
   const addClassName = (icon) => {
