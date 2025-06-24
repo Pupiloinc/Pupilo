@@ -8,7 +8,7 @@ const AddOnCourses = () => {
     <div className="pt-[60px] sm:pt-[100px] lg:pt-32 xl:pt-40">
       <Title
         text={"Add-on Courses"}
-        className={"md:px-6 px-4 pb-[60px] text-center"}
+        className={"md:px-6 px-4 pb-10 md:pb-[60px] text-center"}
       />
       {ADD_ON_COURSES_DATA.map((item, index) => (
         <TechJourneyCards
@@ -18,7 +18,7 @@ const AddOnCourses = () => {
           headingClass={`max-lg:mx-auto`}
           descriptionClass={`max-w-[606px] max-lg:mx-auto`}
           skills={
-            <ul className="list-disc">
+            <ul className="list-disc pl-3 marker:text-sm">
               {item.skills.map((skill, i) => (
                 <li key={i}>{skill}</li>
               ))}
@@ -35,7 +35,9 @@ const AddOnCourses = () => {
           levelTextTheme={item.levelTextTheme}
           level={index + 1}
           starVectorClass={
-            index === 1 || index === 3 ? "opacity-75" : "opacity-20 sm:opacity-35"
+            index === 1 || index === 3
+              ? "opacity-75"
+              : "opacity-20 sm:opacity-35"
           }
           buttonClass={`${
             item.buttonTheme === "white"

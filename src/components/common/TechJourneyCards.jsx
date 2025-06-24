@@ -151,7 +151,7 @@ const PupiloCard = ({
           width={322}
           height={322}
           alt="layer"
-          className={`${starVectorClass} absolute pointer-events-none size-[322px] bottom-0 z-10 right-0 max-lg:bottom-0`}
+          className={`${starVectorClass} absolute pointer-events-none size-[322px] -bottom-[9%] z-10 right-0 max-lg:bottom-0`}
           src={"/assets/images/svg/star-vector-3.svg"}
         />
       </div>

@@ -7,7 +7,7 @@ import Image from "next/image";
 const TechJourney = () => {
   return (
     <div>
-      <div className="py-[60px] md:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
+      <div className="pb-10 pt-[60px] md:pt-[100px] lg:pt-32 xl:pt-40 md:px-6 px-4 2xl:px-0">
         <Title
           text={
             "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."
@@ -16,7 +16,7 @@ const TechJourney = () => {
         />
         <p className="font-semibold text-2xl max-lg:text-xl text-center max-md:text-lg leading-120 text-dark-grey">
           Choose Your Learning Path
-        </p>  
+        </p>
       </div>
       {TECH_JOURNEY_CARDS_LIST.map((item, index) => (
         <TechJourneyCards
@@ -26,7 +26,7 @@ const TechJourney = () => {
           headingClass={`max-lg:mx-auto`}
           descriptionClass={`max-w-[606px] max-lg:mx-auto`}
           skills={
-            <ul className="list-disc">
+            <ul className="list-disc pl-3 marker:text-sm">
               {item.skills.map((skill, i) => (
                 <li key={i}>{skill}</li>
               ))}
@@ -35,6 +35,7 @@ const TechJourney = () => {
           toolsImage={item.tools.map((obj, index) => {
             let width = 164;
             let height = 27;
+            let borderRadius = 0;
             if (item.title === "Little Explorers") {
               if (index === 0) {
                 width = 124;
@@ -61,6 +62,7 @@ const TechJourney = () => {
               if (index === 0) {
                 width = 68;
                 height = 32;
+                borderRadius = 4;
               } else if (index === 1) {
                 width = 98;
                 height = 32;
@@ -87,6 +89,7 @@ const TechJourney = () => {
                 src={obj}
                 alt="tools-img"
                 key={index}
+                style={{ borderRadius }}
               />
             );
           })}
