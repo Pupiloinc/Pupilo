@@ -354,7 +354,7 @@ export const FORMATS = [
     id: 3,
     image: "/assets/images/webp/self-paced-course.webp",
     tag: "Pre-recorded lessons",
-    tagColor: "bg-yellow/10 border border-yellow/20 text-yellow/80",
+    tagColor: "bg-blue-100 text-blue-700",
     title: "Self-Paced Courses",
     desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
     cta: "Try a Free Lesson",

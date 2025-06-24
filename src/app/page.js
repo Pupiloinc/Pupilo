@@ -22,7 +22,7 @@ export default function Home() {
         className="relative z-10 lg:min-h-[527px] rounded-3xl object-cover"
       />
       <Icons icon="htmlIcon" className="absolute top-[-10%] -left-7 z-20 max-lg:hidden" />
-      <Icons icon="pythonIcon" className="absolute bottom-[-10%] -right-7 xl:-right-13 z-20 max-lg:hidden" />
+      <Icons icon="pythonIcon" className="absolute bottom-[-10%] -right-5 xl:-right-13 z-20 max-lg:hidden" />
       </div>} />
       < BrandMarquee />
       <PupiloCurriculum />

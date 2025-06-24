@@ -51,7 +51,7 @@ const PupiloDelivers = () => {
                   src={card.image}
                   alt={card.title}
                   fill
-                  className="object-cover rtext-custom-5xl font-semibold text-center leading-[120%] mb-10ounded-xl"
+                  className="text-custom-5xl font-semibold text-center leading-[120%] mb-10 rounded-xl"
                 />
               </div>
               <div className="flex">
@@ -66,7 +66,7 @@ const PupiloDelivers = () => {
               </h3>
               <p className={`text-base font-normal leading-150 text-dune mt-3 flex-grow ${i === 1 || i === 3 ? "lg:max-w-[320px]" : ""}`}>{card.desc}</p>
               <div className="flex justify-between items-center mt-4">
-                <p className="font-semibold text-sm lg:text-[18px] text-blue leading-150">{card.price}</p>
+                <p className="font-semibold text-base lg:text-[18px] text-blue leading-150">{card.price}</p>
                 <div className="flex items-center gap-2">
                   <a
                     href="#"
