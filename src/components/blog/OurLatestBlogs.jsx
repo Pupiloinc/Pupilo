@@ -7,6 +7,17 @@ import CustomButton from '../common/CustomButton'
 import Link from 'next/link'
 import Icons from '../common/Icons'
 
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
 const OurLatestBlogs = () => {
   return (
     <div className='sm:py-20 py-[60px] bg-our-blog bg-full max-lg:!bg-cover max-md:bg-purple'>
@@ -41,9 +52,9 @@ const OurLatestBlogs = () => {
                 <h3 className="font-semibold lg:text-custom-3xl text-2xl leading-120 text-dark-black lg:mb-4 md:mb-2 mb-2">{blog.title}</h3>
                 <p className="font-normal sm:text-base text-sm leading-[135%] min-[800px]:leading-160 text-dark-grey lg:mb-7 mb-5 font-inter line-clamp-[7]">{blog.description}</p>
 
-                <button className="bg-yellow text-dark-black font-semibold lg:text-base text-sm leading-150 sm:py-3.5 py-3 px-8 rounded-full w-fit cursor-pointer hover:shadow-lg transition-all ease-linear duration-300">
-                  Learn More
-                </button>
+                <Link href={`/blog/${slugify(blog.title)}`} className="bg-yellow text-dark-black font-semibold lg:text-base text-sm leading-150 sm:py-3.5 py-3 px-8 rounded-full w-fit cursor-pointer hover:shadow-lg transition-all ease-linear duration-300 flex items-center gap-2">
+                  Learn More <Icons icon="blackBtnArrow" />
+                </Link>
               </div>
             ))}
 
@@ -72,7 +83,7 @@ const OurLatestBlogs = () => {
                     />
                     <h4 className="font-medium xl:text-xl lg:text-lg md:text-base sm:text-lg text-base leading-120 text-dark-black line-clamp-3 xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1">{blog.title}</h4>
                     <p className="font-normal lg:text-sm text-xs leading-150 text-dark-grey xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1 md:max-w-[323px] md:line-clamp-2 line-clamp-4 overflow-hidden text-ellipsis">{blog.description}</p>
-                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex underline items-center w-fit`} href="#" >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
+                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex underline items-center w-fit`} href={`/blog/${slugify(blog.title)}`} >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
                       <Icons icon="blackBtnArrow" />
                     </span>
                     </Link>

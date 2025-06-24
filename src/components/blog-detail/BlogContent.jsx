@@ -2,8 +2,28 @@
 import React, { useEffect, useState } from "react";
 import Title from "../common/Title";
 import Image from "next/image";
-const BlogContent = () => {
+import { GENERAL_PUPILO_LIST, LATEST_BLOG_DATA_LIST } from '../../../utils/helper';
+
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')      
+    .replace(/\-\-+/g, '-')        
+    .replace(/^-+/, '')              
+    .replace(/-+$/, '');             
+}
+
+const BlogContent = ({ slug }) => {
   const [activeSection, setActiveSection] = useState("coding-everyone");
+
+  // Find the blog by slug
+  const combinedList = [...LATEST_BLOG_DATA_LIST, ...GENERAL_PUPILO_LIST];
+  const blog = combinedList.find(
+    (b) => slugify(b.title) === slug
+  ) || combinedList[0];
+
   useEffect(() => {
     const sectionIds = [
       "coding-everyone",
@@ -23,6 +43,7 @@ const BlogContent = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div className="pt-10 sm:pt-[60px] lg:pt-20 max-w-[1140px] mx-auto px-5 xl:px-0">
       <div className="flex flex-col-reverse lg:flex-row flex-wrap max-lg:gap-10 justify-between">
@@ -30,28 +51,20 @@ const BlogContent = () => {
           <div className="fles flex-col">
             <Title
               className="mb-6"
-              text={
-                "Explore the World of Coding: Tips and Insights for All Ages"
-              }
+              text={blog.title}
             />
             <p className="text-sm sm:text-base font-medium leading-normal text-dark-black mb-3">
-              By: Jordon on March 14, 2025
+              By: {blog.author} on {blog.date}
             </p>
             <Image
               width={730}
               height={442}
-              src="/assets/images/webp/blog-hero-img.webp"
-              alt="blog-hero-img"
-              className="w-full max-w-[730px] xl:h-[442px] rounded-2xl md:rounded-[20px] mb-5"
+              src={blog.image}
+              alt={blog.title}
+              className="w-full max-w-[730px] xl:h-[442px] rounded-2xl md:rounded-[20px] mb-5 object-cover"
             />
             <p className="text-medium-gray leading-163 text-sm sm:text-base font-normal">
-              In today’s digital world, coding is no longer just a career
-              skill—it’s a life skill. Whether you’re a curious 10-year-old
-              building your first game or a 50-year-old professional exploring a
-              new career, the world of coding is open to everyone. At our
-              teaching center, we believe that age should never be a barrier to
-              learning, especially when it comes to something as powerful and
-              creative as coding.
+              {blog.description}
             </p>
           </div>
           <div className="flex flex-col gap-4 lg:gap-5">
@@ -69,8 +82,8 @@ const BlogContent = () => {
               className="max-w-[730px] xl:h-[422px] w-full rounded-2xl md:rounded-[20px]"
             />
             <p className="text-dark-black font-normal text-sm sm:text-base leading-163">
-              One of the biggest misconceptions? “I’m too old” or “I’m too
-              young” to start coding. Let’s kill that noise.
+              One of the biggest misconceptions? "I'm too old" or "I'm too
+              young" to start coding. Let's kill that noise.
             </p>
             <ul className="font-normal text-sm sm:text-base leading-163 -mt-1 list-inside text-dark-grey list-disc flex flex-col gap-[10px] pl-3">
               <li>
@@ -82,8 +95,8 @@ const BlogContent = () => {
               <li>
                 Young Adults & College Students (18–24): This is prime time.
                 Dive into Python, JavaScript, or C++ to start building apps,
-                games, or websites. Whether you’re pursuing a CS degree or
-                self-teaching, now’s the time to stack those skills.
+                games, or websites. Whether you're pursuing a CS degree or
+                self-teaching, now's the time to stack those skills.
               </li>
               <li>
                 Professionals (25–40): Coding isn't just for developers.
@@ -95,7 +108,7 @@ const BlogContent = () => {
               <li>
                 Career Shifters & Hobbyists (40–50+): Believe it — people in
                 their 40s and 50s are pivoting into tech roles or starting
-                freelance dev gigs. You don’t need to compete with 22-year-olds.
+                freelance dev gigs. You don't need to compete with 22-year-olds.
                 Instead, leverage your domain experience and layer in technical
                 skills.
               </li>
@@ -117,7 +130,7 @@ const BlogContent = () => {
             />
             <div className="flex flex-col gap-[10px]">
               <p className="text-dark-black font-normal mb-1 text-sm sm:text-base leading-163">
-                The right tools make all the difference. Here’s a breakdown of
+                The right tools make all the difference. Here's a breakdown of
                 the most user-friendly and effective platforms to get started:
               </p>
               <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-3">
@@ -176,8 +189,8 @@ const BlogContent = () => {
             />
             <div className="mb-8 sm:mb-10 lg:mb-[60px]">
               <p className="mb-4 text-sm sm:text-base leading-163 font-normal text-dark-black">
-                Coding isn’t just about writing lines of syntax. It’s about
-                solving real problems. Here’s how it’s transforming everyday
+                Coding isn't just about writing lines of syntax. It's about
+                solving real problems. Here's how it's transforming everyday
                 lives:
               </p>
               <ol className="list-decimal list-inside space-y-[10px] font-normal text-sm sm:text-base leading-163 text-dark-grey ">
@@ -211,11 +224,11 @@ const BlogContent = () => {
             <p className="text-sm sm:text-base leading-163 font-normal text-dark-black pr-5">
               Coding is not just a career path — it's a mindset shift. It
               teaches you how to think, how to solve, how to create. Whether
-              you're 10 or 50, there’s a space in the tech world waiting for you
+              you're 10 or 50, there's a space in the tech world waiting for you
               to step in. So start now. Be curious. Stay hungry. Build things
               that matter.{" "}
               <span className="font-bold block">
-                And remember: The future doesn’t wait — neither should you.
+                And remember: The future doesn't wait — neither should you.
               </span>
             </p>
           </div>
@@ -228,31 +241,28 @@ const BlogContent = () => {
             </p>
             <ul className="space-y-4 text-nowrap text-dark-black font-normal text-sm sm:text-base leading-normal">
               <li
-                className={`pl-3 border-l-2 ${
-                  activeSection === "coding-everyone"
-                    ? "border-purple text-purple"
-                    : "border-transparent"
-                }`}
+                className={`pl-3 border-l-2 ${activeSection === "coding-everyone"
+                  ? "border-purple text-purple"
+                  : "border-transparent"
+                  }`}
               >
                 <a href="#coding-everyone">Coding Is for Everyone</a>
               </li>
               <li
-                className={`pl-3 border-l-2 ${
-                  activeSection === "tools-platforms"
-                    ? "border-purple text-purple"
-                    : "border-transparent text-nowrap"
-                }`}
+                className={`pl-3 border-l-2 ${activeSection === "tools-platforms"
+                  ? "border-purple text-purple"
+                  : "border-transparent text-nowrap"
+                  }`}
               >
                 <a href="#tools-platforms">
                   Tools & Platforms to Begin Your Journey
                 </a>
               </li>
               <li
-                className={`pl-3 border-l-2 ${
-                  activeSection === "why-code-matters"
-                    ? "border-purple text-purple"
-                    : "border-transparent"
-                }`}
+                className={`pl-3 border-l-2 ${activeSection === "why-code-matters"
+                  ? "border-purple text-purple"
+                  : "border-transparent"
+                  }`}
               >
                 <a href="#why-code-matters">Why Learning to Code Matters</a>
               </li>

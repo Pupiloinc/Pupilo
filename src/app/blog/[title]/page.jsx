@@ -5,11 +5,11 @@ import Footer from '@/components/common/Footer';
 import GetStarted from '@/components/common/GetStarted';
 import Header from '@/components/common/Header';
 
-const page = () => {
+const page = ({ params }) => {
     return (
         <>
             <Header />
-            <BlogContent />
+            <BlogContent slug={params.title} />
             <GeneralPupiloTopic
                 viewMoreBtn="hidden"
                 heading="You May Also Like"

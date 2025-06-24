@@ -5,6 +5,19 @@ import Icons from "../common/Icons";
 import Link from "next/link";
 import CustomButton from "../common/CustomButton";
 import { GENERAL_PUPILO_LIST } from "../../../utils/helper";
+
+// Utility to convert title to slug
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')      // Remove all non-word chars
+    .replace(/\-\-+/g, '-')        // Replace multiple - with single -
+    .replace(/^-+/, '')              // Trim - from start of text
+    .replace(/-+$/, '');             // Trim - from end of text
+}
+
 const GeneralPupiloTopic = ({
   viewMoreBtn = "",
   heading,
@@ -60,7 +73,7 @@ const GeneralPupiloTopic = ({
                 {general.description}
               </p>
               <Link
-                href="#"
+                href={`/blog/${slugify(general.title)}`}
                 className="flex items-center group gap-1 text-base font-semibold underline transition-all duration-300"
               >
                 Learn More{" "}
