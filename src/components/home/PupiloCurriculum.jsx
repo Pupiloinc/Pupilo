@@ -8,7 +8,7 @@ const PupiloCurriculum = () => {
     return (
       <div className='py-[160px] max-lg:py-[100px] max-md:py-[60px]'>
         <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto">
-          <div className="pb-10">
+          <div className="pb-6 lg:pb-10">
             <Title
               text={
                 "Pupilo’s Curriculum: A Transformative Tech Journey from Curiosity to Innovation."

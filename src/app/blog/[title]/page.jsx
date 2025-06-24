@@ -17,7 +17,7 @@ const page = ({ params }) => {
                 paragraphClass="hidden"
                 className="justify-between pb-6 md:pb-10 max-[490px]:flex-col flex-row items-start gap-6"
             />
-            <GetStarted headingText={<>It’s Not Just Learning. <br /> It’s Leveling Up.</>} paragraph={<>Browse programs by level, or book a free placement <br /> session to find the perfect fit.</>} />
+            <GetStarted headingText={<>It’s Not Just Learning. <br className='max-md:hidden' /> It’s Leveling Up.</>} paragraph={<>Browse programs by level, or book a free placement <br /> session to find the perfect fit.</>} />
             <Footer />
             <BackToTop />
         </>

@@ -19,7 +19,7 @@ const page = () => {
       <LearnOurDifference />
       <OurMission />
       <Reviews />
-      <GetStarted headingText={<>Join Africa’s Leading <br /> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br className="max-sm:hidden" /> and confidence to thrive in the future</>} />
+      <GetStarted headingText={<>Join Africa’s Leading <br className='max-md:hidden'/> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br className="max-sm:hidden" /> and confidence to thrive in the future</>} />
       <Footer />
       <BackToTop />
     </div>

@@ -17,13 +17,13 @@ const Gallery = () => {
                     {FORMAT_GALLERY_DATA_LIST.map((card, i) => (
                         <div
                             key={i}
-                            className={`${card.bgColor} md:rounded-3xl rounded-2xl lg:py-8 lg:ps-8 lg:pe-[60px] md:p-6 p-5 mx-auto w-full relative flex flex-col max-sm:min-h-[230px] hover:shadow-2xl transition-all ease-in-out duration-300`}
+                            className={`${card.bgColor} md:rounded-3xl rounded-2xl lg:py-8 lg:ps-8 lg:pe-[60px] md:p-6 p-5 mx-auto w-full relative flex flex-col max-sm:min-h-[215px] hover:shadow-2xl transition-all ease-in-out duration-300`}
                         >
                             <Image className='absolute top-0 right-0 pointer-events-none max-lg:size-[200px] max-sm:size-[150px]' width={270} height={220} src={card.ellipseImage} alt='gallery-ellipse' />
                             <h2 className={`font-semibold lg:text-custom-4xl md:text-2xl text-xl leading-120 lg:max-w-[360px] lg:mb-4 mb-2  ${i === 1 || i === 2 ? "text-dark-black" : "text-white"}`}>{card.title}</h2>
-                            <ul className="list-disc pl-5 lg:mb-6 sm:mb-4 mb-3">
+                            <ul className="lg:mb-6 sm:mb-4 mb-3 ms-2">
                                 {card.points.map((point, index) => (
-                                    <li key={index} className={`font-normal md:text-base text-sm leading-150  ${i === 1 || i === 2 ? "text-dark-grey" : "text-white/80"}`}>{point}</li>
+                                    <li key={index} className={`relative pl-5 font-normal md:text-base text-sm before:content-[''] before:absolute before:left-0 before:top-[9px] before:rounded-full before:size-[5px]  leading-150  ${i === 1 || i === 2 ? "text-dark-grey before:bg-dark-grey" : "text-white/80 before:bg-white/80"}`}>{point}</li>
                                 ))}
                             </ul>
 

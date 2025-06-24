@@ -30,8 +30,8 @@ const Hero = ({ badgeText, blackText, purpleText, heroImg }) => {
         </div>
       </div>
     </div>
-    <Image className="absolute top-[52%] left-[4%]  min-[1700px]:left-[15%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-purple-ellipse.svg" width={240} height={240} alt="purple-ellipse" />
-    <Image className={`${pathName === '/learn-with-pupilo' && "!top-[25%]"} absolute right-[3%] 2xl:right-[6%] top-[30%] min-[1700px]:right-[18%] max-lg:hidden pointer-events-none`} src="/assets/images/svg/hero-yellow-ellipse.svg" width={240} height={240} alt="yellow-ellipse" />
+    <Image className="absolute top-[51%] left-[4%]  min-[1700px]:left-[15%] max-lg:hidden pointer-events-none" src="/assets/images/svg/hero-purple-ellipse.svg" width={240} height={240} alt="purple-ellipse" />
+    <Image className={`${pathName === '/learn-with-pupilo' && "!top-[29%]"} absolute right-[3%] 2xl:right-[6%] top-[30%] min-[1700px]:right-[18%] max-lg:hidden pointer-events-none`} src="/assets/images/svg/hero-yellow-ellipse.svg" width={240} height={240} alt="yellow-ellipse" />
   </div>;
 };
 

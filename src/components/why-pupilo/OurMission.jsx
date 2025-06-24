@@ -20,16 +20,16 @@ const OurMission = () => {
         <div className="w-full min-[790px]:w-1/2 xl:space-y-6 space-y-4">
           <div
             onMouseEnter={() => setSelectedCard("mission")}
-            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${selectedCard === "mission"
+            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-3xl rounded-2xl ${selectedCard === "mission"
               ? "bg-[#875BF7] text-white shadow-lg"
               : "bg-white text-black"
               }`}
           >
-            <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 xl:mb-3 mb-[6px] transition-all duration-500">
+            <h2 className="md:text-[32px] text-2xl font-semibold leading-120 xl:mb-3 mb-[6px] transition-all duration-500">
               Our Mission
             </h2>
             <p
-              className={`xl:text-base text-sm spacing-150 font-normal transition-all duration-500 ${selectedCard === "mission" ? "text-white" : "text-dark-grey"
+              className={`xl:text-base text-sm leading-150 font-normal transition-all duration-500 ${selectedCard === "mission" ? "text-white/80" : "text-dark-grey"
                 }`}
             >
               Pupilo is on mission to become Africa’s most loved & trusted coding
@@ -40,9 +40,9 @@ const OurMission = () => {
           </div>
           <div
             onMouseEnter={() => setSelectedCard("vision")}
-            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-[30px] rounded-2xl ${selectedCard === "vision"
+            className={`xl:p-6 p-4 transition-all duration-500 md:rounded-3xl rounded-2xl ${selectedCard === "vision"
               ? "bg-[#875BF7] text-white shadow-lg"
-              : "bg-white text-black"
+              : "bg-white text-dark-black"
               }`}
           >
             <h2 className="md:text-[32px] text-2xl font-semibold spacing-120 xl:mb-3 mb-[6px] transition-all duration-500">

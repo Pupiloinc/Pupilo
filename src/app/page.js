@@ -23,7 +23,7 @@ export default function Home() {
       <WhyPupilo />
       <OurCoding />
       <Reviews />
-      <GetStarted headingText="Start Your Child’s Coding Journey Today!" paragraph={<> Personalized session with a vetted instructor.<br /> Watch your child build their first project in 45 minutes. </>} />
+      <GetStarted headingText={<>Start Your Child’s <br className="max-md:hidden"/> Coding Journey Today!</>} paragraph={<> Personalized session with a vetted instructor.<br /> Watch your child build their first project in 45 minutes. </>} />
       <Footer />
       <BackToTop />
     </div>
