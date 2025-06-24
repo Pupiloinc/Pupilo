@@ -65,28 +65,31 @@ const PupiloDelivers = () => {
                 {card.title}
               </h3>
               <p className={`text-base font-normal leading-150 text-dune mt-3 flex-grow ${i === 1 || i === 3 ? "lg:max-w-[320px]" : ""}`}>{card.desc}</p>
-              <div className="flex items-center mt-4 gap-2">
-                <a
-                  href="#"
-                  className="text-dark-black text-base font-semibold inline-block underline"
-                >
-                  {card.cta}
-                </a>
-                <svg
-                  width="6"
-                  height="10"
-                  viewBox="0 0 6 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L5 5L1 9"
-                    stroke="#010101"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+              <div className="flex justify-between items-center mt-4">
+                <p className="font-semibold text-sm lg:text-[18px] text-blue leading-150">{card.price}</p>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="#"
+                    className="text-dark-black text-base font-semibold inline-block underline"
+                  >
+                    {card.cta}
+                  </a>
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L1 9"
+                      stroke="#010101"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           ))}

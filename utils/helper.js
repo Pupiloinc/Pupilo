@@ -338,6 +338,7 @@ export const FORMATS = [
     title: "1-on-1 Private Lessons",
     desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
     cta: "Try a Free Lesson",
+    price:"R1,875/mo"
   },
   {
     id: 2,
@@ -347,6 +348,7 @@ export const FORMATS = [
     title: "Online Live Group Lessons",
     desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
     cta: "Try a Free Lesson",
+    price:"R1,250/mo"
   },
   {
     id: 3,
@@ -356,6 +358,7 @@ export const FORMATS = [
     title: "Self-Paced Courses",
     desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
     cta: "Try a Free Lesson",
+    price:"R899/mo"
   },
   {
     id: 4,
@@ -365,6 +368,7 @@ export const FORMATS = [
     title: "Virtual Coding Camps",
     desc: "Exciting week-themed programs packed with creativity, problem-solving, and teamwork.",
     cta: "Try a Free Lesson",
+    price:"R1,099/mo"
   },
 ];
 
