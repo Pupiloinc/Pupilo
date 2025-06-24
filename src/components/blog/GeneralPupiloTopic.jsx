@@ -91,7 +91,7 @@ const GeneralPupiloTopic = ({
             </div>
           ))}
         </div>
-        <div onClick={() => setShowAll((prev) => !prev)} className={`${viewMoreBtn} mt-6 lg:mt-10 flex justify-center`}>
+        <div className={`${viewMoreBtn} mt-6 lg:mt-10 flex justify-center`}>
           <CustomButton
             iconColor="#010101"
             text={showAll ? "View Less" : "View More"}
