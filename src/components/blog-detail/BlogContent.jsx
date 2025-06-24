@@ -24,7 +24,7 @@ const BlogContent = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="pt-[60px] lg:pt-20 max-w-[1140px] mx-auto px-5 2xl:px-0">
+    <div className="pt-10 sm:pt-[60px] lg:pt-20 max-w-[1140px] mx-auto px-5 xl:px-0">
       <div className="flex flex-col-reverse lg:flex-row flex-wrap max-lg:gap-10 justify-between">
         <div className="max-w-[730px] w-full flex flex-col gap-10 md:gap-12 xl:gap-[60px]">
           <div className="fles flex-col">
@@ -42,7 +42,7 @@ const BlogContent = () => {
               height={442}
               src="/assets/images/webp/blog-hero-img.webp"
               alt="blog-hero-img"
-              className="w-full max-w-[730px] xl:h-[442px] rounded-[20px] mb-5"
+              className="w-full max-w-[730px] xl:h-[442px] rounded-2xl md:rounded-[20px] mb-5"
             />
             <p className="text-medium-gray leading-163 text-sm sm:text-base font-normal">
               In today’s digital world, coding is no longer just a career
@@ -66,13 +66,13 @@ const BlogContent = () => {
               height={422}
               src="/assets/images/webp/coding-for-everyone.webp"
               alt="coding-for-everyone"
-              className="max-w-[730px] xl:h-[422px] w-full rounded-[20px]"
+              className="max-w-[730px] xl:h-[422px] w-full rounded-2xl md:rounded-[20px]"
             />
             <p className="text-dark-black font-normal text-sm sm:text-base leading-163">
               One of the biggest misconceptions? “I’m too old” or “I’m too
               young” to start coding. Let’s kill that noise.
             </p>
-            <ul className="font-normal text-sm sm:text-base leading-163 -mt-1 list-inside text-dark-grey list-disc flex flex-col gap-[10px]">
+            <ul className="font-normal text-sm sm:text-base leading-163 -mt-1 list-inside text-dark-grey list-disc flex flex-col gap-[10px] pl-3">
               <li>
                 For Kids (10–17): Platforms like Scratch, Code.org, and Tynker
                 turn programming into play. Visual blocks teach logic,
@@ -113,14 +113,14 @@ const BlogContent = () => {
               height={422}
               src="/assets/images/webp/tools-and-platforms.webp"
               alt="coding-for-everyone"
-              className="max-w-[730px] xl:h-[422px] w-full rounded-[20px]"
+              className="max-w-[730px] xl:h-[422px] w-full rounded-2xl md:rounded-[20px]"
             />
             <div className="flex flex-col gap-[10px]">
               <p className="text-dark-black font-normal mb-1 text-sm sm:text-base leading-163">
                 The right tools make all the difference. Here’s a breakdown of
                 the most user-friendly and effective platforms to get started:
               </p>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
+              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-3">
                 <span className="font-normal text-base leading-160 text-dark-grey !mb-1">
                   1. Absolute Beginners:
                 </span>
@@ -135,7 +135,7 @@ const BlogContent = () => {
                   Grasshopper (by Google): Mobile-first JavaScript learning app.
                 </li>
               </ul>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
+              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-3">
                 <span className="font-normal text-base leading-160 text-dark-grey !mb-1">
                   2. Next-Level Learners:
                 </span>
@@ -145,7 +145,7 @@ const BlogContent = () => {
                 <li>Khan Academy: Interactive JS and web dev courses.</li>
                 <li>Replit : Learn and build real projects in-browser.</li>
               </ul>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
+              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-3">
                 <span className="font-normal text-sm sm:text-base leading-160 text-dark-grey !mb-1">
                   3. For Deep Divers:
                 </span>
@@ -172,7 +172,7 @@ const BlogContent = () => {
               height={422}
               src="/assets/images/webp/why-learning-code.webp"
               alt="coding-for-everyone"
-              className="max-w-[730px] xl:h-[422px] w-full rounded-[20px]"
+              className="max-w-[730px] xl:h-[422px] w-full rounded-2xl md:rounded-[20px]"
             />
             <div className="mb-8 sm:mb-10 lg:mb-[60px]">
               <p className="mb-4 text-sm sm:text-base leading-163 font-normal text-dark-black">
@@ -199,7 +199,7 @@ const BlogContent = () => {
                 </li>
                 <li>
                   <span className="pb-2 inline-flex"> Use coding to:</span>
-                  <ul className="list-disc list-inside font-normal text-sm sm:text-base leading-160 -mt-1 text-dark-grey flex flex-col gap-1">
+                  <ul className="list-disc list-inside font-normal text-sm sm:text-base leading-160 -mt-1 text-dark-grey flex flex-col gap-1 pl-3 marker:!mr-2">
                     <li>Build a side hustle</li>
                     <li>Enhance your job performance</li>
                     <li>Create tools that serve your community</li>
