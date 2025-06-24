@@ -83,7 +83,7 @@ const OurLatestBlogs = () => {
                     />
                     <h4 className="font-medium xl:text-xl lg:text-lg md:text-base sm:text-lg text-base leading-120 text-dark-black line-clamp-3 xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1">{blog.title}</h4>
                     <p className="font-normal lg:text-sm text-xs leading-150 text-dark-grey xl:mb-4 lg:mb-2 md:mb-1 sm:mb-2 mb-1 md:max-w-[323px] md:line-clamp-2 line-clamp-4 overflow-hidden text-ellipsis">{blog.description}</p>
-                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex underline items-center w-fit`} href={`/blog/${slugify(blog.title)}`} >Learn More<span className='flex size-6  max-sm:size-4 justify-center items-center'>
+                    <Link className={`font-semibold xl:text-base lg:text-sm text-xs leading-150 flex underline items-center w-fit group/link`} href={`/blog/${slugify(blog.title)}`} >Learn More<span className='flex size-6 max-sm:size-4 justify-center items-center group-hover/link:translate-x-1.5 transition-all duration-300'>
                       <Icons icon="blackBtnArrow" />
                     </span>
                     </Link>
