@@ -17,7 +17,7 @@ const PupiloCard = ({ title, description, buttonText, buttonClass, buttonIconcol
                         </div>
                         <div className='flex gap-10 max-sm:gap-4 max-lg:justify-center items-center'>
                             <CustomButton iconColor={buttonIconcolor || '#010101'} text={buttonText} className={buttonClass || 'bg-white'} />
-                            <Link className={`font-bold flex group underline items-center ${textColor || 'text-white'}`} href={learnMoreLink || '#learn-more'}>Learn More <span className='flex size-6 group-hover:translate-x-2 transition-all duration-300 max-sm:size-4 justify-center items-center'> <Icons fill={learnMoreIcon} icon={'arrowIcon'} /> </span> </Link>
+                            <Link className={`font-bold flex group underline items-center max-md:text-sm ${textColor || 'text-white'}`} href={learnMoreLink || '#learn-more'}>Learn More <span className='flex size-6 group-hover:translate-x-2 transition-all duration-300 max-sm:size-4 justify-center items-center'> <Icons fill={learnMoreIcon} icon={'arrowIcon'} /> </span> </Link>
                         </div>
                     </div>
                 </div>

@@ -5,14 +5,16 @@ import Icons from "../common/Icons";
 
 const BlogHero = () => {
   return <div className="bg-[url(/assets/images/webp/bg-hero.webp)] bg-cover bg-no-repeat bg-center relative">
-    <Header />
+    <div className="max-sm:mb-[10px]">
+      <Header />
+    </div>
     <div className="container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto">
       <div className="pt-[230px] pb-[326px] relative">
         <h2 className="text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black relative z-10">Our<span className="text-purple relative"> Blogs<Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span></h2>
         <Image src="/assets/images/webp/blog-1.webp" alt="blog-1" width={214} height={166} className="absolute top-[8%] md:top-[14%] left-[5%] -rotate-[20deg] max-sm:w-[144px] rounded-xl" />
         <div className="absolute top-[8%] md:top-[12%] right-[4%] ">
           <div className="relative">
-            <Image src="/assets/images/webp/blog-2.webp" alt="blog-2" width={228} height={178} className="rotate-[30deg] max-sm:w-[144px] rounded-xl" />
+            <Image src="/assets/images/webp/blog-2.webp" alt="blog-2" width={228} height={178} className="rotate-[30deg] max-sm:w-[138px] rounded-xl" />
             <div className="min-w-10 sm:min-w-12 h-10 sm:h-12 bg-white border border-black/10 shadow-light-dark rounded-full flex justify-center items-center absolute right-[-17%] md:right-[-22%] top-[19%] rotate-[2deg] z-10">
               <Image src="/assets/images/svg/sublime.svg" width={30} height={30} alt="sublime" />
             </div>

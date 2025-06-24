@@ -16,7 +16,7 @@ const page = () => {
             <OurLatestBlogs />
             <GeneralPupiloTopic heading="General Pupilo Topic" seeAllBtn="hidden" />
             <Reviews />
-            <GetStarted headingText={<>Let’s Raise Africa’s <br /> So is Every Path.</>} paragraph={<>Browse programs by level, or book a free placement  <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
+            <GetStarted headingText={<>Let’s Raise Africa’s <br className="max-md:hidden" /> Next Tech Innovators.</>} paragraph={<>Browse programs by level, or book a free placement  <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
             <Footer />
             <BackToTop />
         </>

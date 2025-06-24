@@ -14,12 +14,12 @@ const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">
 
-      <Hero badgeText="🌟Highest Rated in Africa" blackText="Choose How You Learn." purpleText={<>Build What <br className="max-lg:hidden" />You <span className="relative">Dream.<Icons icon="heroTextEllipse" className="absolute top-0 -right-5 max-lg:hidden" /></span></>} heroImg={<Image className="relative z-10 lg:min-h-[550px]" src="/assets/images/webp/learn-pupilo.webp" width={566} height={550} alt="home-hero" />} />
+      <Hero badgeText="🌟Highest Rated in Africa" blackText="Choose How You Learn." purpleText={<>Build What <br className="max-lg:hidden" />You <span className="relative">Dream.<Icons icon="heroTextEllipse" className="absolute top-0 -right-5 max-lg:hidden" /></span></>} heroImg={<Image className="relative z-10 lg:min-h-[550px] lg:object-contain xl:object-fill" src="/assets/images/webp/learn-pupilo.webp" width={566} height={550} alt="home-hero" />} />
       <BrandMarquee />
       <Gallery />
       <FindWhatBest />
       <Reviews />
-      <GetStarted headingText={<>Every Learner is Unique.<br /> So is Every Path.</>} paragraph={<>Browse programs by level, or book a free placement  <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
+      <GetStarted headingText={<>Every Learner is Unique.<br className="max-md:hidden" /> So is Every Path.</>} paragraph={<>Browse programs by level, or book a free placement  <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
       <Footer />
       <BackToTop />
     </div>

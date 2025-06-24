@@ -41,6 +41,10 @@ const Reviews = () => {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
+              992:{
+                slidesPerView: 2.4,
+                spaceBetween: 20,
+              },
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 24,
@@ -68,7 +72,7 @@ const Reviews = () => {
                 key={review.id}
                 className="!flex justify-center py-4"
               >
-                <div className="bg-white border border-dolphin/12 rounded-3xl p-6 shadow-bright-dark reviewSlide transition-all w-full duration-500 h-full min-h-[232px] flex flex-col justify-between">
+                <div className="bg-white border border-dolphin/12 rounded-3xl p-4 md:p-6 shadow-bright-dark reviewSlide transition-all w-full duration-500 h-full min-h-[232px] flex flex-col justify-between">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, index) => (
                       <Image
