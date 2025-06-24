@@ -12,11 +12,11 @@ function slugify(text) {
   return text
     .toString()
     .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
 }
 
 const GeneralPupiloTopic = ({
@@ -29,7 +29,9 @@ const GeneralPupiloTopic = ({
 }) => {
   const [showAll, setShowAll] = useState(false);
 
-  const displayedCards = showAll ? GENERAL_PUPILO_LIST : GENERAL_PUPILO_LIST.slice(0, 3);
+  const displayedCards = showAll
+    ? GENERAL_PUPILO_LIST
+    : GENERAL_PUPILO_LIST.slice(0, 3);
 
   return (
     <div className="lg:pt-[160px] md:pt-[100px] pt-[60px] px-4">
@@ -39,8 +41,11 @@ const GeneralPupiloTopic = ({
             text={heading}
             className={`${headingClass} text-center md:!leading-[121%]`}
           />
-          <p className={`${paragraphClass} text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-6 lg:mb-10 mt-3`}>
-            In this section, we cover a wide range of topics to support every learner on their coding journey.
+          <p
+            className={`${paragraphClass} text-dark-grey max-w-[490px] text-base text-center font-normal mx-auto mb-6 lg:mb-10 mt-3`}
+          >
+            In this section, we cover a wide range of topics to support every
+            learner on their coding journey.
           </p>
           <CustomButton
             iconColor="#010101"
@@ -53,7 +58,7 @@ const GeneralPupiloTopic = ({
           {displayedCards.map((general) => (
             <div
               key={general.id}
-              className="bg-white md:rounded-[24px] rounded-xl shadow-light-dark hover:shadow-2xl transition-all duration-300 xl:p-4 max-sm:py-4 max-sm:px-3 text-left"
+              className="bg-white md:rounded-[24px] rounded-xl shadow-light-dark hover:shadow-2xl transition-all duration-300 p-4 max-sm:py-4 max-sm:px-3 text-left"
             >
               <div className="w-full relative overflow-hidden mb-4">
                 <Image
@@ -61,16 +66,16 @@ const GeneralPupiloTopic = ({
                   alt={general.title}
                   width={332}
                   height={220}
-                  className="object-cover lg:max-w-[332px] xl:min-h-[220px] w-full rounded-xl"
+                  className="object-cover xl:max-w-[332px] xl:min-h-[220px] w-full rounded-xl"
                 />
               </div>
               <p className="text-base text-purple font-normal lg:mb-4 mb-2">
                 By {general.author} on {general.date}
               </p>
-              <h3 className="md:text-2xl text-xl font-semibold spacing-120 md:mb-3 mb-2">
+              <h3 className="md:text-2xl text-xl font-semibold leading-120 md:mb-3 mb-2">
                 {general.title}
               </h3>
-              <p className="md:text-base text-sm text-dark-black lg:mb-4 mb-3 font-normal spacing-150">
+              <p className="md:text-base text-sm text-dark-black opacity-80 lg:mb-4 mb-3 font-normal leading-150">
                 {general.description}
               </p>
               <Link
@@ -85,14 +90,17 @@ const GeneralPupiloTopic = ({
             </div>
           ))}
         </div>
-          <div onClick={() => setShowAll(true)} className={`${viewMoreBtn} mt-6 lg:mt-10 flex justify-center`}>
-            <CustomButton
-              iconColor="#010101"
-              text="View More"
-              className="!bg-yellow !px-[22px]"
-              onClick={() => setShowAll(true)}
-            />
-          </div>
+        <div
+          onClick={() => setShowAll(true)}
+          className={`${viewMoreBtn} mt-6 lg:mt-10 flex justify-center`}
+        >
+          <CustomButton
+            iconColor="#010101"
+            text="View More"
+            className="!bg-yellow !px-[22px]"
+            onClick={() => setShowAll(true)}
+          />
+        </div>
       </div>
     </div>
   );

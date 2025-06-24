@@ -2,17 +2,20 @@
 import React, { useEffect, useState } from "react";
 import Title from "../common/Title";
 import Image from "next/image";
-import { GENERAL_PUPILO_LIST, LATEST_BLOG_DATA_LIST } from '../../../utils/helper';
+import {
+  GENERAL_PUPILO_LIST,
+  LATEST_BLOG_DATA_LIST,
+} from "../../../utils/helper";
 
 function slugify(text) {
   return text
     .toString()
     .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')      
-    .replace(/\-\-+/g, '-')        
-    .replace(/^-+/, '')              
-    .replace(/-+$/, '');             
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
 }
 
 const BlogContent = ({ slug }) => {
@@ -20,9 +23,8 @@ const BlogContent = ({ slug }) => {
 
   // Find the blog by slug
   const combinedList = [...LATEST_BLOG_DATA_LIST, ...GENERAL_PUPILO_LIST];
-  const blog = combinedList.find(
-    (b) => slugify(b.title) === slug
-  ) || combinedList[0];
+  const blog =
+    combinedList.find((b) => slugify(b.title) === slug) || combinedList[0];
 
   useEffect(() => {
     const sectionIds = [
@@ -45,14 +47,11 @@ const BlogContent = ({ slug }) => {
   }, []);
 
   return (
-    <div className="pt-10 sm:pt-[60px] lg:pt-20 max-w-[1140px] mx-auto px-5 xl:px-0">
-      <div className="flex flex-col-reverse lg:flex-row flex-wrap max-lg:gap-10 justify-between">
+    <div className="pt-10 sm:pt-[60px] lg:pt-20 max-w-[1140px] mx-auto px-4 xl:px-0">
+      <div className="flex flex-col-reverse lg:flex-row max-lg:gap-10 max-xl:gap-6 justify-between">
         <div className="max-w-[730px] w-full flex flex-col gap-10 md:gap-12 xl:gap-[60px]">
-          <div className="fles flex-col">
-            <Title
-              className="mb-6"
-              text={blog.title}
-            />
+          <div className="flex flex-col">
+            <Title className="mb-6" text={blog.title} />
             <p className="text-sm sm:text-base font-medium leading-normal text-dark-black mb-3">
               By: {blog.author} on {blog.date}
             </p>
@@ -70,7 +69,7 @@ const BlogContent = ({ slug }) => {
           <div className="flex flex-col gap-4 lg:gap-5">
             <h2
               id="coding-everyone"
-              className="font-semibold leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
+              className="font-semibold pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
             >
               1. Coding Is for Everyone
             </h2>
@@ -85,7 +84,7 @@ const BlogContent = ({ slug }) => {
               One of the biggest misconceptions? "I'm too old" or "I'm too
               young" to start coding. Let's kill that noise.
             </p>
-            <ul className="font-normal text-sm sm:text-base leading-163 -mt-1 list-inside text-dark-grey list-disc flex flex-col gap-[10px] pl-3">
+            <ul className="font-normal text-sm marker:mr-0 sm:text-base leading-163 -mt-1 text-dark-grey list-disc flex flex-col gap-[10px] pl-2 ml-5">
               <li>
                 For Kids (10–17): Platforms like Scratch, Code.org, and Tynker
                 turn programming into play. Visual blocks teach logic,
@@ -117,7 +116,7 @@ const BlogContent = ({ slug }) => {
           <div className="flex flex-col gap-4 lg:gap-5">
             <h2
               id="tools-platforms"
-              className="font-semibold leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
+              className="font-semibold pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
             >
               2. Tools & Platforms to Begin Your Journey
             </h2>
@@ -133,7 +132,7 @@ const BlogContent = ({ slug }) => {
                 The right tools make all the difference. Here's a breakdown of
                 the most user-friendly and effective platforms to get started:
               </p>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-3">
+              <ul className="list-disc pl-2 ml-5 space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey">
                 <span className="font-normal text-base leading-160 text-dark-grey !mb-1">
                   1. Absolute Beginners:
                 </span>
@@ -158,7 +157,7 @@ const BlogContent = ({ slug }) => {
                 <li>Khan Academy: Interactive JS and web dev courses.</li>
                 <li>Replit : Learn and build real projects in-browser.</li>
               </ul>
-              <ul className="list-disc list-inside space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-3">
+              <ul className="list-disc space-y-1 font-normal text-sm sm:text-base leading-163 text-dark-grey pl-2 ml-5">
                 <span className="font-normal text-sm sm:text-base leading-160 text-dark-grey !mb-1">
                   3. For Deep Divers:
                 </span>
@@ -176,7 +175,7 @@ const BlogContent = ({ slug }) => {
           <div className="flex flex-col gap-4 lg:gap-5">
             <h2
               id="why-code-matters"
-              className="font-semibold leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
+              className="font-semibold pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
             >
               3. Why Learning to Code Matters
             </h2>
@@ -212,7 +211,7 @@ const BlogContent = ({ slug }) => {
                 </li>
                 <li>
                   <span className="pb-2 inline-flex"> Use coding to:</span>
-                  <ul className="list-disc list-inside font-normal text-sm sm:text-base leading-160 -mt-1 text-dark-grey flex flex-col gap-1 pl-3 marker:!mr-2">
+                  <ul className="list-disc font-normal text-sm sm:text-base leading-160 -mt-1 text-dark-grey flex flex-col gap-1 pl-2 ml-5">
                     <li>Build a side hustle</li>
                     <li>Enhance your job performance</li>
                     <li>Create tools that serve your community</li>
@@ -241,28 +240,31 @@ const BlogContent = ({ slug }) => {
             </p>
             <ul className="space-y-4 text-nowrap text-dark-black font-normal text-sm sm:text-base leading-normal">
               <li
-                className={`pl-3 border-l-2 ${activeSection === "coding-everyone"
-                  ? "border-purple text-purple"
-                  : "border-transparent"
-                  }`}
+                className={`pl-3 border-l-2 ${
+                  activeSection === "coding-everyone"
+                    ? "border-purple text-purple"
+                    : "border-transparent"
+                }`}
               >
                 <a href="#coding-everyone">Coding Is for Everyone</a>
               </li>
               <li
-                className={`pl-3 border-l-2 ${activeSection === "tools-platforms"
-                  ? "border-purple text-purple"
-                  : "border-transparent text-nowrap"
-                  }`}
+                className={`pl-3 border-l-2 ${
+                  activeSection === "tools-platforms"
+                    ? "border-purple text-purple"
+                    : "border-transparent text-nowrap"
+                }`}
               >
                 <a href="#tools-platforms">
                   Tools & Platforms to Begin Your Journey
                 </a>
               </li>
               <li
-                className={`pl-3 border-l-2 ${activeSection === "why-code-matters"
-                  ? "border-purple text-purple"
-                  : "border-transparent"
-                  }`}
+                className={`pl-3 border-l-2 ${
+                  activeSection === "why-code-matters"
+                    ? "border-purple text-purple"
+                    : "border-transparent"
+                }`}
               >
                 <a href="#why-code-matters">Why Learning to Code Matters</a>
               </li>
