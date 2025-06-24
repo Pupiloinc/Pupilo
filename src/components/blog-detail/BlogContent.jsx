@@ -69,7 +69,7 @@ const BlogContent = ({ slug }) => {
           <div className="flex flex-col gap-4 lg:gap-5">
             <h2
               id="coding-everyone"
-              className="font-semibold pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
+              className="font-semibold sm:pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
             >
               1. Coding Is for Everyone
             </h2>
@@ -116,7 +116,7 @@ const BlogContent = ({ slug }) => {
           <div className="flex flex-col gap-4 lg:gap-5">
             <h2
               id="tools-platforms"
-              className="font-semibold pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
+              className="font-semibold sm:pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
             >
               2. Tools & Platforms to Begin Your Journey
             </h2>
@@ -175,7 +175,7 @@ const BlogContent = ({ slug }) => {
           <div className="flex flex-col gap-4 lg:gap-5">
             <h2
               id="why-code-matters"
-              className="font-semibold pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
+              className="font-semibold sm:pl-4 leading-120 lg:mb-3 text-rich-black text-xl sm:text-2xl lg:text-custom-4xl"
             >
               3. Why Learning to Code Matters
             </h2>
