@@ -13,10 +13,10 @@ import PupiloDelivers from "@/components/home/PupiloDelivers";
 import WhyPupilo from "@/components/home/WhyPupilo";
 import { useEffect, useState } from "react";
 const HERO_GIF_DATA = [
+  { src: "assets/gif/hero-fourth-video.gif", duration: 3000 },
+  { src: "assets/gif/hero-third-video.gif", duration: 4500 },
   { src: "assets/gif/home-hero.gif", duration: 4000 },
   { src: "assets/gif/hero-second-video.gif", duration: 3500 },
-  { src: "assets/gif/hero-third-video.gif", duration: 4500 },
-  { src: "assets/gif/hero-fourth-video.gif", duration: 3000 },
 ];
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,10 +55,11 @@ export default function Home() {
               <img
                 key={index}
                 src={obj.src}
+                loading="eager"
                 width={550}
                 height={527}
                 alt={`hero-gif-${index + 1}`}
-                className={`absolute top-0 left-0 h-full transition-opacity duration-700 ease-in-out rounded-3xl object-cover ${
+                className={`absolute top-0 left-0 h-full w-full transition-opacity duration-700 ease-in-out rounded-3xl object-cover ${
                   index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               />
