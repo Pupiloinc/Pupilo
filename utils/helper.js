@@ -6,6 +6,13 @@ export const NAV_DATA_LIST = [
   { title: "Blog", link: "/blog" },
 ];
 
+export const HERO_VIDEO_DATA = [
+  { src: "assets/video/first-video.webm" },
+  { src: "assets/video/second-video.webm" },
+  { src: "assets/video/third-video.webm" },
+  { src: "assets/video/fourth-video.webm" },
+];
+
 export const BRAND_LOGO_DATA_LIST = [
   "/assets/images/svg/layers.svg",
   "/assets/images/svg/sisyphus.svg",
@@ -338,7 +345,7 @@ export const FORMATS = [
     title: "1-on-1 Private Lessons",
     desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
     cta: "Try a Free Lesson",
-    price: "R 1,875/week",
+    price: "R 1,875/mo",
   },
   {
     id: 2,
@@ -348,7 +355,7 @@ export const FORMATS = [
     title: "Online Live Group Lessons",
     desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
     cta: "Try a Free Lesson",
-    price: "R 1,250/week",
+    price: "R 1,250/mo",
   },
   {
     id: 3,
@@ -358,7 +365,7 @@ export const FORMATS = [
     title: "Self-Paced Courses",
     desc: "Learn anytime, anywhere. Your pace, your path. Best for independent learners with busy schedules.",
     cta: "Try a Free Lesson",
-    price: "R 899/week",
+    price: "R 899/mo",
   },
   {
     id: 4,

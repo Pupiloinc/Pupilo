@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import BackToTop from "@/components/common/BackToTop";
 import Footer from "@/components/common/Footer";
 import GetStarted from "@/components/common/GetStarted";
@@ -11,24 +12,27 @@ import OurCoding from "@/components/home/OurCoding";
 import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
 import WhyPupilo from "@/components/home/WhyPupilo";
-import { useEffect, useState } from "react";
-const HERO_GIF_DATA = [
-  { src: "assets/gif/hero-fourth-video.gif", duration: 3000 },
-  { src: "assets/gif/hero-third-video.gif", duration: 4500 },
-  { src: "assets/gif/home-hero.gif", duration: 4000 },
-  { src: "assets/gif/hero-second-video.gif", duration: 3500 },
-];
+import { HERO_VIDEO_DATA } from "../../utils/helper";
+
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex + 1 < HERO_GIF_DATA.length ? prevIndex + 1 : 0
-      );
-    }, HERO_GIF_DATA[currentIndex].duration);
+  const [isFading, setIsFading] = useState(false);
+  const [hasSwitched, setHasSwitched] = useState(false);
 
-    return () => clearTimeout(timeout);
-  }, [currentIndex]);
+  const handleVideoEnd = () => {
+    if (isFading) return;
+
+    setTimeout(() => {
+      setCurrentIndex((prev) =>
+        prev + 1 < HERO_VIDEO_DATA.length ? prev + 1 : 0
+      );
+
+      setTimeout(() => {
+        setIsFading(false);
+        setHasSwitched(false);
+      }, 300);
+    }, 300);
+  };
 
   return (
     <div className="max-w-[2560px] mx-auto">
@@ -43,38 +47,58 @@ export default function Home() {
               Create{" "}
               <Icons
                 icon="heroTextEllipse"
-                className="absolute top-2 -right-8 max-lg:hidden"
+                className="absolute top-2 -right-8 !z-10 max-lg:hidden"
               />
             </span>
             and Thrive.
           </>
         }
         heroImg={
-          <div className="relative w-[550px] h-[527px]">
-            {HERO_GIF_DATA.map((obj, index) => (
-              <img
-                key={index}
-                src={obj.src}
-                loading="eager"
-                width={550}
-                height={527}
-                alt={`hero-gif-${index + 1}`}
-                className={`absolute top-0 left-0 h-full w-full transition-opacity duration-700 ease-in-out rounded-3xl object-cover ${
-                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              />
-            ))}
+          <div className="relative z-10 w-[550px] max-sm:h-[300px] h-[527px]">
+            <div
+              className="absolute top-0 left-0 h-full bg-transparent z-30 w-full rounded-3xl"
+              style={{
+                backdropFilter: isFading ? "blur(10px)" : "blur(0px)",
+                transition: "backdrop-filter 0.5s ease-in-out",
+              }}
+            ></div>
+            <video
+              key={currentIndex}
+              src={HERO_VIDEO_DATA[currentIndex].src}
+              width={550}
+              height={527}
+              autoPlay
+              muted
+              playsInline
+              format="webm"
+              preload="auto"
+              onTimeUpdate={(e) => {
+                const video = e.target;
+                const timeLeft = video.duration - video.currentTime;
+
+                if (timeLeft <= 1.2 && !hasSwitched) {
+                  setHasSwitched(true);
+                  setIsFading(true);
+                  setTimeout(() => {
+                    handleVideoEnd();
+                  }, 100);
+                }
+              }}
+              className="h-full w-full rounded-3xl max-sm:rounded-2xl object-cover z-20"
+            />
             <Icons
               icon="htmlIcon"
-              className="absolute top-[-10%] -left-7 z-20 max-lg:hidden"
+              className="absolute top-[-10%] -left-7 z-30 max-lg:hidden"
             />
             <Icons
               icon="pythonIcon"
-              className="absolute bottom-[-10%] -right-5 xl:-right-13 z-20 max-lg:hidden"
+              className="absolute bottom-[-10%] -right-5 xl:-right-13 z-30 max-lg:hidden"
             />
           </div>
         }
       />
+
+      {/* Remaining Sections */}
       <BrandMarquee />
       <PupiloCurriculum />
       <AddOnCourses />
@@ -91,9 +115,8 @@ export default function Home() {
         }
         paragraph={
           <>
-            {" "}
             Personalized session with a vetted instructor.
-            <br /> Watch your child build their first project in 45 minutes.{" "}
+            <br /> Watch your child build their first project in 45 minutes.
           </>
         }
       />
