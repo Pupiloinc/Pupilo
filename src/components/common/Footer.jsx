@@ -30,19 +30,19 @@ const Footer = () => {
               <div className="flex gap-2">
                 <Icons icon="phoneIcon" />
                 <Link
-                  href="tel:+2341234567890"
+                  href="tel:0738649689"
                   className="text-black/70 hover:text-custom-pink transition-colors"
                 >
-                  +234 123 456 7890
+                  0738649689
                 </Link>
               </div>
               <div className="flex gap-2">
                 <Icons icon="mailIcon" />
                 <Link
-                  href="mailto:hello@pupilo.com"
+                  href="mailto:hello@pupiloinc.com"
                   className="text-black/70 hover:text-custom-pink transition-colors"
                 >
-                  hello@pupilo.com
+                  hello@pupiloinc.com
                 </Link>
               </div>
             </div>
@@ -73,7 +73,7 @@ const Footer = () => {
                     </h4>
                     <div className="flex gap-2">
                       <a
-                        href="https://www.instagram.com"
+                        href="https://www.instagram.com/hellopupilo"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
@@ -81,7 +81,7 @@ const Footer = () => {
                         <Icons icon="instagramIcon" />
                       </a>
                       <a
-                        href="https://www.facebook.com"
+                        href="https://www.facebook.com/hellopupilo"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
@@ -89,7 +89,7 @@ const Footer = () => {
                         <Icons icon="facebookIcon" />
                       </a>
                       <a
-                        href="https://www.linkedin.com"
+                        href="https://www.tiktok.com/@hellopupilo"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
@@ -97,7 +97,7 @@ const Footer = () => {
                         <Icons icon="linkedinIcon" />
                       </a>
                       <a
-                        href="https://www.twitter.com"
+                        href="https://www.linkedin.com/company/pupilo"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"

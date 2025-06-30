@@ -427,6 +427,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Ideal for focused learners & passion projects",
       "Weekly progress reports + goal setting",
     ],
+    price: "R 1,875/mo",
     bgColor: "bg-[#8C52FF]",
     ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
   },
@@ -438,6 +439,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Challenge-based problem solving",
       "Teacher-led coding jams",
     ],
+    price: "R 1,250/mo",
     bgColor: "bg-[#8C52FF33]",
     ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
   },
@@ -449,6 +451,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Ideal for independent learners",
       "Live support for debugging & guidance",
     ],
+    price: "R 899/mo",
     bgColor: "bg-[#F9DC00]",
     ellipseImage: "/assets/images/svg/gallery-yellow-ellipse.svg",
   },
@@ -460,6 +463,7 @@ export const FORMAT_GALLERY_DATA_LIST = [
       "Real project builds & peer presentations",
       "Earn certificates + digital badges",
     ],
+    price: "R 1,099/week",
     bgColor: "bg-[#0D5FCE]",
     ellipseImage: "/assets/images/svg/gallery-ellipse.svg",
   },
@@ -543,7 +547,7 @@ export const LATEST_BLOG_DATA_LIST = [
   {
     id: 1,
     title: "Explore the World of Coding: Tips and Insights for All Ages",
-    author: "John doe",
+    author: "Pupilo",
     date: "2 June 2025",
     description:
       "Discover coding tips, inspiring stories, and expert insights crafted for learners of all ages. Whether you're a curious student, a working professional, or someone exploring a new passion, our blog is here to guide you. From beginner basics to real-world projects, explore how anyone—from age 10 to 50—can start coding and grow.",
@@ -553,7 +557,7 @@ export const LATEST_BLOG_DATA_LIST = [
   {
     id: 2,
     title: "From First Line to Full Stack: Journeys from Our Students",
-    author: "John doe",
+    author: "Pupilo",
     date: "2 June 2025",
     description:
       "Epoxy coatings provide a durable, moisture-resistant surface ideal for high-traffic areas.",
@@ -563,7 +567,7 @@ export const LATEST_BLOG_DATA_LIST = [
   {
     id: 3,
     title: "Your Coding Companion: Learn, Practice, and Grow with Us",
-    author: "John doe",
+    author: "Pupilo",
     date: "2 June 2025",
     description:
       "Installing epoxy flooring involves surface preparation, priming, and applying multiple.",
@@ -572,7 +576,7 @@ export const LATEST_BLOG_DATA_LIST = [
   {
     id: 4,
     title: "Behind the Code: Stories and Resources for Every Student",
-    author: "John doe",
+    author: "Pupilo",
     date: "2 June 2025",
     description:
       "Garages demand tough, long-lasting flooring, and epoxy stands out for its strength.",
@@ -582,11 +586,11 @@ export const LATEST_BLOG_DATA_LIST = [
 export const GENERAL_PUPILO_LIST = [
   {
     id: 1,
-    title: "The Code Learning Blog: For Kids, Teens, and Adults",
+    title: "The Code Learning Blog: For Kids and Teens",
     description:
       "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
     date: "2 June 2025",
-    author: "John doe",
+    author: "Pupilo",
     image: "/assets/images/webp/general-pupilo-one.webp",
   },
   {
@@ -595,7 +599,7 @@ export const GENERAL_PUPILO_LIST = [
     description:
       "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
     date: "2 June 2025",
-    author: "John doe",
+    author: "Pupilo",
     image: "/assets/images/webp/general-pupilo-two.webp",
   },
   {
@@ -604,7 +608,7 @@ export const GENERAL_PUPILO_LIST = [
     description:
       "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
     date: "2 June 2025",
-    author: "John doe",
+    author: "Pupilo",
     image: "/assets/images/webp/general-pupilo-three.webp",
   },
   {
@@ -613,7 +617,7 @@ export const GENERAL_PUPILO_LIST = [
     description:
       "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
     date: "2 June 2025",
-    author: "John doe",
+    author: "Pupilo",
     image: "/assets/images/webp/general-pupilo-two.webp",
   },
   {
@@ -622,16 +626,16 @@ export const GENERAL_PUPILO_LIST = [
     description:
       "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
     date: "2 June 2025",
-    author: "John doe",
+    author: "Pupilo",
     image: "/assets/images/webp/general-pupilo-three.webp",
   },
   {
     id: 6,
-    title: "The Code Learning Blog: For Kids, Teens, and Adults",
+    title: "The Code Learning Blog: For Kids and Teens",
     description:
       "Discover coding resources, tips, and stories designed for learners of every age. Whether you’re a curious kid.",
     date: "2 June 2025",
-    author: "John doe",
+    author: "Pupilo",
     image: "/assets/images/webp/general-pupilo-one.webp",
   },
 ];

@@ -63,7 +63,7 @@ const JoinTheWaitList = () => {
             <form className='flex flex-column justify-center'>
                 <div className="w-full max-w-[698px] mt-3 flex gap-2 max-lg:justify-center">
                     <div className="lg:max-w-[491px] max-w-[375px] max-lg:justify-center w-full bg-white rounded-full py-2.5 md:py-3.5 max-lg:pl-3 lg:px-8">
-                        <input required type="email" placeholder='Enter your Email' className='font-semibold text-sm md:text-base leading-100 placeholder:text-dark-grey outline-none border-none' />
+                        <input required type="email" placeholder='Enter your Email' className='font-semibold w-full text-sm md:text-base leading-100 placeholder:text-dark-grey outline-none border-none' />
                     </div>
                     <CustomButton text="Submit" />
                 </div>
