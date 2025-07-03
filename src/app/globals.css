@@ -163,3 +163,11 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+  border-radius: 12px !important;
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+    background-color: transparent !important;
+     border-radius: 12px !important;
+}

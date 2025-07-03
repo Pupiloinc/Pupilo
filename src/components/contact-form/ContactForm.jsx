@@ -29,7 +29,11 @@ const ContactForm = () => {
     const newErrors = {}
 
     if (!formData.parentName.trim()) newErrors.parentName = "Parent name is required"
-    if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = "Enter a valid 10-digit phone number"
+    if (!formData.phone || formData.phone.trim() === '') {
+      newErrors.phone = "Phone number is required"
+    } else if (!/^\d{10,}$/.test(formData.phone.replace(/\D/g, ''))) {
+      newErrors.phone = "Enter a valid phone number"
+    }
     if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Enter a valid email"
     if (!formData.childName.trim()) newErrors.childName = "Child name is required"
     if (!formData.childAge || formData.childAge < 3 || formData.childAge > 18) {
@@ -148,16 +152,20 @@ const ContactForm = () => {
                 />
               </div>
 
+              <div className="w-full">
                 <PhoneInput
                   country={'za'}
                   value={formData.phone}
                   onChange={phone => setFormData({ ...formData, phone })}
-                  inputClass="!bg-white-100 !outline-0 !py-[13px] !px-10 !rounded-xl !h-[54px] !border-none !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3"
-                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl"
-                  containerClass="!w-full !rounded-xl"
+                  inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-10 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${errors.phone ? '!border !border-red-500' : '!border-none'}`}
+                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl m-[1px]"
+                  containerClass="!w-full !rounded-xl m-[0.5px]"
                   dropdownClass="!rounded-xl"
-                  error={errors.PhoneInput}
                 />
+                {errors.phone && (
+                  <div className="text-red-500 text-xs mt-1 pl-2">{errors.phone}</div>
+                )}
+              </div>
 
               <CustomInput
                 name="email"
