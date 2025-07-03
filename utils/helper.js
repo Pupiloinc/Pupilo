@@ -7,9 +7,9 @@ export const NAV_DATA_LIST = [
 ];
 
 export const HERO_VIDEO_DATA = [
+  { src: "assets/video/third-video.webm" },
   { src: "assets/video/first-video.webm" },
   { src: "assets/video/second-video.webm" },
-  { src: "assets/video/third-video.webm" },
   { src: "assets/video/fourth-video.webm" },
 ];
 
