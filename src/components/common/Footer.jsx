@@ -107,7 +107,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className="flex gap-2">
-                  <Icons icon="whatsappIcon" />
+                  <Icons icon="whatsappFooterIcon" />
                   <Link
                     href="https://wa.me/+27738649689" target="_blank"
                     className="text-black/70 hover:text-custom-pink transition-colors"
