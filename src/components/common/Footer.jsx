@@ -89,21 +89,22 @@ const Footer = () => {
                         <Icons icon="facebookIcon" />
                       </a>
                       <a
-                        href="https://www.tiktok.com/@hellopupilo"
+                        href="https://www.linkedin.com/company/pupilo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                      >
+                        <Icons icon="tiktokIcon" />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                       >
                         <Icons icon="linkedinIcon" />
                       </a>
-                      <a
-                        href="https://www.linkedin.com/company/pupilo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
-                      >
-                        <Icons icon="twitterIcon" />
-                      </a>
+                      
                     </div>
                   </div>
                 )}

@@ -98,10 +98,10 @@ const ContactForm = () => {
                   <Icons icon="facebookIcon" />
                 </a>
                 <a href="https://www.tiktok.com/@hellopupilo" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-all duration-300 hover:opacity-80">
-                  <Icons icon="linkedinIcon" />
+                  <Icons icon="tiktokIcon" />
                 </a>
-                <a href="https://www.linkedin.com/company/pupilo" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-all duration-300 hover:opacity-80">
-                  <Icons icon="twitterIcon" />
+                <a href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-all duration-300 hover:opacity-80">
+                  <Icons icon="linkedinIcon" />
                 </a>
               </div>
             </div>
