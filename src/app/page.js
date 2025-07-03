@@ -13,6 +13,8 @@ import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
 import WhyPupilo from "@/components/home/WhyPupilo";
 import { HERO_VIDEO_DATA } from "../../utils/helper";
+import JoinTheWaitList from "@/components/common/JoinTheWaitList";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,6 +38,7 @@ export default function Home() {
 
   return (
     <div className="max-w-[2560px] mx-auto">
+      <ToastContainer />
       <Hero
         badgeText="🏆Top-Rated by Parents"
         blackText="Where Every Child can"
@@ -122,6 +125,7 @@ export default function Home() {
       />
       <Footer />
       <BackToTop />
+      <JoinTheWaitList/>
     </div>
   );
 }
