@@ -14,18 +14,13 @@ export const HERO_VIDEO_DATA = [
 ];
 
 export const BRAND_LOGO_DATA_LIST = [
-  "/assets/images/svg/layers.svg",
-  "/assets/images/svg/sisyphus.svg",
-  "/assets/images/svg/capsule.svg",
-  "/assets/images/svg/catalog.svg",
-  "/assets/images/svg/spherule.svg",
-  "/assets/images/svg/luminous.svg",
-  "/assets/images/svg/focalpoint.svg",
-  "/assets/images/svg/polymath.svg",
-  "/assets/images/svg/acmeCrop.svg",
-  "/assets/images/svg/segment.svg",
-  "/assets/images/svg/featherDev.svg",
-  "/assets/images/svg/galileo.svg",
+  "/assets/images/svg/scratch.svg",
+  "/assets/images/svg/roblox.svg",
+  "/assets/images/svg/python-logo.svg",
+  "/assets/images/svg/minecraft.svg",
+  "/assets/images/svg/tailwind-css.svg",
+  "/assets/images/svg/python-logo.svg",
+  "/assets/images/svg/roblox.svg",
 ];
 
 export const PUPILO_CURRICULUM_LIST = [
@@ -285,14 +280,6 @@ export const FOOTER_DATA_LIST = [
       { label: "Game Development", url: "#" },
       { label: "Programming with Python", url: "#" },
       { label: "App & Web Development ", url: "#" },
-    ],
-  },
-  {
-    title: "Legal Links",
-    links: [
-      { label: "Terms and Conditions", url: "#" },
-      { label: "Privacy Policy", url: "#" },
-      { label: "Cookie Policy", url: "#" },
     ],
   },
 ];

@@ -23,27 +23,44 @@ const Footer = () => {
               Pupilo is Africa's most loved online coding platform for kids and
               teens—where every child can code, create, and thrive.
             </p>
-
-            <hr className="w-full lg:max-w-[224px] my-[18px] text-black/10" />
-
-            <div className="flex gap-2 flex-col">
+            <div className="mt-4">
+              <h4 className="font-bold text-lg text-dark-black mb-2">
+                Follow Us
+              </h4>
               <div className="flex gap-2">
-                <Icons icon="phoneIcon" />
-                <Link
-                  href="tel:+27 (0) 73 864 9689"
-                  className="text-black/70 hover:text-custom-pink transition-colors"
+                <a
+                  href="https://www.instagram.com/hellopupilo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                 >
-                  +27 (0) 73 864 9689
-                </Link>
-              </div>
-              <div className="flex gap-2">
-                <Icons icon="mailIcon" />
-                <Link
-                  href="mailto:hello@pupiloinc.com"
-                  className="text-black/70 hover:text-custom-pink transition-colors"
+                  <Icons icon="instagramIcon" />
+                </a>
+                <a
+                  href="https://www.facebook.com/hellopupilo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                 >
-                  hello@pupiloinc.com
-                </Link>
+                  <Icons icon="facebookIcon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pupilo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                >
+                  <Icons icon="tiktokIcon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
+                >
+                  <Icons icon="linkedinIcon" />
+                </a>
+
               </div>
             </div>
           </div>
@@ -65,51 +82,42 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
-
-                {obj.title === "Legal Links" && (
-                  <div className="mt-6">
-                    <h4 className="font-bold text-lg text-dark-black mb-2">
-                      Follow Us
-                    </h4>
-                    <div className="flex gap-2">
-                      <a
-                        href="https://www.instagram.com/hellopupilo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
-                      >
-                        <Icons icon="instagramIcon" />
-                      </a>
-                      <a
-                        href="https://www.facebook.com/hellopupilo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
-                      >
-                        <Icons icon="facebookIcon" />
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/company/pupilo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
-                      >
-                        <Icons icon="tiktokIcon" />
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
-                      >
-                        <Icons icon="linkedinIcon" />
-                      </a>
-                      
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
+            <div className="w-full max-w-[176px]">
+              <h4 className="font-bold text-lg text-dark-black sm:mb-3 mb-2">
+                Contact Us
+              </h4>
+              <div className="flex gap-3 flex-col">
+                <div className="flex gap-2">
+                  <Icons icon="phoneIcon" />
+                  <Link
+                    href="tel:+27 (0) 73 864 9689"
+                    className="text-black/70 hover:text-custom-pink transition-colors"
+                  >
+                    +27 73 864 9689
+                  </Link>
+                </div>
+                <div className="flex gap-2">
+                  <Icons icon="mailIcon" />
+                  <Link
+                    href="mailto:hello@pupilo.com"
+                    className="text-black/70 hover:text-custom-pink transition-colors"
+                  >
+                    hello@pupilo.com
+                  </Link>
+                </div>
+                <div className="flex gap-2">
+                  <Icons icon="whatsappIcon" />
+                  <Link
+                    href="https://wa.me/+27738649689" target="_blank"
+                    className="text-black/70 hover:text-custom-pink transition-colors"
+                  >
+                    +27 73 864 9689
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
