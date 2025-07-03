@@ -6,6 +6,8 @@ import CustomInput from '../common/CustomInput'
 import CustomButton from '../common/CustomButton'
 import { toast, ToastContainer } from 'react-toastify'
 import Image from 'next/image'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,9 +19,11 @@ const ContactForm = () => {
     date: '',
     time: '',
     notes: '',
+    countryCode: '+91', // Default to India
   })
 
   const [errors, setErrors] = useState({})
+
 
   const validate = () => {
     const newErrors = {}
@@ -37,6 +41,11 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target
+
+    if (name === 'countryCode') {
+      setFormData({ ...formData, countryCode: value })
+      return
+    }
 
     if (name === 'phone') {
       const onlyNums = value.replace(/\D/g, '') // Only digits allowed
@@ -83,9 +92,9 @@ const ContactForm = () => {
           <div className='max-w-[524px] flex-col flex gap-10 max-lg:gap-8 max-sm:gap-6'>
             <div className='flex flex-col gap-4 max-md:gap-2'>
               <h2 className='max-lg:text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black mt-4 relative z-10 lg:max-w-[524px]'>
-                Let’s Connect. <span className='block text-purple'>Build. Empower.</span>
+                Let's Connect. <span className='block text-purple'>Build. Empower.</span>
               </h2>
-              <Description className={'text-dark-grey font-Inter !leading-160 max-lg:text-center'} text={"Have a question? Want to partner, teach, or enroll your child? Whether you're a parent, educator, investor, or simply passionate about coding education in Africa — we’d love to hear from you."} />
+              <Description className={'text-dark-grey font-Inter !leading-160 max-lg:text-center'} text={"Have a question? Want to partner, teach, or enroll your child? Whether you're a parent, educator, investor, or simply passionate about coding education in Africa — we'd love to hear from you."} />
             </div>
 
             <div className='flex gap-4 flex-col'>
@@ -124,7 +133,7 @@ const ContactForm = () => {
                   type="text"
                   value={formData.childName}
                   onChange={handleChange}
-                  placeholder="Child’s Name"
+                  placeholder="Child's Name"
                   error={errors.childName}
                 />
                 <CustomInput
@@ -132,24 +141,23 @@ const ContactForm = () => {
                   type="number"
                   value={formData.childAge}
                   onChange={handleChange}
-                  placeholder="Child’s Age"
+                  placeholder="Child's Age"
                   minValue={3}
                   maxValue={18}
                   error={errors.childAge}
                 />
               </div>
 
-              <CustomInput
-                name="phone"
-                type="tel"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                maxLength={10}
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Phone Number"
-                error={errors.phone}
-              />
+                <PhoneInput
+                  country={'za'}
+                  value={formData.phone}
+                  onChange={phone => setFormData({ ...formData, phone })}
+                  inputClass="!bg-white-100 !outline-0 !py-[13px] !px-10 !rounded-xl !h-[54px] !border-none !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3"
+                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl"
+                  containerClass="!w-full !rounded-xl"
+                  dropdownClass="!rounded-xl"
+                  error={errors.PhoneInput}
+                />
 
               <CustomInput
                 name="email"
