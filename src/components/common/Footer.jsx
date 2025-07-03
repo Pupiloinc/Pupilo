@@ -80,7 +80,7 @@ const Footer = () => {
                 Subscribe
               </button>
               {/* Show popup only when showPopup is true */}
-              {showPopup && <NewsLetterPopUp onClose={handleClosePopup} />}
+              <NewsLetterPopUp onClose={handleClosePopup} show={showPopup} />
             </div>
             {error && <span className="text-red-500 text-xs mt-1 ml-2 block">{error}</span>}
           </div>
