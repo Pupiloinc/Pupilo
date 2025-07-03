@@ -60,7 +60,6 @@ const Footer = () => {
                 >
                   <Icons icon="linkedinIcon" />
                 </a>
-
               </div>
             </div>
           </div>
