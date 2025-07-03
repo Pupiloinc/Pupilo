@@ -37,6 +37,7 @@ const Footer = () => {
       return;
     }
     setError("");
+    setEmail("")
     setShowPopup(true);
   };
 
