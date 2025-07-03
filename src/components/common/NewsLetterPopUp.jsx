@@ -11,7 +11,8 @@ const NewsLetterPopUp = ({ onClose, show }) => {
                 className={`flex items-center justify-center h-screen w-full`}
             >
                 <div
-                    className={`max-w-[734px] bg-newsletter bg-cover bg-no-repeat w-full p-5 md:p-10 lg:p-[60px] rounded-4xl transition-transform duration-300 ease-in-out ${show ? 'scale-100' : 'scale-0'}`}
+                    className={`max-w-[734px] bg-newsletter bg-cover bg-no-repeat w-full p-5 md:p-10 lg:p-[60px] rounded-4xl transition-transform duration-300 ease-in-out ${show ? 'scale-100' : 'scale-0'} overflow-y-auto scroll-none`}
+                    style={{ maxHeight: 'calc(100vh - 40px)' }}
                     onClick={e => e.stopPropagation()}
                 >
                     <div className="flex justify-center items-center">

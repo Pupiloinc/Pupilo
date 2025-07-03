@@ -91,8 +91,16 @@ const JoinTheWaitList = () => {
             className={`fixed top-0 left-0 w-full h-full flex justify-center items-center !p-4 z-50 bg-black/60 ${!showPopup && 'opacity-0 transition-opacity duration-300 ease-in-out'}  ${hidden && 'hidden'}`}
             onClick={handleClosePopup}
         >
+            <style>{`
+                @media (max-width: 640px) {
+                    .waitlist-popup-maxheight { max-height: calc(100vh - 24px) !important; }
+                }
+                @media (min-width: 641px) {
+                    .waitlist-popup-maxheight { max-height: calc(100vh - 33px) !important; }
+                }
+            `}</style>
             <div
-                className={`bg-purple flex flex-col justify-center rounded-[24px] py-[82px] max-w-[1140px] w-full z-50 px-4 max-sm:px-2 sm:px-6 max-sm:py-12 relative transition-transform duration-300 ease-in-out ${!showPopup && '  scale-0'}`}
+                className={`bg-purple flex flex-col justify-center rounded-[24px] py-[82px] max-w-[1140px] w-full z-50 px-4 max-sm:px-2 sm:px-6 max-sm:py-12 relative transition-transform duration-300 ease-in-out overflow-y-scroll waitlist-popup-maxheight ${!showPopup && '  scale-0'}`}
                 onClick={(e) => e.stopPropagation()}
             >
                 <button type="button" onClick={handleClosePopup} className='absolute top-5 cursor-pointer right-5 z-50'>

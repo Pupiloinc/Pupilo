@@ -179,3 +179,6 @@ input[type=number] {
   background-color: transparent !important;
   border-radius: 12px !important;
 }
+.scroll-none::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
