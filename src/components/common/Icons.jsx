@@ -449,6 +449,40 @@ const Icons = ({ icon, className, fill, stroke }) => {
         </defs>
       </svg>
     ),
+    youtubeFooterIcon: (
+      <svg  width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="18" fill="black" fillOpacity="0.06" />
+        <g clipPath="url(#clip0_942_3677)">
+          <path d="M25.9523 13.4147C26.3332 14.8997 26.3332 17.9997 26.3332 17.9997C26.3332 17.9997 26.3332 21.0997 25.9523 22.5847C25.7407 23.4055 25.1215 24.0513 24.3373 24.2697C22.9132 24.6663 17.9998 24.6663 17.9998 24.6663C17.9998 24.6663 13.089 24.6663 11.6623 24.2697C10.8748 24.048 10.2565 23.403 10.0473 22.5847C9.6665 21.0997 9.6665 17.9997 9.6665 17.9997C9.6665 17.9997 9.6665 14.8997 10.0473 13.4147C10.259 12.5938 10.8782 11.948 11.6623 11.7297C13.089 11.333 17.9998 11.333 17.9998 11.333C17.9998 11.333 22.9132 11.333 24.3373 11.7297C25.1248 11.9513 25.7432 12.5963 25.9523 13.4147ZM16.3332 20.9163L21.3332 17.9997L16.3332 15.083V20.9163Z" fill="#4E4E4E" />
+        </g>
+        <defs>
+          <clipPath id="clip0_942_3677">
+            <rect width="20" height="20" fill="white" transform="translate(8 8)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+    ),
+    newsletterIcon: (
+      <svg width="208" height="190" viewBox="0 0 208 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clipPath="url(#clip0_939_3598)">
+          <path d="M94.9997 174.167C51.2759 174.167 15.833 138.724 15.833 95C15.833 51.2763 51.2759 15.8334 94.9997 15.8334C138.723 15.8334 174.166 51.2763 174.166 95C174.166 138.724 138.723 174.167 94.9997 174.167ZM87.1068 126.667L143.078 70.688L131.883 59.4938L87.1068 104.278L64.7105 81.8821L53.5163 93.0763L87.1068 126.667Z" fill="white" />
+        </g>
+        <circle cx="189" cy="73" r="2" fill="white" />
+        <circle cx="16" cy="20" r="2" transform="rotate(180 16 20)" fill="white" />
+        <circle cx="36" cy="175" r="2" transform="rotate(180 36 175)" fill="white" />
+        <circle cx="203" cy="61" r="5" fill="white" />
+        <circle cx="13" cy="35" r="5" transform="rotate(180 13 35)" fill="white" />
+        <circle cx="202.5" cy="77.5" r="3.5" fill="white" />
+        <circle cx="30.5" cy="25.5" r="3.5" transform="rotate(180 30.5 25.5)" fill="white" />
+        <circle cx="21.5" cy="176.5" r="3.5" transform="rotate(180 21.5 176.5)" fill="white" />
+        <defs>
+          <clipPath id="clip0_939_3598">
+            <rect width="190" height="190" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    )
   };
   const addClassName = (icon) => {
     return React.cloneElement(icon, {

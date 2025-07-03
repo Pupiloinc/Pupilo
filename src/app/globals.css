@@ -69,6 +69,7 @@ body {
   --background-find-best: url("/assets/images/webp/what-best-bg.webp");
   --background-our-blog: url("/assets/images/webp/our-blog-bg.webp");
   --background-pupilo-curriculum: url("/assets/images/webp/pupilo-curriculum-bg.webp");
+  --background-newsletter: url("/assets/images/webp/bg-newsletter.webp");
   --color-fade-purple: #8c52ff14;
   --font-Inter: "Inter", sans-serif;
   --color-medium-gray: #747474;
@@ -109,6 +110,10 @@ body {
 
 .bg-full {
   background-size: 100% 100%;
+}
+
+.bg-newsletter {
+  background-image: var(--background-newsletter);
 }
 
 #about-pupilo .swiper-slide {
@@ -163,11 +168,14 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
   background-color: transparent !important;
   border-radius: 12px !important;
 }
+
 .react-tel-input .flag-dropdown.open .selected-flag {
-    background-color: transparent !important;
-     border-radius: 12px !important;
+  background-color: transparent !important;
+  border-radius: 12px !important;
 }
