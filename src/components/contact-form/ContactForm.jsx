@@ -160,7 +160,7 @@ const ContactForm = () => {
                     setFormData({ ...formData, phone });
                     // Remove non-digits and check length
                     const onlyNums = phone.replace(/\D/g, '');
-                    if (onlyNums.length >= 12) {
+                    if (onlyNums.length >= 8) {
                       setErrors({ ...errors, phone: '' });
                     }
                   }}
