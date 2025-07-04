@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,23 +22,36 @@ const Footer = () => {
     };
   }, [showPopup]);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    // Simple email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email) {
-      setError("Email is required");
-      setShowPopup(false);
-      return;
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ toEmail: email, toName: email.split("@")[0] }),
+      });
+      if (res.ok) {
+        alert("Email sent!");
+      } else {
+        alert("Failed to send email");
+      }
+    } catch (err) {
+      alert("Error sending email");
     }
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address");
-      setShowPopup(false);
-      return;
-    }
-    setError("");
-    setEmail("")
-    setShowPopup(true);
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!email) {
+    //   setError("Email is required");
+    //   setShowPopup(false);
+    //   return;
+    // }
+    // if (!emailRegex.test(email)) {
+    //   setError("Please enter a valid email address");
+    //   setShowPopup(false);
+    //   return;
+    // }
+    // setError("");
+    // setEmail("")
+    // setShowPopup(true);
   };
 
   const handleClosePopup = () => setShowPopup(false);
@@ -61,18 +74,24 @@ const Footer = () => {
               Pupilo is Africa's most loved online coding platform for kids and
               teens—where every child can code, create, and thrive.
             </p>
-            <h4 className="font-bold text-lg text-dark-black mt-6">Subscribe to our Newsletter</h4>
+            <h4 className="font-bold text-lg text-dark-black mt-6">
+              Subscribe to our Newsletter
+            </h4>
             <div className="max-w-[338px] w-full rounded-full bg-[#EEEEEE]  mt-3 flex justify-between">
               <div className="py-[13px] pl-5 w-full">
                 <input
                   required
                   placeholder="Email Address"
-                  className={`bg-transparent text-base leading-160 text-dark-grey placeholder:text-dark-grey font-normal outline-0 border-none w-full ${error ? 'border border-red-500' : ''}`}
+                  className={`bg-transparent text-base leading-160 text-dark-grey placeholder:text-dark-grey font-normal outline-0 border-none w-full ${
+                    error ? "border border-red-500" : ""
+                  }`}
                   type="email"
                   value={email}
-                  onChange={e => { setEmail(e.target.value); setError(""); }}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setError("");
+                  }}
                 />
-
               </div>
               <button
                 className="py-3.5 px-8 bg-yellow font-semibold text-base leading-100 text-dark-black rounded-full cursor-pointer"
@@ -83,7 +102,11 @@ const Footer = () => {
               {/* Show popup only when showPopup is true */}
               <NewsLetterPopUp onClose={handleClosePopup} show={showPopup} />
             </div>
-            {error && <span className="text-red-500 text-xs mt-1 ml-2 block">{error}</span>}
+            {error && (
+              <span className="text-red-500 text-xs mt-1 ml-2 block">
+                {error}
+              </span>
+            )}
           </div>
           <div className="max-sm:w-[100%] max-lg:w-[90%] max-[1120px]:w-[64%] w-[57%] flex flex-wrap xl:gap-[80px] md:gap-[63px] gap-6 sm:gap-10 lg:justify-end justify-between mt-5 lg:mt-0">
             {FOOTER_DATA_LIST.map((obj, i) => (
@@ -93,7 +116,12 @@ const Footer = () => {
                 </h4>
                 <ul className="sm:space-y-2 space-y-1">
                   {obj.links.map((object, index) => (
-                    <li key={index} className={`${index !== obj.links.length - 1 ? "mb-3" : ""} group`}>
+                    <li
+                      key={index}
+                      className={`${
+                        index !== obj.links.length - 1 ? "mb-3" : ""
+                      } group`}
+                    >
                       <Link
                         href={object.url}
                         className="text-black/80 sm:text-base text-sm font-normal hover:text-purple transition-all duration-300 ease-in-out"
@@ -131,7 +159,8 @@ const Footer = () => {
                 <div className="flex gap-2">
                   <Icons icon="whatsappFooterIcon" />
                   <Link
-                    href="https://wa.me/+27738649689" target="_blank"
+                    href="https://wa.me/+27738649689"
+                    target="_blank"
                     className="text-black/70 hover:text-custom-pink transition-colors"
                   >
                     +27 73 864 9689
@@ -149,7 +178,10 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                   >
-                    <Icons className="max-sm:min-w-[30px] max-sm:h-[30px]" icon="facebookIcon" />
+                    <Icons
+                      className="max-sm:min-w-[30px] max-sm:h-[30px]"
+                      icon="facebookIcon"
+                    />
                   </a>
                   <a
                     href="https://www.instagram.com/hellopupilo"
@@ -157,7 +189,10 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                   >
-                    <Icons className="max-sm:min-w-[30px] max-sm:h-[30px]" icon="instagramIcon" />
+                    <Icons
+                      className="max-sm:min-w-[30px] max-sm:h-[30px]"
+                      icon="instagramIcon"
+                    />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/pupilo"
@@ -165,7 +200,10 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                   >
-                    <Icons className="max-sm:min-w-[30px] max-sm:h-[30px]" icon="tiktokIcon" />
+                    <Icons
+                      className="max-sm:min-w-[30px] max-sm:h-[30px]"
+                      icon="tiktokIcon"
+                    />
                   </a>
                   <a
                     href="https://www.youtube.com"
@@ -173,7 +211,10 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                   >
-                    <Icons className="max-sm:min-w-[30px] max-sm:h-[30px]" icon="youtubeFooterIcon" />
+                    <Icons
+                      className="max-sm:min-w-[30px] max-sm:h-[30px]"
+                      icon="youtubeFooterIcon"
+                    />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
@@ -181,7 +222,10 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
                   >
-                    <Icons className="max-sm:min-w-[30px] max-sm:h-[30px]" icon="linkedinIcon" />
+                    <Icons
+                      className="max-sm:min-w-[30px] max-sm:h-[30px]"
+                      icon="linkedinIcon"
+                    />
                   </a>
                 </div>
               </div>
@@ -192,7 +236,6 @@ const Footer = () => {
       <p className="border-t py-4 border-solid border-black/10 text-center text-black/80 max-sm:px-4">
         Copyright © 2025 Pupilo. All Rights Reserved.
       </p>
-
     </div>
   );
 };
