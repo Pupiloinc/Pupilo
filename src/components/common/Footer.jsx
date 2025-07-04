@@ -56,6 +56,7 @@ const Footer = () => {
       if (!response.ok) {
         throw new Error(data.message || "Failed to subscribe.");
       }
+      setLoading(false);
       setError("");
       setEmail("");
       setShowPopup(true);
