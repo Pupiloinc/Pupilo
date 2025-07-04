@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { toast } from 'react-toastify'
 import { TOP_RATED_LIST } from '../../../utils/helper'
 import Icons from './Icons'
-import { abort } from 'process'
 
 const JoinTheWaitList = () => {
     const [timeLeft, setTimeLeft] = useState({
@@ -75,7 +74,6 @@ const JoinTheWaitList = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!email.trim()) return;
-
         localStorage.setItem("hasSeenWaitlistPopup", "true");
         toast.success("Email submitted successfully!");
         console.log("Email submitted:", email);

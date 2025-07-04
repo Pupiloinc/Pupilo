@@ -38,7 +38,7 @@ const Footer = () => {
       return;
     }
     try {
-      const response = await fetch("https://api.brevo.com/v3/contacts", {
+      const response = await fetch("/api/news-letter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
