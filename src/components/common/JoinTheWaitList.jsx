@@ -22,7 +22,10 @@ const JoinTheWaitList = () => {
     useEffect(() => {
         const hasSeenPopup = localStorage.getItem("hasSeenWaitlistPopup");
         if (!hasSeenPopup) {
-            setShowPopup(true);
+            const timer = setTimeout(() => {
+                setShowPopup(true);
+            }, 10000); // 10 seconds
+            return () => clearTimeout(timer);
         }
     }, []);
 
@@ -104,7 +107,7 @@ const JoinTheWaitList = () => {
                 onClick={(e) => e.stopPropagation()}
             >
                 <button type="button" onClick={handleClosePopup} className='absolute top-5 cursor-pointer right-5 z-50'>
-                    <Icons icon={'crossIcon'} className={' size-7 max-sm:size-5 cursor-pointer'}  />
+                    <Icons icon={'crossIcon'} className={' size-7 max-sm:size-5 cursor-pointer'} />
                 </button>
                 <Image src="/assets/images/webp/bottom-left-ellipse.webp" alt='bottom-left' width={325} height={325} className='absolute bottom-0 left-0 pointer-events-none max-lg:hidden' />
                 <Image src="/assets/images/webp/left-ellipse.webp" alt='left-ellipse' width={180} height={340} className='absolute top-1/3 right-0 pointer-events-none max-lg:hidden' />
@@ -138,9 +141,9 @@ const JoinTheWaitList = () => {
 
                 <div className="flex gap-4 items-center justify-center max-sm:flex-col mt-3">
                     <div className='flex'>
-                    {TOP_RATED_LIST.map((item, index) => (
-                        <Image src={item} alt={`top-rated-${index}`} key={index} className={`size-[40px] border-solid border-2 border-purple rounded-full ${index !== 0 && 'ml-[-11px]'}`} width={40} height={40} />
-                    ))}
+                        {TOP_RATED_LIST.map((item, index) => (
+                            <Image src={item} alt={`top-rated-${index}`} key={index} className={`size-[40px] border-solid border-2 border-purple rounded-full ${index !== 0 && 'ml-[-11px]'}`} width={40} height={40} />
+                        ))}
                     </div>
                     <p className='font-semibold text-white text-sm lg:text-base leading-100'>Joined 150+ others on the waitlist</p>
                 </div>
