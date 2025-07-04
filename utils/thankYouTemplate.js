@@ -1,4 +1,5 @@
 export const thankYouTemplate = (toName = "User") => `
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -115,9 +116,9 @@ export const thankYouTemplate = (toName = "User") => `
                                                         <tr>
                                                             <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
                                                             <td style="text-align: center;">
-                                                                <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://borks.io/call-booke" style="height:52px; text-decoration: none !important; v-text-anchor:middle; width:151px;" arcsize="100%"  stroke="f" fillcolor="#F9DC00"><w:anchorlock/><center style="color:#FFFFFF"><![endif]-->
+                                                                <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://pupilo-xi.vercel.app/" style="height:52px; text-decoration: none !important; v-text-anchor:middle; width:151px;" arcsize="100%"  stroke="f" fillcolor="#F9DC00"><w:anchorlock/><center style="color:#FFFFFF"><![endif]-->
                                                                 <a style="text-decoration: none !important; text-decoration: none;"
-                                                                    href="https://borks.io/call-booke" target="_blank"
+                                                                    href="https://pupilo-xi.vercel.app/" target="_blank"
                                                                     class="v-button">
                                                                     <span
                                                                         style=" box-sizing: border-box;display: inline-block;-webkit-text-size-adjust: none;text-align: left; -webkit-border-radius: 100px; -moz-border-radius: 100px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none; padding: 14px 32px; border-radius: 50px; font-size: 14px; font-weight: 600; line-height: 100%; background-color: #F9DC00; color: #000000; text-decoration: none !important;text-transform: capitalize;">
@@ -157,7 +158,7 @@ export const thankYouTemplate = (toName = "User") => `
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%;padding-bottom: 20px;"
+                                                                        <td style="width: 100%;padding-bottom: 6px;"
                                                                             class="text_center">
                                                                             <p
                                                                                 style="color: #515151;font-weight: 400;font-size: 14px;line-height: 160%;max-width: 270px;">
@@ -219,7 +220,7 @@ export const thankYouTemplate = (toName = "User") => `
                                                                     style="width: 100%;max-width: 219px;margin-left: auto;"
                                                                     class="mx_0">
                                                                     <tr>
-                                                                        <td style="width: 100%;padding-bottom: 12px;">
+                                                                        <td style="width: 100%;">
                                                                             <a href="" target="_blank"
                                                                                 style="display: inline-grid;text-decoration: none;">
                                                                                 <table cellpadding="0" cellspacing="0"
@@ -232,7 +233,7 @@ export const thankYouTemplate = (toName = "User") => `
                                                                                                 height="24">
                                                                                         </td>
                                                                                         <td
-                                                                                            style="padding-left: 12px;vertical-align: middle;">
+                                                                                            style="padding-left: 8px;vertical-align: middle;">
                                                                                             <p
                                                                                                 style="color: #515151;font-weight: 400;font-size: 14px;line-height: 160%;">
                                                                                                 877.494.1499</p>
@@ -243,7 +244,7 @@ export const thankYouTemplate = (toName = "User") => `
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td style="width: 100%;padding-bottom: 12px;">
+                                                                        <td style="width: 100%;">
                                                                             <a href="" target="_blank"
                                                                                 style="display: inline-grid;text-decoration: none;">
                                                                                 <table cellpadding="0" cellspacing="0"
@@ -323,5 +324,6 @@ export const thankYouTemplate = (toName = "User") => `
         </tbody>
     </table>
 </body>
-</html>`
 
+</html>
+`;

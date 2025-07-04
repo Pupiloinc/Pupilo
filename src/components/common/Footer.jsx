@@ -10,6 +10,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (showPopup) {
@@ -24,6 +25,7 @@ const Footer = () => {
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email) {
       setError("Email is required");
@@ -35,9 +37,34 @@ const Footer = () => {
       setShowPopup(false);
       return;
     }
-    setError("");
-    setEmail("")
-    setShowPopup(true);
+    try {
+      const response = await fetch("https://api.brevo.com/v3/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          accept: "application/json",
+          "api-key": process.env.NEXT_PUBLIC_BREVO_API_KEY,
+        },
+        body: JSON.stringify({
+          email: email,
+          listIds: [3],
+          updateEnabled: true,
+        }),
+      });
+      const data = await response.json();
+      setLoading(false);
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to subscribe.");
+      }
+      setError("");
+      setEmail("");
+      setShowPopup(true);
+    } catch (error) {
+      setError("Subscription failed. Please try again.");
+      console.error("Brevo API error:", error.message);
+      setShowPopup(false);
+      setLoading(false);
+    }
   };
 
   const handleClosePopup = () => setShowPopup(false);
@@ -83,7 +110,7 @@ const Footer = () => {
                 className="py-3.5 px-8 bg-yellow font-semibold text-base leading-100 text-dark-black rounded-full cursor-pointer"
                 onClick={handleSubscribe}
               >
-                Subscribe
+                {!loading ? "Loading..." : "Subscribe"}
               </button>
               {/* Show popup only when showPopup is true */}
               <NewsLetterPopUp onClose={handleClosePopup} show={showPopup} />
