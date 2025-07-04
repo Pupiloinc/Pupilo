@@ -156,7 +156,14 @@ const ContactForm = () => {
                 <PhoneInput
                   country={'za'}
                   value={formData.phone}
-                  onChange={phone => setFormData({ ...formData, phone })}
+                  onChange={phone => {
+                    setFormData({ ...formData, phone });
+                    // Remove non-digits and check length
+                    const onlyNums = phone.replace(/\D/g, '');
+                    if (onlyNums.length >= 8) {
+                      setErrors({ ...errors, phone: '' });
+                    }
+                  }}
                   inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-10 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${errors.phone ? '!border !border-red-500' : '!border-none'}`}
                   buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl m-[1px]"
                   containerClass="!w-full !rounded-xl m-[0.5px]"
@@ -166,7 +173,6 @@ const ContactForm = () => {
                   <div className="text-red-500 text-xs mt-1 pl-2">{errors.phone}</div>
                 )}
               </div>
-
               <CustomInput
                 name="email"
                 type="email"
