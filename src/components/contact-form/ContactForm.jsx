@@ -45,7 +45,6 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-
     if (name === 'countryCode') {
       setFormData({ ...formData, countryCode: value })
       return
@@ -61,16 +60,24 @@ const ContactForm = () => {
     setErrors({ ...errors, [name]: '' })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const validationErrors = validate()
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors)
-      return
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const validationErrors = validate();
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+  try {
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ toEmail: formData.email, toName: formData.email.split("@")[0] })
+    });
+    if (!response.ok) {
+      throw new Error("Failed to send email");
     }
-
-    console.log("Submitted Data:", formData)
-
     setFormData({
       parentName: '',
       phone: '',
@@ -80,10 +87,15 @@ const ContactForm = () => {
       date: '',
       time: '',
       notes: '',
-    })
+    });
 
-    toast.success("Form submitted successfully!")
+    toast.success("Form submitted and email sent successfully!");
+  } catch (error) {
+    console.error("Email sending failed:", error);
+    toast.error("Failed to send email. Please try again.");
   }
+};
+
 
   return (
     <div className='min-h-screen flex max-md:py-[60px] relative max-lg:py-[100px] py-[30px] justify-center items-center bg-[url(/assets/images/webp/bg-hero.webp)] bg-cover bg-no-repeat bg-center'>

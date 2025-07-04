@@ -24,34 +24,20 @@ const Footer = () => {
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ toEmail: email, toName: email.split("@")[0] }),
-      });
-      if (res.ok) {
-        alert("Email sent!");
-      } else {
-        alert("Failed to send email");
-      }
-    } catch (err) {
-      alert("Error sending email");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      setError("Email is required");
+      setShowPopup(false);
+      return;
     }
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!email) {
-    //   setError("Email is required");
-    //   setShowPopup(false);
-    //   return;
-    // }
-    // if (!emailRegex.test(email)) {
-    //   setError("Please enter a valid email address");
-    //   setShowPopup(false);
-    //   return;
-    // }
-    // setError("");
-    // setEmail("")
-    // setShowPopup(true);
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address");
+      setShowPopup(false);
+      return;
+    }
+    setError("");
+    setEmail("")
+    setShowPopup(true);
   };
 
   const handleClosePopup = () => setShowPopup(false);
