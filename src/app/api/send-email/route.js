@@ -1,10 +1,10 @@
-import { BREVO_API_HOST, BREVO_API_KEY } from "../../../../constants/brevo";
+import { BREVO_API_HOST, BREVO_API_KEY, BREVO_ADMIN_EMAIL, generateAdminEmailTemplate, DEFAULT_SENDER } from "../../../../constants/brevo";
 import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
 export async function POST(request) {
   try {
     const { toEmail, toName, formData } = await request.json();
-    const htmlContent = thankYouTemplate(toName);
+    const htmlContent = thankYouTemplate(formData.parentName);
 
     const res = await fetch(`${BREVO_API_HOST}/smtp/email`, {
       method: "POST",
@@ -20,7 +20,30 @@ export async function POST(request) {
             name: toName,
           },
         ],
+        sender: DEFAULT_SENDER,
+        subject: "Pupilo Inc:  Thank You for Reaching Out.",
         htmlContent,
+      }),
+    });
+
+    // Send an Email to the admin at hello@pupiloinc.com
+    await fetch(`${BREVO_API_HOST}/smtp/email`, {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "api-key": BREVO_API_KEY,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        to: [
+          {
+            email: BREVO_ADMIN_EMAIL,
+            name: "Admin",
+          },
+        ],
+        sender: DEFAULT_SENDER,
+        subject: "Pupilo Update: New Contact Form Submission Received",
+        htmlContent: generateAdminEmailTemplate(formData),
       }),
     });
 
