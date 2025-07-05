@@ -80,6 +80,7 @@ const ContactForm = () => {
         body: JSON.stringify({
           toEmail: formData.email,
           toName: formData.email.split("@")[0],
+          formData
         }),
       });
       if (!response.ok) {
