@@ -13,10 +13,6 @@ export async function POST(request) {
         "content-type": "application/json",
       },
       body: JSON.stringify({
-        sender: {
-          name: "Muskan Saini",
-          email: "muskansaini758@gmail.com",
-        },
         to: [
           {
             email: toEmail,
