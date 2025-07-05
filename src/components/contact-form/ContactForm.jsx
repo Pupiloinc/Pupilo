@@ -20,7 +20,7 @@ const ContactForm = () => {
     date: "",
     time: "",
     notes: "",
-    countryCode: "+91", // Default to India
+    countryCode: "+91",
   });
 
   const [errors, setErrors] = useState({});
@@ -80,7 +80,6 @@ const ContactForm = () => {
         },
         body: JSON.stringify({
           toEmail: formData.email,
-          toName: formData.email.split("@")[0],
           formData,
         }),
       });
