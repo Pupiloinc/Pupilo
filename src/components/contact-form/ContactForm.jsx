@@ -236,10 +236,10 @@ const ContactForm = () => {
                       setErrors({ ...errors, phone: "" });
                     }
                   }}
-                  inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-10 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${
+                  inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-14 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${
                     errors.phone ? "!border !border-red-500" : "!border-none"
                   }`}
-                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl m-[1px]"
+                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl ml-4 my-[1px]"
                   containerClass="!w-full !rounded-xl m-[0.5px]"
                   dropdownClass="!rounded-xl"
                 />
