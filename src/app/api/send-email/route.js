@@ -19,7 +19,6 @@ export async function POST(request) {
             name: toName,
           },
         ],
-        subject: "Thank You for Reaching Out",
         htmlContent,
       }),
     });
