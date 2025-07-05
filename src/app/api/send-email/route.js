@@ -1,10 +1,16 @@
-import { BREVO_API_HOST, BREVO_API_KEY, BREVO_ADMIN_EMAIL, generateAdminEmailTemplate, DEFAULT_SENDER } from "../../../../constants/brevo";
-import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
+import {
+  BREVO_API_HOST,
+  BREVO_API_KEY,
+  BREVO_ADMIN_EMAIL,
+  generateAdminEmailTemplate,
+  DEFAULT_SENDER,
+} from "../../../../constants/brevo";
+// import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
 export async function POST(request) {
   try {
-    const { toEmail, toName, formData } = await request.json();
-    const htmlContent = thankYouTemplate(formData.parentName);
+    const { toEmail, formData } = await request.json();
+    // const htmlContent = thankYouTemplate(formData.parentName);
 
     const res = await fetch(`${BREVO_API_HOST}/smtp/email`, {
       method: "POST",
@@ -17,12 +23,9 @@ export async function POST(request) {
         to: [
           {
             email: toEmail,
-            name: toName,
           },
         ],
-        sender: DEFAULT_SENDER,
-        subject: "Pupilo Inc:  Thank You for Reaching Out.",
-        htmlContent,
+        templateId: 2,
       }),
     });
 
@@ -41,14 +44,22 @@ export async function POST(request) {
             name: "Admin",
           },
         ],
+        params: {
+          parentName: formData.parentName,
+          phone: `${formData.countryCode} ${formData.phone}`,
+          email: formData.email,
+          childName: formData.childName,
+          childAge: formData.childAge,
+          date: formData.date,
+          time: formData.time,
+          notes: formData.notes || "No additional notes provided.",
+        },
+
         sender: DEFAULT_SENDER,
         subject: "Pupilo Update: New Contact Form Submission Received",
         htmlContent: generateAdminEmailTemplate(formData),
       }),
     });
-
-    // FIXME: Send an Email to the admin at hello@pupiloinc.com. This can be a simple text email update.
-    // use infromation from formData and send it like, params: {...formData}
 
     const data = await res.json();
 

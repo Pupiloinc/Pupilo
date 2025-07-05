@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { TOP_RATED_LIST } from "../../../utils/helper";
 import Icons from "./Icons";
 import { WAITLIST_LIST_ID } from "../../../constants/brevo";
+import { CONTACT_URL } from "../../../utils/urls";
 
 const JoinTheWaitList = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -81,7 +82,7 @@ const JoinTheWaitList = () => {
     if (!email.trim()) return;
     setLoading(true);
     try {
-      const response = await fetch("/api/contacts", {
+      const response = await fetch(`${CONTACT_URL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

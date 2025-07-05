@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { SEND_EMAIL_URL } from "../../../utils/urls";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const ContactForm = () => {
     date: "",
     time: "",
     notes: "",
-    countryCode: "+91", // Default to India
+    countryCode: "+91",
   });
 
   const [errors, setErrors] = useState({});
@@ -54,33 +55,32 @@ const ContactForm = () => {
     }
 
     if (name === "phone") {
-      const onlyNums = value.replace(/\D/g, ""); // Only digits allowed
+      const onlyNums = value.replace(/\D/g, "");
       setFormData({ ...formData, [name]: onlyNums });
     } else {
       setFormData({ ...formData, [name]: value });
     }
-
     setErrors({ ...errors, [name]: "" });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
     try {
-      const response = await fetch("/api/send-email", {
+      setLoading(true);
+
+      const response = await fetch(`${SEND_EMAIL_URL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           toEmail: formData.email,
-          toName: formData.email.split("@")[0],
-          formData
+          formData,
         }),
       });
       if (!response.ok) {
@@ -236,10 +236,10 @@ const ContactForm = () => {
                       setErrors({ ...errors, phone: "" });
                     }
                   }}
-                  inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-10 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${
+                  inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-12 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${
                     errors.phone ? "!border !border-red-500" : "!border-none"
                   }`}
-                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl m-[1px]"
+                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl ml-4 my-[1px]"
                   containerClass="!w-full !rounded-xl m-[0.5px]"
                   dropdownClass="!rounded-xl"
                 />
