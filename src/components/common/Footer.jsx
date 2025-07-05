@@ -74,7 +74,7 @@ const Footer = () => {
     <div className="bg-white-100">
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto pt-[60px] sm:pt-20 pb-[60px]">
         <div className="flex lg:flex-row flex-col justify-between gap-7">
-          <div className="lg:w-[35%]">
+          <div className="lg:w-[30%]">
             <Link href="/">
               <Image
                 className="max-sm:max-w-[100px] max-w-[190px] w-full"
@@ -122,7 +122,7 @@ const Footer = () => {
               </span>
             )}
           </div>
-          <div className="max-sm:w-[100%] max-lg:w-[90%] max-[1120px]:w-[64%] w-[57%] flex flex-wrap xl:gap-[80px] md:gap-[63px] gap-6 sm:gap-10 lg:justify-end justify-between mt-5 lg:mt-0">
+          <div className="max-sm:w-[100%] max-lg:w-[90%] max-[1120px]:w-[64%] w-[60%] flex flex-wrap xl:gap-[80px] md:gap-[63px] gap-6 sm:gap-10 lg:justify-end justify-between mt-5 lg:mt-0">
             {FOOTER_DATA_LIST.map((obj, i) => (
               <div key={i}>
                 <h4 className="font-bold text-lg text-dark-black sm:mb-3 mb-2">
@@ -147,7 +147,7 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
-            <div className="w-full max-w-[176px]">
+            <div className="w-full max-w-[203px]">
               <h4 className="font-bold text-lg text-dark-black sm:mb-3 mb-2">
                 Contact Us
               </h4>
@@ -164,10 +164,10 @@ const Footer = () => {
                 <div className="flex gap-2">
                   <Icons icon="mailIcon" />
                   <Link
-                    href="mailto:hello@pupilo.com"
+                    href="mailto:hello@pupiloinc.com"
                     className="text-black/70 hover:text-custom-pink transition-colors"
                   >
-                    hello@pupilo.com
+                    hello@pupiloinc.com
                   </Link>
                 </div>
                 <div className="flex gap-2">
