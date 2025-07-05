@@ -43,7 +43,7 @@ const Footer = () => {
         headers: {
           "Content-Type": "application/json",
           accept: "application/json",
-          "api-key": process.env.NEXT_PUBLIC_BREVO_API_KEY,
+          "api-key": process.env.BREVO_API_KEY,
         },
         body: JSON.stringify({
           email: email,
@@ -111,7 +111,7 @@ const Footer = () => {
                 className="py-3.5 px-8 bg-yellow font-semibold text-base leading-100 text-dark-black rounded-full cursor-pointer"
                 onClick={handleSubscribe}
               >
-                {!loading ? "Loading..." : "Subscribe"}
+                {loading ? "Loading..." : "Subscribe"}
               </button>
               {/* Show popup only when showPopup is true */}
               <NewsLetterPopUp onClose={handleClosePopup} show={showPopup} />
