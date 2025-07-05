@@ -2,8 +2,8 @@ import {
   BREVO_API_HOST,
   BREVO_API_KEY,
   BREVO_ADMIN_EMAIL,
-  // generateAdminEmailTemplate,
-  // DEFAULT_SENDER,
+  generateAdminEmailTemplate,
+  DEFAULT_SENDER,
 } from "../../../../constants/brevo";
 // import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
@@ -26,10 +26,6 @@ export async function POST(request) {
           },
         ],
         templateId: 2,
-
-        // sender: DEFAULT_SENDER,
-        // subject: "Pupilo Inc:  Thank You for Reaching Out.",
-        // htmlContent,
       }),
     });
 
@@ -48,7 +44,6 @@ export async function POST(request) {
             name: "Admin",
           },
         ],
-        templateId: 2,
         params: {
           parentName: formData.parentName,
           phone: `${formData.countryCode} ${formData.phone}`,
@@ -60,14 +55,11 @@ export async function POST(request) {
           notes: formData.notes || "No additional notes provided.",
         },
 
-        // sender: DEFAULT_SENDER,
-        // subject: "Pupilo Update: New Contact Form Submission Received",
-        // htmlContent: generateAdminEmailTemplate(formData),
+        sender: DEFAULT_SENDER,
+        subject: "Pupilo Update: New Contact Form Submission Received",
+        htmlContent: generateAdminEmailTemplate(formData),
       }),
     });
-
-    // FIXME: Send an Email to the admin at hello@pupiloinc.com. This can be a simple text email update.
-    // use infromation from formData and send it like, params: {...formData}
 
     const data = await res.json();
 
