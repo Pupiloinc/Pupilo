@@ -1,3 +1,4 @@
+import { BREVO_API_HOST } from "../../../../constants/brevo";
 import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
 export async function POST(request) {
@@ -5,7 +6,7 @@ export async function POST(request) {
     const { toEmail, toName } = await request.json();
     const htmlContent = thankYouTemplate(toName);
 
-    const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+    const res = await fetch(`${BREVO_API_HOST}/smtp/email`, {
       method: "POST",
       headers: {
         accept: "application/json",

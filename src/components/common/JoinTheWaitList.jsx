@@ -5,6 +5,7 @@ import Image from "next/image";
 import { toast } from "react-toastify";
 import { TOP_RATED_LIST } from "../../../utils/helper";
 import Icons from "./Icons";
+import { WAITLIST_LIST_ID } from "../../../constants/brevo";
 
 const JoinTheWaitList = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -80,12 +81,12 @@ const JoinTheWaitList = () => {
     if (!email.trim()) return;
     setLoading(true);
     try {
-      const response = await fetch("/api/waitlist", {
+      const response = await fetch("/api/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, listId: WAITLIST_LIST_ID }),
       });
       if (!response.ok) {
         throw new Error("Failed to submit email");

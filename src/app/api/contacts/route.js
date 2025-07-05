@@ -1,8 +1,8 @@
 export const POST = async (request) => {
   try {
-    const { email } = await request.json();
+    const { email, listId } = await request.json();
 
-    const res = await fetch("https://api.brevo.com/v3/contacts", {
+    const res = await fetch(`${BREVO_API_HOST}/contacts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export const POST = async (request) => {
       },
       body: JSON.stringify({
         email,
-        listIds: [3],
+        listIds: [listId],
         updateEnabled: true,
       }),
     });
