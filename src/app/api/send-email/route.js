@@ -1,4 +1,10 @@
-import { BREVO_API_HOST, BREVO_API_KEY, BREVO_ADMIN_EMAIL, generateAdminEmailTemplate, DEFAULT_SENDER } from "../../../../constants/brevo";
+import {
+  BREVO_API_HOST,
+  BREVO_API_KEY,
+  BREVO_ADMIN_EMAIL,
+  generateAdminEmailTemplate,
+  DEFAULT_SENDER,
+} from "../../../../constants/brevo";
 import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
 export async function POST(request) {

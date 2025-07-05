@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { SEND_EMAIL_URL } from "../../../utils/urls";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -54,25 +55,25 @@ const ContactForm = () => {
     }
 
     if (name === "phone") {
-      const onlyNums = value.replace(/\D/g, ""); // Only digits allowed
+      const onlyNums = value.replace(/\D/g, "");
       setFormData({ ...formData, [name]: onlyNums });
     } else {
       setFormData({ ...formData, [name]: value });
     }
-
     setErrors({ ...errors, [name]: "" });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
     try {
-      const response = await fetch("/api/send-email", {
+      setLoading(true);
+
+      const response = await fetch(`${SEND_EMAIL_URL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +81,7 @@ const ContactForm = () => {
         body: JSON.stringify({
           toEmail: formData.email,
           toName: formData.email.split("@")[0],
-          formData
+          formData,
         }),
       });
       if (!response.ok) {
