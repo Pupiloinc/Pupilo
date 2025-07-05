@@ -1,4 +1,4 @@
-export const addContactToBrevo = async (email) => {
+export const POST = async (email) => {
   try {
     const res = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
@@ -9,7 +9,7 @@ export const addContactToBrevo = async (email) => {
       },
       body: JSON.stringify({
         email,
-        listIds: [3],
+        listIds: [2],
         updateEnabled: true,
       }),
     });

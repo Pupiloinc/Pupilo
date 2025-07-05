@@ -15,7 +15,7 @@ export async function POST(request) {
       body: JSON.stringify({
         sender: {
           name: "Muskan Saini",
-          email: "muskansaini758@gmail.com", 
+          email: "muskansaini758@gmail.com",
         },
         to: [
           {
@@ -40,9 +40,8 @@ export async function POST(request) {
     return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
     console.error("API Route Error:", error);
-    return new Response(
-      JSON.stringify({ error: "Internal Server Error" }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+    });
   }
 }

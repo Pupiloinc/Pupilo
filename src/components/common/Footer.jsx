@@ -39,12 +39,6 @@ const Footer = () => {
     }
     try {
       const response = await fetch("/api/news-letter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          accept: "application/json",
-          "api-key": process.env.BREVO_API_KEY,
-        },
         body: JSON.stringify({
           email: email,
           listIds: [3],

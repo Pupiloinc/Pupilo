@@ -1,5 +1,7 @@
-export const addContactToBrevo = async (email) => {
+export const POST = async (request) => {
   try {
+    const { email } = await request.json();
+
     const res = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
@@ -9,18 +11,24 @@ export const addContactToBrevo = async (email) => {
       },
       body: JSON.stringify({
         email,
-        listIds: [2],
+        listIds: [3],
         updateEnabled: true,
       }),
     });
+
     const data = await res.json();
     if (!res.ok) {
-      throw new Error(data.message || "Brevo API Error");
+      return new Response(
+        JSON.stringify({ message: data.message || "Brevo API Error" }),
+        { status: res.status }
+      );
     }
-    console.log("Contact added:", data);
-    return data;
+
+    return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
     console.error("Brevo Error:", error.message);
-    return null;
+    return new Response(JSON.stringify({ message: "Internal Server Error" }), {
+      status: 500,
+    });
   }
 };
