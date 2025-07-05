@@ -1,16 +1,16 @@
-import { BREVO_API_HOST } from "../../../../constants/brevo";
+import { BREVO_API_HOST, BREVO_API_KEY } from "../../../../constants/brevo";
 import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
 export async function POST(request) {
   try {
-    const { toEmail, toName } = await request.json();
+    const { toEmail, toName, formData } = await request.json();
     const htmlContent = thankYouTemplate(toName);
 
     const res = await fetch(`${BREVO_API_HOST}/smtp/email`, {
       method: "POST",
       headers: {
         accept: "application/json",
-        "api-key": process.env.BREVO_API_KEY,
+        "api-key": BREVO_API_KEY,
         "content-type": "application/json",
       },
       body: JSON.stringify({
@@ -23,6 +23,9 @@ export async function POST(request) {
         htmlContent,
       }),
     });
+
+    // FIXME: Send an Email to the admin at hello@pupiloinc.com. This can be a simple text email update.
+    // use infromation from formData and send it like, params: {...formData}
 
     const data = await res.json();
 

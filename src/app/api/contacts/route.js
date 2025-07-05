@@ -1,3 +1,5 @@
+import { BREVO_API_HOST, BREVO_API_KEY } from "../../../../constants/brevo";
+
 export const POST = async (request) => {
   try {
     const { email, listId } = await request.json();
@@ -7,7 +9,7 @@ export const POST = async (request) => {
       headers: {
         "Content-Type": "application/json",
         accept: "application/json",
-        "api-key": process.env.BREVO_API_KEY,
+        "api-key": BREVO_API_KEY,
       },
       body: JSON.stringify({
         email,
