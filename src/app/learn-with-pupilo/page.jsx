@@ -11,13 +11,13 @@ import Image from "next/image";
 import React from "react";
 export const metadata = {
   title: "Pupilo",
-   description: "Learn with pupilo ",
+   description: "Choose How You Learn.Build What You Dream.",
   metadataBase: new URL("https://pupilo-omega.vercel.app/learn-with-pupilo"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
-      "Learn with pupilo",
+      "Choose How You Learn.Build What You Dream.",
     images: "https://pupilo-omega.vercel.app/assets/meta-learn.webp",
   },
  

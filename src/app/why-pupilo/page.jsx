@@ -11,13 +11,13 @@ import OurMission from '@/components/why-pupilo/OurMission'
 import Image from 'next/image'
 export const metadata = {
   title: "Pupilo",
-   description: "Why pupilo ",
+   description: "More Than Coding. Here’s Why Pupilo Exists",
   metadataBase: new URL("https://pupilo-omega.vercel.app/why-pupilo"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
-      "Why pupilo",
+      "More Than Coding. Here’s Why Pupilo Exists",
     images: "https://pupilo-omega.vercel.app/assets/meta-why-pupilo.webp",
   },
  
