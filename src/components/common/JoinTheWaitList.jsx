@@ -102,7 +102,7 @@ const JoinTheWaitList = () => {
       }, 500);
     } catch (error) {
       console.error("Error submitting email:", error);
-      toast.error("Something went wrong. Please try again.");
+      toast.error("You’re already subscribed with this email address.");
       setLoading(false);
     }
   };

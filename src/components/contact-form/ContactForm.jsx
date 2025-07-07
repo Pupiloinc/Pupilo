@@ -96,7 +96,6 @@ const ContactForm = () => {
         time: "",
         notes: "",
       });
-
       toast.success("Form submitted and email sent successfully!");
       setLoading(false);
     } catch (error) {
