@@ -9,7 +9,19 @@ import TechJourney from "@/components/courses/TechJourney";
 import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import Image from "next/image";
-
+export const metadata = {
+  title: "Pupilo",
+   description: "Learn with pupilo ",
+  metadataBase: new URL("https://pupilo-cyan.vercel.app/courses"),
+  openGraph: {
+    type: "website",
+    title: "Pupilo",
+    description:
+      "Courses",
+    images: "https://pupilo-cyan.vercel.app/assets/meta-courses.webp",
+  },
+ 
+};
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">

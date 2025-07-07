@@ -9,7 +9,19 @@ import FindWhatBest from "@/components/learn-with-pupilo/FindWhatBest";
 import Gallery from "@/components/learn-with-pupilo/Gallery";
 import Image from "next/image";
 import React from "react";
-
+export const metadata = {
+  title: "Pupilo",
+   description: "Learn with pupilo ",
+  metadataBase: new URL("https://pupilo-cyan.vercel.app/learn-with-pupilo"),
+  openGraph: {
+    type: "website",
+    title: "Pupilo",
+    description:
+      "Learn with pupilo",
+    images: "https://pupilo-cyan.vercel.app/assets/meta-learn.webp",
+  },
+ 
+};
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">

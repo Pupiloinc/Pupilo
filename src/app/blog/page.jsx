@@ -7,7 +7,19 @@ import GetStarted from "@/components/common/GetStarted";
 import Reviews from "@/components/common/Reviews";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import React from "react";
-
+export const metadata = {
+  title: "Pupilo",
+   description: "Learn with pupilo ",
+  metadataBase: new URL("https://pupilo-cyan.vercel.app/blog"),
+  openGraph: {
+    type: "website",
+    title: "Pupilo",
+    description:
+      "Courses",
+    images: "https://pupilo-cyan.vercel.app/assets/meta-blog.webp",
+  },
+ 
+};
 const page = () => {
     return (
         <>
