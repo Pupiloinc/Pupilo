@@ -7,6 +7,7 @@ import { FOOTER_DATA_LIST } from "../../../utils/helper";
 import NewsLetterPopUp from "./NewsLetterPopUp";
 import { NEWSLETTER_LIST_ID } from "../../../constants/brevo";
 import { CONTACT_URL } from "../../../utils/urls";
+import { ToastContainer,toast } from "react-toastify";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -60,8 +61,7 @@ const Footer = () => {
       setEmail("");
       setShowPopup(true);
     } catch (error) {
-      setError("Subscription failed. Please try again.");
-      console.error("Brevo API error:", error.message);
+      toast.error('You’re already subscribed with this email address.');
       setShowPopup(false);
       setLoading(false);
     }
@@ -71,6 +71,7 @@ const Footer = () => {
 
   return (
     <div className="bg-white-100">
+      <ToastContainer />
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto pt-[60px] sm:pt-20 pb-[60px]">
         <div className="flex lg:flex-row flex-col justify-between gap-7">
           <div className="lg:w-[30%]">
@@ -112,7 +113,6 @@ const Footer = () => {
               >
                 {loading ? "Loading..." : "Subscribe"}
               </button>
-              {/* Show popup only when showPopup is true */}
               <NewsLetterPopUp onClose={handleClosePopup} show={showPopup} />
             </div>
             {error && (
