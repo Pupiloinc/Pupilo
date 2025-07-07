@@ -18,7 +18,7 @@ const NewsLetterPopUp = ({ onClose, show }) => {
                     <div className="flex justify-center items-center">
                         <Icons className="max-md:min-w-[150px] max-md:h-[150px]" icon="newsletterIcon" />
                     </div>
-                    <h4 className='text-white font-semibold text-custom-3xl lg:text-5xl leading-120 mt-4 lg:mt-10 text-center'>You’re In - Let’s Go!</h4>
+                    <h4 className='text-white font-semibold text-custom-3xl lg:text-4xl leading-120 mt-4 lg:mt-10 text-center'>We Have Received Your Email</h4>
                     <p className='font-normal text-sm md:text-base leading-150 text-white opacity-80 text-center mt-2'>Thanks for subscribing — your inbox just got a whole lot better. <br className='max-lg:hidden' /> Stay tuned for exclusive updates, fresh drops, and first access to what’s next.</p>
                     <button
                         className='w-full bg-white py-3.5 lg:py-4 font-semibold text-base leading-100 text-purple rounded-full mt-4 lg:mt-6 duration-300 ease-linear transition-all hover:bg-purple hover:text-white border border-transparent hover:border-white'
