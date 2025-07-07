@@ -155,7 +155,7 @@ const Footer = () => {
                   <Icons icon="phoneIcon" />
                   <Link
                     href="tel:+27 (0) 73 864 9689"
-                    className="text-black/70 hover:text-custom-pink transition-colors"
+                    className="text-black/70 hover:text-custom-pink transition-colors hover:text-purple"
                   >
                     +27 73 864 9689
                   </Link>
@@ -164,7 +164,7 @@ const Footer = () => {
                   <Icons icon="mailIcon" />
                   <Link
                     href="mailto:hello@pupiloinc.com"
-                    className="text-black/70 hover:text-custom-pink transition-colors"
+                    className="text-black/70 hover:text-custom-pink transition-colors hover:text-purple"
                   >
                     hello@pupiloinc.com
                   </Link>
@@ -174,7 +174,7 @@ const Footer = () => {
                   <Link
                     href="https://wa.me/+27738649689"
                     target="_blank"
-                    className="text-black/70 hover:text-custom-pink transition-colors"
+                    className="text-black/70 hover:text-custom-pink transition-colors hover:text-purple"
                   >
                     +27 73 864 9689
                   </Link>

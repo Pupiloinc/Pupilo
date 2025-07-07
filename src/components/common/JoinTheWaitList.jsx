@@ -110,7 +110,7 @@ const JoinTheWaitList = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full flex justify-center items-center !p-4 z-50 bg-black/60 ${
-        !showPopup && "opacity-0 transition-opacity duration-300 ease-in-out"
+        !showPopup && "opacity-0 invisible transition-opacity duration-300 ease-in-out"
       }  ${hidden && "hidden"}`}
       onClick={handleClosePopup}
     >
