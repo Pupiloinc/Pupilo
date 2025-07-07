@@ -11,16 +11,15 @@ import BrandMarquee from "@/components/home/BrandMarquee";
 import Image from "next/image";
 export const metadata = {
   title: "Pupilo",
-   description: "Learn with pupilo ",
+  description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
   metadataBase: new URL("https://pupilo-omega.vercel.app/courses"),
   openGraph: {
     type: "website",
     title: "Pupilo",
-    description:
-      "Courses",
+    description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
     images: "https://pupilo-omega.vercel.app/assets/meta-courses.webp",
   },
- 
+
 };
 const page = () => {
   return (
@@ -31,7 +30,7 @@ const page = () => {
       <TechJourney />
       <AddOnCourses />
       <Reviews />
-      <GetStarted headingText={<>Start Their Tech <br className="max-md:hidden"/> Future Today</>} paragraph={<>Browse programs by level, or book a free placement <br className="max-sm:hidden"/> session to find the perfect fit.</>} />
+      <GetStarted headingText={<>Start Their Tech <br className="max-md:hidden" /> Future Today</>} paragraph={<>Browse programs by level, or book a free placement <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
       <Footer />
       <BackToTop />
     </div>

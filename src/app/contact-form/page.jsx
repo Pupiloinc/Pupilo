@@ -4,16 +4,15 @@ import ContactForm from '@/components/contact-form/ContactForm'
 import React from 'react'
 export const metadata = {
   title: "Pupilo",
-   description: "Learn with pupilo ",
+  description: "Let's Connect.Build. Empower.",
   metadataBase: new URL("https://pupilo-omega.vercel.app/contact-form"),
   openGraph: {
     type: "website",
     title: "Pupilo",
-    description:
-      "Courses",
+    description: "Let's Connect.Build. Empower.",
     images: "https://pupilo-omega.vercel.app/assets/meta-contact-form.webp",
   },
- 
+
 };
 const page = () => {
   return (
