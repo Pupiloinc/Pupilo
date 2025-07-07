@@ -12,13 +12,13 @@ import Image from 'next/image'
 export const metadata = {
   title: "Pupilo",
    description: "Why pupilo ",
-  metadataBase: new URL("https://pupilo-cyan.vercel.app/why-pupilo"),
+  metadataBase: new URL("https://pupilo-omega.vercel.app/why-pupilo"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Why pupilo",
-    images: "/assets/meta-why-pupilo.webp",
+    images: "https://pupilo-omega.vercel.app/assets/meta-why-pupilo.webp",
   },
  
 };

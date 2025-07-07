@@ -12,13 +12,13 @@ import React from "react";
 export const metadata = {
   title: "Pupilo",
    description: "Learn with pupilo ",
-  metadataBase: new URL("https://pupilo-cyan.vercel.app/learn-with-pupilo"),
+  metadataBase: new URL("https://pupilo-omega.vercel.app/learn-with-pupilo"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Learn with pupilo",
-    images: "https://pupilo-cyan.vercel.app/assets/meta-learn.webp",
+    images: "https://pupilo-omega.vercel.app/assets/meta-learn.webp",
   },
  
 };
