@@ -1,11 +1,10 @@
 'use client'
-import React from "react";
-import CustomButton from "./common/CustomButton";
 import Image from "next/image";
 import Link from "next/link";
-import Icons from "./common/Icons";
-import Header from "./common/Header";
 import { usePathname, useRouter } from "next/navigation";
+import CustomButton from "./common/CustomButton";
+import Header from "./common/Header";
+import Icons from "./common/Icons";
 
 const Hero = ({ badgeText, blackText, purpleText, heroImg }) => {
   const pathName = usePathname()

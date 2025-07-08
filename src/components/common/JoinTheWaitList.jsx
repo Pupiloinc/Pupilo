@@ -20,6 +20,7 @@ const JoinTheWaitList = () => {
   const [hidden, setHidden] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [notified, setNotified] = useState(false);
 
   useEffect(() => {
     const hasSeenPopup = localStorage.getItem("hasSeenWaitlistPopup");
@@ -96,6 +97,7 @@ const JoinTheWaitList = () => {
       toast.success("Email submitted successfully!");
       setLoading(false);
       setEmail("");
+      setNotified(true);
       setTimeout(() => {
         setShowPopup(false);
         setHidden(true);
@@ -109,9 +111,8 @@ const JoinTheWaitList = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full flex justify-center items-center !p-4 z-50 bg-black/60 ${
-        !showPopup && "opacity-0 invisible transition-opacity duration-300 ease-in-out"
-      }  ${hidden && "hidden"}`}
+      className={`fixed top-0 left-0 w-full h-full flex justify-center items-center !p-4 z-50 bg-black/60 ${!showPopup && "opacity-0 invisible transition-opacity duration-300 ease-in-out"
+        }  ${hidden && "hidden"}`}
       onClick={handleClosePopup}
     >
       <style>{`
@@ -123,9 +124,8 @@ const JoinTheWaitList = () => {
                 }
             `}</style>
       <div
-        className={`bg-purple flex flex-col justify-center rounded-[24px] py-[82px] max-w-[1140px] w-full z-50 px-4 max-sm:px-2 sm:px-6 max-sm:py-12 relative transition-transform duration-300 ease-in-out overflow-y-scroll waitlist-popup-maxheight ${
-          !showPopup && "  scale-0"
-        }`}
+        className={`bg-purple flex flex-col justify-center rounded-[24px] py-[82px] max-w-[1140px] w-full z-50 px-4 max-sm:px-2 sm:px-6 max-sm:py-12 relative transition-transform duration-300 ease-in-out overflow-y-scroll waitlist-popup-maxheight ${!showPopup && "  scale-0"
+          }`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -170,11 +170,9 @@ const JoinTheWaitList = () => {
           We’re building Africa’s most exciting online coding education platform
           for kids and teens...
         </p>
-
         <p className="font-semibold text-2xl md:text-custom-4xl leading-120 text-[#F1F1F1] text-center mt-8 lg:mt-[50px]">
-          Get Notified Soon
+          {notified ? "Get Notified:- We Have Received Your Email" : "Get Notified Soon"}
         </p>
-
         <form
           className="flex flex-column justify-center"
           onSubmit={handleSubmit}
@@ -201,9 +199,8 @@ const JoinTheWaitList = () => {
                 src={item}
                 alt={`top-rated-${index}`}
                 key={index}
-                className={`size-[40px] border-solid border-2 border-purple rounded-full ${
-                  index !== 0 && "ml-[-11px]"
-                }`}
+                className={`size-[40px] border-solid border-2 border-purple rounded-full ${index !== 0 && "ml-[-11px]"
+                  }`}
                 width={40}
                 height={40}
               />
