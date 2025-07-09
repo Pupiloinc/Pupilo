@@ -194,9 +194,9 @@ const ContactForm = () => {
               <div className="flex flex-col items-center justify-center py-3">
                 <Icons className="size-24 md:size-30" icon="purpleTickIcon" />
                 <h3 className="text-base md:text-2xl font-semibold text-dark-black text-center">
-                  We have received your email.
+                  We have received your request.
                   <br />
-                  Someone will connect with you soon.
+                  Someone from our team will connect you soon.
                 </h3>
                 <Link
                   href="/"
