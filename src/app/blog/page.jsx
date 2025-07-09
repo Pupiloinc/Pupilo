@@ -18,7 +18,14 @@ export const metadata = {
       "Read Our latest Blogs",
     images: "https://pupilo-omega.vercel.app/assets/meta-blog.webp",
   },
-
+  twitter: {
+    title: "Pupilo",
+    description: "Read Our Latest Blogs",
+    images: ["https://pupilo-omega.vercel.app/assets/meta-blog.webp"],
+  },
+  alternates: {
+    canonical: "https://pupilo-omega.vercel.app/blog",
+  }
 };
 const page = () => {
   return (

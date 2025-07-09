@@ -11,7 +11,7 @@ import Image from "next/image";
 import React from "react";
 export const metadata = {
   title: "Pupilo",
-   description: "Choose How You Learn.Build What You Dream.",
+  description: "Choose How You Learn.Build What You Dream.",
   metadataBase: new URL("https://pupilo-omega.vercel.app/learn-with-pupilo"),
   openGraph: {
     type: "website",
@@ -20,7 +20,14 @@ export const metadata = {
       "Choose How You Learn.Build What You Dream.",
     images: "https://pupilo-omega.vercel.app/assets/meta-learn.webp",
   },
- 
+  twitter: {
+    title: "Pupilo",
+    description: "Choose How You Learn. Build What You Dream.",
+    images: ["https://pupilo-omega.vercel.app/assets/meta-learn.webp"],
+  },
+  alternates: {
+    canonical: "https://pupilo-omega.vercel.app/learn-with-pupilo",
+  }
 };
 const page = () => {
   return (

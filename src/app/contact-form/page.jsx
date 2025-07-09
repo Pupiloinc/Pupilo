@@ -12,6 +12,14 @@ export const metadata = {
     description: "Let's Connect.Build. Empower.",
     images: "https://pupilo-omega.vercel.app/assets/meta-contact-form.webp",
   },
+  twitter: {
+    title: "Pupilo",
+    description: "Let's Connect. Build. Empower.",
+    images: ["https://pupilo-omega.vercel.app/assets/meta-contact-form.webp"],
+  },
+  alternates: {
+    canonical: "https://pupilo-omega.vercel.app/contact-form",
+  }
 
 };
 const page = () => {

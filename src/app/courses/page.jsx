@@ -19,6 +19,14 @@ export const metadata = {
     description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
     images: "https://pupilo-omega.vercel.app/assets/meta-courses.webp",
   },
+  twitter: {
+    title: "Pupilo",
+    description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
+    images: ["https://pupilo-omega.vercel.app/assets/meta-courses.webp"],
+  },
+  alternates: {
+    canonical: "https://pupilo-omega.vercel.app/courses",
+  }
 
 };
 const page = () => {

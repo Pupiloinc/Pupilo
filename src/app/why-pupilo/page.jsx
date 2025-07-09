@@ -11,7 +11,7 @@ import OurMission from '@/components/why-pupilo/OurMission'
 import Image from 'next/image'
 export const metadata = {
   title: "Pupilo",
-   description: "More Than Coding. Here’s Why Pupilo Exists",
+  description: "More Than Coding. Here’s Why Pupilo Exists",
   metadataBase: new URL("https://pupilo-omega.vercel.app/why-pupilo"),
   openGraph: {
     type: "website",
@@ -20,7 +20,14 @@ export const metadata = {
       "More Than Coding. Here’s Why Pupilo Exists",
     images: "https://pupilo-omega.vercel.app/assets/meta-why-pupilo.webp",
   },
- 
+  twitter: {
+    title: "Pupilo",
+    description: "More Than Coding. Here’s Why Pupilo Exists",
+    images: ["https://pupilo-omega.vercel.app/assets/meta-why-pupilo.webp"],
+  },
+  alternates: {
+    canonical: "https://pupilo-omega.vercel.app/why-pupilo",
+  }
 };
 const page = () => {
   return (
@@ -31,7 +38,7 @@ const page = () => {
       <LearnOurDifference />
       <OurMission />
       <Reviews />
-      <GetStarted headingText={<>Join Africa’s Leading <br className='max-md:hidden'/> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br className="max-sm:hidden" /> and confidence to thrive in the future</>} />
+      <GetStarted headingText={<>Join Africa’s Leading <br className='max-md:hidden' /> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br className="max-sm:hidden" /> and confidence to thrive in the future</>} />
       <Footer />
       <BackToTop />
     </div>

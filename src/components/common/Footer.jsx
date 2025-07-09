@@ -7,7 +7,7 @@ import { FOOTER_DATA_LIST } from "../../../utils/helper";
 import NewsLetterPopUp from "./NewsLetterPopUp";
 import { NEWSLETTER_LIST_ID } from "../../../constants/brevo";
 import { CONTACT_URL } from "../../../utils/urls";
-import { ToastContainer,toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -96,9 +96,8 @@ const Footer = () => {
                 <input
                   required
                   placeholder="Email Address"
-                  className={`bg-transparent text-base leading-160 text-dark-grey placeholder:text-dark-grey font-normal outline-0 border-none w-full ${
-                    error ? "border border-red-500" : ""
-                  }`}
+                  className={`bg-transparent text-base leading-160 text-dark-grey placeholder:text-dark-grey font-normal outline-0 border-none w-full ${error ? "border border-red-500" : ""
+                    }`}
                   type="email"
                   value={email}
                   onChange={(e) => {
@@ -131,9 +130,8 @@ const Footer = () => {
                   {obj.links.map((object, index) => (
                     <li
                       key={index}
-                      className={`${
-                        index !== obj.links.length - 1 ? "mb-3" : ""
-                      } group`}
+                      className={`${index !== obj.links.length - 1 ? "mb-3" : ""
+                        } group`}
                     >
                       <Link
                         href={object.url}
@@ -208,7 +206,7 @@ const Footer = () => {
                     />
                   </a>
                   <a
-                    href="https://www.tiktok.com/"
+                    href="https://www.tiktok.com/@hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
