@@ -3,7 +3,6 @@ import React from "react";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
 import Description from "./Description";
-import { useRouter } from "next/router";
 
 const PupiloCard = ({
   title,
@@ -27,7 +26,6 @@ const PupiloCard = ({
   ourTools,
   descriptionClass,
 }) => {
-  const router = useRouter()
   return (
     <div className="overflow-hidden ">
       <div
