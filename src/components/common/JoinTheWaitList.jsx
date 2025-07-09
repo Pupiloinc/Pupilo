@@ -94,14 +94,13 @@ const JoinTheWaitList = () => {
         throw new Error("Failed to submit email");
       }
       localStorage.setItem("hasSeenWaitlistPopup", "true");
-      toast.success("Email submitted successfully!");
       setLoading(false);
       setEmail("");
       setNotified(true);
       setTimeout(() => {
         setShowPopup(false);
         setHidden(true);
-      }, 500);
+      }, 2000);
     } catch (error) {
       console.error("Error submitting email:", error);
       toast.error("You’re already subscribed with this email address.");
