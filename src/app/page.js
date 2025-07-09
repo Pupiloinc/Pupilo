@@ -15,6 +15,7 @@ import WhyPupilo from "@/components/home/WhyPupilo";
 import { HERO_VIDEO_DATA } from "../../utils/helper";
 import JoinTheWaitList from "@/components/common/JoinTheWaitList";
 import { ToastContainer } from "react-toastify";
+import NewsLetterPopUp from "@/components/common/NewsLetterPopUp";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -100,7 +101,7 @@ export default function Home() {
           </div>
         }
       />
-
+      <NewsLetterPopUp />
       {/* Remaining Sections */}
       <BrandMarquee />
       <PupiloCurriculum />
@@ -125,7 +126,7 @@ export default function Home() {
       />
       <Footer />
       <BackToTop />
-      <JoinTheWaitList/>
+      <JoinTheWaitList />
     </div>
   );
 }
