@@ -208,7 +208,7 @@ const Footer = () => {
                     />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/pupilo"
+                    href="https://www.tiktok.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
