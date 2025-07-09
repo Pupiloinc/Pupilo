@@ -5,6 +5,33 @@ import Footer from "@/components/common/Footer";
 import GetStarted from "@/components/common/GetStarted";
 import Header from "@/components/common/Header";
 
+export async function generateMetadata({ params }) {
+  const formattedTitle = decodeURIComponent(params.title)
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  return {
+    title: `${formattedTitle} | Pupilo`,
+    description: `Where Every Child can Code, Create and Thrive.`,
+    openGraph: {
+      title: `${formattedTitle} | Pupilo`,
+      description: `Where Every Child can Code, Create and Thrive.`,
+      url: `https://www.pupiloinc.com/blog/${params.title}`,
+      images: ["/assets/meta.webp"],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${formattedTitle} | Pupilo`,
+      description: `Where Every Child can Code, Create and Thrive.`,
+      images: ["/assets/meta.webp"],
+    },
+    alternates: {
+      canonical: `https://www.pupiloinc.com/blog/${params.title}`,
+    },
+  };
+}
+
 const page = ({ params }) => {
   return (
     <>

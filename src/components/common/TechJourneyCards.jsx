@@ -25,10 +25,12 @@ const PupiloCard = ({
   headingClass,
   ourTools,
   descriptionClass,
+  id,
 }) => {
   return (
     <div className="overflow-hidden ">
       <div
+      id={id}
         className={`py-10 md:py-[60px] lg:py-[68px] md:px-6 px-4 relative ${cardTheme || "bg-off-purple"
           }`}
       >
