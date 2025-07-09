@@ -132,7 +132,7 @@ const ContactForm = () => {
       />
       <ToastContainer />
       <div className="container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto">
-        <div className="flex gap-10 justify-between max-lg:flex-col-reverse max-lg:items-center">
+        <div className="flex gap-10 justify-between max-lg:flex-col max-lg:items-center">
           <div className="max-w-[524px] flex-col flex gap-10 max-lg:gap-8 max-sm:gap-6">
             <div className="flex flex-col gap-4 max-md:gap-2">
               <h2 className="max-lg:text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black mt-4 relative z-10 lg:max-w-[524px]">
