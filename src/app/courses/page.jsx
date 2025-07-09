@@ -9,7 +9,26 @@ import TechJourney from "@/components/courses/TechJourney";
 import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import Image from "next/image";
+export const metadata = {
+  title: "Pupilo",
+  description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
+  metadataBase: new URL("https://www.pupiloinc.com/courses"),
+  openGraph: {
+    type: "website",
+    title: "Pupilo",
+    description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
+    images: "https://www.pupiloinc.com/assets/meta-courses.webp",
+  },
+  twitter: {
+    title: "Pupilo",
+    description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
+    images: ["https://www.pupiloinc.com/assets/meta-courses.webp"],
+  },
+  alternates: {
+    canonical: "https://www.pupiloinc.com/courses",
+  }
 
+};
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">
@@ -19,7 +38,7 @@ const page = () => {
       <TechJourney />
       <AddOnCourses />
       <Reviews />
-      <GetStarted headingText={<>Start Their Tech <br className="max-md:hidden"/> Future Today</>} paragraph={<>Browse programs by level, or book a free placement <br className="max-sm:hidden"/> session to find the perfect fit.</>} />
+      <GetStarted headingText={<>Start Their Tech <br className="max-md:hidden" /> Future Today</>} paragraph={<>Browse programs by level, or book a free placement <br className="max-sm:hidden" /> session to find the perfect fit.</>} />
       <Footer />
       <BackToTop />
     </div>

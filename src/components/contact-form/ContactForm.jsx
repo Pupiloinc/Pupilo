@@ -9,6 +9,7 @@ import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { SEND_EMAIL_URL } from "../../../utils/urls";
+import Link from "next/link";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +26,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const validate = () => {
     const newErrors = {};
@@ -96,11 +98,9 @@ const ContactForm = () => {
         time: "",
         notes: "",
       });
-
-      toast.success("Form submitted and email sent successfully!");
+      setFormSubmitted(true);
       setLoading(false);
     } catch (error) {
-      console.error("Email sending failed:", error);
       toast.error("Failed to send email. Please try again.");
       setLoading(false);
     }
@@ -153,145 +153,161 @@ const ContactForm = () => {
                 Follow us :
               </p>
               <div className="flex gap-2 max-lg:justify-center max-lg:items-center">
-                <a
+                <Link
                   href="https://www.instagram.com/hellopupilo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="instagramIcon" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.facebook.com/hellopupilo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="facebookIcon" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.tiktok.com/@hellopupilo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="tiktokIcon" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="linkedinIcon" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
-          <div className="p-6 max-lg:p-4 max-sm:p-3 relative max-lg:rounded-2xl max-sm:rounded-xl border-black/4 bg-white max-w-[550px] w-full form-shadow rounded-3xl border border-solid">
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col gap-4 max-md:gap-3.5"
-            >
-              <CustomInput
-                name="parentName"
-                type="text"
-                value={formData.parentName}
-                onChange={handleChange}
-                placeholder={`Parent's Full Name`}
-                error={errors.parentName}
-              />
-
-              <div className="flex max-xl:flex-col gap-4 w-full">
+          <div className="p-6 max-lg:p-4 max-sm:p-3 relative max-lg:rounded-2xl max-sm:rounded-xl border-black/4 bg-white max-w-[550px] w-full form-shadow rounded-3xl border border-solid flex flex-col justify-center items-center">
+            {formSubmitted ? (
+              <div className="flex flex-col items-center justify-center py-3">
+                <Icons className="size-24 md:size-30" icon="purpleTickIcon" />
+                <h3 className="text-base md:text-2xl font-semibold text-dark-black text-center">
+                  We have received your email.
+                  <br />
+                  Someone will connect with you soon.
+                </h3>
+                <Link
+                  href="/"
+                  className="bg-purple max-md:text-sm text-white leading-120 max-md:leading-100 font-semibold px-4.5 mt-4 py-2 md:py-2.5 rounded-xl transition-all duration-300 ease-linear border border-transparent hover:border-purple hover:bg-white hover:text-purple"
+                >
+                  Go Back Home
+                </Link>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4 max-md:gap-3.5 max-w-[502px] w-full"
+              >
                 <CustomInput
-                  name="childName"
+                  name="parentName"
                   type="text"
-                  value={formData.childName}
+                  value={formData.parentName}
                   onChange={handleChange}
-                  placeholder="Child's Name"
-                  error={errors.childName}
+                  placeholder={`Parent's Full Name`}
+                  error={errors.parentName}
                 />
+
+                <div className="flex max-xl:flex-col gap-4 w-full">
+                  <CustomInput
+                    name="childName"
+                    type="text"
+                    value={formData.childName}
+                    onChange={handleChange}
+                    placeholder="Child's Name"
+                    error={errors.childName}
+                  />
+                  <CustomInput
+                    name="childAge"
+                    type="number"
+                    value={formData.childAge}
+                    onChange={handleChange}
+                    placeholder="Child's Age"
+                    minValue={3}
+                    maxValue={18}
+                    error={errors.childAge}
+                  />
+                </div>
+
+                <div className="w-full">
+                  <PhoneInput
+                    country={"za"}
+                    value={formData.phone}
+                    onChange={(phone) => {
+                      setFormData({ ...formData, phone });
+                      // Remove non-digits and check length
+                      const onlyNums = phone.replace(/\D/g, "");
+                      if (onlyNums.length >= 8) {
+                        setErrors({ ...errors, phone: "" });
+                      }
+                    }}
+                    inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-12 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${errors.phone ? "!border !border-red-500" : "!border-none"
+                      }`}
+                    buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl ml-4 my-[1px] !placeholder:text-dark-grey !text-dark-grey"
+                    containerClass="!w-full !rounded-xl m-[0.5px] !placeholder:text-dark-grey !text-dark-grey"
+                    dropdownClass="!rounded-xl !placeholder:text-dark-grey !text-dark-grey"
+                  />
+                  {errors.phone && (
+                    <div className="text-red-500 text-xs mt-1 pl-2">
+                      {errors.phone}
+                    </div>
+                  )}
+                </div>
                 <CustomInput
-                  name="childAge"
-                  type="number"
-                  value={formData.childAge}
+                  name="email"
+                  type="email"
+                  value={formData.email}
                   onChange={handleChange}
-                  placeholder="Child's Age"
-                  minValue={3}
-                  maxValue={18}
-                  error={errors.childAge}
+                  placeholder="Email Address"
+                  error={errors.email}
                 />
-              </div>
 
-              <div className="w-full">
-                <PhoneInput
-                  country={"za"}
-                  value={formData.phone}
-                  onChange={(phone) => {
-                    setFormData({ ...formData, phone });
-                    // Remove non-digits and check length
-                    const onlyNums = phone.replace(/\D/g, "");
-                    if (onlyNums.length >= 8) {
-                      setErrors({ ...errors, phone: "" });
-                    }
-                  }}
-                  inputClass={`!bg-white-100 !outline-0 !py-[13px] !px-12 !rounded-xl !h-[54px] !leading-160 !w-full !placeholder:text-dark-grey !text-dark-grey pl-3 ${
-                    errors.phone ? "!border !border-red-500" : "!border-none"
-                  }`}
-                  buttonClass="!bg-white-100 !border-none !outline-0 !rounded-xl ml-4 my-[1px]"
-                  containerClass="!w-full !rounded-xl m-[0.5px]"
-                  dropdownClass="!rounded-xl"
-                />
-                {errors.phone && (
-                  <div className="text-red-500 text-xs mt-1 pl-2">
-                    {errors.phone}
-                  </div>
-                )}
-              </div>
-              <CustomInput
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email Address"
-                error={errors.email}
-              />
+                <div className="bg-dark-black/8 h-[1px] w-full" />
 
-              <div className="bg-dark-black/8 h-[1px] w-full" />
+                <div className="flex max-xl:flex-col gap-4 w-full">
+                  <CustomInput
+                    type="date"
+                    name="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                    placeholder="Date for Trial"
+                    icon="calendarIcon"
+                  />
+                  <CustomInput
+                    type="time"
+                    name="time"
+                    value={formData.time}
+                    onChange={handleChange}
+                    placeholder="Time for Trial"
+                    icon="clockIcon"
+                  />
+                </div>
 
-              <div className="flex max-xl:flex-col gap-4 w-full">
-                <CustomInput
-                  type="date"
-                  name="date"
-                  value={formData.date}
+                <textarea
+                  name="notes"
+                  value={formData.notes}
                   onChange={handleChange}
-                  placeholder="Date for Trial"
-                  icon="calendarIcon"
-                />
-                <CustomInput
-                  type="time"
-                  name="time"
-                  value={formData.time}
-                  onChange={handleChange}
-                  placeholder="Time for Trial"
-                  icon="clockIcon"
-                />
-              </div>
+                  className="bg-white-100 outline-0 py-[13px] px-5 rounded-xl h-[130px] resize-none leading-160 w-full placeholder:text-dark-grey text-dark-grey"
+                  placeholder="Any Specific Notes or Questions?"
+                ></textarea>
 
-              <textarea
-                name="notes"
-                value={formData.notes}
-                onChange={handleChange}
-                className="bg-white-100 outline-0 py-[13px] px-5 rounded-xl h-[130px] resize-none leading-160 w-full placeholder:text-dark-grey text-dark-grey"
-                placeholder="Any Specific Notes or Questions?"
-              ></textarea>
-
-              <CustomButton
-                text={loading ? "Loading..." : "Submit"}
-                className={"justify-center items-center max-md:mt-2 mt-2"}
-              />
-            </form>
+                <CustomButton
+                  text={loading ? "Loading..." : "Submit"}
+                  className={"justify-center items-center max-md:mt-2 mt-2"}
+                />
+              </form>
+            )}
           </div>
         </div>
       </div>

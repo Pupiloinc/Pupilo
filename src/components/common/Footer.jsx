@@ -7,6 +7,7 @@ import { FOOTER_DATA_LIST } from "../../../utils/helper";
 import NewsLetterPopUp from "./NewsLetterPopUp";
 import { NEWSLETTER_LIST_ID } from "../../../constants/brevo";
 import { CONTACT_URL } from "../../../utils/urls";
+import { ToastContainer, toast } from "react-toastify";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -60,8 +61,7 @@ const Footer = () => {
       setEmail("");
       setShowPopup(true);
     } catch (error) {
-      setError("Subscription failed. Please try again.");
-      console.error("Brevo API error:", error.message);
+      toast.error('You’re already subscribed with this email address.');
       setShowPopup(false);
       setLoading(false);
     }
@@ -71,6 +71,7 @@ const Footer = () => {
 
   return (
     <div className="bg-white-100">
+      <ToastContainer />
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto pt-[60px] sm:pt-20 pb-[60px]">
         <div className="flex lg:flex-row flex-col justify-between gap-7">
           <div className="lg:w-[30%]">
@@ -95,9 +96,8 @@ const Footer = () => {
                 <input
                   required
                   placeholder="Email Address"
-                  className={`bg-transparent text-base leading-160 text-dark-grey placeholder:text-dark-grey font-normal outline-0 border-none w-full ${
-                    error ? "border border-red-500" : ""
-                  }`}
+                  className={`bg-transparent text-base leading-160 text-dark-grey placeholder:text-dark-grey font-normal outline-0 border-none w-full ${error ? "border border-red-500" : ""
+                    }`}
                   type="email"
                   value={email}
                   onChange={(e) => {
@@ -112,7 +112,6 @@ const Footer = () => {
               >
                 {loading ? "Loading..." : "Subscribe"}
               </button>
-              {/* Show popup only when showPopup is true */}
               <NewsLetterPopUp onClose={handleClosePopup} show={showPopup} />
             </div>
             {error && (
@@ -131,9 +130,8 @@ const Footer = () => {
                   {obj.links.map((object, index) => (
                     <li
                       key={index}
-                      className={`${
-                        index !== obj.links.length - 1 ? "mb-3" : ""
-                      } group`}
+                      className={`${index !== obj.links.length - 1 ? "mb-3" : ""
+                        } group`}
                     >
                       <Link
                         href={object.url}
@@ -155,7 +153,7 @@ const Footer = () => {
                   <Icons icon="phoneIcon" />
                   <Link
                     href="tel:+27 (0) 73 864 9689"
-                    className="text-black/70 hover:text-custom-pink transition-colors"
+                    className="text-black/70 hover:text-custom-pink transition-colors hover:text-purple"
                   >
                     +27 73 864 9689
                   </Link>
@@ -164,7 +162,7 @@ const Footer = () => {
                   <Icons icon="mailIcon" />
                   <Link
                     href="mailto:hello@pupiloinc.com"
-                    className="text-black/70 hover:text-custom-pink transition-colors"
+                    className="text-black/70 hover:text-custom-pink transition-colors hover:text-purple"
                   >
                     hello@pupiloinc.com
                   </Link>
@@ -174,7 +172,7 @@ const Footer = () => {
                   <Link
                     href="https://wa.me/+27738649689"
                     target="_blank"
-                    className="text-black/70 hover:text-custom-pink transition-colors"
+                    className="text-black/70 hover:text-custom-pink transition-colors hover:text-purple"
                   >
                     +27 73 864 9689
                   </Link>
@@ -185,7 +183,7 @@ const Footer = () => {
                   Follow Us
                 </h4>
                 <div className="flex gap-1  xl:gap-2">
-                  <a
+                  <Link
                     href="https://www.facebook.com/hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -195,8 +193,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="facebookIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.instagram.com/hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -206,9 +204,9 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="instagramIcon"
                     />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/pupilo"
+                  </Link>
+                  <Link
+                    href="https://www.tiktok.com/@hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cursor-pointer transform hover:scale-110 transition-all duration-300 ease-in-out hover:opacity-80"
@@ -217,8 +215,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="tiktokIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.youtube.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -228,8 +226,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="youtubeFooterIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -239,7 +237,7 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="linkedinIcon"
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -194,6 +194,7 @@ export const ADD_ON_COURSES_LIST = [
     imageWeight: 309,
     rightPosition: 70,
     learnMoreLink: "#learn-more",
+    id:"game"
   },
   {
     title: "Fun Coding Math",
@@ -208,6 +209,7 @@ export const ADD_ON_COURSES_LIST = [
     imageWeight: 389,
     rightPosition: 61,
     learnMoreLink: "#learn-more",
+    id:"coding"
   },
   {
     title: "Game Development & Storytelling",
@@ -276,10 +278,10 @@ export const FOOTER_DATA_LIST = [
   {
     title: "Our Courses",
     links: [
-      { label: "Coding Fundamentals", url: "#" },
-      { label: "Game Development", url: "#" },
-      { label: "Programming with Python", url: "#" },
-      { label: "App & Web Development ", url: "#" },
+      { label: "Coding Fundamentals", url: "/courses#coding" },
+      { label: "Game Development", url: "/courses#game" },
+      { label: "Programming with Python", url: "/courses#python" },
+      { label: "App & Web Development ", url: "/courses#dev" },
     ],
   },
 ];
@@ -473,6 +475,7 @@ export const ADD_ON_COURSES_DATA = [
     buttonText: "Try a Free Lesson",
     buttonTheme: "white",
     badgeBorder: "white",
+    id:"coding"
   },
   {
     grade: "Grades 2-5",
@@ -491,6 +494,7 @@ export const ADD_ON_COURSES_DATA = [
     buttonTheme: "dark-black",
     badgeBorder: "dark-black",
     textColor: "dark-black",
+    id:"dev"
   },
   {
     grade: "Grades 2-6",
@@ -509,6 +513,7 @@ export const ADD_ON_COURSES_DATA = [
     buttonText: "Try a Free Lesson",
     buttonTheme: "white",
     badgeBorder: "white",
+    id:"game"
   },
   {
     grade: "Grades 6-12",
@@ -527,6 +532,7 @@ export const ADD_ON_COURSES_DATA = [
     buttonTheme: "dark-black",
     badgeBorder: "dark-black",
     textColor: "dark-black",
+    id:"python"
   },
 ];
 

@@ -9,7 +9,26 @@ import FutureInnovators from '@/components/why-pupilo/FutureInnovators'
 import LearnOurDifference from '@/components/why-pupilo/LearnOurDifference'
 import OurMission from '@/components/why-pupilo/OurMission'
 import Image from 'next/image'
-
+export const metadata = {
+  title: "Pupilo",
+  description: "More Than Coding. Here’s Why Pupilo Exists",
+  metadataBase: new URL("https://www.pupiloinc.com/why-pupilo"),
+  openGraph: {
+    type: "website",
+    title: "Pupilo",
+    description:
+      "More Than Coding. Here’s Why Pupilo Exists",
+    images: "https://www.pupiloinc.com/assets/meta-why-pupilo.webp",
+  },
+  twitter: {
+    title: "Pupilo",
+    description: "More Than Coding. Here’s Why Pupilo Exists",
+    images: ["https://www.pupiloinc.com/assets/meta-why-pupilo.webp"],
+  },
+  alternates: {
+    canonical: "https://www.pupiloinc.com/why-pupilo",
+  }
+};
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">
@@ -19,7 +38,7 @@ const page = () => {
       <LearnOurDifference />
       <OurMission />
       <Reviews />
-      <GetStarted headingText={<>Join Africa’s Leading <br className='max-md:hidden'/> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br className="max-sm:hidden" /> and confidence to thrive in the future</>} />
+      <GetStarted headingText={<>Join Africa’s Leading <br className='max-md:hidden' /> Coding Movement</>} paragraph={<>Give your child a head start with the tech skills, mindset, <br className="max-sm:hidden" /> and confidence to thrive in the future</>} />
       <Footer />
       <BackToTop />
     </div>

@@ -9,7 +9,26 @@ import FindWhatBest from "@/components/learn-with-pupilo/FindWhatBest";
 import Gallery from "@/components/learn-with-pupilo/Gallery";
 import Image from "next/image";
 import React from "react";
-
+export const metadata = {
+  title: "Pupilo",
+  description: "Choose How You Learn.Build What You Dream.",
+  metadataBase: new URL("https://www.pupiloinc.com/learn-with-pupilo"),
+  openGraph: {
+    type: "website",
+    title: "Pupilo",
+    description:
+      "Choose How You Learn.Build What You Dream.",
+    images: "https://www.pupiloinc.com/assets/meta-learn.webp",
+  },
+  twitter: {
+    title: "Pupilo",
+    description: "Choose How You Learn. Build What You Dream.",
+    images: ["https://www.pupiloinc.com/assets/meta-learn.webp"],
+  },
+  alternates: {
+    canonical: "https://www.pupiloinc.com/learn-with-pupilo",
+  }
+};
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">

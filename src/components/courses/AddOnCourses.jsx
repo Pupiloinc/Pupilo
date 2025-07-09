@@ -12,6 +12,7 @@ const AddOnCourses = () => {
       />
       {ADD_ON_COURSES_DATA.map((item, index) => (
         <TechJourneyCards
+          id={item.id}
           key={index}
           badge={item.grade}
           title={item.title}
@@ -39,11 +40,10 @@ const AddOnCourses = () => {
               ? "opacity-75"
               : "opacity-20 sm:opacity-35"
           }
-          buttonClass={`${
-            item.buttonTheme === "white"
+          buttonClass={`${item.buttonTheme === "white"
               ? "!bg-white !text-dark-black"
               : "!bg-dark-black !text-white"
-          }  w-full text-center justify-center`}
+            }  w-full text-center justify-center`}
           ourTools="hidden"
         />
       ))}

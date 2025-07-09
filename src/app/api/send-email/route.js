@@ -5,13 +5,10 @@ import {
   generateAdminEmailTemplate,
   DEFAULT_SENDER,
 } from "../../../../constants/brevo";
-// import { thankYouTemplate } from "../../../../utils/thankYouTemplate";
 
 export async function POST(request) {
   try {
     const { toEmail, formData } = await request.json();
-    // const htmlContent = thankYouTemplate(formData.parentName);
-
     const res = await fetch(`${BREVO_API_HOST}/smtp/email`, {
       method: "POST",
       headers: {
@@ -25,6 +22,12 @@ export async function POST(request) {
             email: toEmail,
           },
         ],
+        params: {
+          parentName: formData.parentName,
+          date: formData.date,
+          childName: formData.childName,
+          time: formData.time,
+        },
         templateId: 2,
       }),
     });
