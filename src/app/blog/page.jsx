@@ -10,21 +10,21 @@ import React from "react";
 export const metadata = {
   title: "Pupilo",
   description: "Read Our latest Blogs",
-  metadataBase: new URL("https://pupilo-omega.vercel.app/blog"),
+  metadataBase: new URL("https://www.pupiloinc.com/blog"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Read Our latest Blogs",
-    images: "https://pupilo-omega.vercel.app/assets/meta-blog.webp",
+    images: "https://www.pupiloinc.com/assets/meta-blog.webp",
   },
   twitter: {
     title: "Pupilo",
     description: "Read Our Latest Blogs",
-    images: ["https://pupilo-omega.vercel.app/assets/meta-blog.webp"],
+    images: ["https://www.pupiloinc.com/assets/meta-blog.webp"],
   },
   alternates: {
-    canonical: "https://pupilo-omega.vercel.app/blog",
+    canonical: "https://www.pupiloinc.com/blog",
   }
 };
 const page = () => {

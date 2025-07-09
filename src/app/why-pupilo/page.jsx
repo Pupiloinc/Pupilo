@@ -12,21 +12,21 @@ import Image from 'next/image'
 export const metadata = {
   title: "Pupilo",
   description: "More Than Coding. Here’s Why Pupilo Exists",
-  metadataBase: new URL("https://pupilo-omega.vercel.app/why-pupilo"),
+  metadataBase: new URL("https://www.pupiloinc.com/why-pupilo"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "More Than Coding. Here’s Why Pupilo Exists",
-    images: "https://pupilo-omega.vercel.app/assets/meta-why-pupilo.webp",
+    images: "https://www.pupiloinc.com/assets/meta-why-pupilo.webp",
   },
   twitter: {
     title: "Pupilo",
     description: "More Than Coding. Here’s Why Pupilo Exists",
-    images: ["https://pupilo-omega.vercel.app/assets/meta-why-pupilo.webp"],
+    images: ["https://www.pupiloinc.com/assets/meta-why-pupilo.webp"],
   },
   alternates: {
-    canonical: "https://pupilo-omega.vercel.app/why-pupilo",
+    canonical: "https://www.pupiloinc.com/why-pupilo",
   }
 };
 const page = () => {

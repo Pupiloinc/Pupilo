@@ -12,20 +12,20 @@ import Image from "next/image";
 export const metadata = {
   title: "Pupilo",
   description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
-  metadataBase: new URL("https://pupilo-omega.vercel.app/courses"),
+  metadataBase: new URL("https://www.pupiloinc.com/courses"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
-    images: "https://pupilo-omega.vercel.app/assets/meta-courses.webp",
+    images: "https://www.pupiloinc.com/assets/meta-courses.webp",
   },
   twitter: {
     title: "Pupilo",
     description: "Engaging & Fun Programs for Kids & Teens ages7-18.",
-    images: ["https://pupilo-omega.vercel.app/assets/meta-courses.webp"],
+    images: ["https://www.pupiloinc.com/assets/meta-courses.webp"],
   },
   alternates: {
-    canonical: "https://pupilo-omega.vercel.app/courses",
+    canonical: "https://www.pupiloinc.com/courses",
   }
 
 };
