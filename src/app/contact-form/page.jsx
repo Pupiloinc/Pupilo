@@ -5,20 +5,20 @@ import React from 'react'
 export const metadata = {
   title: "Pupilo",
   description: "Let's Connect.Build. Empower.",
-  metadataBase: new URL("https://pupilo-omega.vercel.app/contact-form"),
+  metadataBase: new URL("https://www.pupiloinc.com/contact-form"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description: "Let's Connect.Build. Empower.",
-    images: "https://pupilo-omega.vercel.app/assets/meta-contact-form.webp",
+    images: "https://www.pupiloinc.com/assets/meta-contact-form.webp",
   },
   twitter: {
     title: "Pupilo",
     description: "Let's Connect. Build. Empower.",
-    images: ["https://pupilo-omega.vercel.app/assets/meta-contact-form.webp"],
+    images: ["https://www.pupiloinc.com/assets/meta-contact-form.webp"],
   },
   alternates: {
-    canonical: "https://pupilo-omega.vercel.app/contact-form",
+    canonical: "https://www.pupiloinc.com/contact-form",
   }
 
 };

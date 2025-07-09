@@ -12,21 +12,21 @@ import React from "react";
 export const metadata = {
   title: "Pupilo",
   description: "Choose How You Learn.Build What You Dream.",
-  metadataBase: new URL("https://pupilo-omega.vercel.app/learn-with-pupilo"),
+  metadataBase: new URL("https://www.pupiloinc.com/learn-with-pupilo"),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Choose How You Learn.Build What You Dream.",
-    images: "https://pupilo-omega.vercel.app/assets/meta-learn.webp",
+    images: "https://www.pupiloinc.com/assets/meta-learn.webp",
   },
   twitter: {
     title: "Pupilo",
     description: "Choose How You Learn. Build What You Dream.",
-    images: ["https://pupilo-omega.vercel.app/assets/meta-learn.webp"],
+    images: ["https://www.pupiloinc.com/assets/meta-learn.webp"],
   },
   alternates: {
-    canonical: "https://pupilo-omega.vercel.app/learn-with-pupilo",
+    canonical: "https://www.pupiloinc.com/learn-with-pupilo",
   }
 };
 const page = () => {
