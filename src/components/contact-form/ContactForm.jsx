@@ -99,7 +99,6 @@ const ContactForm = () => {
         notes: "",
       });
       setFormSubmitted(true);
-      toast.success("Form submitted and email sent successfully!");
       setLoading(false);
     } catch (error) {
       toast.error("Failed to send email. Please try again.");
@@ -192,7 +191,7 @@ const ContactForm = () => {
 
           <div className="p-6 max-lg:p-4 max-sm:p-3 relative max-lg:rounded-2xl max-sm:rounded-xl border-black/4 bg-white max-w-[550px] w-full form-shadow rounded-3xl border border-solid flex flex-col justify-center items-center">
             {formSubmitted ? (
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center py-3">
                 <Icons className="size-24 md:size-30" icon="purpleTickIcon" />
                 <h3 className="text-base md:text-2xl font-semibold text-dark-black text-center">
                   We have received your email.
