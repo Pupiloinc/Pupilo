@@ -183,7 +183,7 @@ const Footer = () => {
                   Follow Us
                 </h4>
                 <div className="flex gap-1  xl:gap-2">
-                  <a
+                  <Link
                     href="https://www.facebook.com/hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -193,8 +193,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="facebookIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.instagram.com/hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -204,8 +204,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="instagramIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.tiktok.com/@hellopupilo"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -215,8 +215,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="tiktokIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.youtube.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -226,8 +226,8 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="youtubeFooterIcon"
                     />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -237,7 +237,7 @@ const Footer = () => {
                       className="max-sm:min-w-[30px] max-sm:h-[30px]"
                       icon="linkedinIcon"
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

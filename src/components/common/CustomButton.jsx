@@ -27,13 +27,13 @@ const CustomButton = ({ iconClass, text, className, iconColor, onClick, href }) 
     }
     // External link
     return (
-      <a
+      <Link
         href={href}
         className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-md:text-sm max-md:py-2.5 max-md:px-5 ${className}`}
         target="_blank" rel="noopener noreferrer"
       >
         {content}
-      </a>
+      </Link>
     );
   }
 

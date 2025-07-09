@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { FORMATS } from "../../../utils/helper";
+import Link from "next/link";
 
 const PupiloDelivers = () => {
   return (
@@ -68,12 +70,12 @@ const PupiloDelivers = () => {
               <div className="flex justify-between items-center mt-4">
                 <p className="font-semibold text-base lg:text-[18px] text-blue leading-150">{card.price}</p>
                 <div className="flex items-center gap-2">
-                  <a
+                  <Link
                     href="#"
                     className="text-dark-black text-base font-semibold inline-block underline"
                   >
                     {card.cta}
-                  </a>
+                  </Link>
                   <svg
                     width="6"
                     height="10"

@@ -154,38 +154,38 @@ const ContactForm = () => {
                 Follow us :
               </p>
               <div className="flex gap-2 max-lg:justify-center max-lg:items-center">
-                <a
+                <Link
                   href="https://www.instagram.com/hellopupilo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="instagramIcon" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.facebook.com/hellopupilo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="facebookIcon" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.tiktok.com/@hellopupilo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="tiktokIcon" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.linkedin.com/company/pupiloinc/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-all duration-300 hover:opacity-80"
                 >
                   <Icons icon="linkedinIcon" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

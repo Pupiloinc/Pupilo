@@ -6,6 +6,7 @@ import {
   GENERAL_PUPILO_LIST,
   LATEST_BLOG_DATA_LIST,
 } from "../../../utils/helper";
+import Link from "next/link";
 
 function slugify(text) {
   return text
@@ -246,7 +247,7 @@ const BlogContent = ({ slug }) => {
                     : "border-transparent"
                 }`}
               >
-                <a href="#coding-everyone">Coding Is for Everyone</a>
+                <Link href="#coding-everyone">Coding Is for Everyone</Link>
               </li>
               <li
                 className={`pl-3 border-l-2 ${
@@ -255,9 +256,9 @@ const BlogContent = ({ slug }) => {
                     : "border-transparent text-nowrap"
                 }`}
               >
-                <a href="#tools-platforms">
+                <Link href="#tools-platforms">
                   Tools & Platforms to Begin Your Journey
-                </a>
+                </Link>
               </li>
               <li
                 className={`pl-3 border-l-2 ${
@@ -266,7 +267,7 @@ const BlogContent = ({ slug }) => {
                     : "border-transparent"
                 }`}
               >
-                <a href="#why-code-matters">Why Learning to Code Matters</a>
+                <Link href="#why-code-matters">Why Learning to Code Matters</Link>
               </li>
             </ul>
           </div>
