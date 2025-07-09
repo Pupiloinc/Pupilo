@@ -17,14 +17,14 @@ export async function generateMetadata({ params }) {
       title: `${formattedTitle} | Pupilo`,
       description: `Where Every Child can Code, Create and Thrive.`,
       url: `https://www.pupiloinc.com/blog/${params.title}`,
-      images: ["/assets/meta.webp"],
+      images: ["https://www.pupiloinc.com/assets/meta-blog.webp"],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: `${formattedTitle} | Pupilo`,
       description: `Where Every Child can Code, Create and Thrive.`,
-      images: ["/assets/meta.webp"],
+      images: ["https://www.pupiloinc.com/assets/meta-blog.webp"],
     },
     alternates: {
       canonical: `https://www.pupiloinc.com/blog/${params.title}`,
