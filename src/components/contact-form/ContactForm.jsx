@@ -99,7 +99,6 @@ const ContactForm = () => {
       toast.success("Form submitted and email sent successfully!");
       setLoading(false);
     } catch (error) {
-      console.error("Email sending failed:", error);
       toast.error("Failed to send email. Please try again.");
       setLoading(false);
     }

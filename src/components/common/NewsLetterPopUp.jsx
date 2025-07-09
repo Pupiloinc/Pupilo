@@ -20,12 +20,6 @@ const NewsLetterPopUp = ({ onClose, show }) => {
                     </div>
                     <h4 className='text-white font-semibold text-custom-3xl lg:text-4xl leading-120 mt-4 lg:mt-10 text-center max-w-[520px] mx-auto'>Thanks for Subscribing to Our Newsletter</h4>
                     <p className='font-normal text-sm md:text-base leading-150 text-white opacity-80 text-center mt-2'>Your inbox just got a whole lot better. <br className='max-lg:hidden' /> Stay tuned for exclusive updates, fresh drops, and first access to what’s next.</p>
-                    <button
-                        className='w-full bg-white py-3.5 lg:py-4 font-semibold text-base leading-100 text-purple rounded-full mt-4 lg:mt-6 duration-300 ease-linear transition-all hover:bg-purple hover:text-white border border-transparent hover:border-white'
-                        onClick={onClose}
-                    >
-                        Back to Homepage
-                    </button>
                 </div>
             </div>
         </div>
