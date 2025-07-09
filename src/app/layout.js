@@ -8,11 +8,17 @@ export const metadata = {
   openGraph: {
     type: "website",
     title: "Pupilo",
-    description:
-      "Where Every Child can Code, Create and Thrive.",
+    description: "Where Every Child can Code, Create and Thrive.",
     images: "/assets/meta.webp",
   },
-
+  twitter: {
+    title: "Pupilo",
+    description: "Where Every Child can Code, Create and Thrive.",
+    images: ["/assets/meta.webp"],
+  },
+  alternates: {
+    canonical: "https://pupilo-cyan.vercel.app/",
+  }
 };
 
 export default function RootLayout({ children }) {
