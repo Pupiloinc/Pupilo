@@ -4,8 +4,28 @@ import BackToTop from '@/components/common/BackToTop';
 import Footer from '@/components/common/Footer';
 import GetStarted from '@/components/common/GetStarted';
 import Header from '@/components/common/Header';
-
+export const metadata = {
+    title: "Pupilo",
+    description: "Read Our latest Blogs",
+    metadataBase: new URL("https://www.pupiloinc.com/blog/from-first-line-to-full-stack-journeys-from-our-students"),
+    openGraph: {
+        type: "website",
+        title: "Pupilo",
+        description:
+            "Read Our latest Blogs",
+        images: "https://www.pupiloinc.com/assets/meta-blog-details.webp",
+    },
+    twitter: {
+        title: "Pupilo",
+        description: "Read Our Latest Blogs",
+        images: ["https://www.pupiloinc.com/assets/meta-blog-details.webp"],
+    },
+    alternates: {
+        canonical: "https://www.pupiloinc.com/blog/from-first-line-to-full-stack-journeys-from-our-students",
+    }
+};
 const page = ({ params }) => {
+
     return (
         <>
             <Header />
