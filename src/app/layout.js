@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata = {
   title: "Pupilo",
   description: "Where Every Child can Code, Create and Thrive.",
-  metadataBase: new URL("https://pupilo-cyan.vercel.app/"),
+  metadataBase: new URL("https://pupilo-omega.vercel.app/"),
   openGraph: {
     type: "website",
     title: "Pupilo",
@@ -17,7 +17,7 @@ export const metadata = {
     images: ["/assets/meta.webp"],
   },
   alternates: {
-    canonical: "https://pupilo-cyan.vercel.app/",
+    canonical: "https://pupilo-omega.vercel.app/",
   }
 };
 
