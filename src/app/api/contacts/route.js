@@ -3,6 +3,7 @@ import { BREVO_API_HOST, BREVO_API_KEY } from "../../../../constants/brevo";
 export const POST = async (request) => {
   try {
     const { email, listId } = await request.json();
+    console.log("Incoming Request Body (/api/contacts):", request.body);
 
     const res = await fetch(`${BREVO_API_HOST}/contacts`, {
       method: "POST",
@@ -20,6 +21,7 @@ export const POST = async (request) => {
 
     const data = await res.json();
     if (!res.ok) {
+      console.error("Brevo API Error (/api/contacts):", data);
       return new Response(
         JSON.stringify({ message: data.message || "Brevo API Error" }),
         { status: res.status }
@@ -28,7 +30,7 @@ export const POST = async (request) => {
 
     return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
-    console.error("Brevo Error:", error.message);
+    console.error("Unexpected error in /api/contacts", error.message);
     return new Response(JSON.stringify({ message: "Internal Server Error" }), {
       status: 500,
     });
