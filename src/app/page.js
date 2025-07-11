@@ -42,19 +42,18 @@ export default function Home() {
       <ToastContainer />
       <Hero
         badgeText="🏆Top-Rated by Parents"
-        blackText="Where Every Child can"
+        blackText={<><span className="xl:text-nowrap">Future innovators</span> are born here </>}
         purpleText={
           <>
-            Code,
+            where every child can
             <span className="relative">
-              {" "}
-              Create{" "}
+              <span></span> code
               <Icons
                 icon="heroTextEllipse"
                 className="absolute top-2 -right-8 !z-10 max-lg:hidden"
               />
             </span>
-            and Thrive.
+            Thrive.
           </>
         }
         heroImg={
