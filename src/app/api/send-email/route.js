@@ -9,6 +9,11 @@ import {
 export async function POST(request) {
   try {
     const { toEmail, formData } = await request.json();
+    console.log("Incoming request body (/api/send-email):", {
+      toEmail,
+      formData,
+    });
+
     const res = await fetch(`${BREVO_API_HOST}/smtp/email`, {
       method: "POST",
       headers: {
@@ -67,7 +72,7 @@ export async function POST(request) {
     const data = await res.json();
 
     if (!res.ok) {
-      console.error("Brevo API error:", data);
+      console.error("Brevo user email error (/api/send-email):", data);
       return new Response(JSON.stringify({ error: data }), {
         status: res.status,
       });
@@ -75,7 +80,7 @@ export async function POST(request) {
 
     return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
-    console.error("API Route Error:", error);
+    console.error("Unexpected error in /api/send-email", error.message);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,
     });
