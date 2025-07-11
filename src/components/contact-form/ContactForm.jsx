@@ -21,7 +21,7 @@ const ContactForm = () => {
     date: "",
     time: "",
     notes: "",
-    countryCode: "+91",
+    countryCode: "",
   });
 
   const [errors, setErrors] = useState({});
