@@ -41,21 +41,8 @@ export default function Home() {
     <div className="max-w-[2560px] mx-auto">
       <ToastContainer />
       <Hero
-        badgeText="🏆Top-Rated by Parents"
-        blackText={<><span className="xl:text-nowrap">Future innovators</span> are born here </>}
-        purpleText={
-          <>
-            where every child can
-            <span className="relative">
-              <span></span> code
-              <Icons
-                icon="heroTextEllipse"
-                className="absolute top-2 -right-8 !z-10 max-lg:hidden"
-              />
-            </span>
-            Thrive.
-          </>
-        }
+        badgeText="🏆 Top-Rated by Parents"
+        blackText="Where Every Child can" purpleText={<>Code,<span className="relative"> Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span>and Thrive.</>}
         heroImg={
           <div className="relative z-10 w-[550px] max-sm:h-[300px] h-[527px]">
             <div

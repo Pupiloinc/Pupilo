@@ -6,7 +6,7 @@ const CustomButton = ({ iconClass, text, className, iconColor, onClick, href }) 
   const content = (
     <>
       {text}
-      <span className="size-6 max-md:size-4 flex justify-center transition-all duration-300 group-hover:rotate-45 items-center">
+      <span className="size-6 max-md:size-4 flex justify-center transition-all duration-300 max-[380px]:text-[12px] text-nowrap group-hover:rotate-45 items-center">
         <Icons
           icon={"commonArrow"}
           className={`${iconClass}`}
@@ -20,7 +20,7 @@ const CustomButton = ({ iconClass, text, className, iconColor, onClick, href }) 
     if (href.startsWith('/')) {
       // Internal link: use Next.js Link
       return (
-        <Link className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-md:text-sm max-md:py-2.5 max-md:px-5 ${className}`} href={href}>
+        <Link className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-[380px]:text-[12px] max-md:text-[12px] max-md:py-2.5 max-md:px-5 ${className}`} href={href}>
           {content}
         </Link>
       );
@@ -29,7 +29,7 @@ const CustomButton = ({ iconClass, text, className, iconColor, onClick, href }) 
     return (
       <Link
         href={href}
-        className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-md:text-sm max-md:py-2.5 max-md:px-5 ${className}`}
+        className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-[380px]:text-[12px] max-md:text-[12px] max-md:py-2.5 max-md:px-5 ${className}`}
         target="_blank" rel="noopener noreferrer"
       >
         {content}
@@ -38,7 +38,7 @@ const CustomButton = ({ iconClass, text, className, iconColor, onClick, href }) 
   }
 
   return (
-    <button onClick={onClick} className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-md:text-sm max-md:py-2.5 max-md:px-5 ${className}`}>
+    <button onClick={onClick} className={`flex gap-2 py-3.5 px-8 group items-center cursor-pointer bg-yellow rounded-full text-nowrap text-dark-black font-semibold transition-all duration-300  hover:shadow-xl leading-150 max-md:text-[12px] max-md:py-2.5 max-md:px-5 ${className}`}>
       {content}
     </button>
   );

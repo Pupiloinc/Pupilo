@@ -6,7 +6,7 @@ const FutureInnovators = () => {
   return (
     <div className='lg:py-[160px] md:py-20 py-[60px]'>
       <div className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto max-[790px]:max-w-[650px]">
-        <Title text="Future Innovators are Born Here!" className="text-center lg:!leading-[160%] max-[580px]:max-w-[420px] mx-auto" />
+        <Title text="Future Innovators are Born Here" className="text-center lg:!leading-[160%] max-[580px]:max-w-[420px] mx-auto" />
       <div className="w-full md:my-10 my-6">
         <Image
           src="/assets/images/webp/future-innovators.webp"
