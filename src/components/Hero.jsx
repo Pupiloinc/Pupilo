@@ -17,7 +17,7 @@ const Hero = ({ badgeText, blackText, purpleText, heroImg }) => {
           <div className={`max-lg:mx-auto py-2 lg:py-[11.2px] border border-purple/15 px-4 lg:px-5 rounded-full bg-purple/10 w-fit  lg:w-full font-semibold text-sm md:text-base leading-100 text-nowrap text-purple ${pathName === '/learn-with-pupilo' && 'lg:max-w-[245px]'} ${pathName === '/' && "lg:max-w-[239px]"} ${pathName === '/courses' && "lg:max-w-[253px]"} ${pathName === '/why-pupilo' && "lg:max-w-[245px]"}`}>{badgeText}</div>
           <h2 className="max-lg:text-center font-semibold text-[38px] sm:text-[43px] md:text-5xl lg:text-[58px] xl:text-custom-6xl leading-120 text-dark-black mt-4 relative z-10 lg:max-w-[502px]">{blackText} <span className="text-purple block">{purpleText}</span></h2>
           <div className="mt-4 sm:mt-5 md:mt-6 flex gap-3 relative z-10 max-lg:justify-center items-center">
-            <CustomButton href="/contact-form" iconColor="#010101" text={`${pathName === "/" ? "Try a free class" : "Try a Free Lesson"} `} />
+            <CustomButton href="/contact-form" iconColor="#010101" text={`${pathName === "/" ? "Try a Free Class" : "Try a Free Lesson"} `} />
             <Link href="https://wa.me/+27738649689" target="_blank">
               <div className="min-w-[41px] h-[41px] lg:min-w-[52px] lg:h-[52px] bg-dark-black rounded-full flex justify-center items-center duration-300 ease-linear transition-all hover:opacity-50">
                 <Icons icon="whatsappIcon" />
