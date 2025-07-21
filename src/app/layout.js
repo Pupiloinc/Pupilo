@@ -3,21 +3,21 @@ import "./globals.css";
 export const metadata = {
   title: "Pupilo",
   description: "Where Every Child can Code, Create and Thrive.",
-  metadataBase: new URL("https://www.pupiloinc.com"),
+  metadataBase: new URL(process.env.PUPILO_HOST_URL),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description: "Where Every Child can Code, Create and Thrive.",
-    images: "/assets/meta.webp",
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta.webp`],
   },
   twitter: {
     title: "Pupilo",
     description: "Where Every Child can Code, Create and Thrive.",
-    images: ["/assets/meta.webp"],
-    url: "https://www.pupiloinc.com",
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta.webp`],
+    url: process.env.PUPILO_HOST_URL,
   },
   alternates: {
-    canonical: "https://www.pupiloinc.com",
+    canonical: process.env.PUPILO_HOST_URL,
   }
 };
 

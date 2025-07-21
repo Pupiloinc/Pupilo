@@ -13,7 +13,6 @@ import PupiloCurriculum from "@/components/home/PupiloCurriculum";
 import PupiloDelivers from "@/components/home/PupiloDelivers";
 import WhyPupilo from "@/components/home/WhyPupilo";
 import { HERO_VIDEO_DATA } from "../../utils/helper";
-import JoinTheWaitList from "@/components/common/JoinTheWaitList";
 import { ToastContainer } from "react-toastify";
 import NewsLetterPopUp from "@/components/common/NewsLetterPopUp";
 
@@ -42,7 +41,21 @@ export default function Home() {
       <ToastContainer />
       <Hero
         badgeText="🏆 Top-Rated by Parents"
-        blackText="Where Every Child can" purpleText={<>Code,<span className="relative"> Create <Icons icon="heroTextEllipse" className="absolute top-2 -right-8 max-lg:hidden" /></span>and Thrive.</>}
+        blackText="Where Every Child can"
+        purpleText={
+          <>
+            Code,
+            <span className="relative">
+              {" "}
+              Create{" "}
+              <Icons
+                icon="heroTextEllipse"
+                className="absolute top-2 -right-8 max-lg:hidden"
+              />
+            </span>
+            and Thrive.
+          </>
+        }
         heroImg={
           <div className="relative z-10 w-[550px] max-sm:h-[300px] h-[527px]">
             <div
@@ -112,7 +125,6 @@ export default function Home() {
       />
       <Footer />
       <BackToTop />
-      <JoinTheWaitList />
     </div>
   );
 }

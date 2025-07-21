@@ -1,26 +1,25 @@
-import Footer from '@/components/common/Footer'
-import Header from '@/components/common/Header'
-import ContactForm from '@/components/contact-form/ContactForm'
-import React from 'react'
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
+import ContactForm from "@/components/contact-form/ContactForm";
+import React from "react";
 export const metadata = {
   title: "Pupilo",
   description: "Let's Connect.Build. Empower.",
-  metadataBase: new URL("https://www.pupiloinc.com/contact-form"),
+  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/contact-form`),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description: "Let's Connect.Build. Empower.",
-    images: "https://www.pupiloinc.com/assets/meta-contact-form.webp",
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-contact-form.webp`],
   },
   twitter: {
     title: "Pupilo",
     description: "Let's Connect. Build. Empower.",
-    images: ["https://www.pupiloinc.com/assets/meta-contact-form.webp"],
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-contact-form.webp`],
   },
   alternates: {
-    canonical: "https://www.pupiloinc.com/contact-form",
-  }
-
+    canonical: `${process.env.PUPILO_HOST_URL}/contact-form`,
+  },
 };
 const page = () => {
   return (
@@ -29,7 +28,7 @@ const page = () => {
       <ContactForm />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

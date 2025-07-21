@@ -10,21 +10,21 @@ import React from "react";
 export const metadata = {
   title: "Pupilo",
   description: "Read Our latest Blogs",
-  metadataBase: new URL("https://www.pupiloinc.com/blog"),
+  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/blog`),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Read Our latest Blogs",
-    images: "https://www.pupiloinc.com/assets/meta-blog.webp",
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
   },
   twitter: {
     title: "Pupilo",
     description: "Read Our Latest Blogs",
-    images: ["https://www.pupiloinc.com/assets/meta-blog.webp"],
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
   },
   alternates: {
-    canonical: "https://www.pupiloinc.com/blog",
+    canonical: `${process.env.PUPILO_HOST_URL}/blog`,
   }
 };
 const page = () => {
