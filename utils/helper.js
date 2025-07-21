@@ -334,7 +334,7 @@ export const FORMATS = [
     title: "1-on-1 Private Lessons",
     desc: "Your child gets a dedicated mentor who tailors each lesson to their pace, interests, and goals.",
     cta: "Try a Free Lesson",
-    price: "R 1,875/mo",
+    price: "R 2,875/mo",
   },
   {
     id: 2,
@@ -344,7 +344,7 @@ export const FORMATS = [
     title: "Online Live Group Lessons",
     desc: "Interactive, small-group lessons where kids learn coding with peers in real time.",
     cta: "Try a Free Lesson",
-    price: "R 1,250/mo",
+    price: "R 1,485/mo",
   },
   {
     id: 3,
