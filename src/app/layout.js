@@ -1,4 +1,3 @@
-
 import "./globals.css";
 
 export const metadata = {
@@ -15,6 +14,7 @@ export const metadata = {
     title: "Pupilo",
     description: "Where Every Child can Code, Create and Thrive.",
     images: ["/assets/meta.webp"],
+    url: "https://www.pupiloinc.com",
   },
   alternates: {
     canonical: "https://www.pupiloinc.com",
