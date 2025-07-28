@@ -16,18 +16,18 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${formattedTitle} | Pupilo`,
       description: `Where Every Child can Code, Create and Thrive.`,
-      url: `https://www.pupiloinc.com/blog/${params.title}`,
-      images: ["https://www.pupiloinc.com/assets/meta-blog.webp"],
+      url: `${process.env.PUPILO_HOST_URL}/blog/${params.title}`,
+      images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: `${formattedTitle} | Pupilo`,
       description: `Where Every Child can Code, Create and Thrive.`,
-      images: ["https://www.pupiloinc.com/assets/meta-blog.webp"],
+      images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
     },
     alternates: {
-      canonical: `https://www.pupiloinc.com/blog/${params.title}`,
+      canonical: `${process.env.PUPILO_HOST_URL}/blog/${params.title}`,
     },
   };
 }

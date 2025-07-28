@@ -12,21 +12,21 @@ import Image from 'next/image'
 export const metadata = {
   title: "Pupilo",
   description: "More Than Coding. Here’s Why Pupilo Exists",
-  metadataBase: new URL("https://www.pupiloinc.com/why-pupilo"),
+  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/why-pupilo`),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "More Than Coding. Here’s Why Pupilo Exists",
-    images: "https://www.pupiloinc.com/assets/meta-why-pupilo.webp",
+    images: `${process.env.PUPILO_HOST_URL}/assets/meta-why-pupilo.webp`,
   },
   twitter: {
     title: "Pupilo",
     description: "More Than Coding. Here’s Why Pupilo Exists",
-    images: ["https://www.pupiloinc.com/assets/meta-why-pupilo.webp"],
+    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-why-pupilo.webp`],
   },
   alternates: {
-    canonical: "https://www.pupiloinc.com/why-pupilo",
+    canonical: `${process.env.PUPILO_HOST_URL}/why-pupilo`,
   }
 };
 const page = () => {
