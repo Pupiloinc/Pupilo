@@ -45,6 +45,7 @@ const Header = () => {
                             )
                         })}
                     </ul>
+                    <Link href="/enroll" className='bg-yellow duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-none text-dark-black gap-2 py-3.5 px-8 rounded-full'>Enroll Now <Icons icon="commonArrow" /></Link>
                     <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-none text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
                     <div className="lg:hidden z-50 cursor-pointer">
                         <button
@@ -79,6 +80,7 @@ const Header = () => {
                                 {item.title}
                             </Link>
                         ))}
+                        <Link href="/enroll" className='bg-yellow duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-dark-black gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Enroll Now <Icons className="min-w-4 h-4" icon="commonArrow" /></Link>
                         <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
                     </div>
                 </div>
