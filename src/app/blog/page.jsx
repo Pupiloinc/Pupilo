@@ -7,25 +7,24 @@ import GetStarted from "@/components/common/GetStarted";
 import Reviews from "@/components/common/Reviews";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import React from "react";
+const HOST = process.env.PUPILO_HOST_URL;
 export const metadata = {
   title: "Pupilo",
   description: "Read Our latest Blogs",
-  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/blog`),
+  ...(HOST ? { metadataBase: new URL(`${HOST}/blog`) } : {}),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Read Our latest Blogs",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
+    images: [HOST ? `${HOST}/assets/meta-blog.webp` : "/assets/meta-blog.webp"],
   },
   twitter: {
     title: "Pupilo",
     description: "Read Our Latest Blogs",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
+    images: [HOST ? `${HOST}/assets/meta-blog.webp` : "/assets/meta-blog.webp"],
   },
-  alternates: {
-    canonical: `${process.env.PUPILO_HOST_URL}/blog`,
-  }
+  ...(HOST ? { alternates: { canonical: `${HOST}/blog` } } : {}),
 };
 const page = () => {
   return (

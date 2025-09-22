@@ -9,25 +9,27 @@ import TechJourney from "@/components/courses/TechJourney";
 import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import Image from "next/image";
+
+const HOST = process.env.PUPILO_HOST_URL;
+
 export const metadata = {
   title: "Pupilo",
   description: "Engaging & Fun Programs for Kids & Teens ages 7-18.",
-  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/courses`),
+  ...(HOST ? { metadataBase: new URL(`${HOST}/courses`) } : {}),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description: "Engaging & Fun Programs for Kids & Teens ages 7-18.",
-    images: `${process.env.PUPILO_HOST_URL}/assets/meta-courses.webp`,
+    images: [HOST ? `${HOST}/assets/meta-courses.webp` : "/assets/meta-courses.webp"],
   },
   twitter: {
     title: "Pupilo",
     description: "Engaging & Fun Programs for Kids & Teens ages 7-18.",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-courses.webp`],
+    images: [HOST ? `${HOST}/assets/meta-courses.webp` : "/assets/meta-courses.webp"],
   },
-  alternates: {
-    canonical: `${process.env.PUPILO_HOST_URL}/courses`,
-  },
+  ...(HOST ? { alternates: { canonical: `${HOST}/courses` } } : {}),
 };
+
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">

@@ -3,25 +3,26 @@ import Footer from "@/components/common/Footer";
 import Title from "@/components/common/Title";
 import Image from "next/image";
 import Script from "next/script";
+import TallyLazyEmbed from "@/components/common/TallyLazyEmbed";
+
+const HOST = process.env.PUPILO_HOST_URL;
 
 export const metadata = {
   title: "Enroll — Pupilo",
   description: "Enroll at Pupilo — Where Every Child can Code, Create and Thrive.",
-  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}`),
+  ...(HOST ? { metadataBase: new URL(`${HOST}`) } : {}),
   openGraph: {
     type: "website",
     title: "Enroll — Pupilo",
     description: "Enroll at Pupilo — Where Every Child can Code, Create and Thrive.",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/images/webp/pupilo-hero.webp`],
+    images: [HOST ? `${HOST}/assets/images/webp/pupilo-hero.webp` : "/assets/images/webp/pupilo-hero.webp"],
   },
   twitter: {
     title: "Enroll — Pupilo",
     description: "Enroll at Pupilo — Where Every Child can Code, Create and Thrive.",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/images/webp/pupilo-hero.webp`],
+    images: [HOST ? `${HOST}/assets/images/webp/pupilo-hero.webp` : "/assets/images/webp/pupilo-hero.webp"],
   },
-  alternates: {
-    canonical: `${process.env.PUPILO_HOST_URL}/enroll`,
-  },
+  ...(HOST ? { alternates: { canonical: `${HOST}/enroll` } } : {}),
 };
 
 export default function Page() {
@@ -55,7 +56,10 @@ export default function Page() {
           <div className="py-8 md:py-12 lg:py-16">
             <div className="text-center max-w-[860px] mx-auto">
               <Title className="!text-4xl sm:!text-5xl" text={
-                <>Secure Your Spot — <span className="text-purple">Enroll Now</span></>
+                <>
+                  <span className="bg-gradient-to-r from-purple to-blue-600 bg-clip-text text-transparent font-extrabold">ENROLL NOW</span>
+                  {" "}TO START YOUR CHILD/TEEN CODING JOURNEY
+                </>
               } />
               <p className="mt-3 text-black/70">
                 Complete the enrollment form below. It takes less than 2 minutes!
@@ -65,7 +69,6 @@ export default function Page() {
                 <span className="text-sm px-3 py-1.5 rounded-full bg-white-100 border border-black/10">✓ Secure & private</span>
                 <span className="text-sm px-3 py-1.5 rounded-full bg-white-100 border border-black/10">✓ No payment required</span>
                 <span className="text-sm px-3 py-1.5 rounded-full bg-white-100 border border-black/10">✓ Takes under 2 minutes</span>
-                <span className="text-sm px-3 py-1.5 rounded-full bg-white-100 border border-black/10">✓ Top-rated by parents</span>
               </div>
               {/* Help link */}
               <div className="mt-3 text-sm text-black/70">
@@ -79,22 +82,13 @@ export default function Page() {
       <section className="container max-w-[1140px] xl:px-0 px-6 max-sm:px-4 mx-auto pt-2 sm:pt-4 pb-[40px] sm:pb-[56px]">
         <div className="mt-0 sm:mt-0 bg-white rounded-3xl form-shadow p-3 sm:p-5 border border-black/20 ring-1 ring-purple/15 focus-within:ring-2 focus-within:ring-purple/25 transition-shadow">
           {/* Tally Embed */}
-          <div className="rounded-2xl overflow-hidden border-2 border-purple/20 bg-white">
-            <iframe
-              data-tally-src="https://tally.so/embed/wvkX9A?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              title="Pupilo - Enrollment"
-              loading="lazy"
-              width="100%"
-              height="800"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              className="w-full"
-              style={{ background: "transparent" }}
-            />
-          </div>
+          <TallyLazyEmbed
+            src="https://tally.so/embed/wvkX9A?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            title="Pupilo - Enrollment"
+            height={800}
+          />
           {/* Pre-form checklist (reduces friction by setting expectations) */}
-      
+        
         </div>
 
         {/* FAQ: addresses common anxieties */}
