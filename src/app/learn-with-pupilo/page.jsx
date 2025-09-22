@@ -10,25 +10,25 @@ import Gallery from "@/components/learn-with-pupilo/Gallery";
 import Image from "next/image";
 import React from "react";
 
+const HOST = process.env.PUPILO_HOST_URL;
+
 export const metadata = {
   title: "Pupilo",
   description: "Choose How You Learn.Build What You Dream.",
-  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/learn-with-pupilo`),
+  ...(HOST ? { metadataBase: new URL(`${HOST}/learn-with-pupilo`) } : {}),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "Choose How You Learn.Build What You Dream.",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-learn.webp`],
+    images: [HOST ? `${HOST}/assets/meta-learn.webp` : "/assets/meta-learn.webp"],
   },
   twitter: {
     title: "Pupilo",
     description: "Choose How You Learn. Build What You Dream.",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-learn.webp`],
+    images: [HOST ? `${HOST}/assets/meta-learn.webp` : "/assets/meta-learn.webp"],
   },
-  alternates: {
-    canonical: `${process.env.PUPILO_HOST_URL}/learn-with-pupilo`,
-  }
+  ...(HOST ? { alternates: { canonical: `${HOST}/learn-with-pupilo` } } : {}),
 };
 const page = () => {
   return (

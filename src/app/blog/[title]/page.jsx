@@ -5,6 +5,8 @@ import Footer from "@/components/common/Footer";
 import GetStarted from "@/components/common/GetStarted";
 import Header from "@/components/common/Header";
 
+const HOST = process.env.PUPILO_HOST_URL;
+
 export async function generateMetadata({ params }) {
   const formattedTitle = decodeURIComponent(params.title)
     .replace(/-/g, " ")
@@ -16,19 +18,17 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${formattedTitle} | Pupilo`,
       description: `Where Every Child can Code, Create and Thrive.`,
-      url: `${process.env.PUPILO_HOST_URL}/blog/${params.title}`,
-      images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
+      ...(HOST ? { url: `${HOST}/blog/${params.title}` } : {}),
+      images: [HOST ? `${HOST}/assets/meta-blog.webp` : "/assets/meta-blog.webp"],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: `${formattedTitle} | Pupilo`,
       description: `Where Every Child can Code, Create and Thrive.`,
-      images: [`${process.env.PUPILO_HOST_URL}/assets/meta-blog.webp`],
+      images: [HOST ? `${HOST}/assets/meta-blog.webp` : "/assets/meta-blog.webp"],
     },
-    alternates: {
-      canonical: `${process.env.PUPILO_HOST_URL}/blog/${params.title}`,
-    },
+    ...(HOST ? { alternates: { canonical: `${HOST}/blog/${params.title}` } } : {}),
   };
 }
 

@@ -272,6 +272,7 @@ export const FOOTER_DATA_LIST = [
       { label: "How It Works", url: "/how-it-works" },
       { label: "Why Pupilo?", url: "/why-pupilo" },
       { label: "Instructors", url: "/instructors" },
+      { label: "Enroll", url: "/enroll" },
       { label: "Blog", url: "/blog" },
     ],
   },

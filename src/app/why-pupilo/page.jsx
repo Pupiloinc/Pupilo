@@ -9,26 +9,27 @@ import FutureInnovators from '@/components/why-pupilo/FutureInnovators'
 import LearnOurDifference from '@/components/why-pupilo/LearnOurDifference'
 import OurMission from '@/components/why-pupilo/OurMission'
 import Image from 'next/image'
+
+const HOST = process.env.PUPILO_HOST_URL;
 export const metadata = {
   title: "Pupilo",
   description: "More Than Coding. Here’s Why Pupilo Exists",
-  metadataBase: new URL(`${process.env.PUPILO_HOST_URL}/why-pupilo`),
+  ...(HOST ? { metadataBase: new URL(`${HOST}/why-pupilo`) } : {}),
   openGraph: {
     type: "website",
     title: "Pupilo",
     description:
       "More Than Coding. Here’s Why Pupilo Exists",
-    images: `${process.env.PUPILO_HOST_URL}/assets/meta-why-pupilo.webp`,
+    images: [HOST ? `${HOST}/assets/meta-why-pupilo.webp` : "/assets/meta-why-pupilo.webp"],
   },
   twitter: {
     title: "Pupilo",
     description: "More Than Coding. Here’s Why Pupilo Exists",
-    images: [`${process.env.PUPILO_HOST_URL}/assets/meta-why-pupilo.webp`],
+    images: [HOST ? `${HOST}/assets/meta-why-pupilo.webp` : "/assets/meta-why-pupilo.webp"],
   },
-  alternates: {
-    canonical: `${process.env.PUPILO_HOST_URL}/why-pupilo`,
-  }
+  ...(HOST ? { alternates: { canonical: `${HOST}/why-pupilo` } } : {}),
 };
+
 const page = () => {
   return (
     <div className="max-w-[2560px] mx-auto">
