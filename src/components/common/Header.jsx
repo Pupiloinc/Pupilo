@@ -23,11 +23,11 @@ const Header = () => {
         };
     }, [isOpen]);
     return (
-        <div className="py-3 lg:py-6 border-b border-b-black/10 sticky top-0 z-30 bg-white lg:relative lg:z-auto">
+        <div className="py-3 lg:py-6 border-b border-b-black/10 sticky top-0 z-40 bg-white lg:relative lg:z-auto">
             <div className='container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto'>
                 <div className="flex justify-between items-center">
                     <Link href="/">
-                        <Image className='max-sm:max-w-[100px] w-full' src="/assets/images/svg/logo.svg" width={152} height={42} alt='logo' />
+                        <Image className='w-[120px] sm:w-[140px] lg:w-full h-auto object-contain' src="/assets/images/svg/logo.svg" width={152} height={42} alt='logo' priority />
                     </Link>
                     <ul className="flex gap-8 items-center max-lg:hidden">
                         {NAV_DATA_LIST.map((item, i) => {
@@ -47,7 +47,7 @@ const Header = () => {
                     </ul>
                     <Link href="/enroll" className='bg-yellow duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-none text-dark-black gap-2 py-3.5 px-8 rounded-full'>Enroll Now <Icons icon="commonArrow" /></Link>
                     <Link href="/" className='bg-black duration-300 ease-linear transition-all hover:shadow-xl max-lg:hidden flex items-center font-semibold text-base leading-none text-white gap-2 py-3.5 px-8 rounded-full'>Log In <Icons icon="logoutIcon" /></Link>
-                    <div className="lg:hidden z-50 cursor-pointer">
+                    <div className="lg:hidden z-50 cursor-pointer relative">
                         <button
                             onClick={toggleMenu}
                             className={`lg:hidden relative z-50 cursor-pointer hover:scale-[1.05] duration-300 flex justify-end items-center rounded-lg w-[46px] h-[45px] `}
@@ -66,7 +66,7 @@ const Header = () => {
                         </button>
                     </div>
                     <div
-                        className={`w-full h-screen bg-white transition-all duration-500 left-0 lg:-top-full z-40 fixed flex gap-6 flex-col justify-center items-center ${isOpen ? "top-0 left-0" : "-top-full"
+                        className={`w-full h-screen bg-white transition-all duration-500 left-0 lg:-top-full z-30 fixed flex gap-6 flex-col justify-center items-center ${isOpen ? "top-0 left-0" : "-top-full"
                             }`}
                     >
                         {NAV_DATA_LIST.map((item, i) => (
