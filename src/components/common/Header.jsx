@@ -12,6 +12,7 @@ const Header = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
@@ -27,7 +28,7 @@ const Header = () => {
             <div className='container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto'>
                 <div className="flex justify-between items-center">
                     <Link href="/">
-                        <Image className='w-[120px] sm:w-[140px] lg:w-full h-auto object-contain' src="/assets/images/svg/logo.svg" width={152} height={42} alt='logo' priority />
+                        <Image className='w-[120px] sm:w-[140px] lg:w-full h-auto object-contain [transform:translateZ(0)] will-change-transform' src="/assets/images/svg/logo.svg" width={152} height={42} alt='logo' priority unoptimized />
                     </Link>
                     <ul className="flex gap-8 items-center max-lg:hidden">
                         {NAV_DATA_LIST.map((item, i) => {
