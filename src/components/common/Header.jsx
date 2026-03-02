@@ -13,16 +13,7 @@ const Header = () => {
         setIsOpen(!isOpen);
     };
 
-    useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [isOpen]);
+    // Remove body overflow manipulation for mobile scroll lock
     return (
         <>
             <div className="h-[60px] sm:h-[72px] lg:hidden" />
@@ -76,24 +67,24 @@ const Header = () => {
                                 )}
                             </button>
                         </div>
-                        <div
-                            className={`w-full h-screen bg-white transition-all duration-500 left-0 lg:-top-full z-30 fixed flex gap-6 flex-col justify-center items-center ${isOpen ? "top-0 left-0" : "-top-full"
-                                }`}
-                        >
-                            {NAV_DATA_LIST.map((item, i) => (
-                                <Link
-                                    key={i}
-                                    href={item.link}
-                                    className={`font-normal text-sm md:text-base leading-150 text-dark-grey relative  transition-all duration-700
-     after:absolute after:left-0 after:bottom-[-8%] after:h-[1.5px] after:bg-dark-grey
-    after:w-0 after:transition-all after:duration-500 hover:after:w-full ${i === 0 && "font-semibold"} `}
-                                >
-                                    {item.title}
-                                </Link>
-                            ))}
-                            <Link href="/enroll" className='bg-yellow duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-dark-black gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Enroll Now <Icons className="min-w-4 h-4" icon="commonArrow" /></Link>
-                            <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
-                        </div>
+                        {/* Overlay for mobile menu scroll lock */}
+                        {isOpen && (
+                            <div className="fixed inset-0 z-30 bg-white flex gap-6 flex-col justify-center items-center overflow-hidden">
+                                {NAV_DATA_LIST.map((item, i) => (
+                                    <Link
+                                        key={i}
+                                        href={item.link}
+                                        className={`font-normal text-sm md:text-base leading-150 text-dark-grey relative  transition-all duration-700
+         after:absolute after:left-0 after:bottom-[-8%] after:h-[1.5px] after:bg-dark-grey
+        after:w-0 after:transition-all after:duration-500 hover:after:w-full ${i === 0 && "font-semibold"} `}
+                                    >
+                                        {item.title}
+                                    </Link>
+                                ))}
+                                <Link href="/enroll" className='bg-yellow duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-dark-black gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Enroll Now <Icons className="min-w-4 h-4" icon="commonArrow" /></Link>
+                                <Link href="/" className='bg-black duration-300 md:text-base ease-linear transition-all hover:shadow-xl flex items-center font-semibold text-sm leading-100 text-white gap-1 py-2 px-4 md:py-3.5 md:px-5 rounded-full'>Log In <Icons className="min-w-4 h-4" icon="logoutIcon" /></Link>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
