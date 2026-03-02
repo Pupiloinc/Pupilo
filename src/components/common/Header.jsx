@@ -30,15 +30,19 @@ const Header = () => {
                 <div className='container max-w-[1140px] xl:px-0 px-4 md:px-6 mx-auto'>
                     <div className="flex justify-between items-center">
                         <Link href="/">
-                            <div className="w-[120px] sm:w-[140px] lg:w-[152px] relative h-[42px]">
-                                <Image
-                                    src="/assets/images/svg/logo.svg"
-                                    alt="logo"
-                                    fill
-                                    priority
-                                    className="object-contain"
-                                />
-                            </div>
+                            <img
+                                src="/assets/images/svg/logo.svg"
+                                alt="logo"
+                                loading="eager"
+                                decoding="async"
+                                style={{
+                                    width: '120px',
+                                    height: 'auto',
+                                    aspectRatio: '152 / 42',
+                                    display: 'block'
+                                }}
+                                className="sm:w-[140px] lg:w-[152px]"
+                            />
                         </Link>
                         <ul className="flex gap-8 items-center max-lg:hidden">
                             {NAV_DATA_LIST.map((item, i) => {
